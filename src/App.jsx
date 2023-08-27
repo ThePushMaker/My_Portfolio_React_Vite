@@ -10,14 +10,13 @@ function App() {
   
   return (
     <>
-      <div>        
         <NavBar />
+      <div className='mx-auto px-6 md:px-14 lg:px-20'>        
         <Banner />
         <Skills />
         <Projects />
         <Contact />
         <Footer />
-
       </div>
     </>
   );

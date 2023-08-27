@@ -12,9 +12,9 @@
 }
 .scrolled {
   padding: 10px 0;
-  background-color: #121212;
+  /* background-color: rgba(18, 18, 18, 0.85); */
+  box-shadow: inset 0px 150px 10px -70px rgba(0,0,0,0.94);
 }
-
 .navbar-link {
   font-weight: 400;
   color: #fff !important;
@@ -30,7 +30,7 @@
 .social-icon a {
   width: 42px;
   height: 42px;
-  background: rgba(217, 217, 217, 0.1);
+  /* background: rgba(217, 217, 217, 0.0); */
   display: inline-flex;
   border-radius: 50%;
   margin-right: 6px;

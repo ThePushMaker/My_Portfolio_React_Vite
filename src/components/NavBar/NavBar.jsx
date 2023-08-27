@@ -91,7 +91,7 @@ const NavBar = () => {
                 </a>
               </div>
               <button className="" onClick={connect}>
-                <span>Let's Connect</span>
+                <span>{'< '}CONTACT ME{'  />'}</span>
               </button>
             </div>
           
