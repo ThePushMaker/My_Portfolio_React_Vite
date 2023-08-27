@@ -7,15 +7,15 @@ import "./NavBar.css";
 // animaciones p
 
 const NavBar = () => {
-  const [activateLink, setActiveLink] = useState(false);
+  const [activateLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
       window.scrollY > 50 ? setScrolled(true) : setScrolled(false);
-    };
+    }
 
-    window.addEventListener("croll", onScroll);
+    window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -32,28 +32,27 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className={`${scrolled ? scrolled : ""} navbar`}>
-        <div className=" container mx-auto flex flex-wrap  justify-between items-center max-w-screen-xl">
+    <div>
+      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+        <div className="mx-auto flex justify-between container px-6 md:px-14 lg:px-20">
           
-            <div className="flex items-center">
-              <a href="#home" className="navbar-brand pl-5">
-                <img src={logo} alt="Logo" className="object-scale-down w-24 mr-6"/>
+            <div className="flex items-center w-full justify-between lg:w-auto lg:justify-start">
+              <a href="#home" className="navbar-brand">
+                <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-[140px] lg:mr-8"/>
               </a>
               {/* menú hamburguesa ocultable */}
               <button
-                className="visible lg:invisible"
-                aria-controls="basic-navbar-nav"
+                className="navbar-toggler-icon visible flex lg:invisible lg:hidden"
                 type="button"
-                aria-label="Toggle navigation"
               >
                 <span className="navbar-toggler-icon"></span>
               </button>
-              <div className="invisible lg:visible navbar-nav flex ">
+              <div className="invisible hidden lg:flex lg:visible">
                 <a
                   href="#home"
                   className={`${
                     activateLink === "home" ? "active" : ""
-                  } navbar-link nav-link navLinkTtext`}
+                  } navbar-link`}
                   onClick={() => onUpdateActiveLink("home")}
                 >
                   Home
@@ -61,8 +60,8 @@ const NavBar = () => {
                 <a
                   href="#skills"
                   className={`${
-                    activateLink === "home" ? "active" : ""
-                  } navbar-link nav-link navLinkTtext`}
+                    activateLink === "skills" ? "active" : ""
+                  } navbar-link`}
                   onClick={() => onUpdateActiveLink("skills")}
                 >
                   Skills
@@ -70,8 +69,8 @@ const NavBar = () => {
                 <a
                   href="#projects"
                   className={`${
-                    activateLink === "home" ? "active" : ""
-                  } navbar-link nav-link navLinkTtext`}
+                    activateLink === "projects" ? "active" : ""
+                  } navbar-link`}
                   onClick={() => onUpdateActiveLink("projects")}
                 >
                   Projects
@@ -79,7 +78,7 @@ const NavBar = () => {
               </div>
             </div>
 
-            <span className="invisible lg:visible flex items-center navbar-text">
+            <div className="invisible hidden items-center navbar-text lg:visible lg:flex">
               <div className="social-icon">
                 <a href="#">
                   <img src={navIcon1} alt="navIcon1" />
@@ -91,13 +90,14 @@ const NavBar = () => {
                   <img src={navIcon3} alt="navIcon3" />
                 </a>
               </div>
-              <button className="vdd" onClick={connect}>
+              <button className="" onClick={connect}>
                 <span>Let's Connect</span>
               </button>
-            </span>
+            </div>
           
         </div>
       </nav>
+      </div>
     </>
   );
 };

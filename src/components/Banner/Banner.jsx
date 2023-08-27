@@ -1,7 +1,11 @@
+import headerImg from "../../assets/img/header-img.svg";
+
 const Banner = () => {
 
   return(
-    <div>Banner</div>
+    <>
+      <img src={headerImg} alt="Header Img"/>
+    </>
   );
 }
 
