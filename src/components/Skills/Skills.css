@@ -17,13 +17,12 @@
 }
 .skill p {
   color: #B8B8B8;
-  font-size: 18px;
+  /* font-size: 18px; */
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  margin:14px 0 75px 0;
 }
 .skill-slider {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }

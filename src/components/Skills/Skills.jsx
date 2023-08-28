@@ -21,19 +21,23 @@ const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
-    items: 7
+    items: 7,
+    partialVisibilityGutter: 40
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 7
+    items: 7,
+    partialVisibilityGutter: 40
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 4
+    items: 4,
+    partialVisibilityGutter: 30
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 2
+    items: 3,
+    partialVisibilityGutter: 30
   }
 };
 
@@ -61,31 +65,42 @@ const Skills = () => {
   return(
     <>
       <section className='skill' id='skills'>
-        <div className='container px-6 md:px-14 lg:px-20 mx-auto'>
+        <div className='container px-4 md:px-14 lg:px-20 mx-auto'>
           <div className='m-auto'>
-            <div className='skill-bx px-[30px] md:py-[50px] md:px-[40px] lg:px-[60px] shadow-2xl'>
+            <div className='skill-bx px-[28px] py-6 md:py-[50px] md:px-[40px] lg:px-[60px] shadow-2xl'>
               <h2>Skills</h2>
-              <p className='text-start'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus at aliquid incidunt voluptatum facere. Iure quis atque voluptate. Nemo assumenda accusamus cupiditate voluptas nobis deleniti labore nostrum. Aperiam, numquam?</p>
+              <p className='text-start text-sm md:text-[18px] mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus at aliquid incidunt voluptatum facere. Iure quis atque voluptate. Nemo assumenda accusamus cupiditate voluptas nobis deleniti labore nostrum. Aperiam, numquam?</p>
             
             <Carousel
-              className="owl-carousel owl-theme skill-slider"
-              swipeable={true}
+              additionalTransfrom={0}
+              arrows
+              autoPlaySpeed={3000}
+              centerMode={false}
+              className="owl-carousel owl-theme skill-slider pb-10 mb-4 lg:mb-0"
+              dotListClass=""
               draggable={true}
-              showDots={true}
-              responsive={responsive}
-              ssr={true} // means to render carousel on server-side.
+              focusOnSelect={false}
+              itemClass=""
               infinite={true}
-              // autoPlay={true}
-              // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-              autoPlaySpeed={2000}
               keyBoardControl={true}
-              customTransition="all .5"
+              minimumTouchDrag={80}
+              pauseOnHover
+              renderArrowsWhenDisabled={false}
+              renderButtonGroupOutside={false}
+              renderDotsOutside={false}
+              responsive={responsive}
+              rewind={false}
+              rtl={false}
+              shouldResetAutoplay
+              showDots={true}
+              sliderClass=''
+              slidesToSlide={1}
+              swipeable={true}
+              ssr={true} // means to render carousel on server-side.
+              autoPlay={true}
+              customTransition="all 2"
               transitionDuration={500}
               containerClass="carousel-container"
-              // removeArrowOnDeviceType={["tablet", "mobile"]}
-              // deviceType={this.props.deviceType}
-              dotListClass="custom-dot-list-style"
-              itemClass="carousel-item-padding-40-px"
             >
               <div className='item'>
                 <img src={meter1} alt="React" />
