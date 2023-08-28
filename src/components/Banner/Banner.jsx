@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import headerImg from "../../assets/img/3.jpg";
+import headerImg from "../../assets/img/pfp/difuminado_light.png";
 import './Banner.css';
 
 const Banner = () => {
@@ -8,14 +8,21 @@ const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 1700;
+  const [fontSize, setFontSize] = useState(16); // Tamaño de fuente inicial en píxeles
+
   const toRotate = [
                       'Full Stack Web Developer',
                       'Web Designer', 
-                      'Database Developer',
-                      'Fronted Developer', 
-                      'Backend Developer' 
+                      'Frontend Developer', 
+                      'Backend Developer',
+                      'Database Developer'
                     ]
-
+  useEffect(() => {
+    // Calcula el nuevo tamaño de fuente basado en la longitud del texto
+    const newFontSize = Math.min(35, 700 / text.length); // h,w; Ajusta los valores mínimo y máximo según tus necesidades
+    setFontSize(newFontSize);
+  }, [text]);
+  
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();
@@ -40,22 +47,22 @@ const Banner = () => {
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setDelta(500);
+      setDelta(250);
     }
 
   }
 
   return(
     <>
-      <section className="banner" id="home">
-        <div className="container">
+      <section className="banner  px-6 md:px-14 lg:px-20" id="home">
+        <div className="container mx-auto flex  ">
           <div className="items-center flex flex-wrap">
             <div className="w-full md:w-1/2 xl:w-7/12">
               <div>
                 <span className="tagline">Welcome to my portfolio</span>
-                <h1>{"Hi, I'm Martín Calderón! "}
-                  <div className="lg:h-14">
-                    <span className="wrap">{text}</span>
+                <h1 className="text-4xl md:text-5xl lg:text-5xl">{"Hi, I'm Martín Calderón! "}
+                  <div className="h-16 md:h-[90px] lg:h-12 mt-2">
+                    <span className="wrap text-bubble-gum" style={{ fontSize: `${fontSize}px` }}>{text}</span>
                   </div>
                 </h1>
                 <p className="mb-2">I'm Martín Calderón a 23-years-old Full Stack Web Developer who's passionate about all forms of virtual art creation. There's nothing that fascinates me more than well-structured systems that not only function but also have something profound to communicate to the world.</p>
@@ -70,9 +77,9 @@ const Banner = () => {
                 </button>
               </div>
             </div>
-            <div className="w-full md:w-1/2 xl:w-5/12">
+            <div className="w-full md:w-1/2 xl:w-5/12 mt-16 md:pl-6">
               <div>
-                <img className="lg:mx-auto lg:w-80 rounded-full" src={headerImg} alt="Header Img" />
+                <img className="w-64 m-auto md:w-80 lg:m-0 lg:w-[400px] rounded-full opacity-[92%] shadow-2xl" src={headerImg} alt="Header Img" />
               </div>
             </div>
           </div>

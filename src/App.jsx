@@ -11,7 +11,7 @@ function App() {
   return (
     <>
         <NavBar />
-      <div className='mx-auto px-6 md:px-14 lg:px-20'>        
+      <div className=''>        
         <Banner />
         <Skills />
         <Projects />
