@@ -80,13 +80,13 @@ const NavBar = () => {
 
             <div className="invisible hidden items-center navbar-text lg:visible lg:flex">
               <div className="social-icon">
-                <a href="#">
+                <a target="_blank" href="https://www.linkedin.com/in/martin-calderon-dev">
                   <img src={navIcon1} alt="navIcon1" />
                 </a>
-                <a href="#">
+                <a target="_blank" href="https://github.com/DSW-47">
                   <img src={navIcon2} alt="navIcon2" />
                 </a>
-                <a href="#">
+                <a target="_blank" href="https://www.youtube.com/channel/UCNy0OJqXOCyhThyXTcLLCJA?sub_confirmation=1">
                   <img src={navIcon3} alt="navIcon3" />
                 </a>
               </div>
@@ -97,6 +97,11 @@ const NavBar = () => {
           
         </div>
       </nav>
+      </div>
+      <div class="floating-button" id="back-to-top-button">
+        <a href='#home' class="">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <g opacity="1"> <path d="M12 15.5V9.5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 11.5L12 8.5L15 11.5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
+        </a>
       </div>
     </>
   );

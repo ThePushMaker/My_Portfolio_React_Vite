@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import headerImg from "../../assets/img/pfp/difuminado_light.png";
+import headerImg from "../../assets/img/pfp/difuminado2.png";
 import './Banner.css';
 
 const Banner = () => {
@@ -51,6 +51,10 @@ const Banner = () => {
     }
 
   }
+  const description = 
+    <span>
+      I'm Martín Calderón a 23-years-old <span className="text-highlighted_text_color"><strong>Full Stack Web Developer</strong></span> who's passionate about all forms of virtual art creation. There's nothing that fascinates me more than well-structured systems that not only function but also have something profound to communicate to the world.
+    </span>
 
   return(
     <>
@@ -62,15 +66,15 @@ const Banner = () => {
                 <span className="tagline">Welcome to my portfolio</span>
                 <h1 className="text-4xl md:text-5xl lg:text-5xl">{"Hi, I'm Martín Calderón! "}
                   <div className="h-16 md:h-[90px] lg:h-12 mt-2">
-                    <span className="wrap text-bubble-gum" style={{ fontSize: `${fontSize}px` }}>{text}</span>
+                    <span className="wrap text-highlighted_text_color" style={{ fontSize: `${fontSize}px` }}>{text}</span>
                   </div>
                 </h1>
-                <p className="mb-2">I'm Martín Calderón a 23-years-old Full Stack Web Developer who's passionate about all forms of virtual art creation. There's nothing that fascinates me more than well-structured systems that not only function but also have something profound to communicate to the world.</p>
-                <p>Follow me on <a className="text-enlace hover:text-enlace_hover" target="_blank" href="https://linktr.ee/martin_calderon"> my social media</a>.</p>
+                <p className="mb-2">{description}</p>
+                <p>Follow me on <a className="text-link_color hover:text-link_color_hover hover:underline" target="_blank" href="https://linktr.ee/martin_calderon"> my social media</a>.</p>
               </div>
               <div>
                 <button className="mt-4" onClick={() => console.log('connect')}>
-                  <label className="text-enlace hover:text-enlace_hover">
+                  <label className="text-link_color hover:text-link_color_hover hover:underline">
                     Let's Connect!
                   </label>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path></svg>

@@ -1,11 +1,18 @@
 
 /** skills **/
+.background-image-left {
+  top:28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
+}
 .skill {
   padding: 0 0 50px 0;
   position: relative;
 }
 .skill-bx {
-  background: #1E1D2B;
+  background: #0F0F17;
   border-radius: 64px;
   text-align: center;
   /* padding: 60px 50px; */
@@ -31,17 +38,8 @@
   width: 90px;
   margin: auto 0 auto 0;
 }
-.background-image-left {
-  top:28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
-}
 
-.owl-carousel {
-  padding-bottom: 20px;
-}
+
 
 .skill li {
   display: flex;
@@ -55,4 +53,18 @@
 
 .skill img {
   align-self: center; /*alinear imagenes centro x*/
+}
+.react-multiple-carousel__arrow--left {
+  left: 0;
+}
+
+.react-multiple-carousel__arrow--right {
+  right: 0;
+}
+.react-multi-carousel-dot-list{
+ /* bottom: -0px !important;  */
+}
+.react-multi-carousel-dot--active button {
+  background-color: white;
+  
 }

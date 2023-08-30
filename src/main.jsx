@@ -12,6 +12,6 @@ document.addEventListener('dragstart', function(evt) {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+      <App />
   </React.StrictMode>,
 )
