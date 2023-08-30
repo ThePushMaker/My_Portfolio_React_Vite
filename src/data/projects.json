@@ -1,0 +1,38 @@
+{
+  "categories": [
+    {
+      "category": "Web Platforms & Applications",
+      "projects": [
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": "projIMG1"
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": "projIMG2"
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": "projIMG3"
+        }
+      ]
+    },
+    {
+      "category": "User Experience (UX)",
+      "projects": [
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": "projIMG1"
+        }
+      ]
+    },
+    {
+      "category": "Community Contributions",
+      "projects": []
+    }
+  ]
+}

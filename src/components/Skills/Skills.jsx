@@ -42,7 +42,7 @@ const responsive = {
 };
 
 const skills_description = 
-  <span>
+  <span className='text-lg'>
     Over the course of more than 8 years of studying programming since my high school days,
     I have learned to work with a diverse range of technologies. Nevertheless, I have particularly
     focused on honing my skills and <span className="text-highlighted_text_color"><strong>specializing in React, Laravel, and Vue.Js</strong></span>, regarding them as

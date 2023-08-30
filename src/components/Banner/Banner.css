@@ -24,7 +24,6 @@
   display: inline-block;
 }
 .banner h1 {
-  /* font-size: 58px; */
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
@@ -32,10 +31,6 @@
   display: block;
 }
 .banner p {
-  color: #bbbbbb;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
   width: 96%;
 }
 .banner button {
