@@ -39,6 +39,13 @@
   margin: auto 0 auto 0;
 }
 
+@media (min-width: 400) {
+  .skill-slider .item img {
+    width: 20px !important;
+
+  }
+}
+
 
 
 .skill li {

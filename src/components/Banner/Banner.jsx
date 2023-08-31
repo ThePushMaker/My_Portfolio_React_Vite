@@ -58,7 +58,7 @@ const Banner = () => {
   return(
     <>
       <section className="banner  px-6 md:px-14 lg:px-20" id="home">
-        <div className="container mx-auto flex  ">
+        <div className="container mx-auto flex">
           <div className="items-center flex flex-wrap">
             <div className="w-full md:w-1/2 xl:w-7/12">
               <div>

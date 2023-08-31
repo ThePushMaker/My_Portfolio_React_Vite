@@ -77,7 +77,7 @@ const Skills = () => {
           <div className='m-auto'>
             <div className='skill-bx px-[28px] py-6 md:py-[50px] md:px-[40px] lg:px-[60px] shadow-2xl'>
               <h2>Skills</h2>
-              <p className='text-start text-sm md:text-[18px] mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'> 
+              <p className='text-center text-sm md:text-[18px] mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'> 
                 {skills_description} 
               </p>
             
