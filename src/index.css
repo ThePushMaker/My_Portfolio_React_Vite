@@ -21,9 +21,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --highlighted_text_color:#ff77e9;
-    --link_color:#69C7FF;
-    --link_color_hover:#97D8FF;
+    --highlighted_text_color:#ff64f2;
+    --link_color:#75b3ff;
+    --link_color_hover:#a7ceff;
     /* --menu-border-color: #ebb2ff;
     --background-color: #051739;
     --text-color: white;

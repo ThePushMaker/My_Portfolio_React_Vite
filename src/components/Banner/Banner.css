@@ -1,4 +1,12 @@
 
+/* p blink cursos */
+.cursor {
+  animation: typedjsBlink 0.7s infinite;
+  -webkit-animation: typedjsBlink 0.7s infinite;
+  animation: typedjsBlink 0.7s infinite;
+}
+
+
 /* Banner */
 .banner {
   margin-top: 0;
@@ -15,8 +23,8 @@
   padding: 8px 10px;
   background: linear-gradient(
     90.21deg,
-    rgba(170, 54, 124, 0.4) -5.91%,
-    rgba(74, 47, 189, 0.4) 111.58%
+    rgba(170, 54, 124, 0.55) -5.91%,
+    rgba(74, 47, 189, 0.55) 111.58%
   );
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;

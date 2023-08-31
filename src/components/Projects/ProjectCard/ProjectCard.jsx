@@ -1,8 +1,8 @@
 import "./ProjectCard.css"
-const ProjectCard = ( { title, description, imgPath } ) => {
-  console.log(title)
-  console.log(description)
-  console.log(imgPath)
+const ProjectCard = ( {title, description, imgPath} ) => {
+  // console.log(title)
+  // console.log(description)
+  // console.log(imgPath)
   
   const openProject = () => {
       console.log("click")

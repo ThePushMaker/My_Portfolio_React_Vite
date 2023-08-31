@@ -2,6 +2,7 @@
   "categories": [
     {
       "category": "Web Platforms & Applications",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores voluptate temporibus, atque ab eos, delectus at ad hic voluptatem veritatis iure, nulla voluptates quod nobis doloremque eaque! Perferendis, soluta",
       "projects": [
         {
           "title": "Business Startup",
@@ -32,6 +33,7 @@
     },
     {
       "category": "User Experience (UX)",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores voluptate temporibus, atque ab eos, delectus at ad hic voluptatem veritatis iure, nulla voluptates quod nobis doloremque eaque! Perferendis, soluta",
       "projects": [
         {
           "title": "Business Startup",
@@ -42,6 +44,7 @@
     },
     {
       "category": "Community Contributions",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores voluptate temporibus, atque ab eos, delectus at ad hic voluptatem veritatis iure, nulla voluptates quod nobis doloremque eaque! Perferendis, soluta",
       "projects": []
     }
   ]
