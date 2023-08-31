@@ -1,20 +1,20 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from '../../assets/img/color-sharp.png';
-import meter1 from '../../assets/img/icons/react.png';
-import meter2 from '../../assets/img/icons/laravel.svg';
-import meter3 from '../../assets/img/icons/vue.png';
-import meter4 from '../../assets/img/icons/js.png';
-import meter5 from '../../assets/img/icons/php.png';
-import meter6 from '../../assets/img/icons/node.svg';
-import meter7 from '../../assets/img/icons/tw.png';
-import meter8 from '../../assets/img/icons/bootstrap.svg';
-import meter9 from '../../assets/img/icons/wp.svg';
-import meter10 from '../../assets/img/icons/sql.png';
-import meter11 from '../../assets/img/icons/css.png';
-import meter12 from '../../assets/img/icons/html.png';
-import meter13 from '../../assets/img/icons/figma.png';
-import meter14 from '../../assets/img/icons/languages.jpg';
+import meter1 from '../../assets/img/skill_icons/react.png';
+import meter2 from '../../assets/img/skill_icons/laravel.svg';
+import meter3 from '../../assets/img/skill_icons/vue.png';
+import meter4 from '../../assets/img/skill_icons/js.png';
+import meter5 from '../../assets/img/skill_icons/php.png';
+import meter6 from '../../assets/img/skill_icons/node.svg';
+import meter7 from '../../assets/img/skill_icons/tw.png';
+import meter8 from '../../assets/img/skill_icons/bootstrap.svg';
+import meter9 from '../../assets/img/skill_icons/wp.svg';
+import meter10 from '../../assets/img/skill_icons/sql.png';
+import meter11 from '../../assets/img/skill_icons/css.png';
+import meter12 from '../../assets/img/skill_icons/html.png';
+import meter13 from '../../assets/img/skill_icons/figma.png';
+import meter14 from '../../assets/img/skill_icons/languages.jpg';
 import './Skills.css';
 
 const responsive = {
@@ -41,6 +41,14 @@ const responsive = {
   }
 };
 
+const skills_description = 
+  <span className='text-lg'>
+    Over the course of more than 8 years of studying programming since my high school days,
+    I have learned to work with a diverse range of technologies. Nevertheless, I have particularly
+    focused on honing my skills and <span className="text-highlighted_text_color"><strong>specializing in React, Laravel, and Vue.Js</strong></span>, regarding them as
+    my primary areas of expertise.
+  </span>
+;
 
 const Skills = () => {
   
@@ -69,11 +77,14 @@ const Skills = () => {
           <div className='m-auto'>
             <div className='skill-bx px-[28px] py-6 md:py-[50px] md:px-[40px] lg:px-[60px] shadow-2xl'>
               <h2>Skills</h2>
-              <p className='text-start text-sm md:text-[18px] mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus at aliquid incidunt voluptatum facere. Iure quis atque voluptate. Nemo assumenda accusamus cupiditate voluptas nobis deleniti labore nostrum. Aperiam, numquam?</p>
+              <p className='text-center text-sm md:text-[18px] mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'> 
+                {skills_description} 
+              </p>
             
             <Carousel
               additionalTransfrom={0}
               arrows
+              autoPlay={true}
               autoPlaySpeed={3000}
               centerMode={false}
               className="owl-carousel owl-theme skill-slider pb-10 mb-4 lg:mb-0"
@@ -97,10 +108,9 @@ const Skills = () => {
               slidesToSlide={1}
               swipeable={true}
               ssr={true} // means to render carousel on server-side.
-              autoPlay={true}
-              customTransition="all 2"
-              transitionDuration={500}
-              containerClass="carousel-container"
+              // customTransition="all"
+              // transitionDuration={10}
+              containerClass=""
             >
               <div className='item'>
                 <img src={meter1} alt="React" />

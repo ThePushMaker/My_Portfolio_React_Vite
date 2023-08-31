@@ -1,6 +1,31 @@
 
 /* navbar */
+@media (min-width: 1280) {
+  
+}
 
+
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  opacity: 0.70;
+  z-index: 1;
+  /* transform: scale(1); */
+}
+.floating-button:hover {
+  transition: 0.4s;
+  transform: scale(1.2);
+  background-color: black;
+}
 
 .navbar{
   padding: 26px 0;

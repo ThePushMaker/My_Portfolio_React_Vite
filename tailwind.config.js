@@ -16,10 +16,13 @@ export default {
       'silver': '#ecebff',
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
-      'enlace': '#a6a0ff',
-      'enlace_hover': '#d8ddff',
+      
+      'highlighted_text_color': 'var(--highlighted_text_color)',
+      'link_color': 'var(--link_color)',
+      'link_color_hover': 'var(--link_color_hover)',
     },
   },
   plugins: [],
 }
+
 

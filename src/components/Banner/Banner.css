@@ -15,8 +15,8 @@
   padding: 8px 10px;
   background: linear-gradient(
     90.21deg,
-    rgba(170, 54, 124, 0.5) -5.91%,
-    rgba(74, 47, 189, 0.5) 111.58%
+    rgba(170, 54, 124, 0.4) -5.91%,
+    rgba(74, 47, 189, 0.4) 111.58%
   );
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
@@ -24,7 +24,6 @@
   display: inline-block;
 }
 .banner h1 {
-  /* font-size: 58px; */
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
@@ -32,10 +31,6 @@
   display: block;
 }
 .banner p {
-  color: #bbbbbb;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
   width: 96%;
 }
 .banner button {
