@@ -1,4 +1,4 @@
-import ProjectCard from "../ProjectCard/ProjectCard.jsx"
+import ProjectItem from "../ProjectItem/ProjectItem.jsx"
 
 const TabPanel = ({category, projects, description}) => {
   return (
@@ -12,18 +12,16 @@ const TabPanel = ({category, projects, description}) => {
         {description}
       </p>
       <div
-        className="grid grid-cols-1 gap-6
-      md:grid-cols-2
-      "
+        className="grid grid-cols-1 gap-6 
+      md:grid-cols-2"
       >
       {console.log(projects)}
       {/* {console.log(categories[0].projects)} */}
         {projects.map((project, index) => {
           console.log(project)
           return (
-              <ProjectCard 
+              <ProjectItem 
                 key={index} 
-                
                 {...project} 
               />
             )

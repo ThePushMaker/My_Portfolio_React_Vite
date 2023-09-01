@@ -9,33 +9,39 @@
 }
 
 :root {
-  /* --menu-border-color: #4895EF;
-  --background-color: #ffffeb;
-  --text-color: black;
-  --active: #d62828;
-  --menu-text-color:#f72585;
-  --menu-text-hover-color:#4cc9f0;
-  --button-background-color: #ff80ba;
-  --button-background-color-hover: #8dafff; */
+  --highlighted_text_color:#ff8fff;
+  --link_color:#94b6ff;
+  --link_color_hover:#b6cdff;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  /* :root {
     --highlighted_text_color:#ff64f2;
     --link_color:#75b3ff;
-    --link_color_hover:#a7ceff;
-    /* --menu-border-color: #ebb2ff;
-    --background-color: #051739;
-    --text-color: white;
-    --active: #f88f00;
-    --menu-text-color:#ff5cf3;
-    --menu-text-hover-color:#83d0ff;
-    --button-background-color: #427bfe;
-    --button-background-color-hover: #c865f9ff; */
-  }
+    --link_color_hover:#ff64f2;
+  } */
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #292934;
+  border-radius: 5px;
+}
 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--link_color);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--highlighted_text_color);
+}
 /* Custom fonts */
 *{
 	user-select: none;

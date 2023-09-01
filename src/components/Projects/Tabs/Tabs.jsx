@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import TabPanel from "../TabPanel/TabPanel.jsx"
+import TabPanelItem from "../TabPanelItem/TabPanelItem.jsx"
 
 const Tabs = ( {categories} ) => {
   const [activeTab, setActiveTab] = useState(1); // Add state to track active tab
@@ -13,8 +13,18 @@ const Tabs = ( {categories} ) => {
       tab.getBoundingClientRect().left -
       tab.parentElement.getBoundingClientRect().left +
       "px";
-  };
-
+      
+      
+    const tabs = document.querySelectorAll(".tab");
+    tabs.forEach((tab) => {
+      tab.classList.remove("texto_blanco");  
+      // tab.classList.add("opacity-90");
+    });
+    const clickedTab = document.getElementById(`tab-${index}`);
+      clickedTab.classList.add("texto_blanco");
+      // clickedTab.classList.remove("opacity-90");
+    };
+    
   const handleTabClick = (index) => {
     setActiveTab(index);
     // Remove transition classes from all panels and indicator
@@ -23,7 +33,7 @@ const Tabs = ( {categories} ) => {
       panel.classList.remove("visible", "opacity-100");
       panel.classList.add("invisible", "opacity-0");
     });
-
+    
     // Apply transition classes to the clicked panel
     const clickedPanel = document.getElementById(`panel-${index}`);
     clickedPanel.classList.remove("invisible", "opacity-0");
@@ -50,7 +60,7 @@ const Tabs = ( {categories} ) => {
   }, [activeTab]);
 
   return (
-    <div>
+    <>
       <div
         id="projects-tabs"
         role="tablist"
@@ -70,7 +80,7 @@ const Tabs = ( {categories} ) => {
                 onClick={() => handleTabClick(index + 1)} // Call the click handler
               >
                 <span
-                  className="text-[14px] font-thin    
+                  className="text-[12px] font-thin text-link_color hover:text-link_color_hover transition duration-300   
                   md:text-[18px] 
                   lg:font-[500]"
                 >
@@ -84,29 +94,21 @@ const Tabs = ( {categories} ) => {
 
       <div
         className="relative rounded-3xl tabs_panel mt-[5px]  tab-pane active show
-        lg:mt-[15px]  
-      "
+        lg:mt-[15px]"
       >
-        {/* {console.log(categories[0])} */}
-        <TabPanel 
-          {...categories[0]}
-        />
-        <div
-          role="tabpanel"
-          id="panel-2"
-          className="tab-panel absolute top-0 invisible opacity-0 p-6 transition duration-1000"
-        >
-          <h3 className="pb-[15px] lg:pb-[20px]">Second tab panel</h3>
-        </div>
-        <div
-          role="tabpanel"
-          id="panel-3"
-          className="tab-panel absolute top-0 invisible opacity-0 p-6 transition duration-1000"
-        >
-          <h3 className="pb-[15px] lg:pb-[20px]">Third tab panel</h3>
-        </div>
+        {categories.map((category, index) => {
+          // console.log(project)
+          return (
+              <TabPanelItem
+                key={index} 
+                index={index}
+                {...category}
+              />
+            )
+        })} 
+
       </div>
-    </div>
+    </>
   );
 };
 
