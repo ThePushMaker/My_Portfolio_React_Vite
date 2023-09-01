@@ -20,23 +20,29 @@ const Contact = () => {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setButtonText("sending...");
-    let response = await fetch(import.meta.env.VITE_APP_NODEMAILER_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    })
     
-    setButtonText("Send")
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200){
-      setStatus ({ success: true, message: "Message was sent successfully" });
+    // validate data
+    if(!formDetails.fullName ||!formDetails.email || !formDetails.message){
+      setStatus({ success: false, message: "Please fill out all the fields" });
     } else {
-      setStatus({ success: false, message: "something went wrong, please try again later." });
+      e.preventDefault();
+      setButtonText("sending...");
+      let response = await fetch(import.meta.env.VITE_APP_NODEMAILER_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(formDetails),
+      })
+      
+      setButtonText("Send")
+      let result = await response.json();
+      setFormDetails(formInitialDetails);
+      if (result.code == 200){
+        setStatus ({ success: true, message: "Message was sent successfully" });
+      } else {
+        setStatus({ success: false, message: "something went wrong, please try again later." });
+      }
     }
   };
   
@@ -50,7 +56,7 @@ const Contact = () => {
             </div>
           </div>
           <div className='w-full md:w-1/2'>
-            <h2>Get In Touch</h2>
+            <h2>Let{"'"}s Make it Happen!</h2>
             <form onSubmit={handleSubmit}>
               <div className='flex flex-wrap'>
                 <div className='w-full'>

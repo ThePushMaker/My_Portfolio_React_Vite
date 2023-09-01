@@ -12,18 +12,24 @@ app.use(cors());
 app.use(express.json());
 app.use("/", router);
 app.listen(5000, () => console.log("Server Running"));
-console.log(process.env.REACT_APP_NODEMAILER_USER);
+// console.log(process.env.REACT_APP_NODEMAILER_USER);
 // console.log(process.env.EMAIL_PASS);
 
 const contactEmail = nodemailer.createTransport({
-  service: 'hotmail',
+  service: 'outlook',
+  host: "smtp.office365.com", // hostname
+  port: 587, // port for secure SMTP
+  secureConnection: true,
+  requiresAuth: true,
+  domains: ["hotmail.com", "outlook.com"],
+  tls: 'STARTTLS',
   auth: {
     user: process.env.REACT_APP_NODEMAILER_USER,
     pass: process.env.REACT_APP_NODEMAILER_PASS
   },  
-  tls: {
-    rejectUnauthorized: false // Desactivar la verificación de certificados
-  }  
+  // tls: {
+  //   rejectUnauthorized: true  // Desactivar la verificación de certificados
+  // }  
 });
 
 contactEmail.verify((error) => {
@@ -42,13 +48,13 @@ router.post("/contact", (req, res) => {
   const mail = {
     from: process.env.REACT_APP_NODEMAILER_USER,
     to: process.env.REACT_APP_NODEMAILER_RECIPIENT,
-    subject: "¡TE CONTACTARON POR TRABAJOOO!- PORTAFOLIO",
+    subject: "¡TE CONTACTARON POR TRABAJO!- PORTAFOLIO",
     html: `
-      Buen día ¡Felicidades, has sido contactado tu formulario de tu portafolio web!
+      ¡Buen día! ¡Felicidades, has sido contactado tu formulario de tu portafolio web!
       Los datos del mensaje del cliente son los siguientes:
-      <h1>fulNname: ${fullName}</h1>
-      <h2>Email: ${email}</h2>
-      <p>Message: ${message}</p>
+      <h1>Full Name: ${fullName}</h1>
+      <h3>Email: ${email}</h3>
+      <h3>Message: ${message}</h3>
       `
   };
   

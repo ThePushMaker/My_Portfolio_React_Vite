@@ -79,12 +79,14 @@ const Banner = () => {
                 <p>Follow me on <a className="text-link_color hover:text-link_color_hover" target="_blank" rel="noreferrer" href="https://linktr.ee/martin_calderon"> my social media</a>.</p>
               </div>
               <div>
-                <button className="mt-4" onClick={() => console.log('connect')}>
-                  <label className="text-link_color hover:text-link_color_hover">
-                    <a href="#contact">{"Let's Connect!"}</a>
-                  </label>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path fillRule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path></svg>
-                </button>
+                <a href="#contact">
+                  <button className="mt-4" onClick={() => console.log('connect')}>
+                    <label className="text-link_color hover:text-link_color_hover">
+                      {"Let's Connect!"}
+                    </label>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path fillRule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path></svg>
+                  </button>
+                </a>
               </div>
             </div>
             <div className="w-full md:w-1/2 lg:w-5/12 mt-16 md:pl-6">
