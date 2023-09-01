@@ -152,11 +152,11 @@ select:focus {
 }
 
 p.success {
-  color: green;
+  color: rgb(146, 255, 146);
 }
 
 p.danger {
-  color: red;
+  color: rgb(255, 99, 99);
 }
 
 

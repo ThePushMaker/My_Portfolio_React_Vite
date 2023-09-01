@@ -67,7 +67,7 @@ const Banner = () => {
       <section className="banner  px-6 md:px-14 lg:px-20" id="home">
         <div className="container mx-auto flex">
           <div className="items-center flex flex-wrap">
-            <div className="w-full md:w-1/2 xl:w-7/12">
+            <div className="w-full md:w-1/2 lg:w-7/12">
               <div>
                 <span className="tagline">Welcome to my portfolio</span>
                 <h1 className="text-4xl md:text-5xl lg:text-5xl">{"Hi, I'm Martín Calderón! "}
@@ -81,13 +81,13 @@ const Banner = () => {
               <div>
                 <button className="mt-4" onClick={() => console.log('connect')}>
                   <label className="text-link_color hover:text-link_color_hover">
-                    {"Let's Connect!"}
+                    <a href="#contact">{"Let's Connect!"}</a>
                   </label>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path fillRule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path></svg>
                 </button>
               </div>
             </div>
-            <div className="w-full md:w-1/2 xl:w-5/12 mt-16 md:pl-6">
+            <div className="w-full md:w-1/2 lg:w-5/12 mt-16 md:pl-6">
               <div>
                 <img className="w-64 m-auto md:w-80 lg:m-0 lg:w-[400px] rounded-full opacity-[92%] shadow-2xl" src={headerImg} alt="Header Img" />
               </div>

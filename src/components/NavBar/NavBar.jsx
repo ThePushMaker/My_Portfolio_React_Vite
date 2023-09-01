@@ -25,11 +25,6 @@ const NavBar = () => {
     setActiveLink(value);
   };
 
-  // pendiente
-  const connect = () => {
-    console.log("connect");
-  };
-
   return (
     <>
     <div>
@@ -90,9 +85,11 @@ const NavBar = () => {
                   <img src={navIcon3} alt="navIcon3" />
                 </a>
               </div>
-              <button className="" onClick={connect}>
-                <span>{'< '}CONTACT ME{'  />'}</span>
-              </button>
+              <a href="#contact">
+                <button className="">
+                  <span>{'< '}CONTACT ME{'  />'}</span>
+                </button>
+              </a>
             </div>
           
         </div>
