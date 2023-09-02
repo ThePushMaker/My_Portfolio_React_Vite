@@ -2,9 +2,7 @@ import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import Newsletter from '../Newsletter/Newsletter';
 
 const MailchimpForm = () => {
-  const postURL = `${import.meta.env.VITE_APP_MAILCHIMP_URL}
-    ?u=${import.meta.env.VITE_APP_MAILCHIMP_U}
-    &id=${import.meta.env.VITE_APP_MAILCHIMP_ID}`;
+  const postURL = `https://gmail.us21.list-manage.com/subscribe/post?u=3db304085fd3fc78def0a405d&id=c6f4155918`;
 
   return (
     <>

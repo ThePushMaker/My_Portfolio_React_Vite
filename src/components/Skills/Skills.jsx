@@ -51,25 +51,6 @@ const skills_description =
 ;
 
 const Skills = () => {
-  
-  const images = [
-    {
-      id: 1,
-      src: meter1,
-      alt: "First Slide"
-    },
-    {
-      id: 2,
-      src: meter2,
-      alt: "Second Slide"
-    },
-    {
-      id: 3,
-      src: meter3,
-      alt: "Third Slide"
-    }
-  ]
-
   return(
     <>
       <section className='skill' id='skills'>

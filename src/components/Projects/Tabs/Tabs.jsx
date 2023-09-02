@@ -38,6 +38,11 @@ const Tabs = ( {categories} ) => {
     const clickedPanel = document.getElementById(`panel-${index}`);
     clickedPanel.classList.remove("invisible", "opacity-0");
     clickedPanel.classList.add("visible", "opacity-100");
+    
+    
+    // const section = document.getElementById(`projects`);
+    // section.classList.add("height", "5000px");
+    
   };
 
   useEffect(() => {
@@ -93,7 +98,7 @@ const Tabs = ( {categories} ) => {
       </div>
 
       <div
-        className="relative rounded-3xl tabs_panel mt-[5px]  tab-pane active show
+        className="tabs_panel relative rounded-3xl mt-[5px] active show bg-[red]
         lg:mt-[15px]"
       >
         {categories.map((category, index) => {

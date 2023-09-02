@@ -1,18 +1,15 @@
-
-
 /** footer **/
 .footer {
   padding: 0 0 50px 0;
-  background-image: url('./assets/img/footer-bg.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('../../assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .newsletter-bx {
-  background: #ffffff;
+  background: #e3e3e6;
   border-radius: 55px;
-  color: #121212;
-  padding: 85px 125px;
+  color: rgb(0, 0, 0);
   margin-bottom: 80px;
   margin-top: -122px;
 }
@@ -22,7 +19,7 @@
   line-height: 1.2em;
 }
 .new-email-bx {
-  background: #fff;
+  background: #161621;
   padding: 5px;
   border-radius: 20px;
   position: relative;
@@ -32,7 +29,8 @@
 }
 .new-email-bx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
+  background-color: #161621;
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -43,7 +41,7 @@
 }
 .new-email-bx::after {
   content: "";
-  background: #fff;
+  background: #e3e3e6;
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -53,21 +51,14 @@
   right: 0;
 }
 .new-email-bx input {
+  padding: 18px 26px;
   width: 100%;
-  color: #121212;
+  color: black;
   font-weight: 500;
   background: transparent;
   border: 0;
-  padding: 0 15px;
 }
-.new-email-bx button {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  padding: 20px 65px;
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  border-radius: 18px;
-}
+
 .footer img {
   width: 26%;
 }
@@ -79,4 +70,49 @@
   margin-top: 20px;
 }
 
+.newsletter_button {
+  font-weight: 700;
+  color: black;
+  font-size: 18px;
+  margin-top: 25px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+  border: 1px solid black;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 20px 65px;
+  letter-spacing: 0.5px;
+}
+.newsletter_button span {
+  z-index: 1;
+  position: relative;
+}
+.newsletter_button:hover {
+  color: white;
+}
+.newsletter_button::before {
+  content: "";
+  border-radius: 20px;
+  background-color: black;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+.newsletter_button:hover::before {
+  width: 100%;
+}
 
+.left-50{
+  left: 50%;
+}
+.alert_green {
+  color: var(--success_dark_color);
+}
+.alert_red {
+  color: var(--danger_dark_color);
+}

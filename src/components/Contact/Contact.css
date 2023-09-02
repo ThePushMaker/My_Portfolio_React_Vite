@@ -36,7 +36,7 @@
   color: #fff;
 }
 .contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
-  color: #0a0018;
+  color: #000000;
   opacity: 0.8;
 }
 .contact form button {
@@ -44,7 +44,6 @@
   color: #ffffff;
   font-size: 18px;
   margin-top: 25px;
-  border-radius: 0;
   position: relative;
   transition: 0.3s ease-in-out;
   width: 38%;
@@ -62,8 +61,8 @@
 }
 .contact form button::before {
   content: "";
-  border-radius: 20px;
-  background: #FFF;
+  border-radius: 18px;
+  background: #ffffff;
   width: 0;
   height: 100%;
   position: absolute;

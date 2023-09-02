@@ -1,5 +1,3 @@
-import '../../components/Footer/Footer.css'
-
 import './Footer.css'
 import MailchimpForm from './MailchimpForm/MailchimpForm';
 import logo from '../../assets/img/logo.svg';
@@ -16,7 +14,7 @@ const Footer = () => {
           <div className='w-full md:w-1/2'>
             <img src={logo} alt="logo" />
           </div>
-          <div className='w-full md:w-1/2 text-center text-sm text-end'>
+          <div className='w-full md:w-1/2 text-sm text-end'>
             <div className="social-icon">
                 <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/martin-calderon-dev">
                   <img src={navIcon1} alt="navIcon1" />

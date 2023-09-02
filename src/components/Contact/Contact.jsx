@@ -20,12 +20,11 @@ const Contact = () => {
   }
 
   const handleSubmit = async (e) => {
-    
+    e.preventDefault();
     // validate data
     if(!formDetails.fullName ||!formDetails.email || !formDetails.message){
       setStatus({ success: false, message: "Please fill out all the fields" });
     } else {
-      e.preventDefault();
       setButtonText("sending...");
       let response = await fetch(import.meta.env.VITE_APP_NODEMAILER_URL, {
         method: "POST",
@@ -84,7 +83,7 @@ const Contact = () => {
                 </div>
                 <div className='w-full'>
                   <div className='flex justify-center'>
-                    <button type="submit" className='bg-red-400' >
+                    <button type="submit">
                     <span>{buttonText}</span>
                     </button>
                   </div>
@@ -92,7 +91,7 @@ const Contact = () => {
                 <div className='w-full'>
                   {
                     <div className='w-full'>
-                      <div className='flex justify-center'>
+                      <div className='flex justify-center pt-2'>
                         <p className={`${status.success === false ? 'danger' : 'success'} text-center`}>
                           {status.message}
                         </p>
