@@ -27,12 +27,7 @@
   transition: 0.3s ease-in-out;
 }
 
-.tabs_panel span {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.8px;
-}
+
 .background-image-right {
   top: 20%;
   position: absolute;
@@ -50,3 +45,8 @@
   height: 0;
   transition: 0.4s ease-in-out;
 }
+
+.texto_blanco span {
+  color: white !important;
+}
+

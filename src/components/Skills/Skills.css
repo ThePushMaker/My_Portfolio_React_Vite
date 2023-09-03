@@ -12,7 +12,7 @@
   position: relative;
 }
 .skill-bx {
-  background: #0F0F17;
+  background: #161621;
   border-radius: 64px;
   text-align: center;
   /* padding: 60px 50px; */
@@ -46,8 +46,6 @@
   }
 }
 
-
-
 .skill li {
   display: flex;
   justify-content: center;
@@ -67,9 +65,6 @@
 
 .react-multiple-carousel__arrow--right {
   right: 0;
-}
-.react-multi-carousel-dot-list{
- /* bottom: -0px !important;  */
 }
 .react-multi-carousel-dot--active button {
   background-color: white;
