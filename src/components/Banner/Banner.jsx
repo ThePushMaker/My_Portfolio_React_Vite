@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import headerImg from "../../assets/img/pfp/difuminado2.png";
 import './Banner.css';
+import TypeAnimation from './TypeAnimation/TypeAnimation'
 
 const description = 
 <span>
@@ -14,53 +15,16 @@ const description =
 </span>
 
 const Banner = () => {
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 1700;
   const [fontSize, setFontSize] = useState(16); // Tamaño de fuente inicial en píxeles
 
-  const toRotate = [
-                      'Full Stack Web Developer',
-                      'Web Designer', 
-                      'YouTube Educator',
-                      'Code Blog Author',
-                    ]
   useEffect(() => {
     // Calcula el nuevo tamaño de fuente basado en la longitud del texto
     const newFontSize = Math.min(35, 700 / text.length); // h,w; Ajusta los valores mínimo y máximo según tus necesidades
     setFontSize(newFontSize);
   }, [text]);
-  
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-    return () => clearInterval(ticker);
-  }, [text]);
 
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting ? 
-                    ( fullText.substring(0, text.length - 1 )) 
-                    : 
-                    ( fullText.substring(0, text.length + 1 ));
-    setText(updatedText);
-    if (isDeleting) {
-      setDelta(prevDelta => prevDelta / 2);
-    }
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setDelta(period);
-    } else if (isDeleting && updatedText === '') {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setDelta(250);
-    }
 
-  }
 
   return(
     <>
@@ -70,9 +34,9 @@ const Banner = () => {
             <div className="w-full md:w-1/2 lg:w-7/12">
               <div>
                 <span className="tagline">Welcome to my portfolio</span>
-                <h1 className="text-4xl md:text-5xl lg:text-5xl">{"Hi, I'm Martín Calderón! "}
+                <h1 className="text-4xl md:text-5xl lg:text-5xl">{"Hi, I'm Martín Calderón! "}                           
                   <div className="h-16 md:h-[90px] lg:h-12 mt-2">
-                    <span className="wrap text-highlighted_text_color" style={{ fontSize: `${fontSize}px` }}>{text}</span>
+                    <span className="wrap text-highlighted_text_color" style={{ fontSize: `${fontSize}px` }}>{ <TypeAnimation />}</span>
                   </div>
                 </h1>
                 <p className="mb-2">{description}</p>

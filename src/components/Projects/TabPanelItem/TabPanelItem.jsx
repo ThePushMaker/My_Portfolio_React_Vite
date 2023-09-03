@@ -9,8 +9,7 @@ const TabPanel = (props) => {
 
   const toggleMostrarMas = () => {
     // setMostrarMas(!mostrarMas);
-    console.log("click en mostrar más");
-    
+    console.log("click en mostrar más");    
   };
 
   return (
