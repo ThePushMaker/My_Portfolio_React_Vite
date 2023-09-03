@@ -98,7 +98,7 @@ const Tabs = ( {categories} ) => {
       </div>
 
       <div
-        className="tabs_panel relative rounded-3xl mt-[5px] active show bg-[red]
+        className="tabs_panel relative rounded-3xl mt-[5px] active show
         lg:mt-[15px]"
       >
         {categories.map((category, index) => {

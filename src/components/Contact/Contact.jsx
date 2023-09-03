@@ -82,7 +82,7 @@ const Contact = () => {
                   ></textarea>
                 </div>
                 <div className='w-full'>
-                  <div className='flex justify-center'>
+                  <div className='button_transparent_rounded flex justify-center'>
                     <button type="submit">
                     <span>{buttonText}</span>
                     </button>

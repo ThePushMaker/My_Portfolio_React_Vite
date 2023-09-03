@@ -45,10 +45,8 @@
   height: 0;
   transition: 0.4s ease-in-out;
 }
-/* .tab span {
-  color: white !important;
-} */
 
 .texto_blanco span {
   color: white !important;
 }
+

@@ -26,7 +26,6 @@
   transition: 0.3s ease-in-out;
 }
 .contact form input:focus, .contact form textarea:focus {
-  /* background: rgba(255, 255, 255, 1); */
   background: rgb(198, 162, 255);
   color: #1e0044;
 }
@@ -39,39 +38,3 @@
   color: #000000;
   opacity: 0.8;
 }
-.contact form button {
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 18px;
-  margin-top: 25px;
-  position: relative;
-  transition: 0.3s ease-in-out;
-  width: 38%;
-  border: 1px solid #fff;
-  padding: 18px 34px;
-  background-color: transparent;
-  border-radius: 20px;
-}
-.contact form button span {
-  z-index: 1;
-  position: relative;
-}
-.contact form button:hover {
-  color: black;
-}
-.contact form button::before {
-  content: "";
-  border-radius: 18px;
-  background: #ffffff;
-  width: 0;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  transition: 0.3s ease-in-out;
-}
-.contact form button:hover::before {
-  width: 100%;
-}
-
