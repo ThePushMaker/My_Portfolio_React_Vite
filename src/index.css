@@ -10,8 +10,8 @@
 
 :root {
   --highlighted_text_color:#ff8fff;
-  --link_color:#94b6ff;
-  --link_color_hover:#b6cdff;
+  --link_color:#02b2f4;
+  --link_color_hover:#5dcbf3;
   --success_color:rgb(146, 255, 146);
   --success_dark_color:rgb(46, 107, 46);
   --danger_color:rgb(255, 99, 99);

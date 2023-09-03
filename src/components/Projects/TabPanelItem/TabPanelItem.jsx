@@ -16,7 +16,7 @@ const TabPanel = (props) => {
     <div
       role="tabpanel"
       id={`panel-${props.index+1}`}
-      className={`${props.index !== 0 ? 'absolute top-0 invisible opacity-0' : ''} tab-panel pt-6 transition duration-1000 max-h-screen`}
+      className={`${props.index !== 0 ? 'absolute top-0 invisible opacity-0' : ''} tab-panel pt-6 transition duration-1000 h-[800px]`}
     >
       <h3 className="pb-[15px] lg:pb-[20px] text-highlighted_text_color">{props.category}</h3>
       <p className="text-center m-auto pb-[25px] lg:pb-[35px] lg:w-[70%]">
@@ -27,7 +27,7 @@ const TabPanel = (props) => {
         md:grid-cols-2 lg:grid-cols-3 grid-rows-3"
       >
       
-      {console.log(props.projects)}
+      {/* {console.log(props.projects)} */}
 
         {mostrarRegistros.map((project, index) => {
           return (
@@ -40,7 +40,7 @@ const TabPanel = (props) => {
         
       </div>
       
-      <div className="relative top-[-260px]">
+      <div className="relative top-[-265px]">
         {props.projects.length > 6 && (
           <button  className="button_transparent_rounded flex m-auto justify-center" onClick={toggleMostrarMas}>
             <span>
