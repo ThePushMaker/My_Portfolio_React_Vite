@@ -1,6 +1,5 @@
 /** footer **/
 .footer {
-  padding: 0 0 50px 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('../../assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;
@@ -74,7 +73,6 @@
   font-weight: 700;
   color: black;
   font-size: 18px;
-  margin-top: 25px;
   position: relative;
   transition: 0.3s ease-in-out;
   width: 100%;

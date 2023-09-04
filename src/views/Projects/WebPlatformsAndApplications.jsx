@@ -1,7 +1,12 @@
+
 const WebPlatformsAndApplications = () => {
 
   return(
-    <div>WebPlatformsAndApplications</div>
+    <>
+      <div>
+        <h1>WebPlatformsAndApplications</h1>
+      </div>
+    </>
   );
 }
 

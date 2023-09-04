@@ -200,3 +200,13 @@ p.danger {
 }
 
 
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Esto asegura que la altura del contenedor sea al menos igual a la altura de la ventana gráfica. */
+}
+
+footer {
+  margin-top: auto; /* Empuja el pie de página hacia abajo para que quede en la parte inferior */
+}

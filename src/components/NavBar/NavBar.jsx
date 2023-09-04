@@ -4,7 +4,7 @@ import navIcon1 from "../../assets/img/nav-icon1.svg";
 import navIcon2 from "../../assets/img/nav-icon2.svg";
 import navIcon3 from "../../assets/img/nav-icon3.svg";
 import "./NavBar.css";
-// animaciones p
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [activateLink, setActiveLink] = useState('home');
@@ -32,9 +32,10 @@ const NavBar = () => {
         <div className="mx-auto flex justify-between container px-6 md:px-14 lg:px-20">
           
             <div className="flex items-center w-full justify-between lg:w-auto lg:justify-start">
-              <a href="#home" className="navbar-brand">
+            
+              <Link to="/#home" className="navbar-brand">
                 <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-[140px] lg:mr-8"/>
-              </a>
+              </Link>
               {/* menú hamburguesa ocultable */}
               <button
                 className="navbar-toggler-icon visible flex lg:invisible lg:hidden"
@@ -43,15 +44,13 @@ const NavBar = () => {
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="invisible hidden lg:flex lg:visible">
-                <a
-                  href="#home"
-                  className={`${
+                <Link to="/#home" className={`${
                     activateLink === "home" ? "active" : ""
                   } navbar-link`}
                   onClick={() => onUpdateActiveLink("home")}
                 >
                   Home
-                </a>
+                </Link>
                 <a
                   href="#skills"
                   className={`${

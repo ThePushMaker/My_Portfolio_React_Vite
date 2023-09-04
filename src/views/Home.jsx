@@ -9,14 +9,14 @@ function Home() {
   
   return (
     <>
-      <NavBar />
-      <div className=''>        
+      <NavBar />      
+      <div className="app-container">
         <Banner />
         <Skills />
         <Projects />
         <Contact />
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }
