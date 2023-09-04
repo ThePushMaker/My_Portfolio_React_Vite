@@ -1,22 +1,18 @@
-import NavBar from './components/NavBar/NavBar';
-import Banner from './components/Banner/Banner';
-import Skills from './components/Skills/Skills';
-import Projects from './components/Projects/Projects';
-import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
+import { Routes, Route } from "react-router-dom"
+import Home from './views/Home'
+import WebPlatformsAndApplications from "./views/Projects/WebPlatformsAndApplications";
+import UserExperienceUX from "./views/Projects/UserExperienceUX";
+import CommunityContributions from "./views/Projects/CommunityContributions";
 
 function App() {
-  
   return (
     <>
-        <NavBar />
-      <div className=''>        
-        <Banner />
-        <Skills />
-        <Projects />
-        <Contact />
-        <Footer />
-      </div>
+       <Routes>
+        <Route path="/" element={ <Home /> } />
+        <Route path="projects/web-platforms-and-applications" element={ <WebPlatformsAndApplications /> } />
+        <Route path="projects/user-experience-ux" element={ <UserExperienceUX /> } />
+        <Route path="projects/community-contributions" element={ <CommunityContributions /> } />
+      </Routes>
     </>
   );
 }
