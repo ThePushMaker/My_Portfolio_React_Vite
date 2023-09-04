@@ -15,12 +15,13 @@ const ProjectItem = ( {title, description, imgPath} ) => {
     <motion.div animate={{scale: [0, 1]}} transition={{duration: 0.5}} className="mx-auto">
       <a>
         <div className="proj-imgbx 
-          md:max-h-[230px]
+          max-h-[280px]
+          md:max-h-[210px]
           lg:max-h-[260px]" 
           onClick={openProject}
         >
           <img src={imgPath} alt={title} 
-            className="text-center min-h-[300px]"
+            className="text-center min-h-[280px] md:min-h-[250px] lg:min-h-[300px]"
           />
           <div className="proj-txtx">
             <h4>{title}</h4>

@@ -25,7 +25,7 @@ const TabPanel = (props) => {
         className={`${props.activeTab === props.index+1 ? '' : 'opacity-0 hidden'} `}
       >
         <h3 className="pb-[15px] lg:pb-[20px] text-highlighted_text_color">{props.category}</h3>
-        <p className="text-center m-auto pb-[25px] lg:pb-[35px] lg:w-[70%]">
+        <p className="text-center m-auto pb-[25px] w-[85%] md:w-[90%] lg:pb-[35px] lg:w-[70%]">
           {props.description}
         </p>
         <div

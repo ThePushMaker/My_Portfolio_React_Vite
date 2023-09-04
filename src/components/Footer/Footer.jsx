@@ -9,13 +9,12 @@ import { useLocation } from "react-router-dom";
 
 const Footer = () => {
   let location = useLocation();
-  console.log(location.pathname) 
+  // console.log(location.pathname) 
   return(
     <footer className='footer px-6 md:px-14 lg:px-20'>
       <div className='container mx-auto pt-16 pb-16'>
         <div className='flex flex-wrap items-center'>
           {location.pathname==='/' && <MailchimpForm />}
-          
           <div className='w-full md:w-1/2'>
             <img src={logo} alt="logo" />
           </div>

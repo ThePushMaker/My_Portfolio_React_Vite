@@ -7,15 +7,10 @@
   width: 40%;
   z-index: -4;
 }
-.skill {
-  padding: 0 0 50px 0;
-  position: relative;
-}
 .skill-bx {
   background: #161621;
   border-radius: 64px;
   text-align: center;
-  /* padding: 60px 50px; */
   margin-top: -60px;
 }
 .skill h2 {

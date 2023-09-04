@@ -16,12 +16,12 @@ const Projects = () => {
 
   return (
     <>
-      <section className="project px-4 md:px-14 lg:px-20 pt-8 pb-16 lg:py-20" id="projects">
+      <section className="project px-4 md:px-14 lg:px-24 pt-8 pb-16 lg:py-20" id="projects">
         <div className="container m-auto">
           <div className="w-full">
             <h2>Projects</h2>
-            <p className="mt-[14px] mx-auto mb-[35px] text-center w-[90%]
-            lg:w-[70%]">
+            <p className="mt-[14px] mx-auto mb-[35px] text-center w-[90%] md:w-[100%]
+            lg:mx-30">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
               doloremque adipisci unde voluptatum numquam aspernatur architecto
               dolores commodi cum, ullam vitae! Possimus voluptatibus quasi

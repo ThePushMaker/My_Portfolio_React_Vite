@@ -28,7 +28,7 @@ const Banner = () => {
 
   return(
     <>
-      <section className="banner px-6 md:px-14 lg:px-20 mt-0 pt-[260px] pb-[100px]" id="home">
+      <section className="banner px-6 md:px-14 lg:px-24 mt-0 pt-[260px] pb-[100px]" id="home">
         <div className="container mx-auto flex">
           <div className="items-center flex flex-wrap">
             <div className="w-full md:w-1/2 lg:w-7/12">
@@ -53,9 +53,9 @@ const Banner = () => {
                 </a>
               </div>
             </div>
-            <div className="w-full md:w-1/2 lg:w-5/12 mt-16 md:pl-6">
-              <div>
-                <img className="w-64 m-auto md:w-80 lg:m-0 lg:w-[400px] rounded-full opacity-[92%] shadow-2xl" src={headerImg} alt="Header Img" />
+            <div className=" md:w-1/2 lg:w-5/12 mt-16 mx-auto">
+              <div className="">
+                <img className="w-64 md:w-80 lg:w-[400px] rounded-full opacity-[92%] shadow-2xl ml-auto" src={headerImg} alt="Header Img" />
               </div>
             </div>
           </div>
