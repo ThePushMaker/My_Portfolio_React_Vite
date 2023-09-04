@@ -4,9 +4,7 @@
 
 
 
-.indicator {
-  transition: left .4s;
-}
+
 
 :root {
   --highlighted_text_color:#ff8fff;

@@ -1,59 +1,45 @@
-import { useEffect, useState } from "react";
-import TabPanelItem from "../TabPanelItem/TabPanelItem.jsx"
+import TabPanelItem from '../TabPanelItem/TabPanelItem';
+import { useEffect, useState } from 'react';
 
-const Tabs = ( {categories} ) => {
-  const [activeTab, setActiveTab] = useState(1); // Add state to track active tab
+
+const Tabs = ({categories}) => {
+  // Estado local para rastrear la pestaña activa
+  const [activeTab, setActiveTab] = useState(1);
 
   const updateIndicator = (index) => {
-    // Update indicator position
+    // Get the indicator element and the clicked tab
     const indicator = document.querySelector(".indicator");
-    const tab = document.getElementById(`tab-${index}`);
-    indicator.style.width = tab.getBoundingClientRect().width + "px";
-    indicator.style.left =
-      tab.getBoundingClientRect().left -
-      tab.parentElement.getBoundingClientRect().left +
-      "px";
-      
-      
+    const clickedTab = document.getElementById(`tab-${index}`);
+    
+    // Calculate the indicator width and left position
+    const tabRect = clickedTab.getBoundingClientRect();
+    const parentRect = clickedTab.parentElement.getBoundingClientRect();
+    
+    indicator.style.width = `${tabRect.width}px`;
+    indicator.style.height = `${tabRect.height}px`;
+    indicator.style.left = `${tabRect.left - parentRect.left}px`;      
+    indicator.style.top = `${tabRect.top - parentRect.top}px`;      
+    
+    // Remove 'texto_blanco' class from all tabs
     const tabs = document.querySelectorAll(".tab");
     tabs.forEach((tab) => {
-      tab.classList.remove("texto_blanco");  
-      // tab.classList.add("opacity-90");
+      tab.classList.remove("texto_blanco");
     });
-    const clickedTab = document.getElementById(`tab-${index}`);
-      clickedTab.classList.add("texto_blanco");
-      // clickedTab.classList.remove("opacity-90");
-    };
-    
-  const handleTabClick = (index) => {
-    setActiveTab(index);
-    // Remove transition classes from all panels and indicator
-    const panels = document.querySelectorAll(".tab-panel");
-    panels.forEach((panel) => {
-      panel.classList.remove("visible", "opacity-100");
-      panel.classList.add("invisible", "opacity-0");
-    });
-    
-    // Apply transition classes to the clicked panel
-    const clickedPanel = document.getElementById(`panel-${index}`);
-    clickedPanel.classList.remove("invisible", "opacity-0");
-    clickedPanel.classList.add("visible", "opacity-100");
-    
-    
-    // const section = document.getElementById(`projects`);
-    // section.classList.add("height", "5000px");
-    
+
+    // Add 'texto_blanco' class to the clicked tab
+    clickedTab.classList.add("texto_blanco");
   };
 
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+  };
+  
   useEffect(() => {
     updateIndicator(activeTab);
 
     // Función que se ejecutará cuando cambie el tamaño de la pantalla
     const handleResize = () => {
-      // Update indicator position
       updateIndicator(activeTab);
-
-      // Coloca aquí el código que deseas ejecutar cuando cambie el tamaño
     };
     // Agregar un event listener al evento 'resize' del objeto window
     window.addEventListener("resize", handleResize);
@@ -64,57 +50,58 @@ const Tabs = ( {categories} ) => {
     };
   }, [activeTab]);
 
-  return (
-    <>
-      <div
-        id="projects-tabs"
-        role="tablist"
-        aria-label="tabs"
-        className="relative overflow-hidden shadow-2xl shadow-900/20 nav nav-pills h-[90px] 
+  return(
+    <div>
+      {/* Botones de pestaña */}
+      <div className="relative flex space-x-4
+        shadow-2xl shadow-900/20 nav nav-pills h-[180px] 
         md:h-[75px] 
         lg:w-[72%]"
       >
-        <div className="flex h-[100%]">
-          <div className="indicator h-[100%] rounded-full shadow-md"></div>
-          {categories.map((tab, index) => {
-            return (
-              <button
-                key={index}
-                id={`tab-${index + 1}`}
-                className="w-[100%] tab nav-item nav-link"
-                onClick={() => handleTabClick(index + 1)} // Call the click handler
-              >
-                <span
-                  className="text-[12px] font-thin text-link_color hover:text-link_color_hover transition duration-300   
-                  md:text-[18px] 
-                  lg:font-[500]"
+        <div className="flex h-[100%] w-[100%] flex-wrap md:flex-nowrap">
+        <div className="indicator h-[100%] rounded-full shadow-md"></div>
+            {categories.map((tab, index) => {
+              return (
+                <button
+                  key={index}
+                  id={`tab-${index + 1}`}
+                  className="w-[100%] tab nav-item nav-link"
+                  onClick={() => handleTabClick(index+1)}
                 >
-                  {tab.category}
-                </span>
-              </button>
-            );
-          })}
-        </div>
+                  <span
+                    className="text-md font-thin text-link_color hover:text-link_color_hover 
+                    md:text-[18px] 
+                    lg:font-[500]"
+                    >
+                    {tab.category}
+                  </span>
+                </button>
+              );
+            })}
+        
+        </div>  
+        
       </div>
 
-      <div
-        className="tabs_panel relative rounded-3xl mt-[5px] active show
-        lg:mt-[15px]"
-      >
+      <div className='mt-8'>
+        {/* Contenido de las pestañas */}
+  
         {categories.map((category, index) => {
           // console.log(project)
           return (
-              <TabPanelItem
-                key={index} 
-                index={index}
-                {...category}
-              />
+            <TabPanelItem
+            key={index} 
+            index={index}
+            activeTab={activeTab}
+            {...category}
+            />
             )
-        })} 
-
+          })} 
       </div>
-    </>
+      
+
+    </div>
   );
-};
+}
 
 export default Tabs;

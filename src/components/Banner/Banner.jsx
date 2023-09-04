@@ -3,7 +3,6 @@ import headerImg from "../../assets/img/pfp/difuminado2.png";
 import './Banner.css';
 import TypeAnimation from './TypeAnimation/TypeAnimation'
 
-
 const description = 
 <span>
   I{"'"}m Martín Calderón a 23-years-old 
@@ -29,11 +28,6 @@ const Banner = () => {
 
   return(
     <>
-    
-
-    
-    
-    
       <section className="banner  px-6 md:px-14 lg:px-20" id="home">
         <div className="container mx-auto flex">
           <div className="items-center flex flex-wrap">
