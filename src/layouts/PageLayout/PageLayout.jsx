@@ -1,20 +1,29 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
-const PageLayout = (props) => {
+import colorSharp2 from "../../assets/img/color-sharp2.png";
+
+const PageLayout = () => {
 
   return(
     <>
       <NavBar />
-        <div className="app-container">
+        <div className="app-container" id="top">
         
-          <section className="mt-0 pt-[170px] pb-[100px] container px-4 md:px-14 lg:px-20 mx-auto w-full">
-          
-                <div className='skill-bx px-[28px] py-6 md:py-[50px] md:px-[40px] lg:px-[60px] shadow-2xl min-h-screen'>
-                  <Outlet />
+          <section className='pt-44 pb-24' id='skills'>
+            <div className='skill'>
+              <div className='container mx-auto px-6 md:px-14 lg:px-10 '>
+                <div className=' skill-bx shadow-2xl pt-12 pb-16 px-[28px] md:py-[50px] md:px-[40px] lg:px-24'>
+                    <Outlet />
+                  </div>  
                 </div>  
-           
-          </section>
+              </div>  
+              <img
+                className="background-image-right"
+                src={colorSharp2}
+                alt="background_right"
+              />
+            </section>
           
         </div>  
       <Footer />

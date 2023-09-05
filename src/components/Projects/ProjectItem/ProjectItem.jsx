@@ -14,7 +14,7 @@ const ProjectItem = ( {title, description, imgPath} ) => {
   return (
     <motion.div animate={{scale: [0, 1]}} transition={{duration: 0.5}} className="mx-auto">
       <a>
-        <div className="proj-imgbx 
+        <div className="proj-imgbx flex
           max-h-[280px]
           md:max-h-[210px]
           lg:max-h-[260px]" 

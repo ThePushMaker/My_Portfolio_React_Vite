@@ -104,6 +104,7 @@ ul {
   line-height: normal;
   text-decoration: none;
 }
+
 h2,
 h3 {
   font-weight: 700;
@@ -167,10 +168,8 @@ p.danger {
   font-weight: 700;
   color: #ffffff;
   font-size: 18px;
-  margin-top: 25px;
   position: relative;
   transition: 0.3s ease-in-out;
-  width: 38%;
   border: 1px solid #fff;
   padding: 18px 34px;
   background-color: transparent;

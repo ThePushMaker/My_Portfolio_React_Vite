@@ -33,7 +33,7 @@ const NavBar = () => {
           
             <div className="flex items-center w-full justify-between lg:w-auto lg:justify-start">
             
-              <Link to="/#home" className="navbar-brand">
+              <Link to="/" className="navbar-brand">
                 <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-[140px] lg:mr-8"/>
               </Link>
               {/* menú hamburguesa ocultable */}
@@ -44,31 +44,35 @@ const NavBar = () => {
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="invisible hidden lg:flex lg:visible">
-                <Link to="/#home" className={`${
+                <Link to="/" className={`${
                     activateLink === "home" ? "active" : ""
                   } navbar-link`}
                   onClick={() => onUpdateActiveLink("home")}
                 >
                   Home
                 </Link>
-                <a
-                  href="#skills"
-                  className={`${
-                    activateLink === "skills" ? "active" : ""
-                  } navbar-link`}
-                  onClick={() => onUpdateActiveLink("skills")}
-                >
-                  Skills
-                </a>
-                <a
-                  href="#projects"
-                  className={`${
-                    activateLink === "projects" ? "active" : ""
-                  } navbar-link`}
-                  onClick={() => onUpdateActiveLink("projects")}
-                >
-                  Projects
-                </a>
+                {location.pathname==='/' && (
+                  <>
+                    <a
+                      href="#skills"
+                      className={`${
+                        activateLink === "skills" ? "active" : ""
+                      } navbar-link`}
+                      onClick={() => onUpdateActiveLink("skills")}
+                    >
+                      Skills
+                    </a>
+                    <a
+                      href="#projects"
+                      className={`${
+                        activateLink === "projects" ? "active" : ""
+                      } navbar-link`}
+                      onClick={() => onUpdateActiveLink("projects")}
+                    >
+                      Projects
+                    </a>
+                  </>
+                )}
               </div>
             </div>
 
@@ -95,7 +99,7 @@ const NavBar = () => {
       </nav>
       </div>
       <div className="floating-button" id="back-to-top-button">
-        <a href='#home'>
+        <a href='#top'>
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path> <g opacity="1"> <path d="M12 15.5V9.5" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M9 11.5L12 8.5L15 11.5" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path> </g> </g></svg>
         </a>
       </div>
