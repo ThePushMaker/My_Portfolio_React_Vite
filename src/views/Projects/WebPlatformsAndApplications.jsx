@@ -1,11 +1,13 @@
+import projectsJSON from "../../data/projects.json";
+import ListAllProjectsCategory from "./ListAllProjectsCategory";
 
 const WebPlatformsAndApplications = () => {
-
+  const { categories } = projectsJSON;
+  const webPlatformsAndApplications = categories[0]; // Obtén la categoría específica
+  
   return(
     <>
-      <div>
-        <h1>WebPlatformsAndApplications</h1>
-      </div>
+      <ListAllProjectsCategory categoryData={webPlatformsAndApplications} />
     </>
   );
 }

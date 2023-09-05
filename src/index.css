@@ -8,6 +8,7 @@
 
 :root {
   --highlighted_text_color:#ff8fff;
+  --link_disabled_color:#80d2ff;
   --link_color:#02b2f4;
   --link_color_hover:#5dcbf3;
   --success_color:rgb(146, 255, 146);

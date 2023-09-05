@@ -20,6 +20,7 @@ export default {
       'highlighted_text_color': 'var(--highlighted_text_color)',
       'link_color': 'var(--link_color)',
       'link_color_hover': 'var(--link_color_hover)',
+      'link_disabled_color': 'var(--link_disabled_color)',
     },
   },
   plugins: [],

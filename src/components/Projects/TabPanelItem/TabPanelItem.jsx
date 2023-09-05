@@ -1,5 +1,8 @@
 import ProjectItem from "../ProjectItem/ProjectItem.jsx"
 import { motion } from "framer-motion";
+import ScrollToTop from "../../ScrollToTop/ScrollToTop.jsx";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const variants = {
   open: { opacity: 1 },
@@ -7,13 +10,24 @@ const variants = {
 }
 
 const TabPanel = (props) => {
+  let navigate = useNavigate();
+
+  
+  const [isClicked, setIsClicked] = useState(false);
+  
+  useEffect(() => {
+    if (isClicked){
+       return navigate("/projects");
+    }
+  },[isClicked]);
 
   // const [mostrarMas, setMostrarMas] = useState(false);
   const mostrarRegistros = props.projects.slice(0, 6);
 
-  const toggleMostrarMas = () => {
-    // setMostrarMas(!mostrarMas);
+  const toggleMostrarMas = (e) => {
+    e.preventDefault();
     console.log("click en mostrar más");    
+    setIsClicked(true)
   };
 
   return (
@@ -32,7 +46,6 @@ const TabPanel = (props) => {
           className="grid grid-cols-1 gap-6
           md:grid-cols-2 lg:grid-cols-3"
         >
-        
           {mostrarRegistros.map((project, index) => {
             return (
                 <ProjectItem 
@@ -45,14 +58,19 @@ const TabPanel = (props) => {
         
         <div className="">
           {props.projects.length > 6 && (
+
+            // { props.category }
             <button  className="button_transparent_rounded flex m-auto justify-center mt-6 w-[25%]" onClick={toggleMostrarMas}>
               <span>
                 Display More
                 {/* {mostrarMas ? "Display Less" : "Display More"} */}
               </span>
+              
             </button>
+      
           )}
         </div>
+        <ScrollToTop />
       </motion.div>
     )}
     
