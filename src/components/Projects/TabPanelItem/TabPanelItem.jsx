@@ -1,6 +1,5 @@
 import ProjectItem from "../ProjectItem/ProjectItem.jsx"
 import { motion } from "framer-motion";
-import ScrollToTop from "../../ScrollToTop/ScrollToTop.jsx";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -70,7 +69,6 @@ const TabPanel = (props) => {
       
           )}
         </div>
-        <ScrollToTop />
       </motion.div>
     )}
     
