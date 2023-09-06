@@ -59,9 +59,13 @@ const TabPanel = (props) => {
           {props.projects.length > 6 && (
 
             // { props.category }
-            <button  className="button_transparent_rounded flex m-auto justify-center mt-6 w-[25%]" onClick={toggleMostrarMas}>
+            <button  
+              className="button_transparent_rounded flex m-auto justify-center mt-6 w-[25%]
+              border-[1.5px] border-solid border-border_color1 bg-[black] bg-opacity-[30%]" 
+              onClick={toggleMostrarMas}
+            >
               <span>
-                Display More
+                DISPLAY MORE
                 {/* {mostrarMas ? "Display Less" : "Display More"} */}
               </span>
               

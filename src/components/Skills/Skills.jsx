@@ -42,7 +42,7 @@ const responsive = {
 };
 
 const skills_description = 
-  <span className='text-lg'>
+  <span>
     Over the course of more than 8 years of studying programming since my high school days,
     I have learned to work with a diverse range of technologies. Nevertheless, I have particularly
     focused on honing my skills and <span className="text-highlighted_text_color"><strong>specializing in React, Laravel, and Vue.Js</strong></span>, regarding them as
@@ -53,13 +53,15 @@ const skills_description =
 const Skills = () => {
   return(
     <>
-      <section className='' id='skills'>
+      <section className='bg-bg_color1 pb-20' id='skills'>
         <div>
           <div className='skill'>
             <div className='container mx-auto px-6 md:px-14 lg:px-10 '>
-              <div className=' skill-bx shadow-2xl pt-12 pb-16 px-[28px] md:py-[50px] md:px-[40px] lg:px-24'>
+              <div className=' skill-bx bg-container_color2 shadow-2xl pt-12 pb-16 px-[28px] md:py-[50px] md:px-[40px] lg:px-24'>
                 <h2>Skills</h2>
-                <p className='text-center text-sm md:text-[18px] mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'> 
+                <p className='text-center mt-[14px] mb-6 md:mb-8 lg:mb-[70px]
+                  md:text-[24px] '
+                > 
                   {skills_description} 
                 </p>
               

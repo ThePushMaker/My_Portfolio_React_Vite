@@ -2,19 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
-
+/* faff5c  yellow*/
+/* ff8fff pink */
+/* 6fa6ff lightblue1 */
+/* 80d2ff lightblue2 */
 :root {
-  --highlighted_text_color:#ff8fff;
-  --link_disabled_color:#80d2ff;
-  --link_color:#02b2f4;
-  --link_color_hover:#5dcbf3;
+  --border_color1:#0062ff;
+  --highlighted_text_color:#faff5c;
+  --link_disabled_color:#ff8fff;
+  --link_color:#6fa6ff;
+  --link_color_hover:#faff5c;
+  --container_color:#130E1D;
+  --container_color2:#0e0b13;
+  --bg_color1:#110922;
   --success_color:rgb(146, 255, 146);
   --success_dark_color:rgb(46, 107, 46);
   --danger_color:rgb(255, 99, 99);
   --danger_dark_color:rgb(141, 53, 53);
+  --default_text_size: 22.5px;
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +30,8 @@
     --link_color_hover:#ff64f2;
   } */
 }
+
+/* Configuraciones de scrollbar */
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -45,12 +53,14 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--highlighted_text_color);
 }
+/* hasta aqui scrollbar */
+
 /* Custom fonts */
 *{
 	user-select: none;
 }
   
-@font-face {
+/* @font-face {
   font-family: Centra;
   src: url("assets/font/CentraNo2-Bold.ttf");
   font-weight: 700;
@@ -64,6 +74,12 @@
   font-family: Centra;
   src: url("assets/font/CentraNo2-Book.ttf");
   font-weight: 400;
+} */
+
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
 }
 
 /* default css */
@@ -76,13 +92,39 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
 }
+@keyframes borderAnimation {
+  0% {
+    border-color: var(--border_color1); /* Inicia con el color del borde */
+  }
+  25% {
+    border-color: rgb(255, 0, 0); /* Cambia a rojo al 25% de la animación */
+  }
+  50% {
+    border-color: rgb(0, 255, 0); /* Cambia a verde al 50% de la animación */
+  }
+  75% {
+    border-color: rgb(0, 0, 255); /* Cambia a azul al 75% de la animación */
+  }
+  100% {
+    border-color: var(--border_color1); /* Vuelve al color original al final de la animación */
+  }
+}
 body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #050509 !important;
-  color: #fff !important;
-  font-family: "Centra", sans-serif !important;
+  background-color: #050509;
+  color: #fff;
+  /* font-family: "Centra", sans-serif !important; */
+  font-family: "Cyber", sans-serif !important;
+  font-size: 22.5px;
+  
+  border: 1px solid var(--border_color1); /* Decoración alrededor de la página */
+  animation: borderAnimation 30s infinite; /* Aplica la animación al borde */
+}
+*:focus {
+  outline-color: var(--border_color1);
+  
 }
 h1,
 h2,
@@ -113,39 +155,23 @@ h3 {
   
 }
 h2 {
-  font-size: 45px;
+  font-size: 50px;
 }
 h3 {
   letter-spacing: 0.8px;
   line-height: 1.1em;
-  font-size: 25px;
+  font-size: 35px;
 }
 
 p {
   color: #bbbbbb;
-  font-size: 18px;
+  font-size: 22px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
 }
 
 a:hover {
   text-decoration: none;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-button {
-  border: 0;
-  background-color: transparent;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
 }
 
 @media (min-width: 1700px) {
@@ -171,9 +197,8 @@ p.danger {
   font-size: 18px;
   position: relative;
   transition: 0.3s ease-in-out;
-  border: 1px solid #fff;
   padding: 18px 34px;
-  background-color: transparent;
+  /* background-color: transparent; */
   border-radius: 20px;
 }
 .button_transparent_rounded span {
@@ -207,6 +232,3 @@ p.danger {
   min-height: 100vh; /* Esto asegura que la altura del contenedor sea al menos igual a la altura de la ventana gráfica. */
 }
 
-footer {
-  margin-top: auto; /* Empuja el pie de página hacia abajo para que quede en la parte inferior */
-}

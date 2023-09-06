@@ -14,13 +14,13 @@ const PageLayout = () => {
           <section className='pt-44 pb-12' id='skills'>
             <div className='skill'>
               <div className='container mx-auto px-6 md:px-14 lg:px-10 '>
-                <div className=' skill-bx shadow-2xl pt-12 pb-16 px-[28px] md:py-[50px] md:px-[40px] lg:px-24'>
+                <div className=' skill-bx bg-container_color shadow-2xl pt-12 pb-16 px-[28px] md:py-[50px] md:px-[40px] lg:px-24'>
                     <Outlet />
                   </div>  
                 </div>  
               </div>  
               <img
-                className="background-image-right"
+                className="absolute bottom-0 w-35% right-0 -z-10 opacity-70"
                 src={colorSharp2}
                 alt="background_right"
               />

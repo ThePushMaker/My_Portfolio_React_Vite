@@ -33,7 +33,7 @@ const Banner = () => {
           <div className="items-center flex flex-wrap">
             <div className="w-full md:w-1/2 lg:w-7/12">
               <div>
-                <span className="tagline">Welcome to my portfolio</span>
+                <span className="tagline text-link_disabled_color">Welcome to my portfolio</span>
                 <h1 className="text-4xl md:text-5xl lg:text-5xl">{"Hi, I'm Martín Calderón! "}                           
                   <div className="h-16 md:h-[90px] lg:h-12 mt-2">
                     <span className="wrap text-highlighted_text_color" style={{ fontSize: `${fontSize}px` }}>{ <TypeAnimation />}</span>

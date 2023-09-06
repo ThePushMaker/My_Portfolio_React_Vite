@@ -1,7 +1,7 @@
 
 /** Contact **/
 .contact {
-  background: linear-gradient(90.21deg, #4d0054 -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #690b80 -5.91%, #020024 111.58%);
 }
 .contact img {
   width: 92%;
@@ -13,8 +13,7 @@
 }
 .contact form input, .contact form textarea {
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 20px;
   color: #fff;
   margin: 0 0 8px 0;
@@ -25,8 +24,12 @@
   transition: 0.3s ease-in-out;
 }
 .contact form input:focus, .contact form textarea:focus {
-  background: rgb(198, 162, 255);
-  color: #1e0044;
+  background: rgba(255, 255, 255, 0.75);
+  /* background: rgba(0, 0, 0, 0.75); */
+  color: #28004e;
+  /* color: black; */
+  /* color: white; */
+  backdrop-filter: brightness(200%);
 }
 .contact form input::placeholder, .contact form textarea::placeholder {
   font-size: 16px;

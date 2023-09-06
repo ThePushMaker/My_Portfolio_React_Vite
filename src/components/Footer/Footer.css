@@ -19,7 +19,7 @@
 }
 .new-email-bx {
   background: #161621;
-  padding: 5px;
+  /* padding: 5px; */
   border-radius: 20px;
   position: relative;
   z-index: 0;
@@ -54,6 +54,7 @@
   width: 100%;
   color: black;
   font-weight: 500;
+  border-radius: 20px;
   background: transparent;
   border: 0;
 }
@@ -79,7 +80,7 @@
   border: 1px solid black;
   background-color: transparent;
   border-radius: 20px;
-  padding: 20px 65px;
+  padding: 20px;
   letter-spacing: 0.5px;
 }
 .newsletter_button span {
@@ -114,3 +115,8 @@
 .alert_red {
   color: var(--danger_dark_color);
 }
+
+footer {
+  margin-top: auto; /* Empuja el pie de página hacia abajo para que quede en la parte inferior */
+}
+

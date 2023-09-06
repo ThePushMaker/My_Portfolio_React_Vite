@@ -20,6 +20,7 @@ const ListAllProjectsCategory = ({ categoryData }) => {
           <p className=" mx-auto mb-10 text-center w-[90%] md:w-[100%] lg:mx-30 text-xl">
             {description}
           </p>
+          
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, index) => (
               <ProjectItem key={index} {...project} />

@@ -56,7 +56,9 @@ const Tabs = ({categories}) => {
       <div className="relative flex space-x-4
         shadow-2xl shadow-900/20 nav nav-pills h-[180px] 
         md:h-[75px] 
-        lg:w-[72%]"
+        lg:w-[72%]
+        my-0 mx-auto rounded-[50px] bg-container_color overflow-hidden
+        "
       >
         <div className="flex h-[100%] w-[100%] flex-wrap md:flex-nowrap">
         <div className="indicator h-[100%] rounded-full shadow-md"></div>
