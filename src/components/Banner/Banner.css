@@ -8,12 +8,12 @@
 
 /* Banner */
 .banner {
-  margin-top: 0;
-  padding: 260px 0 100px 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../assets/img/bg1.jpg");
+  background-image: linear-gradient(rgba(6, 1, 21, 0.7), rgba(13, 0, 7, 0.75)), url("../../assets/img/bg1.jpg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+ 
 }
 
 .banner .tagline {
@@ -22,10 +22,10 @@
   padding: 8px 10px;
   background: linear-gradient(
     90.21deg,
-    rgba(170, 54, 124, 0.55) -5.91%,
-    rgba(74, 47, 189, 0.55) 111.58%
+    rgba(33, 0, 44, 0.35) -5.91%,
+    rgba(0, 2, 68, 0.35) 111.58%
   );
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--border_color1);
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;

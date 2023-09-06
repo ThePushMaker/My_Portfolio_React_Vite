@@ -7,26 +7,10 @@
   width: 40%;
   z-index: -4;
 }
-.skill {
-  padding: 0 0 50px 0;
-  position: relative;
-}
 .skill-bx {
-  background: #161621;
   border-radius: 64px;
   text-align: center;
-  /* padding: 60px 50px; */
   margin-top: -60px;
-}
-.skill h2 {
-  font-size: 45px;
-  font-weight: 700;
-}
-.skill p {
-  color: #B8B8B8;
-  /* font-size: 18px; */
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
 }
 .skill-slider {
   width: 100%;
@@ -46,10 +30,6 @@
   }
 }
 
-.skill li {
-  display: flex;
-  justify-content: center;
-}
 
 .item {
   display: flex;
@@ -58,15 +38,4 @@
 
 .skill img {
   align-self: center; /*alinear imagenes centro x*/
-}
-.react-multiple-carousel__arrow--left {
-  left: 0;
-}
-
-.react-multiple-carousel__arrow--right {
-  right: 0;
-}
-.react-multi-carousel-dot--active button {
-  background-color: white;
-  
 }

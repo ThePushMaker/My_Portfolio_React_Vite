@@ -1,4 +1,6 @@
 import "./ProjectItem.css"
+import { motion } from "framer-motion"
+
 const ProjectItem = ( {title, description, imgPath} ) => {
 
   if(imgPath==''){
@@ -10,15 +12,16 @@ const ProjectItem = ( {title, description, imgPath} ) => {
   }
   
   return (
-    <div className="mx-auto">
+    <motion.div animate={{scale: [0, 1]}} transition={{duration: 0.5}} className="mx-auto">
       <a>
-        <div className="proj-imgbx 
-          md:max-h-[230px]
+        <div className="proj-imgbx flex
+          max-h-[280px]
+          md:max-h-[210px]
           lg:max-h-[260px]" 
           onClick={openProject}
         >
           <img src={imgPath} alt={title} 
-            className="text-center min-h-[300px]"
+            className="text-center min-h-[280px] md:min-h-[250px] lg:min-h-[300px]"
           />
           <div className="proj-txtx">
             <h4>{title}</h4>
@@ -26,7 +29,7 @@ const ProjectItem = ( {title, description, imgPath} ) => {
           </div>
         </div>
       </a>
-    </div>
+    </motion.div>
       
 
   );

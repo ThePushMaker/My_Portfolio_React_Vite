@@ -19,7 +19,7 @@ const Newsletter = ({ onValidated, status, message }) => {
     e.preventDefault();
     
     if(!email){
-      setIsValidated({ status: "blankData", message: "Please write your email" });
+      setIsValidated({ status: "blankData", message: "Please write your email." });
     }else {
       email && 
       email.indexOf("@") > -1 &&
@@ -39,60 +39,63 @@ const clearFields = () => {
       py-[20px]
       md:py-[50px] px-10  
       lg:py-[85px] lg:px-[125px]">
-        <div className="flex flex-wrap items-center">
-          <div className="w-full lg:w-1/2 py-3">
-            <h3 className="text-[1.2rem] md:text-[1.6rem]">Subscribe to our Newsletter & Never miss important updates</h3>
-            
-            {status === 'sending' && 
-              <div className="left-50 border px-4 rounded-lg relative bottom-[-50px] py-6 text-center" 
-                role="alert"
-              >
-                <strong className="font-bold">sending...</strong>
-              </div>
-            }
-            {isValidated.status === 'error' && 
-              <div className="alert_red left-50 border px-4 rounded-lg relative bottom-[-65px] py-6 text-center" 
-                  role="alert"
-                >
-                  <strong className="font-bold">{isValidated.message}</strong>
-              </div>
-            }
-            {isValidated.status === 'success' &&  
-              <div className="alert_green left-50 border px-4 rounded-lg relative bottom-[-50px] py-6 text-center" 
-                  role="alert"
-                >
-                  <strong className="font-bold">{isValidated.message}</strong>
-              </div>
-            }
-            {isValidated.status === 'blankData' &&
-             <div className="alert_red left-50 border px-4 rounded-lg relative bottom-[-50px] py-6" 
-                role="alert"
-              >
-                <strong className="font-bold">{isValidated.message}</strong>
-              </div>
-            }
-            
+        <div className="flex flex-wrap items-center w-full">
+          <div className="w-full lg:w-5/12 py-3">
+            <h3 className="text-[1.2rem] md:text-[1.6rem] lg:mr-4">Subscribe to our Newsletter and Never miss important updates</h3>
           </div>
-          <div className="w-full lg:w-1/2 py-3">
+          <div className="w-full lg:w-7/12 py-3">
             <form onSubmit={handleSubmit}>
-               <div className="flex flex-wrap">
-                <div className="new-email-bx w-full mb-3 md:mb-0 
-                  md:w-3/4"
+               <div className="flex flex-wrap justify-end">
+                <div className="new-email-bx w-full mb-3 md:m-0 
+                  md:w-8/12"
                 >
-                  <input className=""
+                  <input 
+                    className="focus:outline-border_color1 focus:ring-border_color1 w-full"
                     value={email} 
                     type="email" 
                     onChange={(e) => setEmail(e.target.value)} 
                     placeholder="Email Adress" 
                     />
                 </div>
-                <div className="md:pl-2 md:w-1/4 m-auto">
-                  <button className="newsletter_button  flex justify-center m-auto text-center" type="submit"> <span>Submit</span></button>
+                <div className=" w-[65%] m-auto 
+                  md:w-4/12 md:m-0 md:pl-3 "
+                >
+                  <button className="newsletter_button w-full" type="submit"><span>SUBMIT{' >'}</span></button>
                 </div>
               </div>
             </form>
           </div>
         </div>
+        <div className="text-center flex justify-center">
+            {status === 'sending' && 
+              <div className="left-50 border px-4 rounded-lg relative bottom-[-50px] py-6" 
+                role="alert"
+              >
+                <strong className="font-bold">sending...</strong>
+              </div>
+            }
+            {isValidated.status === 'error' && 
+              <div className="alert_red border px-4 rounded-lg relative bottom-[-65px] py-6" 
+                  role="alert"
+                >
+                  <strong className="font-bold">{isValidated.message}</strong>
+              </div>
+            }
+            {isValidated.status === 'success' &&  
+              <div className="alert_green  border px-4 rounded-lg relative bottom-[-50px] py-6" 
+                  role="alert"
+                >
+                  <strong className="font-bold">{isValidated.message}</strong>
+              </div>
+            }
+            {isValidated.status === 'blankData' &&
+             <div className="alert_red  border px-4 rounded-lg relative bottom-[-50px] py-6" 
+                role="alert"
+              >
+                <strong className="font-bold">{isValidated.message}</strong>
+              </div>
+            }
+            </div>
       </div>
     </div>
   );

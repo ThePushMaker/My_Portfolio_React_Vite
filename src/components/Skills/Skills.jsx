@@ -42,7 +42,7 @@ const responsive = {
 };
 
 const skills_description = 
-  <span className='text-lg'>
+  <span>
     Over the course of more than 8 years of studying programming since my high school days,
     I have learned to work with a diverse range of technologies. Nevertheless, I have particularly
     focused on honing my skills and <span className="text-highlighted_text_color"><strong>specializing in React, Laravel, and Vue.Js</strong></span>, regarding them as
@@ -53,118 +53,122 @@ const skills_description =
 const Skills = () => {
   return(
     <>
-      <section className='skill' id='skills'>
-        <div className='container px-4 md:px-14 lg:px-20 mx-auto'>
-          <div className='m-auto'>
-            <div className='skill-bx px-[28px] py-6 md:py-[50px] md:px-[40px] lg:px-[60px] shadow-2xl'>
-              <h2>Skills</h2>
-              <p className='text-center text-sm md:text-[18px] mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'> 
-                {skills_description} 
-              </p>
-            
-            <Carousel
-              additionalTransfrom={0}
-              arrows
-              autoPlay={true}
-              autoPlaySpeed={3000}
-              centerMode={false}
-              className="owl-carousel owl-theme skill-slider pb-10 mb-4 lg:mb-0"
-              dotListClass=""
-              draggable={true}
-              focusOnSelect={false}
-              itemClass=""
-              infinite={true}
-              keyBoardControl={true}
-              minimumTouchDrag={80}
-              pauseOnHover
-              renderArrowsWhenDisabled={false}
-              renderButtonGroupOutside={false}
-              renderDotsOutside={false}
-              responsive={responsive}
-              rewind={false}
-              rtl={false}
-              shouldResetAutoplay
-              showDots={true}
-              sliderClass=''
-              slidesToSlide={1}
-              swipeable={true}
-              ssr={true} // means to render carousel on server-side.
-              // customTransition="all"
-              // transitionDuration={10}
-              containerClass=""
-            >
-              <div className='item'>
-                <img src={meter1} alt="React" />
-                <h5>React</h5>
+      <section className='bg-bg_color1 pb-20' id='skills'>
+        <div>
+          <div className='skill'>
+            <div className='container mx-auto px-6 md:px-14 lg:px-10 '>
+              <div className=' skill-bx bg-container_color2 shadow-2xl pt-12 pb-16 px-[28px] md:py-[50px] md:px-[40px] lg:px-24'>
+                <h2>Skills</h2>
+                <p className='text-center mt-[14px] mb-6 md:mb-8 lg:mb-[70px]
+                  md:text-[24px] '
+                > 
+                  {skills_description} 
+                </p>
+              
+              <Carousel
+                additionalTransfrom={0}
+                arrows
+                autoPlay={true}
+                autoPlaySpeed={3000}
+                centerMode={false}
+                className="owl-carousel owl-theme skill-slider pb-10 mb-4 lg:mb-0"
+                dotListClass=""
+                draggable={true}
+                focusOnSelect={false}
+                itemClass=""
+                infinite={true}
+                keyBoardControl={true}
+                minimumTouchDrag={80}
+                pauseOnHover
+                renderArrowsWhenDisabled={false}
+                renderButtonGroupOutside={false}
+                renderDotsOutside={false}
+                responsive={responsive}
+                rewind={false}
+                rtl={false}
+                shouldResetAutoplay
+                showDots={true}
+                sliderClass=''
+                slidesToSlide={1}
+                swipeable={true}
+                ssr={true} // means to render carousel on server-side.
+                // customTransition="all"
+                // transitionDuration={10}
+                containerClass=""
+              >
+                <div className='item'>
+                  <img src={meter1} alt="React" />
+                  <h5>React</h5>
+                </div>
+                <div className='item'>
+                  <img src={meter2} alt="Laravel" />
+                  <h5>Laravel</h5>
+                </div>
+                <div className='item'>
+                  <img src={meter3} alt="Vue.Js" />
+                  <h5>Vue.Js</h5>
+                </div>
+                <div className='item'>
+                  <img src={meter4} alt="Javascript" />
+                  <h5>Javascript</h5>
+                </div>
+                <div className='item'>
+                  <img src={meter5} alt="PHP" />
+                  <h5>PHP</h5>
+                </div>
+                <div className='item'>
+                <img src={meter6} alt="Node.Js" />
+                  <h5>Node.Js</h5>
+                </div>
+                <div className='item'>
+                  <img src={meter7} alt="Tailwind" />
+                  <h5>Tailwind</h5>
+                </div>
+                <div className='item'>
+                  <img src={meter8} alt="Bootstrap" />
+                  <h5>Bootstrap</h5>
+                </div>
+                <div className='item'>
+                  <img src={meter9} alt="Wordpress" />
+                  <h5>Wordpress</h5>
+                </div>
+                <div className='item'>
+                  <img src={meter10} alt="MySQL" />
+                  <h5>MySQL</h5>
+                </div>
+                <div className='item'>
+                  <img src={meter11} alt="CSS3" />
+                  <h5>CSS3</h5>
+                </div>
+                <div className='item'>
+                  <img src={meter12} alt="HTML5" />
+                  <h5>HTML5</h5>
+                </div>
+                <div className='item'>
+                  <img src={meter13} alt="Wireframes & Mockups" />
+                  <h5>Wireframes & Mockups</h5>
+                </div>
+                <div className='item'>
+                  <img src={meter14} alt="English & Spanish" />
+                  <h5>English & Spanish</h5>
+                </div>
+              </Carousel>
+              {/* <Carousel controls="true">
+                {images.map(imageSlide => (
+                    <div key={imageSlide.id}>
+                      <a href="/">
+                        <img src={imageSlide.src} className="img-fluid w-100" alt={imageSlide.alt} />
+                      </a>
+                    </div>
+                ))}
+              </Carousel> */}
+              
+              
               </div>
-              <div className='item'>
-                <img src={meter2} alt="Laravel" />
-                <h5>Laravel</h5>
-              </div>
-              <div className='item'>
-                <img src={meter3} alt="Vue.Js" />
-                <h5>Vue.Js</h5>
-              </div>
-              <div className='item'>
-                <img src={meter4} alt="Javascript" />
-                <h5>Javascript</h5>
-              </div>
-              <div className='item'>
-                <img src={meter5} alt="PHP" />
-                <h5>PHP</h5>
-              </div>
-              <div className='item'>
-              <img src={meter6} alt="Node.Js" />
-                <h5>Node.Js</h5>
-              </div>
-              <div className='item'>
-                <img src={meter7} alt="Tailwind" />
-                <h5>Tailwind</h5>
-              </div>
-              <div className='item'>
-                <img src={meter8} alt="Bootstrap" />
-                <h5>Bootstrap</h5>
-              </div>
-              <div className='item'>
-                <img src={meter9} alt="Wordpress" />
-                <h5>Wordpress</h5>
-              </div>
-              <div className='item'>
-                <img src={meter10} alt="MySQL" />
-                <h5>MySQL</h5>
-              </div>
-              <div className='item'>
-                <img src={meter11} alt="CSS3" />
-                <h5>CSS3</h5>
-              </div>
-              <div className='item'>
-                <img src={meter12} alt="HTML5" />
-                <h5>HTML5</h5>
-              </div>
-              <div className='item'>
-                <img src={meter13} alt="Wireframes & Mockups" />
-                <h5>Wireframes & Mockups</h5>
-              </div>
-              <div className='item'>
-                <img src={meter14} alt="English & Spanish" />
-                <h5>English & Spanish</h5>
-              </div>
-            </Carousel>
-            {/* <Carousel controls="true">
-              {images.map(imageSlide => (
-                  <div key={imageSlide.id}>
-                    <a href="/">
-                      <img src={imageSlide.src} className="img-fluid w-100" alt={imageSlide.alt} />
-                    </a>
-                  </div>
-              ))}
-            </Carousel> */}
-            
-            
             </div>
           </div>
+          <img className='background-image-left opacity-50' src={colorSharp} alt="ImageBackground" />
         </div>
-        <img className='background-image-left opacity-50' src={colorSharp} alt="ImageBackground" />
       </section>
 
     

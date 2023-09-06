@@ -9,7 +9,7 @@ const Contact = () => {
     message: ''
   }
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Send');
+  const [buttonText, setButtonText] = useState('SEND >');
   const [status, setStatus] = useState({useState});
   
   const onFormUpdate = (category, value) => {
@@ -34,7 +34,7 @@ const Contact = () => {
         body: JSON.stringify(formDetails),
       })
       
-      setButtonText("Send")
+      setButtonText("SEND >")
       let result = await response.json();
       setFormDetails(formInitialDetails);
       if (result.code == 200){
@@ -46,8 +46,8 @@ const Contact = () => {
   };
   
   return(
-    <section className='contact px-6 md:px-14 lg:px-20' id="contact">
-      <div className='container mx-auto '>
+    <section className='contact px-6 md:px-14 lg:px-28 pt-[60px] pb-[200px] ' id="contact">
+      <div className='container mx-auto'>
         <div className='flex flex-wrap items-center'>
           <div className='w-full md:w-1/2'>
             <div>
@@ -60,6 +60,7 @@ const Contact = () => {
               <div className='flex flex-wrap'>
                 <div className='w-full'>
                   <input 
+                    className='bg-[white] bg-opacity-[4%]'
                     type="text" 
                     value={formDetails.fullName} 
                     placeholder='Full Name' 
@@ -68,6 +69,7 @@ const Contact = () => {
                 </div>
                 <div className='w-full'>
                   <input 
+                    className='bg-[white] bg-opacity-[4%]'
                     type="email" 
                     value={formDetails.email} 
                     placeholder='Email Address' 
@@ -76,13 +78,17 @@ const Contact = () => {
                 </div>
                 <div className='w-full'>
                   <textarea 
+                    className='bg-[white] bg-opacity-[4%]'
                     value={formDetails.message} 
                     placeholder='Message' 
                     onChange={(e) => onFormUpdate('message', e.target.value)} 
                   ></textarea>
                 </div>
                 <div className='w-full'>
-                  <div className='button_transparent_rounded flex justify-center'>
+                  <div 
+                    className='mx-auto my-4 w-[50%] lg:w-[30%] button_transparent_rounded flex justify-center border-[1.5px] 
+                    border-solid border-white bg-[black] bg-opacity-[30%]' 
+                  >
                     <button type="submit">
                     <span>{buttonText}</span>
                     </button>
