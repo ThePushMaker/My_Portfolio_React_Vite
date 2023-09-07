@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import {RouterProvider} from 'react-router-dom'
 import router from './router.jsx'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 // Event delegation
 document.addEventListener('dragstart', function(evt) {
@@ -13,6 +14,7 @@ document.addEventListener('dragstart', function(evt) {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <>
+      
       <RouterProvider router={router}/>
     </>
  )

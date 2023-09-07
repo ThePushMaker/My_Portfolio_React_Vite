@@ -30,6 +30,10 @@
   }
 }
 
+.skill li { /*Para centrar verticalmente la imagen en el contenedor*/
+  display: flex;
+  justify-content: center;
+}
 
 .item {
   display: flex;
@@ -38,4 +42,15 @@
 
 .skill img {
   align-self: center; /*alinear imagenes centro x*/
+}
+.react-multiple-carousel__arrow--left {
+  left: 0;
+}
+
+.react-multiple-carousel__arrow--right {
+  right: 0;
+}
+.react-multi-carousel-dot--active button {
+  background-color: white;
+  
 }

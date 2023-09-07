@@ -72,7 +72,7 @@ const Tabs = ({categories}) => {
                 >
                   <span
                     className="text-md font-thin text-link_color hover:text-link_color_hover 
-                    md:text-[18px] 
+                    md:text-[18px] lg:text-[20px]
                     lg:font-[500]"
                     >
                     {tab.category}

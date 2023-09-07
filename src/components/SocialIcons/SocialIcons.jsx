@@ -2,7 +2,6 @@ import navIcon1 from "../../assets/img/nav-icon1.svg";
 import navIcon2 from "../../assets/img/nav-icon2.svg";
 import navIcon3 from "../../assets/img/nav-icon3.svg";
 import navIcon4 from "../../assets/img/icons/wakatime.svg";
-import { Tooltip } from 'react-tooltip'
 
 const SocialIcons = () => {
   return(
@@ -25,7 +24,6 @@ const SocialIcons = () => {
           target="_blank" rel="noreferrer" href="https://wakatime.com/@dsw47">
           <img src={navIcon4} alt="navIcon4" />
         </a>
-        <Tooltip id={"myTooltip"} place="top" type="dark" effect="solid"/>
       </div>
     </>
   );

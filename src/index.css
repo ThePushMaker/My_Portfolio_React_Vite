@@ -117,7 +117,7 @@ body {
   color: #fff;
   /* font-family: "Centra", sans-serif !important; */
   font-family: "Cyber", sans-serif !important;
-  font-size: 22.5px;
+  font-size: 19.5px;
   
   border: 1px solid var(--border_color1); /* Decoración alrededor de la página */
   animation: borderAnimation 30s infinite; /* Aplica la animación al borde */
@@ -165,7 +165,7 @@ h3 {
 
 p {
   color: #bbbbbb;
-  font-size: 22px;
+  font-size: 21.5px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
 }

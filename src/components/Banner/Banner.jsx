@@ -3,12 +3,14 @@ import headerImg from "../../assets/img/pfp/difuminado2.png";
 import './Banner.css';
 import TypeAnimation from './TypeAnimation/TypeAnimation'
 
+const fullStackDefinition = "Fullstack Web Developer (Desarrollador Web 'Todo-Terreno'): Un ser mágico capaz de navegar por las profundidades de los códigos front-end y back-end con la gracia de un equilibrista. Su habilidad para hablar en múltiples lenguajes de programación es tan impresionante como su capacidad para lidiar con los errores en medio de la noche. Se dice que los Fullstack Web Developers tienen una relación cercana con el café y una paciencia inquebrantable para lidiar con los problemas técnicos. ¡Convierte el caos digital en elegantes sitios web y aplicaciones, todo mientras mantiene una sonrisa en el rostro!"
+
 const description = 
 <span>
   I{"'"}m a 23-years-old{' '}
   <a className="hover:underline  hover:decoration-link_color_hover" target="_blank" rel="noreferrer" href="https://www.google.com/search?q=Full+Stack+Developer&oq=Full+Stack+Developer&aqs=chrome..69i57j0i512l9.387j0j7&sourceid=chrome&ie=UTF-8&bshm=rimc/1">
-    <span className="text-link_color hover:text-link_color_hover">
-      <strong>Full Stack Web Developer</strong>
+    <span className="text-link_color hover:text-link_color_hover"> 
+      <strong data-tooltip-id="myTooltip" data-tooltip-content="Where one person juggles both the front-end and back-end with the grace of a one-person band. 🎸" data-tip="myTooltip" >Full Stack Web Developer</strong>
     </span>
   </a>
   {' '}who{"'"}s passionate about all forms of virtual art creation. There{"'"}s nothing that fascinates me more than well-structured systems that not only function but also have something fascinating to communicate to the world.

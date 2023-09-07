@@ -1,7 +1,6 @@
 import ProjectItem from "../ProjectItem/ProjectItem.jsx"
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
 
 const variants = {
   open: { opacity: 1 },
@@ -11,29 +10,30 @@ const variants = {
 const TabPanel = (props) => {
   let navigate = useNavigate();
 
-  
-  const [isClicked, setIsClicked] = useState(false);
-  
-  useEffect(() => {
-    if (isClicked){
-       return navigate("/projects");
-    }
-  },[isClicked]);
-
-  // const [mostrarMas, setMostrarMas] = useState(false);
   const mostrarRegistros = props.projects.slice(0, 6);
 
   const toggleMostrarMas = (e) => {
     e.preventDefault();
-    console.log("click en mostrar más");    
-    setIsClicked(true)
+    // console.log(props.category);    
+    
+    const newURL = props.category === 'Web Platforms & Applications' ? '/projects/web-apps' : '' 
+    || props.category === 'User Experience (UX)' ? '/projects/ux' : ''
+    || props.category === 'Community Contributions' ? '/projects/community' : '';
+    
+  
+    window.scrollTo(0, 0);
+    
+    
+    navigate(newURL); // Perform navigation immediately
+
   };
+  
 
   return (
   <>
     { (
       <motion.div animate={props.activeTab === props.index+1 ? "open" : "closed"}
-      variants={variants} transition={{ duration: 0.8 }} 
+        variants={variants} transition={{ duration: 0.8 }} 
         id={`panel-${props.index+1}`}
         className={`${props.activeTab === props.index+1 ? '' : 'opacity-0 hidden'} `}
       >

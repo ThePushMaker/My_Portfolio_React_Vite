@@ -12,7 +12,7 @@ function TypedText() {
                 'YouTube Educator',
                 'Code Blog Author'
                ],
-      typeSpeed: 60, // Velocidad de escritura en milisegundos
+      typeSpeed: 80, // Velocidad de escritura en milisegundos
       backSpeed: 25, // Velocidad de borrado en milisegundos
       loop: true, // Repetir el ciclo
     };

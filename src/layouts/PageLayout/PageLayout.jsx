@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
 import colorSharp2 from "../../assets/img/color-sharp2.png";
+import { useEffect } from "react";
 import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
 
 const PageLayout = () => {
@@ -25,10 +26,9 @@ const PageLayout = () => {
                 alt="background_right"
               />
             </section>
-          
+            <ScrollToTop />
         </div>  
       <Footer />
-      <ScrollToTop />
     </>
   );
 }
