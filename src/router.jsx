@@ -1,11 +1,9 @@
 import {createBrowserRouter} from 'react-router-dom'
 
 import Home from './views/Home';
-import WebPlatformsAndApplications from './views/Projects/WebPlatformsAndApplications';
-import UserExperienceUX from './views/Projects/UserExperienceUX';
-import CommunityContributions from './views/Projects/CommunityContributions';
 import PageLayout from './layouts/PageLayout/PageLayout'
-import ProjectsLinksList from './views/Projects/ProjectsLinksList';
+import AllCategoriesLinks from './views/Projects/AllCategoriesLinks';
+import AllProjectsCategoryPage from './views/Projects/AllProjectsCategoryPage';
 
 const router = createBrowserRouter([
     {path: '/',
@@ -23,19 +21,19 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/projects',
-                element: <ProjectsLinksList />
+                element: <AllCategoriesLinks />
             },
             {
                 path: '/projects/web-apps',
-                element: <WebPlatformsAndApplications />
+                element: <AllProjectsCategoryPage categoryIndex='0' />
             },
             {
                 path: '/projects/ux',
-                element: <UserExperienceUX />
+                element: <AllProjectsCategoryPage categoryIndex='1' />
             },
             {
                 path: '/projects/community',
-                element: <CommunityContributions />
+                element: <AllProjectsCategoryPage categoryIndex='2' />
             }
             
         ]

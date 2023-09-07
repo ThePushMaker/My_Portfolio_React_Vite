@@ -17,7 +17,6 @@ export default {
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
       
-      'default_text_size': 'var(--default_text_size)',
       'border_color1': 'var(--border_color1)',
       'bg_color1': 'var(--bg_color1)',
       'highlighted_text_color': 'var(--highlighted_text_color)',
@@ -26,6 +25,8 @@ export default {
       'link_disabled_color': 'var(--link_disabled_color)',
       'container_color': 'var(--container_color)',
       'container_color2': 'var(--container_color2)',
+      
+      'default_md_text_size': 'var(--default_md_text_size)',
     },
   },
   plugins: [],

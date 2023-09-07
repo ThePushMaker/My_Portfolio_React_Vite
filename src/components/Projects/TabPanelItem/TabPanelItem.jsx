@@ -20,9 +20,6 @@ const TabPanel = (props) => {
     || props.category === 'User Experience (UX)' ? '/projects/ux' : ''
     || props.category === 'Community Contributions' ? '/projects/community' : '';
     
-  
-    window.scrollTo(0, 0);
-    
     
     navigate(newURL); // Perform navigation immediately
 

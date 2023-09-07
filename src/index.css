@@ -19,7 +19,7 @@
   --success_dark_color:rgb(46, 107, 46);
   --danger_color:rgb(255, 99, 99);
   --danger_dark_color:rgb(141, 53, 53);
-  --default_text_size: 22.5px;
+  --default_md_text_size: 21.5px;
   
 }
 
@@ -117,7 +117,7 @@ body {
   color: #fff;
   /* font-family: "Centra", sans-serif !important; */
   font-family: "Cyber", sans-serif !important;
-  font-size: 19.5px;
+  font-size: var(--default_md_text_size);
   
   border: 1px solid var(--border_color1); /* Decoración alrededor de la página */
   animation: borderAnimation 30s infinite; /* Aplica la animación al borde */
@@ -231,4 +231,7 @@ p.danger {
   flex-direction: column;
   min-height: 100vh; /* Esto asegura que la altura del contenedor sea al menos igual a la altura de la ventana gráfica. */
 }
+
+
+
 
