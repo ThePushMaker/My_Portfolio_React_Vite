@@ -1,43 +1,47 @@
 import {createBrowserRouter} from 'react-router-dom'
 
-import Home from './views/Home';
-import PageLayout from './layouts/PageLayout/PageLayout'
-import AllCategoriesLinks from './views/Projects/AllCategoriesLinks';
-import AllProjectsCategoryPage from './views/Projects/AllProjectsCategoryPage';
+import Home from './views/pages/Home';
+import ArticleLayout from './layouts/ArticleLayout';
+import IndexLayout from './layouts/IndexLayout'
+import ProjectsCategoryOverview from './views/Projects/ProjectsCategoryOverview';
+import ProjectsCategoriesIndex from './views/Projects/ProjectsCategoriesIndex';
 
 const router = createBrowserRouter([
-    {path: '/',
-    // element: <Layout />,
-    children: [
-        {
-            index: true,
-            element: <Home />
-        }
-    ]
-    },
     {
-        basename: '/projects',
-        element: <PageLayout />,
+        path: '/',
+        element: <IndexLayout />,
         children: [
             {
-                path: '/projects',
-                element: <AllCategoriesLinks />
+                basename: '/',
+                path: '/',
+                index: true,
+                element: <Home />
             },
             {
-                path: '/projects/web-apps',
-                element: <AllProjectsCategoryPage categoryIndex='0' />
+                basename: '/projects',
+                element: <ArticleLayout />,
+                children: [
+                    {
+                        path: '/projects',
+                        element: <ProjectsCategoriesIndex />
+                    },
+                    {
+                        path: '/projects/web-apps',
+                        element: <ProjectsCategoryOverview categoryIndex='0' />
+                    },
+                    {
+                        path: '/projects/ux',
+                        element: <ProjectsCategoryOverview categoryIndex='1' />
+                    },
+                    {
+                        path: '/projects/community',
+                        element: <ProjectsCategoryOverview categoryIndex='2' />
+                    }
+                ]
             },
-            {
-                path: '/projects/ux',
-                element: <AllProjectsCategoryPage categoryIndex='1' />
-            },
-            {
-                path: '/projects/community',
-                element: <AllProjectsCategoryPage categoryIndex='2' />
-            }
-            
         ]
     },
+    
 
 ])
 

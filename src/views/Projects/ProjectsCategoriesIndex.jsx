@@ -1,26 +1,25 @@
 import { Link, useLocation } from "react-router-dom";
 import projectsJSON from "../../data/projects.json";
 import AnimatedButton from "../../components/AnimatedButton/AnimatedButton";
-import BreadCrumb from "../../components/BreadCrumb/Breadcrumb";
+import ArticleHeaderLayout from "../Generals/ArticleHeaderLayout";
 
-const AllCategoriesLinks = (props) => {
+const ProjectsCategoriesIndex = (props) => {
   const location = useLocation();
   
   const URL = location.pathname; // Obtén la URL actual
-  const { categories } = projectsJSON;
   const title = 'Projects';
   const mainParagraph = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quis facilis sunt, officiis optio itaque vero quisquam. Necessitatibus ipsam, odit perspiciatis harum, laudantium eligendi minus veniam sunt atque soluta omnis.';
+  
+  const { categories } = projectsJSON;
 
 
   return(
     <>
-      <h1 className="font-bold text-4xl md:text-4x1 text-highlighted_text_color mb-3">
-        { title }
-      </h1>
-      <BreadCrumb URL={URL} />
-      <p className=" mt-[14px] mx-auto mb-[35px] text-center w-[90%] md:w-[100%] lg:mx-30">
-        { mainParagraph }
-      </p>
+      <ArticleHeaderLayout 
+        title = {title}
+        mainParagraph = {mainParagraph}
+        URL = {URL}
+      />
       
       <div className="flex justify-center">
       <div className="text-start">
@@ -55,4 +54,4 @@ const AllCategoriesLinks = (props) => {
   );
 }
 
-export default AllCategoriesLinks;
+export default ProjectsCategoriesIndex;

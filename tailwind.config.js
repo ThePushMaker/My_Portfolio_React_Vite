@@ -27,6 +27,8 @@ export default {
       'container_color2': 'var(--container_color2)',
       
       'default_md_text_size': 'var(--default_md_text_size)',
+      'gradient_color1': 'var(--gradient_color1)',
+      'gradient_color2': 'var(--gradient_color2)',
     },
   },
   plugins: [],

@@ -1,11 +1,10 @@
 import { Outlet } from "react-router-dom";
-import Footer from "../../components/Footer/Footer";
-import NavBar from "../../components/NavBar/NavBar";
-import colorSharp2 from "../../assets/img/color-sharp2.png";
-import { useEffect } from "react";
-import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
+import Footer from "../components/Footer/Footer";
+import NavBar from "../components/NavBar/NavBar";
+import colorSharp2 from "../assets/img/color-sharp2.png";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 
-const PageLayout = () => {
+const ArticleLayout = () => {
 
   return(
     <>
@@ -33,4 +32,4 @@ const PageLayout = () => {
   );
 }
 
-export default PageLayout;
+export default ArticleLayout;

@@ -55,7 +55,8 @@ const Contact = () => {
             </div>
           </div>
           <div className='w-full md:w-1/2'>
-            <h2>Let{"'"}s Make it Happen!</h2>
+            <h2 className='text-[40px] mb-5'>"Web development is an art, and your project is our masterpiece."</h2>
+            <p className='mb-5 text-center'>Let{"'"}s build something great together!</p>
             <form onSubmit={handleSubmit}>
               <div className='flex flex-wrap'>
                 <div className='w-full'>

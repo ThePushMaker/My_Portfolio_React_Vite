@@ -39,7 +39,8 @@
 }
 .indicator {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  /* background: transparent; */
+  background: linear-gradient(90.21deg, var(--gradient_color1) -5.91%, var(--gradient_color2) 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;

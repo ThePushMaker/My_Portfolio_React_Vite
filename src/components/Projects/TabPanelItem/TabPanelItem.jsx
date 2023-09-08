@@ -1,6 +1,6 @@
-import ProjectItem from "../ProjectItem/ProjectItem.jsx"
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import ProjectItemCard from "../ProjectItemCard/ProjectItemCard.jsx";
 
 const variants = {
   open: { opacity: 1 },
@@ -44,7 +44,7 @@ const TabPanel = (props) => {
         >
           {mostrarRegistros.map((project, index) => {
             return (
-                <ProjectItem 
+                <ProjectItemCard 
                   key={index} 
                   {...project} 
                 />

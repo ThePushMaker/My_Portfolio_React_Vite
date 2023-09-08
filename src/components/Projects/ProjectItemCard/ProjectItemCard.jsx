@@ -1,7 +1,7 @@
-import "./ProjectItem.css"
+import "./ProjectItemCard.css"
 import { motion } from "framer-motion"
 
-const ProjectItem = ( {title, description, imgPath} ) => {
+const ProjectItemCard = ( {title, description, imgPath} ) => {
 
   if(imgPath==''){
     imgPath='https://wordpress.calderonworks.pro/wordpress/wp-content/uploads/2023/09/404.png'
@@ -35,4 +35,4 @@ const ProjectItem = ( {title, description, imgPath} ) => {
   );
 }
 
-export default ProjectItem;
+export default ProjectItemCard;

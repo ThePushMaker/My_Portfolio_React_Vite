@@ -12,14 +12,16 @@
   --link_disabled_color:#ff8fff;
   --link_color:#6fa6ff;
   --link_color_hover:#faff5c;
-  --container_color:#130E1D;
+  --container_color:#15152a;
   --container_color2:#0e0b13;
-  --bg_color1:#110922;
+  --bg_color1:#130d22;
   --success_color:rgb(146, 255, 146);
   --success_dark_color:rgb(46, 107, 46);
   --danger_color:rgb(255, 99, 99);
   --danger_dark_color:rgb(141, 53, 53);
   --default_md_text_size: 21.5px;
+  --gradient_color1: #ac31b0;
+  --gradient_color2: #3720aa;
   
 }
 

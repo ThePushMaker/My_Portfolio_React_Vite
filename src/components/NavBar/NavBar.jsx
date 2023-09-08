@@ -7,6 +7,7 @@ import SocialIcons from "../SocialIcons/SocialIcons"
 const NavBar = () => {
   const [activateLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -23,6 +24,10 @@ const NavBar = () => {
     setActiveLink(value);
   };
   
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
+  
   return (
     <>
     <div>
@@ -34,11 +39,18 @@ const NavBar = () => {
               <Link to="/" className="navbar-brand">
                 <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-[140px] lg:mr-8"/>
               </Link>
-              {/* menú hamburguesa ocultable */}
+              {/* menú hamburguesa es el de abajo */}
               <button
                 className="navbar-toggler-icon visible flex lg:invisible lg:hidden"
-                type="button"
-              >
+                type="button" onClick={toggleMenu}
+                >
+                 {menuVisible && (
+                    // Aquí colocas tu menú flotante que se mostrará cuando menuVisible sea true
+                    <div className="menu-float">
+                      aaa
+                    </div>
+                  )}
+                {/*el  menú hamburguesa es el de arriba */}
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="invisible hidden lg:flex lg:visible">
@@ -78,7 +90,7 @@ const NavBar = () => {
               <SocialIcons />
               <a href="#contact">
                 <button className="">
-                  <span>{'< '}CONTACT ME{'  />'}</span>
+                  <span><label className='font-mono'>{'<'}</label>CONTACT ME<label className='font-mono'>{'/>'}</label></span>
                 </button>
               </a>
             </div>
