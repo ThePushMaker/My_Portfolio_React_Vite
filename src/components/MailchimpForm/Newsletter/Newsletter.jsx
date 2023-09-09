@@ -41,7 +41,7 @@ const clearFields = () => {
       lg:py-[85px] lg:px-[125px]">
         <div className="flex flex-wrap items-center w-full">
           <div className="w-full lg:w-5/12 py-3">
-            <h3 className="text-[1.2rem] md:text-[1.6rem] lg:mr-4">Subscribe to this Newsletter and Never miss important updates about my new contributions</h3>
+            <p className="text-[1.2rem] md:text-[1.3rem] lg:mr-4 text-[black] font-[700] text-center">Subscribe to this Newsletter and Never miss important updates about my new contributions</p>
           </div>
           <div className="w-full lg:w-7/12 py-3">
             <form onSubmit={handleSubmit}>

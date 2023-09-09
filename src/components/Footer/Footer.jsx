@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
           <div className='w-full md:w-1/2 text-sm text-end'>
             <SocialIcons />
-            <p>© 2023 Martín Calderón. All Rights Reserved.</p>
+            <p className='font-sm'>© 2023 Martín Calderón. All Rights Reserved.</p>
             <p>This website has been developed with React, Tailwind, and Vite.</p>
           </div>
         </div>

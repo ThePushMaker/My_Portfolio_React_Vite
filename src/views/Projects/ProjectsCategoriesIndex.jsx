@@ -21,7 +21,7 @@ const ProjectsCategoriesIndex = () => {
       
       <div className="flex justify-center">
       <div className="text-start">
-        <span>
+        <span className="text-2xl">
           Categories:
         </span>
         <ul className="list-disc mt-2 ml-10">
