@@ -4,7 +4,7 @@ const IndexLayout = ({ menuVisible  }) => {
 
   return(
     <>
-      <div className={` ${menuVisible ? 'blur-background' : ''}`}>
+      <div>
         <Outlet />
       </div>
     </>
