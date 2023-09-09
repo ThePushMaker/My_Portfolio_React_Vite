@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
-import { Tooltip } from "react-tooltip";
 
-const IndexLayout = () => {
+const IndexLayout = ({ menuVisible  }) => {
 
   return(
     <>
-      <Outlet />
-      <Tooltip id={"myTooltip"} place="top" type="dark" effect="solid" style={{fontSize:"17px"}}/>
+      <div className={` ${menuVisible ? 'blur-background' : ''}`}>
+        <Outlet />
+      </div>
     </>
   );
 }

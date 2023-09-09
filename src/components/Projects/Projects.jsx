@@ -8,12 +8,7 @@ import Tabs from "./Tabs/Tabs.jsx";
 // proximamente category 'Research and Experimentation'
 
 const Projects = () => {
-  // const [data, setData] = useState(projectsJSON);
-  const {categories} = projectsJSON;
-  // console.log(categories)
-
- 
-
+  const {categories, description} = projectsJSON;
   return (
     <>
       <section className="project px-4 md:px-14 lg:px-24 pt-12 pb-16 lg:pb-16" id="projects">
@@ -22,14 +17,11 @@ const Projects = () => {
             <h2>Projects</h2>
             <p className="mt-[14px] mx-auto mb-[35px] text-center w-[90%] md:w-[100%]
             lg:mx-30">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-              doloremque adipisci unde voluptatum numquam aspernatur architecto
-              dolores commodi cum, ullam vitae! Possimus voluptatibus quasi
-              dolorem quia molestias nostrum harum illum!
+              {description}
             </p>
             <p className="mt-[14px] mx-auto mb-[35px] text-center w-[90%]
             lg:w-[70%]">
-            Elige una de las siguientes categorias para ver mis proyectos desarrollados de ella:
+            Select a category below to view the projects I{"'"}ve developed in that specific area:
             </p>
      
               <Tabs

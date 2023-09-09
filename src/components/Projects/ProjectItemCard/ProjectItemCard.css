@@ -9,7 +9,7 @@
 
 .proj-imgbx::before {
 	content: "";
-	background: linear-gradient(90.21deg, #680085 -5.91%, #003f7a 111.58%);
+	background: var(--degradado2);
 	opacity: 0;
 	position: absolute;
 	width: 100%;

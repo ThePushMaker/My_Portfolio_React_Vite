@@ -46,7 +46,7 @@ const Contact = () => {
   };
   
   return(
-    <section className='contact px-6 md:px-14 lg:px-28 pt-[60px] pb-[200px] ' id="contact">
+    <section className='contact degradado1 px-6 md:px-14 lg:px-28 pt-[60px] pb-[200px] ' id="contact">
       <div className='container mx-auto'>
         <div className='flex flex-wrap items-center'>
           <div className='w-full md:w-1/2'>

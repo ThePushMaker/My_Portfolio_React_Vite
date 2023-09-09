@@ -8,20 +8,21 @@
 /* 80d2ff lightblue2 */
 :root {
   --border_color1:#0062ff;
-  --highlighted_text_color:#faff5c;
+  --highlighted_text_color:#dde170;
   --link_disabled_color:#ff8fff;
   --link_color:#6fa6ff;
   --link_color_hover:#faff5c;
   --container_color:#15152a;
   --container_color2:#0e0b13;
-  --bg_color1:#130d22;
+  --bg_color1:#172565;
   --success_color:rgb(146, 255, 146);
   --success_dark_color:rgb(46, 107, 46);
   --danger_color:rgb(255, 99, 99);
   --danger_dark_color:rgb(141, 53, 53);
   --default_md_text_size: 21.5px;
   --gradient_color1: #ac31b0;
-  --gradient_color2: #3720aa;
+  --gradient_color2: #341da8;
+  --degradado2: linear-gradient(90.21deg, #710a75 -5.91%, #172565 111.58%);
   
 }
 
@@ -234,6 +235,15 @@ p.danger {
   min-height: 100vh; /* Esto asegura que la altura del contenedor sea al menos igual a la altura de la ventana gráfica. */
 }
 
-
-
-
+.degradado1 {
+  background: linear-gradient(90.21deg, #341da8 5.58%, #172565 95.91%);
+}
+.svg_link1:hover svg path {
+  fill: var(--link_color_hover);
+}
+.svg_link2:hover svg path {
+  stroke: var(--link_color_hover);
+}
+.blur-background {
+  filter: blur(5px); /* Ajusta el valor de desenfoque según tu preferencia */
+}

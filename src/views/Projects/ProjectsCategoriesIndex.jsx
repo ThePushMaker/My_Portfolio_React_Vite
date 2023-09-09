@@ -3,21 +3,19 @@ import projectsJSON from "../../data/projects.json";
 import AnimatedButton from "../../components/AnimatedButton/AnimatedButton";
 import ArticleHeaderLayout from "../Generals/ArticleHeaderLayout";
 
-const ProjectsCategoriesIndex = (props) => {
+const ProjectsCategoriesIndex = () => {
   const location = useLocation();
+  // const { description } = projectsJSON;
+  const { categories, description } = projectsJSON;
   
   const URL = location.pathname; // Obtén la URL actual
   const title = 'Projects';
-  const mainParagraph = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quis facilis sunt, officiis optio itaque vero quisquam. Necessitatibus ipsam, odit perspiciatis harum, laudantium eligendi minus veniam sunt atque soluta omnis.';
-  
-  const { categories } = projectsJSON;
-
 
   return(
     <>
       <ArticleHeaderLayout 
         title = {title}
-        mainParagraph = {mainParagraph}
+        mainParagraph = {description}
         URL = {URL}
       />
       
