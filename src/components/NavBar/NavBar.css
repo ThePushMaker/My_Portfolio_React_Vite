@@ -24,7 +24,6 @@
 .floating-button:hover {
   transition: 0.4s;
   transform: scale(1.2);
-  background-color: black;
 }
 
 .navbar{
@@ -38,7 +37,7 @@
 .scrolled {
   padding: 10px 0;
   /* background-color: rgba(18, 18, 18, 0.85); */
-  box-shadow: inset 0px 150px 10px -70px rgba(0,0,0,0.94);
+  box-shadow: inset 0px 150px 10px -70px rgba(0,0,0,0.90);
 }
 .navbar-link {
   font-weight: 400;
@@ -91,7 +90,7 @@
   font-weight: 700;
   color: #fff;
   border: 1px solid #fff;
-  padding: 18px 34px;
+
   margin-left: 18px;
   position: relative;
   background-color: transparent;

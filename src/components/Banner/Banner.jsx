@@ -13,7 +13,7 @@ const description =
       <strong data-tooltip-id="myTooltip" data-tooltip-content="Where one person juggles both the front-end and back-end with the grace of a one-person band. 🎸" data-tip="myTooltip" >Full Stack Web Developer</strong>
     </span>
   </a>
-  {' '}who{"'"}s passionate about all forms of virtual art creation. There{"'"}s nothing that fascinates me more than well-structured systems that not only function but also have something fascinating to communicate to the world.
+  {' '}who{"'"}s passionate about all forms of virtual art creation. Although my youth may limit my experience a bit, my motivation is powerful and drives me every day to advance and learn much more. I would like to demonstrate through my efforts that software is not merely cold and mechanical logic; it{"'"}s not just a tool, but it has the potential to become something authentically artistic, fascinating, and brimming with identity. Software is not a thing of tomorrow; it is of today.
 </span>
 
 const Banner = () => {
@@ -36,7 +36,7 @@ const Banner = () => {
             <div className="w-full md:w-1/2 lg:w-7/12">
               <div>
                 <span className="tagline text-link_disabled_color">Welcome to my portfolio</span>
-                <h1 className="text-4xl md:text-5xl lg:text-5xl">{"Hi, I'm Martín Calderón! "}                           
+                <h1 className="text-4xl md:text-5xl lg:text-5xl mb-3">{"Hi, I'm Martín Calderón! "}                           
                   <div className="h-16 md:h-[90px] lg:h-12 mt-2">
                     <span className="wrap text-highlighted_text_color" style={{ fontSize: `${fontSize}px` }}>{ <TypeAnimation />}</span>
                   </div>

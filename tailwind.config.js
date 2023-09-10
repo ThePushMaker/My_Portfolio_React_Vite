@@ -4,7 +4,12 @@ export default {
     "./index.html", "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'large1': '0 20px 40px -20px rgba(0, 0, 0, 0.3)',
+        // 'large1': '0 35px 40px -15px rgba(0, 0, 0, 0.3)',
+      }
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -31,6 +36,8 @@ export default {
       'default_sm_text_size': 'var(--default_sm_text_size)',
       'gradient_color1': 'var(--gradient_color1)',
       'gradient_color2': 'var(--gradient_color2)',
+      'neon_color1': 'var(--neon_color1)',
+      'neon_color2': 'var(--neon_color2)',
       
       'normal-font-family1': 'var(--normal-font-family)',
       'styled-font-family1': 'var(--styled-font-family1)',
@@ -45,8 +52,8 @@ export default {
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      'lgxl': '1080px',
-      // => @media (min-width: 1080px) { ... }
+      'lgxl': '1100px',
+      // => @media (min-width: 1100px) { ... }
 
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }

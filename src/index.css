@@ -30,6 +30,8 @@
 /* 80d2ff lightblue2 */
 /* 1f1d36 bg gray  */
 :root {
+  --neon_color1:rgba(0, 98, 255, 0.849);
+  --neon_color2:red;
   --border_color1:#0062ff;
   --highlighted_text_color:#dde170;
   --link_disabled_color:#ff8fff;
@@ -89,7 +91,7 @@
 
 /* Custom fonts */
 *{
-	user-select: none;
+	/* user-select: none; */
 }
   
 

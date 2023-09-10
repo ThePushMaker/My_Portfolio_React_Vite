@@ -41,7 +41,7 @@ const NavBar = () => {
   return (
     <>
     <div>
-      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <nav className={`navbar ${scrolled ? 'scrolled backdrop-blur-sm' : ''} `}>
         <div className="mx-auto max-w-[1500px] flex justify-between px-6 md:px-12 lg:px-16">
           
             <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start">
@@ -85,7 +85,7 @@ const NavBar = () => {
                 {/* botn de hamburguesa es el de abajo */}
                 <div>
                   <button
-                    className="visible flex lg:invisible lg:hidden svg_link2"
+                    className="visible inline lg:invisible lg:hidden svg_link2"
                     type="button" onClick={toggleMenu}
                   >
                     <svg className="w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H14M4 18H9" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
@@ -93,8 +93,8 @@ const NavBar = () => {
                   {/*el  boton de hamburguesa es el de arriba */}
                   {/* aqui inicia el menu movil */}
                   {menuVisible && (
-                    <div className="mobileNavbar absolute top-[0] right-0 w-[60vw] md:w-[45vw] bg-[black] shadow-2xl shadow-border_color1 text-white h-screen py-7 px-14 bg-opacity-[95%] h-screen">
-                      <div className="flex justify-end">
+                    <div className="mobileNavbar absolute top-[0] backdrop-blur-md right-0 w-[60vw] md:w-[45vw] bg-[black] shadow-2xl shadow-border_color1 text-white pt-3 pb-7 px-12 bg-opacity-[90%] h-screen visible inline lg:invisible lg:hidden">
+                      <div className="flex justify-end ">
                         <button onClick={toggleMenu} className="svg_link1">
                         <span className="">
                           <svg className="w-7" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier">
@@ -121,15 +121,15 @@ const NavBar = () => {
               
             </div>
 
-            <div className="invisible hidden items-center navbar-text lg:visible lg:flex">
+            <div className="invisible hidden lg:visible lg:flex items-center navbar-text ">
               <SocialIcons />
               <a href="#contact">
-                <button>
-                  {'<'}
+                <button className="lg:px-5 py-4 lgxl:px-8">
+                  {'< '}
                     <label className="text-styled-font-family1">
                       CONTACT ME
                     </label>
-                  {'/>'}
+                  {' />'}
                 </button>
               </a>
             </div>
