@@ -51,6 +51,7 @@
   --button-font-size: 17px;
   --gradient_color1: #ac31b0;
   --gradient_color2: #341da8;
+  --degradado1: linear-gradient(90deg, #1a2b82 5.58%, #191963 95.91%);
   --degradado2: linear-gradient(90.21deg, #341da8 -5.91%, #161333 111.58%);
   --normal-font-family: 'Chakra', sans-serif;
   --styled-font-family1: "Cyber", sans-serif;
@@ -258,7 +259,7 @@ p.danger {
 
 /* 341da8 */
 .degradado1 {
-  background: linear-gradient(90.21deg, #2f1d87 5.58%, #16266b 95.91%);
+  background: var(--degradado1);
 }
 .svg_link1:hover svg path {
   fill: var(--link_color_hover);
