@@ -33,13 +33,13 @@
   --neon_color1:rgba(0, 93, 254, 0.403);
   --neon_color2: #0062ff;
   --border_color1:#0062ff;
-  --highlighted_text_color:#dde170;
+  --highlighted_text_color:#d8db8e;
   --link_disabled_color:#ff8fff;
   --link_color:#6fa6ff;
   --link_color_hover:#faff5c;
   --container_color:#1f1d36;
-  --container_color2:#0e0b13;
-  --container_color3:#141225;
+  --container_color2:#0e0b13; 
+  --container_color3:#100f1f;/*141225*/
   --bg_color1:#172565;
   --success_color:rgb(146, 255, 146);
   --success_dark_color:rgb(46, 107, 46);
@@ -51,7 +51,7 @@
   --button-font-size: 17px;
   --gradient_color1: #ac31b0;
   --gradient_color2: #341da8;
-  --degradado1: linear-gradient(90deg, #1a2b82 5.58%, #191963 95.91%);
+  --degradado1: linear-gradient(90deg, #241f80 5.58%, #1a2b82 95.91%);
   --degradado2: linear-gradient(90.21deg, #341da8 -5.91%, #161333 111.58%);
   --normal-font-family: 'Chakra', sans-serif;
   --styled-font-family1: "Cyber", sans-serif;
