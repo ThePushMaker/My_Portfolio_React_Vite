@@ -32,7 +32,7 @@ const imagesArray = [
     href: 'https://wakatime.com/@dsw47'
   },
 ];
-const stylesLink = 'lgxl:w-11 lgxl:h-11 lg:w-[37px] lg:h-[37px] mr-[6px]';
+const stylesLink = 'lgxl:w-11 lgxl:h-11 w-[35px] h-[35px] mr-[6px]';
 
 const SocialIcons = () => {
   return(
