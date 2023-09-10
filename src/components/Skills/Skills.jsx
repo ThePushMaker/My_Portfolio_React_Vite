@@ -56,7 +56,7 @@ const Skills = () => {
       <section className='degradado1 pb-20' id='skills'>
         <div>
           <div className='skill'>
-            <div className='container mx-auto px-6 md:px-14 lg:px-10 '>
+            <div className=' mx-auto px-6 md:px-14 lg:px-14 '>
               <div className=' skill-bx bg-container_color2 shadow-2xl pt-12 pb-16 px-[28px] md:py-[50px] md:px-[40px] lg:px-24'>
                 <h2>Skills</h2>
                 <p className='text-center mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'
