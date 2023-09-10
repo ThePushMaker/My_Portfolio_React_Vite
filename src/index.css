@@ -263,6 +263,7 @@ p.danger {
 .svg_link2:hover svg path {
   stroke: var(--link_color_hover);
 }
+
 .blur-background {
   filter: blur(5px); /* Ajusta el valor de desenfoque según tu preferencia */
 }

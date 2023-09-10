@@ -83,17 +83,17 @@ const NavBar = () => {
               </div>
               
                 {/* botn de hamburguesa es el de abajo */}
-                <div className="">
+                <div>
                   <button
-                    className="navbar-toggler-icon visible flex lg:invisible lg:hidden"
+                    className="visible flex lg:invisible lg:hidden svg_link2"
                     type="button" onClick={toggleMenu}
                   >
-                    <span className=""></span>
+                    <svg className="w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H14M4 18H9" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                   </button>
                   {/*el  boton de hamburguesa es el de arriba */}
                   {/* aqui inicia el menu movil */}
                   {menuVisible && (
-                    <div className="absolute top-[0] right-0 w-[60vw] md:w-[45vw] bg-[black] shadow-2xl shadow-border_color1 text-white h-screen py-7 px-14 bg-opacity-[95%] h-screen">
+                    <div className="mobileNavbar absolute top-[0] right-0 w-[60vw] md:w-[45vw] bg-[black] shadow-2xl shadow-border_color1 text-white h-screen py-7 px-14 bg-opacity-[95%] h-screen">
                       <div className="flex justify-end">
                         <button onClick={toggleMenu} className="svg_link1">
                         <span className="">
