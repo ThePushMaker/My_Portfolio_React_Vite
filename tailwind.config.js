@@ -7,7 +7,7 @@ export default {
     extend: {
       boxShadow: {
         'large1': '0 20px 40px -20px rgba(0, 0, 0, 0.3)',
-        // 'large1': '0 35px 40px -15px rgba(0, 0, 0, 0.3)',
+        'large2': '0 20px 30px -20px rgba(0, 0, 0, 0.3)',
       }
     },
     colors: {
