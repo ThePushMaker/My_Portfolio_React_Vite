@@ -44,12 +44,14 @@
   --danger_color:rgb(255, 99, 99);
   --danger_dark_color:rgb(141, 53, 53);
   --default_md_text_size: 20px;
+  --default_sm_text_size: 10px;
   --input-font-size: 19.4px;
   --button-font-size: 17px;
   --gradient_color1: #ac31b0;
   --gradient_color2: #341da8;
   --degradado2: linear-gradient(90.21deg, #710a75 -5.91%, #172565 111.58%);
   --normal-font-family: 'Chakra', sans-serif;
+  --styled-font-family1: "Cyber", sans-serif;
 
 }
 
@@ -125,7 +127,7 @@ body {
   position: relative;
   background-color: #050509;
   color: #fff;
-  font-family: "Cyber", sans-serif;
+  font-family: var(--styled-font-family1);
   border: 1px solid var(--border_color1); /* Decoración alrededor de la página */
   animation: borderAnimation 30s infinite; /* Aplica la animación al borde */
 }
@@ -195,6 +197,10 @@ a:hover {
   text-decoration: none;
 }
 
+.styledFontFamily{
+  font-family: var(--styled-font-family1);
+}
+
 @media (min-width: 1700px) {
   main .container {
     max-width: 100%;
@@ -209,7 +215,6 @@ p.success {
 p.danger {
   color: var(--danger_color);
 }
-
 
 
 .button_transparent_rounded {
@@ -243,9 +248,6 @@ p.danger {
 .button_transparent_rounded:hover::before {
   width: 100%;
 }
-
-
-
 .app-container {
   display: flex;
   flex-direction: column;

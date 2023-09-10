@@ -9,7 +9,7 @@ const Contact = () => {
     message: ''
   }
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('SEND >');
+  const [buttonText, setButtonText] = useState('SEND');
   const [status, setStatus] = useState({useState});
   
   const onFormUpdate = (category, value) => {
@@ -34,7 +34,7 @@ const Contact = () => {
         body: JSON.stringify(formDetails),
       })
       
-      setButtonText("SEND >")
+      setButtonText("SEND")
       let result = await response.json();
       setFormDetails(formInitialDetails);
       if (result.code == 200){
@@ -91,7 +91,7 @@ const Contact = () => {
                     border-solid border-white bg-[black] bg-opacity-[30%]' 
                   >
                     <button type="submit">
-                    <span>{buttonText}</span>
+                    <span> SEND <span className='styledFontFamily' >{'>'}</span></span>
                     </button>
                   </div>
                 </div>

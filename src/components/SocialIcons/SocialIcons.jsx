@@ -5,7 +5,6 @@ import navIcon2 from '../../assets/img/icons/nav-icon2.svg';
 import navIcon3 from '../../assets/img/icons/nav-icon3.svg';
 import navIcon4 from '../../assets/img/icons/nav-icon4.svg';
 
-const stylesLink = 'w-[43px] h-[43px]';
 
 const imagesArray = [
   {
@@ -33,14 +32,15 @@ const imagesArray = [
     href: 'https://wakatime.com/@dsw47'
   },
 ];
+const stylesLink = 'lgxl:w-11 lgxl:h-11 lg:w-[37px] lg:h-[37px] mr-[6px]';
 
 const SocialIcons = () => {
   return(
     <>
       <div className='social-icon'>
       {imagesArray.map((item, index) => (
-        <a key={index} data-tooltip-id='myTooltip' data-tooltip-content={item.dataTooltip} className={stylesLink} href={item.href}>
-          <img src={item.src} target='_blank' rel='noreferrer' />
+        <a key={index} className={stylesLink} data-tooltip-id='myTooltip' data-tooltip-content={item.dataTooltip}  href={item.href} target='_blank' rel='noreferrer' >
+          <img src={item.src} />
         </a>
       ))}
       <Tooltip id={'myTooltip'} place='top' type='dark' effect='solid' style={{fontSize:'17px'}}/>

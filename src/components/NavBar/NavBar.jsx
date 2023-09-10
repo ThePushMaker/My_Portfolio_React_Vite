@@ -36,11 +36,13 @@ const NavBar = () => {
     {URL: '/about-me', name: 'About Me'},
   ]
   
+  const navLinkStyles = 'navbar-link lg:text-[17px] lgxl:text-xl';
+  
   return (
     <>
     <div>
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-        <div className="mx-auto flex justify-between container px-6 md:px-14 lg:px-20">
+        <div className="mx-auto max-w-[1500px] flex justify-between px-6 md:px-12 lg:px-16">
           
             <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start">
             
@@ -50,18 +52,19 @@ const NavBar = () => {
               <div className="invisible hidden lg:inline lg:visible">
                 <Link to="/" className={`${
                     activateLink === "home" ? "active" : ""
-                  } navbar-link`}
+                  }  ${navLinkStyles}`}
                   onClick={() => onUpdateActiveLink("home")}
                 >
                   Home
                 </Link>
+                {/* menu lg */}
                 {location.pathname==='/' && (
                   <>
                     <a
                       href="#skills"
                       className={`${
                         activateLink === "skills" ? "active" : ""
-                      } navbar-link`}
+                      } ${navLinkStyles}`}
                       onClick={() => onUpdateActiveLink("skills")}
                     >
                       Skills
@@ -70,7 +73,7 @@ const NavBar = () => {
                       href="#projects"
                       className={`${
                         activateLink === "projects" ? "active" : ""
-                      } navbar-link`}
+                      }  ${navLinkStyles}`}
                       onClick={() => onUpdateActiveLink("projects")}
                     >
                       Projects
@@ -82,7 +85,7 @@ const NavBar = () => {
                 {/* botn de hamburguesa es el de abajo */}
                 <div className="">
                   <button
-                    className="navbar-toggler-icon visible flex md:invisible md:hidden"
+                    className="navbar-toggler-icon visible flex lg:invisible lg:hidden"
                     type="button" onClick={toggleMenu}
                   >
                     <span className=""></span>
@@ -109,7 +112,7 @@ const NavBar = () => {
                         {/* aqui termina el menu movil */}
                       </ul>
                       <div className="flex justify-center">
-                          <SocialIcons />
+                          <SocialIcons /> 
                       </div>
                     </div>
                   )}
@@ -122,7 +125,11 @@ const NavBar = () => {
               <SocialIcons />
               <a href="#contact">
                 <button>
-                  <span><label className='font-mono'>{'<'}</label>CONTACT ME<label className='font-mono'>{'/>'}</label></span>
+                  {'<'}
+                    <label className="text-styled-font-family1">
+                      CONTACT ME
+                    </label>
+                  {'/>'}
                 </button>
               </a>
             </div>
