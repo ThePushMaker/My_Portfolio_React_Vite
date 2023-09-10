@@ -14,7 +14,7 @@ const ProjectItemCard = ( {title, description, imgPath} ) => {
   return (
     <motion.div animate={{scale: [0, 1]}} transition={{duration: 0.5}} className="mx-auto">
       <a>
-        <div className="proj-imgbx flex shadow-md shadow-neon_color1 hover:shadow-large1 hover:shadow-neon_color2 
+        <div className="proj-imgbx flex shadow-sm shadow-neon_color1 hover:shadow-md hover:shadow-neon_color2 
           max-h-[280px]
           md:max-h-[210px]
           lg:max-h-[260px]" 
