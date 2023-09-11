@@ -23,6 +23,7 @@ export default {
       'bermuda': '#78dcca',
       
       'border_color1': 'var(--border_color1)',
+      'border_color2': 'var(--border_color2)',
       'bg_color1': 'var(--bg_color1)',
       'highlighted_text_color': 'var(--highlighted_text_color)',
       'link_color': 'var(--link_color)',

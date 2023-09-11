@@ -30,14 +30,15 @@
 /* 80d2ff lightblue2 */
 /* 1f1d36 bg gray  */
 :root {
-  --neon_color1:rgba(0, 93, 254, 0.403);
+  --neon_color1:rgba(65, 135, 255, 0.659); /*used in projectItem*/
   --neon_color2: #0062ff;
   --border_color1:#0062ff;
+  --border_color2:rgba(0, 98, 255, 0.448); /* used in projectItems*/
   --highlighted_text_color:#d8db8e;
   --link_disabled_color:#ff8fff;
   --link_color:#6fa6ff;
   --link_color_hover:#faff5c;
-  --container_color:#231e3d;
+  --container_color:#171939; /*used in project tabs*/
   --container_color2:#0e0b13; 
   --container_color3:#100f1f;/*141225*/
   --bg_color1:#172565;
@@ -49,12 +50,11 @@
   --default_sm_text_size: 10px;
   --input-font-size: 19.4px;
   --button-font-size: 17px;
-  --gradient_color1: #ac31b0;
-  --gradient_color2: #341da8;
-  --degradado1: linear-gradient(90deg, #241f80 5.58%, #1a2b82 95.91%); /*used in nowhere*/
-  --degradado2: linear-gradient(90.21deg, #341da8 -5.91%, #161333 111.58%); /*user in projectItem */
-  /*used in home.jsx*/
-  --degradado3: linear-gradient(180deg, rgba(36, 31, 128, 0) 5.58%, rgba(32, 26, 119, 0.53) 95.91%); 
+  --gradient_color1: #ac31b0; /*used in project tabs*/
+  --gradient_color2: #3a20bb;/*used in project tabs*/
+  --degradado1: linear-gradient(90deg, #241f80 5.58%, #172672 95.91%); /*used in Articles*/
+  --degradado2: linear-gradient(90.21deg, #ac31b0 -5.91%, #341da8 111.58%); /*user in projectItem */
+  --degradado3: linear-gradient(180deg, rgba(36, 31, 128, 0) 90.58%, rgb(50, 50, 165) 100.91%); /*used in skills*/
   --degradado4: linear-gradient(90deg, rgba(36, 31, 127, 0.697) 5.58%, rgba(26, 43, 130, 0.766) 95.91%); /*used in contacto*/
   --normal-font-family: 'Chakra', sans-serif;
   --styled-font-family1: "Cyber", sans-serif;
@@ -278,7 +278,7 @@ p.danger {
 }
 
 .bgBanner1 {
-  background-image: linear-gradient(to right, rgba(6, 1, 21, 1), rgba(14, 0, 17, 0.5)), url("./assets/img/bg1.jpg");
+  background-image: linear-gradient(to right, rgba(6, 1, 21, 1), rgba(14, 0, 17, 0.525)), url("./assets/img/bg1.jpg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
