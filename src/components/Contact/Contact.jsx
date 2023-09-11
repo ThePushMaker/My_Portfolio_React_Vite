@@ -46,68 +46,70 @@ const Contact = () => {
   };
   
   return(
-    <section className='contact degradado1 px-6 md:px-14 lg:px-28 pt-[60px] pb-[200px] ' id="contact">
-      <div className='container mx-auto'>
-        <div className='flex flex-wrap items-center'>
-          <div className='w-full md:w-1/2'>
-            <div>
-              <img src={contactImg} alt="contact_image" />
+    <section className='bgBannerContacto'>
+      <div className='contact degradado4 px-6 md:px-14 lg:px-28 pt-[60px] pb-[200px] ' id="contact">
+        <div className='container mx-auto'>
+          <div className='flex flex-wrap items-center'>
+            <div className='w-full md:w-1/2'>
+              <div>
+                <img src={contactImg} alt="contact_image" />
+              </div>
             </div>
-          </div>
-          <div className='w-full md:w-1/2'>
-            <h2 className='text-[40px] mb-5'>"Web development is an art, and your project is our masterpiece."</h2>
-            <p className='mb-5 text-center'>Let{"'"}s build something great together!</p>
-            <form onSubmit={handleSubmit}>
-              <div className='flex flex-wrap'>
-                <div className='w-full'>
-                  <input 
-                    className='bg-[white] bg-opacity-[4%]'
-                    type="text" 
-                    value={formDetails.fullName} 
-                    placeholder='Full Name' 
-                    onChange={(e) => onFormUpdate('fullName', e.target.value)} 
-                  />
-                </div>
-                <div className='w-full'>
-                  <input 
-                    className='bg-[white] bg-opacity-[4%]'
-                    type="email" 
-                    value={formDetails.email} 
-                    placeholder='Email Address' 
-                    onChange={(e) => onFormUpdate('email', e.target.value)} 
-                  />
-                </div>
-                <div className='w-full'>
-                  <textarea 
-                    className='bg-[white] bg-opacity-[4%]'
-                    value={formDetails.message} 
-                    placeholder='Message' 
-                    onChange={(e) => onFormUpdate('message', e.target.value)} 
-                  ></textarea>
-                </div>
-                <div className='w-full'>
-                  <div 
-                    className='mx-auto my-4 w-[50%] lg:w-[30%] button_transparent_rounded flex justify-center border-[1.5px] 
-                    border-solid border-white bg-[black] bg-opacity-[30%]' 
-                  >
-                    <button type="submit">
-                    <span> SEND <span className='styledFontFamily' >{'>'}</span></span>
-                    </button>
+            <div className='w-full md:w-1/2'>
+              <h2 className='text-[40px] mb-5'>"Web development is an art, and your project is our masterpiece."</h2>
+              <p className='mb-5 text-center'>Let{"'"}s build something great together!</p>
+              <form onSubmit={handleSubmit}>
+                <div className='flex flex-wrap'>
+                  <div className='w-full'>
+                    <input 
+                      className='bg-[white] bg-opacity-[4%]'
+                      type="text" 
+                      value={formDetails.fullName} 
+                      placeholder='Full Name' 
+                      onChange={(e) => onFormUpdate('fullName', e.target.value)} 
+                      />
+                  </div>
+                  <div className='w-full'>
+                    <input 
+                      className='bg-[white] bg-opacity-[4%]'
+                      type="email" 
+                      value={formDetails.email} 
+                      placeholder='Email Address' 
+                      onChange={(e) => onFormUpdate('email', e.target.value)} 
+                    />
+                  </div>
+                  <div className='w-full'>
+                    <textarea 
+                      className='bg-[white] bg-opacity-[4%]'
+                      value={formDetails.message} 
+                      placeholder='Message' 
+                      onChange={(e) => onFormUpdate('message', e.target.value)} 
+                    ></textarea>
+                  </div>
+                  <div className='w-full'>
+                    <div 
+                      className='mx-auto my-4 w-[50%] lg:w-[30%] button_transparent_rounded flex justify-center border-[1.5px] 
+                      border-solid border-white bg-[black] bg-opacity-[30%]' 
+                      >
+                      <button type="submit">
+                      <span> SEND <span className='styledFontFamily' >{'>'}</span></span>
+                      </button>
+                    </div>
+                  </div>
+                  <div className='w-full'>
+                    {
+                      <div className='w-full'>
+                        <div className='flex justify-center pt-2'>
+                          <p className={`${status.success === false ? 'danger' : 'success'} text-center`}>
+                            {status.message}
+                          </p>
+                        </div>
+                      </div>
+                    }
                   </div>
                 </div>
-                <div className='w-full'>
-                  {
-                    <div className='w-full'>
-                      <div className='flex justify-center pt-2'>
-                        <p className={`${status.success === false ? 'danger' : 'success'} text-center`}>
-                          {status.message}
-                        </p>
-                      </div>
-                    </div>
-                  }
-                </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>

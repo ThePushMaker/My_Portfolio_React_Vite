@@ -53,7 +53,7 @@ const skills_description =
 const Skills = () => {
   return(
     <>
-      <section className='degradado1 pb-20' id='skills'>
+      <section className='degradado3 pb-20' id='skills'>
         <div>
           <div className='skill'>
             <div className=' mx-auto px-6 md:px-14 lg:px-14 '>

@@ -7,13 +7,13 @@
 }
 
 /* Banner */
-.banner {
+/* .banner {
   background-image: linear-gradient(to right, rgba(6, 1, 21, 1), rgba(14, 0, 17, 0.5)), url("../../assets/img/bg1.jpg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
+} */
 .textShadow {
   text-shadow: 1px 1px 20px rgba(0, 0, 0, 1); 
 }

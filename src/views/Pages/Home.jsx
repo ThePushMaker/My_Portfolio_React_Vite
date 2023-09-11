@@ -11,8 +11,10 @@ function Home() {
     <>
       <NavBar />      
       <div className="app-container">
-        <Banner />
-        <Skills />
+        <div className='bgBanner1'>
+          <Banner />
+          <Skills />
+        </div>
         <Projects />
         <Contact />
       </div>

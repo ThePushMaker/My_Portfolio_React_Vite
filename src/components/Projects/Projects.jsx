@@ -19,8 +19,8 @@ const Projects = () => {
             lg:mx-30">
               {description}
             </p>
-            <p className="mt-[14px] mx-auto mb-[35px] text-center w-[90%]
-            lg:w-[70%]">
+            <p className="mt-[55px] mx-auto mb-[30px] text-center w-[90%]
+            lg:w-[70%] font-bold">
             Select a category below to view the projects I{"'"}ve developed in that specific area:
             </p>
      

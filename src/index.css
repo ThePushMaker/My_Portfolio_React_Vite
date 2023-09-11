@@ -37,7 +37,7 @@
   --link_disabled_color:#ff8fff;
   --link_color:#6fa6ff;
   --link_color_hover:#faff5c;
-  --container_color:#1f1d36;
+  --container_color:#231e3d;
   --container_color2:#0e0b13; 
   --container_color3:#100f1f;/*141225*/
   --bg_color1:#172565;
@@ -51,14 +51,17 @@
   --button-font-size: 17px;
   --gradient_color1: #ac31b0;
   --gradient_color2: #341da8;
-  --degradado1: linear-gradient(90deg, #241f80 5.58%, #1a2b82 95.91%);
-  --degradado2: linear-gradient(90.21deg, #341da8 -5.91%, #161333 111.58%);
+  --degradado1: linear-gradient(90deg, #241f80 5.58%, #1a2b82 95.91%); /*used in nowhere*/
+  --degradado2: linear-gradient(90.21deg, #341da8 -5.91%, #161333 111.58%); /*user in projectItem */
+  /*used in home.jsx*/
+  --degradado3: linear-gradient(180deg, rgba(36, 31, 128, 0) 5.58%, rgba(32, 26, 119, 0.53) 95.91%); 
+  --degradado4: linear-gradient(90deg, rgba(36, 31, 127, 0.697) 5.58%, rgba(26, 43, 130, 0.766) 95.91%); /*used in contacto*/
   --normal-font-family: 'Chakra', sans-serif;
   --styled-font-family1: "Cyber", sans-serif;
 
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) { 
   /* :root {
     --highlighted_text_color:#ff64f2;
     --link_color:#75b3ff;
@@ -257,9 +260,11 @@ p.danger {
   min-height: 100vh; /* Esto asegura que la altura del contenedor sea al menos igual a la altura de la ventana gráfica. */
 }
 
-/* 341da8 */
 .degradado1 {
   background: var(--degradado1);
+}
+.degradado3 {
+  background: var(--degradado3);
 }
 .svg_link1:hover svg path {
   fill: var(--link_color_hover);
@@ -270,4 +275,12 @@ p.danger {
 
 .blur-background {
   filter: blur(5px); /* Ajusta el valor de desenfoque según tu preferencia */
+}
+
+.bgBanner1 {
+  background-image: linear-gradient(to right, rgba(6, 1, 21, 1), rgba(14, 0, 17, 0.5)), url("./assets/img/bg1.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
