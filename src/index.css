@@ -38,9 +38,13 @@
   --link_disabled_color:#ff8fff;
   --link_color:#6fa6ff;
   --link_color_hover:#faff5c;
+  --dark_link_color:#001f50;
+  --dark_link_color_hover:#f6ff00;
+  --dark_link_color_hover2:#0059e8;
   --container_color:#171939; /*used in project tabs*/
-  --container_color2:#0e0b13; 
-  --container_color3:#100f1f;/*141225*/
+  --container_color2:#17152c; /*used in skills*/
+  --container_color3:#e8e8ee;/*Used in articles*/
+  --container_color4:#b3b3d3;/*Used in articles*/
   --bg_color1:#172565;
   --success_color:rgb(146, 255, 146);
   --success_dark_color:rgb(46, 107, 46);
@@ -52,10 +56,11 @@
   --button-font-size: 17px;
   --gradient_color1: #ac31b0; /*used in project tabs*/
   --gradient_color2: #3a20bb;/*used in project tabs*/
-  --degradado1: linear-gradient(90deg, #241f80 5.58%, #172672 95.91%); /*used in Articles*/
+  --degradado1: linear-gradient(90deg, hsl(234, 35%, 69%) 5.58%, #677cb8 95.91%); /*used in Articles*/
   --degradado2: linear-gradient(90.21deg, #ac31b0 -5.91%, #341da8 111.58%); /*user in projectItem */
   --degradado3: linear-gradient(180deg, rgba(36, 31, 128, 0) 90.58%, rgb(50, 50, 165) 100.91%); /*used in skills*/
-  --degradado4: linear-gradient(90deg, rgba(118, 34, 178, 0.697) -10.58%, rgba(26, 43, 130, 0.766) 95.91%); /*used in contacto*/
+  --degradado4: linear-gradient(90deg, rgba(70, 111, 149, 0.697) -10.58%, rgba(33, 50, 130, 0.766) 95.91%); /*used in contacto*/
+  --degradado5: linear-gradient(90deg, #4878af 5.58%, rgb(36, 70, 155) 95.91%); /*used in Articles*/
   --normal-font-family: 'Chakra', sans-serif;
   --styled-font-family1: "Cyber", sans-serif;
 
@@ -260,6 +265,9 @@ p.danger {
 
 .degradado1 {
   background: var(--degradado1);
+}
+.degradado5 {
+  background: var(--degradado5);
 }
 .degradado3 {
   background: var(--degradado3);

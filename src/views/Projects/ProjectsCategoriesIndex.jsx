@@ -1,30 +1,18 @@
-import { Link, useLocation } from "react-router-dom";
-import projectsJSON from "../../data/projects.json";
-import AnimatedButton from "../../components/AnimatedButton/AnimatedButton";
-import ArticleHeaderLayout from "../Generals/ArticleHeaderLayout";
+import { Link } from "react-router-dom";
 
+import AnimatedButton from "../../components/AnimatedButton/AnimatedButton";
+import projectsJSON from '../../data/projects.json'
 const ProjectsCategoriesIndex = () => {
-  const location = useLocation();
-  // const { description } = projectsJSON;
-  const { categories, description } = projectsJSON;
-  
-  const URL = location.pathname; // Obtén la URL actual
-  const title = 'Projects';
+const { categories } = projectsJSON;
 
   return(
     <>
-      <ArticleHeaderLayout 
-        title = {title}
-        mainParagraph = {description}
-        URL = {URL}
-      />
-      
       <div className="flex justify-center">
-      <div className="text-start">
+      <div className="">
         <span className="text-2xl">
           Categories:
         </span>
-        <ul className="list-disc mt-2 ml-10">
+        <ul className="list-disc mt-2">
           <li className="py-2 ">
           <Link to={'/projects/web-apps'} 
             className='text-link_color hover:text-link_color_hover hover:underline'> 

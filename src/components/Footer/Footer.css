@@ -1,12 +1,12 @@
 /** footer **/
 .footer {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('../../assets/img/footer-bg.png');
+  background-image: linear-gradient( var(--container_color), var(--container_color)), url('../../assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .newsletter-bx {
-  background: #e3e3e6;
+  background: var(--container_color3);
   border-radius: 55px;
   color: rgb(0, 0, 0);
   margin-bottom: 80px;
@@ -34,7 +34,7 @@
 }
 .new-email-bx::after {
   content: "";
-  background: #e3e3e6;
+  background: var(--container_color3);
   border-radius: 20px;
   position: absolute;
   z-index: -1;

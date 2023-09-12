@@ -13,20 +13,24 @@ const ProjectsCategoryOverview = (props) => {
 
   return(
     <>
-      <div>
-        <h1 className="font-bold text-4xl text-highlighted_text_color mb-3">
-          {category}
-        </h1>
-        <BreadCrumb URL={URL} />
-        <p className=" mx-auto mb-10 text-center w-[90%] md:w-[100%] lg:mx-30">
-          {description}
-        </p>
-        
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 ">
-          {projects.map((project, index) => (
-            <ProjectItemCard key={index} {...project} />
-            ))}
-          {/* ProjectItemCard */}
+      <div className="">
+        <div className="degradado5 rounded-t-[64px] w-full py-[35px]">
+          <h1 className="text-center font-bold text-white text-4xl">
+            {category}
+          </h1>
+        </div>
+        <div className='pt-5 pb-[70px] px-[28px] md:px-[40px] lg:px-24 bg-container_color3 shadow-2xl rounded-b-[64px]'>
+          <BreadCrumb URL={URL} />
+          <p className=" mx-auto text-[black] mb-10 text-center w-[90%] md:w-[100%] lg:mx-30">
+            {description}
+          </p>
+          
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 ">
+            {projects.map((project, index) => (
+              <ProjectItemCard key={index} {...project} />
+              ))}
+            {/* ProjectItemCard */}
+          </div>
         </div>
       </div>
 {/*     

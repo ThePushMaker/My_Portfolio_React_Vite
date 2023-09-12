@@ -3,8 +3,8 @@
   position: relative;
   border-radius: 30px;
   overflow: hidden;
-  opacity: 1;
-  background: linear-gradient(90.21deg, #09090c -5.91%, #191950 111.58%);
+  opacity: 0.95;
+  background: linear-gradient(90.21deg, #27276b -5.91%, #202067 111.58%);
 }
 
 .proj-imgbx::before {
@@ -23,6 +23,7 @@
   height: 30%;
 }
 .proj-imgbx:hover {
+  opacity: 100;
   filter: brightness(106%);
 }
 

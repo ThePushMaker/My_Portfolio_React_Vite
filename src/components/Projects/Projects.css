@@ -1,14 +1,10 @@
 
 /** projects **/
-.project {
-  background: #060606;
-}
 
 #projects-tabs  {
   margin: 0 auto;
   border-radius: 50px;
-  background-color: #0F0F17;
-  /* background-color: rgb(255 255 255 / 10%); */
+  opacity: 80%;
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-link  {
@@ -20,7 +16,6 @@
   position: absolute;
   width: 0;
   height: 100%;
-  background: #101021;
   top: 0;
   left: 0;
   z-index: -1;

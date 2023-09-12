@@ -57,7 +57,7 @@ const Tabs = ({categories}) => {
         shadow-2xl shadow-900/20 nav nav-pills h-[180px] 
         md:h-[75px] 
         lg:w-[72%]
-        my-0 mx-auto rounded-[50px] bg-container_color overflow-hidden
+        my-0 mx-auto rounded-[50px] bg-container_color4 overflow-hidden
         "
       >
         <div className="flex h-[100%] w-[100%] flex-wrap md:flex-nowrap">
@@ -67,11 +67,11 @@ const Tabs = ({categories}) => {
                 <button
                   key={index}
                   id={`tab-${index + 1}`}
-                  className="w-[100%] tab nav-item nav-link hover:underline hover:decoration-link_color_hover"
+                  className="w-[100%] tab nav-item nav-link hover:underline hover:decoration-link_color_hover text-dark_link_color hover:text-dark_link_color_hover"
                   onClick={() => handleTabClick(index+1)}
                 >
                   <span
-                    className="text-md font-thin text-link_color hover:text-link_color_hover 
+                    className="text-md font-thin 
                     md:text-[18px] lg:text-[20px]
                     lg:font-[500]"
                     >
