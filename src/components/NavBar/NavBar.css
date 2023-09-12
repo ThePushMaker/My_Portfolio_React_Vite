@@ -147,6 +147,8 @@
   100% {
     transform: translatex(200%);
     opacity: 0;
+    visibility: hidden;
+    display: none;
   }
 }
 
@@ -157,8 +159,9 @@
 
 .mobileNavbar.close {
   animation: slideOut 0.4s ease;
-  opacity: 0;
+  animation-fill-mode: forwards; /* Esto hará que la animación retenga el estado final */
 }
+
 
 .floating-button {
   position: fixed;
