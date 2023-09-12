@@ -57,7 +57,7 @@ const clearFields = () => {
                     placeholder="Email Adress" 
                     />
                 </div>
-                <div className=" w-[65%] m-auto 
+                <div className=" w-52 m-auto 
                   md:w-4/12 md:m-0 md:pl-3 "
                 >
                   <button className="newsletter_button w-full bg-[black] bg-opacity-[88%]" type="submit">

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import logo from "../../assets/img/logo.svg";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
@@ -7,8 +7,29 @@ import SocialIcons from "../SocialIcons/SocialIcons"
 const NavBar = () => {
   const [activateLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
-  const [menuVisible, setMenuVisible] = useState(false);
+  const [openMobileNavbar, setOpenMobileNavbar] = useState(false);
+  const navbarRef = useRef(null);
+  
+  // Manejador de clics fuera de la navbar
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        // Si se hizo clic fuera de la navbar, ciérrala
+        // setNavbarAbierta(false);
+        setOpenMobileNavbar(false);
+      }
+    }
 
+    // Agregar un event listener al documento
+    document.addEventListener("click", handleClickOutside);
+
+    // Limpieza: elimina el event listener cuando el componente se desmonta
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+ 
   useEffect(() => {
     const onScroll = () => {
       window.scrollY > 50 ? setScrolled(true) : setScrolled(false);
@@ -25,7 +46,7 @@ const NavBar = () => {
   };
   
   const toggleMenu = () => {
-    setMenuVisible(!menuVisible);
+    setOpenMobileNavbar(!openMobileNavbar);
   };
   
   const URLList = [
@@ -38,11 +59,13 @@ const NavBar = () => {
   
   const navLinkStyles = 'navbar-link lg:text-[17px] lgxl:text-xl';
   
+  const navbarPaddings = 'px-6 md:px-12 lg:px-16 py-6';
+  
   return (
     <>
     <div>
-      <nav className={`navbar ${scrolled ? 'scrolled backdrop-blur-sm' : ''} `}>
-        <div className="mx-auto max-w-[1500px] flex justify-between px-6 md:px-12 lg:px-16">
+      <nav className={`${scrolled ? 'scrolled backdrop-blur-sm py-[10px]' : ''} navbar  ${navbarPaddings}`}>
+        <div className="mx-auto max-w-[1500px] flex justify-between ">
           
             <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start">
             
@@ -58,7 +81,7 @@ const NavBar = () => {
                   Home
                 </Link>
                 {/* menu lg */}
-                {location.pathname==='/' && (
+                {location.pathname === '/' && (
                   <>
                     <a
                       href="#skills"
@@ -82,19 +105,21 @@ const NavBar = () => {
                 )}
               </div>
               
-                {/* botn de hamburguesa es el de abajo */}
-                <div>
+                {/*  hamburger button below */}
+                <div ref={navbarRef}>
                   <button
                     className="visible inline lg:invisible lg:hidden svg_link2"
                     type="button" onClick={toggleMenu}
                   >
                     <svg className="w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H14M4 18H9" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                   </button>
-                  {/*el  boton de hamburguesa es el de arriba */}
-                  {/* aqui inicia el menu movil */}
-                  {menuVisible && (
-                    <div className="mobileNavbar absolute top-[0] backdrop-blur-md right-0 w-[60vw] md:w-[45vw] bg-[black] shadow-2xl shadow-border_color1 text-white pt-3 pb-7 px-12 bg-opacity-[90%] h-screen visible inline lg:invisible lg:hidden">
-                      <div className="flex justify-end ">
+                  {/*hamburger menu  */}
+                  {openMobileNavbar && (
+                    <div className={`${navbarPaddings} mobileNavbar absolute top-0 backdrop-blur-md right-0 w-[64vw] md:w-[45vw] 
+                      bg-[black] shadow-2xl shadow-border_color1 text-white  bg-opacity-[90%] h-screen visible inline 
+                      lg:invisible lg:hidden`} 
+                    >
+                      <div className="flex justify-end">
                         <button onClick={toggleMenu} className="svg_link1">
                         <span className="">
                           <svg className="w-7" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier">
@@ -109,7 +134,7 @@ const NavBar = () => {
                             <a href={item.URL} className="hover:text-link_color_hover"> {item.name}</a>
                           </li>
                         ))}
-                        {/* aqui termina el menu movil */}
+                        {/* here ends hamburger menu */}
                       </ul>
                       <div className="flex justify-center">
                           <SocialIcons /> 

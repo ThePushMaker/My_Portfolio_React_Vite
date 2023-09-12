@@ -48,14 +48,12 @@ const Contact = () => {
   return(
     <section className='bgBannerContacto'>
       <div className='contact degradado4 px-6 md:px-14 lg:px-28 pt-[60px] pb-[200px] ' id="contact">
-        <div className='container mx-auto'>
+        <div className='container mx-auto w-full h-full'>
           <div className='flex flex-wrap items-center'>
             <div className='w-full md:w-1/2'>
-              <div>
-                <img src={contactImg} alt="contact_image" />
-              </div>
+              <img src={contactImg} alt="contact_image" />
             </div>
-            <div className='w-full md:w-1/2'>
+            <div className='w-full md:w-1/2 mt-10 md:mt-0'>
               <h2 className='text-[40px] mb-5'>"Web development is an art, and your project is our masterpiece."</h2>
               <p className='mb-5 text-center'>Let{"'"}s build something great together!</p>
               <form onSubmit={handleSubmit}>
@@ -88,8 +86,10 @@ const Contact = () => {
                   </div>
                   <div className='w-full'>
                     <div 
-                      className='mx-auto my-4 w-[50%] lg:w-[30%] button_transparent_rounded flex justify-center border-[1.5px] 
-                      border-solid border-white bg-[black] bg-opacity-[30%]' 
+                      className='mx-auto my-4 w-fit button_transparent_rounded flex justify-center border-[1.5px] 
+                      border-solid border-white bg-[black] bg-opacity-[30%]
+                      
+                      ' 
                       >
                       <button type="submit">
                       <span> SEND <span className='styledFontFamily' >{'>'}</span></span>

@@ -3,7 +3,7 @@
 }
 
 .bgBannerContacto {
-  background-image: linear-gradient(to right, rgb(35, 22, 82), rgba(14, 0, 17, 0.73)), url("../../assets/img/bg2.jpg");
+  background-image: linear-gradient(to right, rgb(55, 0, 255), rgba(14, 0, 17, 0.73)), url("../../assets/img/bg2.jpg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;

@@ -57,7 +57,7 @@ const TabPanel = (props) => {
 
             // { props.category }
             <button  
-              className="shadow-sm shadow-border_color1 hover:shadow-md hover:shadow-neon_color2 button_transparent_rounded flex m-auto justify-center mt-6 w-[25%]
+              className="shadow-sm shadow-border_color1 hover:shadow-md hover:shadow-neon_color2 button_transparent_rounded flex m-auto justify-center mt-6 w-fit
               border-[1.5px] border-solid border-border_color1 bg-[black]" 
               onClick={toggleMostrarMas}
             >

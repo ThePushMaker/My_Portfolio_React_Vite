@@ -55,7 +55,7 @@
   --degradado1: linear-gradient(90deg, #241f80 5.58%, #172672 95.91%); /*used in Articles*/
   --degradado2: linear-gradient(90.21deg, #ac31b0 -5.91%, #341da8 111.58%); /*user in projectItem */
   --degradado3: linear-gradient(180deg, rgba(36, 31, 128, 0) 90.58%, rgb(50, 50, 165) 100.91%); /*used in skills*/
-  --degradado4: linear-gradient(90deg, rgba(36, 31, 127, 0.697) 5.58%, rgba(26, 43, 130, 0.766) 95.91%); /*used in contacto*/
+  --degradado4: linear-gradient(90deg, rgba(118, 34, 178, 0.697) -10.58%, rgba(26, 43, 130, 0.766) 95.91%); /*used in contacto*/
   --normal-font-family: 'Chakra', sans-serif;
   --styled-font-family1: "Cyber", sans-serif;
 
@@ -92,12 +92,6 @@
   background: var(--highlighted_text_color);
 }
 /* hasta aqui scrollbar */
-
-/* Custom fonts */
-*{
-	/* user-select: none; */
-}
-  
 
 
 /* default css */
@@ -228,7 +222,7 @@ p.danger {
   color: #ffffff;
   position: relative;
   transition: 0.3s ease-in-out;
-  padding: 18px 34px;
+  padding: 18px 60px;
   /* background-color: transparent; */
   border-radius: 20px;
 }

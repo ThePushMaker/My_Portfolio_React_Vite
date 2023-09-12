@@ -30,14 +30,14 @@ const Banner = () => {
 
   return(
     <>
-      <section className="banner px-6 md:px-14 lg:px-24 mt-0 pt-[260px] pb-[100px]" id="home">
+      <section className="banner px-6 md:px-14 lg:px-24 text-center md:text-start mt-0 pt-[260px] pb-[140px]" id="home">
         <div className="container mx-auto flex">
           <div className="items-center flex flex-wrap">
-            <div className="w-full md:w-1/2 lg:w-7/12">
+            <div className="w-full lg:w-7/12">
               <div>
                 <span className="tagline text-link_disabled_color">Welcome to my portfolio</span>
                 <h1 className="text-4xl md:text-5xl lg:text-5xl mb-3"><span className="textShadow">{"Hi, I'm Martín Calderón! "}</span>                       
-                  <div className="h-16 md:h-[90px] lg:h-12 mt-2">
+                  <div className="h-16 lg:h-12 mt-2">
                     <span className="wrap text-highlighted_text_color" style={{ fontSize: `${fontSize}px` }}>{ <TypeAnimation />}</span>
                   </div>
                 </h1>
@@ -45,8 +45,8 @@ const Banner = () => {
                 <p className="textShadow">Follow me on <a className="text-link_color hover:text-link_color_hover hover:underline" target="_blank" rel="noreferrer" href="https://linktr.ee/martin_calderon"> my social media</a>.</p>
               </div>
               <div>
-                <a href="#contact">
-                  <button className="mt-4" onClick={() => console.log('connect')}>
+                <a href="#contact" className="flex justify-center md:justify-start" >
+                  <button className="mt-6" onClick={() => console.log('connect')}>
                     <label className="text-link_color hover:text-link_color_hover hover:underline textShadow">
                       {"Let's Connect!"}
                     </label>
@@ -55,9 +55,9 @@ const Banner = () => {
                 </a>
               </div>
             </div>
-            <div className=" md:w-1/2 lg:w-5/12 mt-16 mx-auto">
+            <div className=" md:w-1/2 lg:w-5/12 mt-16 lg:mt-0 mx-auto self-start">
               <div className="">
-                <img className="w-64 md:w-80 lg:w-[400px] rounded-full opacity-[92%] shadow-2xl ml-auto" src={headerImg} alt="Header Img" />
+                <img className="w-96 md:w-80 lg:w-[400px] rounded-full opacity-[92%] shadow-2xl ml-auto" src={headerImg} alt="Header Img" />
               </div>
             </div>
           </div>
