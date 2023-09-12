@@ -131,12 +131,22 @@
 
 @keyframes slideIn {
   0% {
-    transform: translatex(-100%);
+    transform: translatex(200%);
     opacity: 0;
   }
   100% {
+    transform: translatex(0%);
+    opacity: 100;
+  }
+}
+@keyframes slideOut {
+  0% {
     transform: translatex(0);
     opacity: 100;
+  }
+  100% {
+    transform: translatex(200%);
+    opacity: 0;
   }
 }
 
@@ -144,6 +154,12 @@
 .mobileNavbar {
   animation: slideIn 0.4s ease;
 }
+
+.mobileNavbar.close {
+  animation: slideOut 0.4s ease;
+  opacity: 0;
+}
+
 .floating-button {
   position: fixed;
   bottom: 20px;

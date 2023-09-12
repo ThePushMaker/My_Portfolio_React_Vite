@@ -61,6 +61,10 @@
 
 }
 
+*{
+	user-select: none;
+}
+
 @media (prefers-color-scheme: dark) { 
   /* :root {
     --highlighted_text_color:#ff64f2;
