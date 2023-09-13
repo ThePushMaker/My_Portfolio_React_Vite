@@ -55,10 +55,10 @@
   --default_sm_text_size: 10px;
   --input-font-size: 19.4px;
   --button-font-size: 17px;
-  --gradient_color1: #3199b0; /*used in project tabs*/
-  --gradient_color2: #1419a6;/*used in project tabs*/
+  --gradient_color1: #aa42cc; /*used in project tabs*/
+  --gradient_color2: #3825c6;/*used in project tabs*/
   --degradado1: linear-gradient(90deg, #171939 5.58%, #171939 95.91%); /*used in Articles*/
-  --degradado2: linear-gradient(90.21deg, #3199b0 -5.91%, #341da8 111.58%); /*user in projectItem */
+  --degradado2: linear-gradient(90.21deg, #3b77c5 -5.91%, #591da8 111.58%); /*user in projectItem */
   --degradado3: linear-gradient(180deg, rgba(36, 31, 128, 0) 90.58%, rgb(50, 50, 165) 100.91%); /*used in skills*/
   --degradado4: linear-gradient(90deg, rgba(70, 111, 149, 0.697) -10.58%, rgba(33, 50, 130, 0.766) 95.91%); /*used in contacto*/
   --degradado5: linear-gradient(90deg, #3977b6 5.58%, #4551b2 95.91%); /*used in Articles*/
