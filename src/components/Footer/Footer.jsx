@@ -4,6 +4,7 @@ import MailchimpForm from "../MailchimpForm/MailchimpForm";
 import { useLocation } from "react-router-dom";
 import SocialIcons from '../SocialIcons/SocialIcons';
 
+const smTextSize = 'text-[17px]'
 
 const Footer = () => {
   let location = useLocation();
@@ -16,10 +17,10 @@ const Footer = () => {
           <div className='w-full md:w-1/2'>
             <img src={logo} alt="logo" />
           </div>
-          <div className='w-full md:w-1/2 text-sm text-end'>
+          <div className='w-full md:w-1/2 text-end'>
             <SocialIcons />
-            <p>© 2023 Martín Calderón. All Rights Reserved.</p>
-            <p>This website has been developed using the technologies React, Tailwind, and Vite.</p>
+            <p className={smTextSize}>© 2023 Martín Calderón. All Rights Reserved.</p>
+            <p className={smTextSize}>This website has been developed with React, Tailwind, and Vite.</p>
           </div>
         </div>
       </div>

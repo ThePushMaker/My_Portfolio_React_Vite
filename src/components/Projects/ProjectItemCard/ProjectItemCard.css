@@ -1,0 +1,44 @@
+
+.proj-imgbx {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  opacity: 0.95;
+  background: linear-gradient(90.21deg, #27276b -5.91%, #202067 111.58%);
+}
+
+.proj-imgbx::before {
+	content: "";
+	background: var(--degradado2);
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 0%;
+  bottom: 0;
+	transition: 0.4s ease-in-out;
+}
+.proj-imgbx:hover::before {
+  /* height: 100%; */
+  opacity: 0.90;
+  height: 30%;
+}
+.proj-imgbx:hover {
+  opacity: 100;
+  filter: brightness(106%);
+}
+
+.proj-txtx {
+  position: absolute;
+  text-align: center;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, +100%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+.proj-imgbx:hover .proj-txtx {
+  bottom: 25%;
+  opacity: 1;
+}
+

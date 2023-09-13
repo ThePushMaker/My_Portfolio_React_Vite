@@ -1,45 +1,68 @@
 import {createBrowserRouter} from 'react-router-dom'
 
-import Home from './views/Home';
-import WebPlatformsAndApplications from './views/Projects/WebPlatformsAndApplications';
-import UserExperienceUX from './views/Projects/UserExperienceUX';
-import CommunityContributions from './views/Projects/CommunityContributions';
-import PageLayout from './layouts/PageLayout/PageLayout'
-import ProjectsLinksList from './views/Projects/ProjectsLinksList';
+import Home from './views/pages/Home';
+import ArticleLayout from './layouts/ArticleLayout';
+import IndexLayout from './layouts/IndexLayout'
+import ProjectsCategoryOverview from './views/Projects/ProjectsCategoryOverview';
+import ProjectsCategoriesIndex from './views/Projects/ProjectsCategoriesIndex';
+import MoreAboutMe from './views/MoreAboutMe';
+import ProjectDisplay from './views/Projects/ProjectDisplay';
+import ArticleProjectsLayout from './layouts/ArticleProjectsLayout';
 
 const router = createBrowserRouter([
-    {path: '/',
-    // element: <Layout />,
-    children: [
-        {
-            index: true,
-            element: <Home />
-        }
-    ]
-    },
     {
-        basename: '/projects',
-        element: <PageLayout />,
+        path: '/',
+        element: <IndexLayout />,
         children: [
             {
-                path: '/projects',
-                element: <ProjectsLinksList />
+                path: '/',
+                index: true,
+                element: <Home />
             },
             {
-                path: '/projects/web-apps',
-                element: <WebPlatformsAndApplications />
+                // basename: '/article',
+                element: <ArticleLayout />,
+                children: [
+                    {
+                        basename: '/projects',
+                        element: <ArticleProjectsLayout />,
+                        children: [
+                            {
+                                path: '/projects',
+                                element: <ProjectsCategoriesIndex />
+                            },
+                            {
+                                path: '/project/1',
+                                element: <ProjectDisplay />
+                            }
+                        ]
+                    },
+                    {
+                        path: '/projects/web-apps',
+                        element: <ProjectsCategoryOverview categoryIndex='0' />
+                    },
+                    {
+                        path: '/projects/ux',
+                        element: <ProjectsCategoryOverview categoryIndex='1' />
+                    },
+                    {
+                        path: '/projects/community',
+                        element: <ProjectsCategoryOverview categoryIndex='2' />
+                    },
+                    {
+                        path: '/projects/:idProjectsCategory/:idProject',
+                        element: <ProjectDisplay />
+                    },
+                ]
             },
             {
-                path: '/projects/ux',
-                element: <UserExperienceUX />
-            },
-            {
-                path: '/projects/community',
-                element: <CommunityContributions />
+                path: '/about-me',
+                element: <MoreAboutMe />
+                
             }
-            
         ]
     },
+    
 
 ])
 

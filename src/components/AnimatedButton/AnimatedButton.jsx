@@ -6,8 +6,14 @@ const AnimatedButton = () => {
   return(
 <>
 <button className="cybr-btn">
-  {'< Contact Me />'} Me<span aria-hidden>_</span>
-  <span aria-hidden className="cybr-btn__glitch">ContactMe</span>
+  <label className='font-mono'>{'< '}</label>
+  {'Contact Me'}<span aria-hidden></span>
+  <span className="cybr-btn__tag">New</span>
+  <span aria-hidden className="cybr-btn__glitch">
+  <label className='font-mono'>{'< '}</label>
+  {'Contact Me'}
+  <label className='font-mono'>{' />'}</label>
+  </span>
   <span aria-hidden className="cybr-btn__tag">R25</span>
 </button>
 <button className="cybr-btn">

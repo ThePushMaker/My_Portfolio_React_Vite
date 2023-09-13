@@ -2,28 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Chakra;
+  src: url("./assets/font/ChakraPetch-Light.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: Chakra;
+  src: url("./assets/font/ChakraPetch-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Chakra;
+  src: url("./assets/font/ChakraPetch-Bold.ttf");
+  font-weight: 700;
+}
+
 /* faff5c  yellow*/
 /* ff8fff pink */
 /* 6fa6ff lightblue1 */
 /* 80d2ff lightblue2 */
+/* 1f1d36 bg gray  */
 :root {
+  --text_dark-gray: #24243a;
+  --neon_color1:rgba(65, 135, 255, 0.659); /*used in projectItem*/
+  --neon_color2: #0062ff;
   --border_color1:#0062ff;
-  --highlighted_text_color:#faff5c;
+  --border_color2:rgba(0, 98, 255, 0.448); /* used in projectItems*/
+  --highlighted_text_color:#d8db8e;
   --link_disabled_color:#ff8fff;
   --link_color:#6fa6ff;
   --link_color_hover:#faff5c;
-  --container_color:#130E1D;
-  --container_color2:#0e0b13;
-  --bg_color1:#110922;
+  --dark_link_color:#0040a6;
+  --dark_link_color_hover:#f6ff00;
+  --dark_link_color_hover2:#0059e8;
+  --container_color:#171939; /*used in project tabs*/
+  --container_color2:#17152c; /*used in skills*/
+  --container_color3:#f0f0f0;/*Used in articles*/
+  --container_color4:#b9b9e7;/*Used in articles*/
+  --container_color5:#13142f; /*used in footer*/
+  --bg_color1:#172565;
   --success_color:rgb(146, 255, 146);
   --success_dark_color:rgb(46, 107, 46);
   --danger_color:rgb(255, 99, 99);
   --danger_dark_color:rgb(141, 53, 53);
-  --default_text_size: 22.5px;
-  
+  --default_md_text_size: 21px; /*parrafos y demás*/
+  --input-font-size: 19.5px;
+  --button-font-size: 18px;
+  --gradient_color1: #8a44db; /*used in project tabs*/
+  --gradient_color2: #1f53cc;/*used in project tabs*/
+  --degradado1: linear-gradient(90deg, #171939 5.58%, #171939 95.91%); /*used in Articles*/
+  --degradado2: linear-gradient(90.21deg, #3b77c5 -5.91%, #722fca 111.58%); /*user in projectItem */
+  --degradado3: linear-gradient(180deg, rgba(36, 31, 128, 0) 90.58%, rgb(50, 50, 165) 100.91%); /*used in skills*/
+  --degradado4: linear-gradient(90deg, rgba(70, 111, 149, 0.697) -10.58%, rgba(33, 50, 130, 0.766) 95.91%); /*used in contacto*/
+  --degradado5: linear-gradient(90deg, #3977b6 5.58%, #4551b2 95.91%); /*used in Articles*/
+  --normal-font-family: 'Chakra', sans-serif;
+  --styled-font-family1: "Cyber", sans-serif;
+
 }
 
-@media (prefers-color-scheme: dark) {
+*{
+	user-select: none;
+}
+
+@media (prefers-color-scheme: dark) { 
   /* :root {
     --highlighted_text_color:#ff64f2;
     --link_color:#75b3ff;
@@ -55,32 +103,6 @@
 }
 /* hasta aqui scrollbar */
 
-/* Custom fonts */
-*{
-	user-select: none;
-}
-  
-/* @font-face {
-  font-family: Centra;
-  src: url("assets/font/CentraNo2-Bold.ttf");
-  font-weight: 700;
-}
-@font-face {
-  font-family: Centra;
-  src: url("assets/font/CentraNo2-Medium.ttf");
-  font-weight: 500;
-}
-@font-face {
-  font-family: Centra;
-  src: url("assets/font/CentraNo2-Book.ttf");
-  font-weight: 400;
-} */
-
-@font-face {
-  font-family: Cyber;
-  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
-  font-display: swap;
-}
 
 /* default css */
 * {
@@ -115,10 +137,7 @@ body {
   position: relative;
   background-color: #050509;
   color: #fff;
-  /* font-family: "Centra", sans-serif !important; */
-  font-family: "Cyber", sans-serif !important;
-  font-size: 22.5px;
-  
+  font-family: var(--styled-font-family1);
   border: 1px solid var(--border_color1); /* Decoración alrededor de la página */
   animation: borderAnimation 30s infinite; /* Aplica la animación al borde */
 }
@@ -146,8 +165,22 @@ ul {
   padding: 0;
   line-height: normal;
   text-decoration: none;
+  font-family: var(--normal-font-family);
+  font-size: var(--default_md_text_size);
 }
-
+p,
+a,
+li,
+button,
+ul {
+  font-size: var(--default_md_text_size);
+}
+input {
+  font-size: var(--input-font-size);
+}
+button {
+  font-size: var(--button-font-size);
+}
 h2,
 h3 {
   font-weight: 700;
@@ -165,13 +198,17 @@ h3 {
 
 p {
   color: #bbbbbb;
-  font-size: 22px;
+  font-size: var(--default_md_text_size);
   letter-spacing: 0.8px;
   line-height: 1.5em;
 }
 
 a:hover {
   text-decoration: none;
+}
+
+.styledFontFamily{
+  font-family: var(--styled-font-family1);
 }
 
 @media (min-width: 1700px) {
@@ -190,14 +227,12 @@ p.danger {
 }
 
 
-
 .button_transparent_rounded {
   font-weight: 700;
   color: #ffffff;
-  font-size: 18px;
   position: relative;
   transition: 0.3s ease-in-out;
-  padding: 18px 34px;
+  padding: 18px 60px;
   /* background-color: transparent; */
   border-radius: 20px;
 }
@@ -223,12 +258,36 @@ p.danger {
 .button_transparent_rounded:hover::before {
   width: 100%;
 }
-
-
-
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Esto asegura que la altura del contenedor sea al menos igual a la altura de la ventana gráfica. */
 }
 
+.degradado1 {
+  background: var(--degradado1);
+}
+.degradado5 {
+  background: var(--degradado5);
+}
+.degradado3 {
+  background: var(--degradado3);
+}
+.svg_link1:hover svg path {
+  fill: var(--link_color_hover);
+}
+.svg_link2:hover svg path {
+  stroke: var(--link_color_hover);
+}
+
+.blur-background {
+  filter: blur(5px); /* Ajusta el valor de desenfoque según tu preferencia */
+}
+
+.bgBanner1 {
+  background-image: linear-gradient(to right, rgba(6, 1, 21, 1), rgba(14, 0, 17, 0.525)), url("./assets/img/bg1.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

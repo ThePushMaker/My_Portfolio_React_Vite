@@ -1,8 +1,8 @@
-@font-face {
+/* @font-face {
   font-family: Cyber;
   src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
   font-display: swap;
-}
+} */
 
 .cybr-btn {
   --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
@@ -39,9 +39,7 @@
   min-width: 300px;
   height: 75px;
   line-height: 75px;
-  transition: background 0.2s;
-  
-
+ 
   -webkit-clip-path: var(--clip);
           clip-path: var(--clip);
   display: block;
@@ -71,9 +69,9 @@
   background: var(--shadow-primary);
   transform: translate(var(--border), 0);
 }
-
+/* fondo */
 .cybr-btn:after {
-  background: var(--primary);
+  background: #3f119b;
 }
 
 .cybr-btn__tag {

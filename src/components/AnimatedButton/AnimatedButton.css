@@ -5,6 +5,7 @@
 } */
 
 .cybr-btn {
+  --bg_color_button: #3f119b; 
   --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
   --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);
   --primary-hue: 0;
@@ -39,9 +40,7 @@
   min-width: 300px;
   height: 75px;
   line-height: 75px;
-  transition: background 0.2s;
-  
-
+ 
   -webkit-clip-path: var(--clip);
           clip-path: var(--clip);
   display: block;
@@ -71,20 +70,20 @@
   background: var(--shadow-primary);
   transform: translate(var(--border), 0);
 }
-
+/* fondo */
 .cybr-btn:after {
-  background: var(--primary);
+  background: var(--bg_color_button);
 }
 
 .cybr-btn__tag {
-  position: absolute;
+  position: absolute !important;
   padding: 1px 4px;
   letter-spacing: 1px;
   line-height: 1;
   bottom: -5%;
   right: 5%;
   font-weight: normal;
-  color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%) !important;
   font-size: var(--label-size);
 }
 
@@ -116,7 +115,7 @@
   left: calc(var(--border) * 1);
   -webkit-clip-path: var(--clip);
           clip-path: var(--clip);
-  background: var(--primary);
+  background: var(--bg_color_button);
   z-index: -1;
 }
 

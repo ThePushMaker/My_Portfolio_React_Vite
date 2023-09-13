@@ -1,15 +1,18 @@
+.degradado4 {
+  background: var(--degradado4);
+}
+
+.bgBannerContacto {
+  background-image: linear-gradient(to right, rgb(55, 0, 255), rgba(14, 0, 17, 0.73)), url("../../assets/img/bg2.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 /** Contact **/
-.contact {
-  background: linear-gradient(90.21deg, #690b80 -5.91%, #020024 111.58%);
-}
 .contact img {
   width: 92%;
-}
-.contact h2 {
-	font-size: 45px;
-	font-weight: 700;
-  margin-bottom: 30px;
 }
 .contact form input, .contact form textarea {
   width: 100%;
@@ -25,14 +28,10 @@
 }
 .contact form input:focus, .contact form textarea:focus {
   background: rgba(255, 255, 255, 0.75);
-  /* background: rgba(0, 0, 0, 0.75); */
   color: #28004e;
-  /* color: black; */
-  /* color: white; */
   backdrop-filter: brightness(200%);
 }
 .contact form input::placeholder, .contact form textarea::placeholder {
-  font-size: 16px;
   font-weight: 400;
   color: #fff;
 }

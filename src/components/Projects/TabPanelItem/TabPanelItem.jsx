@@ -1,7 +1,6 @@
-import ProjectItem from "../ProjectItem/ProjectItem.jsx"
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import ProjectItemCard from "../ProjectItemCard/ProjectItemCard.jsx";
 
 const variants = {
   open: { opacity: 1 },
@@ -11,29 +10,27 @@ const variants = {
 const TabPanel = (props) => {
   let navigate = useNavigate();
 
-  
-  const [isClicked, setIsClicked] = useState(false);
-  
-  useEffect(() => {
-    if (isClicked){
-       return navigate("/projects");
-    }
-  },[isClicked]);
-
-  // const [mostrarMas, setMostrarMas] = useState(false);
   const mostrarRegistros = props.projects.slice(0, 6);
 
   const toggleMostrarMas = (e) => {
     e.preventDefault();
-    console.log("click en mostrar más");    
-    setIsClicked(true)
+    // console.log(props.category);    
+    
+    const newURL = props.category === 'Web Platforms & Applications' ? '/projects/web-apps' : '' 
+    || props.category === 'User Experience (UX)' ? '/projects/ux' : ''
+    || props.category === 'Community Contributions' ? '/projects/community' : '';
+    
+    
+    navigate(newURL); // Perform navigation immediately
+
   };
+  
 
   return (
   <>
     { (
       <motion.div animate={props.activeTab === props.index+1 ? "open" : "closed"}
-      variants={variants} transition={{ duration: 0.8 }} 
+        variants={variants} transition={{ duration: 0.8 }} 
         id={`panel-${props.index+1}`}
         className={`${props.activeTab === props.index+1 ? '' : 'opacity-0 hidden'} `}
       >
@@ -47,7 +44,7 @@ const TabPanel = (props) => {
         >
           {mostrarRegistros.map((project, index) => {
             return (
-                <ProjectItem 
+                <ProjectItemCard 
                   key={index} 
                   {...project} 
                 />
@@ -60,8 +57,8 @@ const TabPanel = (props) => {
 
             // { props.category }
             <button  
-              className="button_transparent_rounded flex m-auto justify-center mt-6 w-[25%]
-              border-[1.5px] border-solid border-border_color1 bg-[black] bg-opacity-[30%]" 
+              className="button_transparent_rounded shadow-sm shadow-border_color1 hover:shadow-md hover:shadow-neon_color2
+              flex m-auto justify-center mt-6 w-fit border-[1.5px] border-solid border-border_color1 bg-[black] bg-opacity-40" 
               onClick={toggleMostrarMas}
             >
               <span>

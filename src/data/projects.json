@@ -1,23 +1,25 @@
 {
+  "description": "In our world of digital innovation, my goal is to create cutting-edge technological solutions that span from robust web platforms and customized applications to captivating user experience interfaces and a continuous commitment to the development community. At the core of my approach lies a passion for technology, excellence in design, and an ongoing desire to contribute to the growth and success of both my contractors and the community at large. Welcome to a journey of technological creativity and collaborative development.",
   "categories": [
     {
       "category": "Web Platforms & Applications",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores voluptate temporibus, atque ab eos, delectus at ad hic voluptatem veritatis iure, nulla voluptates quod nobis doloremque eaque! Perferendis, soluta",
+      "route": "web-apps",
+      "description": "I can create cross-platform (responsive) web solutions that meet your specific needs. From planning and documentation to implementation and maintenance, I am committed to providing you with the best web platform and applications that will maximize your company's efficiency and management.",
       "projects": [
         {
           "title": "Business Startup",
           "description": "Design & Development",
-          "imgPath": "https://miro.medium.com/v2/resize:fit:750/0*QOZm9X5er1Y0r5-t"
+          "imgPath": ""
+        },
+        {
+          "title": "Business Staraaatup",
+          "description": "Deaaasign & Development",
+          "imgPath": ""
         },
         {
           "title": "Business Startup",
           "description": "Design & Development",
-          "imgPath": "https://miro.medium.com/v2/resize:fit:750/0*QOZm9X5er1Y0r5-t"
-        },
-        {
-          "title": "Business Startup",
-          "description": "Design & Development",
-          "imgPath": "https://miro.medium.com/v2/resize:fit:750/0*QOZm9X5er1Y0r5-t"
+          "imgPath": ""
         },
         {
           "title": "Business Startup",
@@ -53,63 +55,95 @@
     },
     {
       "category": "User Experience (UX)",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores voluptate temporibus, atque ab eos, delectus at ad hic voluptatem veritatis iure, nulla voluptates quod nobis doloremque eaque! Perferendis, soluta",
+      "route": "ux",
+      "description": "I'm passionate about designing captivating user interfaces that are not only visually appealing but also highly functional. I strive to provide users with an unforgettable experience when interacting with the application. From initial user research to prototyping and optimization, I am dedicated to elevating the user experience to the highest level possible.",
       "projects": [
         {
           "title": "Business Startup",
           "description": "Design & Development",
-          "imgPath": "https://miro.medium.com/v2/resize:fit:750/0*QOZm9X5er1Y0r5-t"
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
         }
       ]
     },
     {
       "category": "Community Contributions",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores voluptate temporibus, atque ab eos, delectus at ad hic voluptatem veritatis iure, nulla voluptates quod nobis doloremque eaque! Perferendis, soluta",
+      "route": "community",
+      "description": "In Community Contributions, I think about giving back to the community a bit of everything it has given me. I collaborate on open-source projects and actively engage in the development community in various ways. My goal is to share my humble knowledge and experience while delving deeper into the topics I know.",
       "projects": [
         {
           "title": "Business Startup",
           "description": "Design & Development",
-          "imgPath": "https://miro.medium.com/v2/resize:fit:750/0*QOZm9X5er1Y0r5-t"
+          "imgPath": ""
         },
         {
           "title": "Business Startup",
           "description": "Design & Development",
-          "imgPath": "https://miro.medium.com/v2/resize:fit:750/0*QOZm9X5er1Y0r5-t"
+          "imgPath": ""
         },
         {
           "title": "Business Startup",
           "description": "Design & Development",
-          "imgPath": "https://miro.medium.com/v2/resize:fit:750/0*QOZm9X5er1Y0r5-t"
+          "imgPath": ""
         },
         {
           "title": "Business Startup",
           "description": "Design & Development",
-          "imgPath": "https://miro.medium.com/v2/resize:fit:750/0*QOZm9X5er1Y0r5-t"
+          "imgPath": ""
         },
         {
           "title": "Business Startup",
           "description": "Design & Development",
-          "imgPath": "https://miro.medium.com/v2/resize:fit:750/0*QOZm9X5er1Y0r5-t"
+          "imgPath": ""
         },
         {
           "title": "Business Startup",
           "description": "Design & Development",
-          "imgPath": "https://miro.medium.com/v2/resize:fit:750/0*QOZm9X5er1Y0r5-t"
+          "imgPath": ""
         },
         {
           "title": "Business Startup",
           "description": "Design & Development",
-          "imgPath": "https://miro.medium.com/v2/resize:fit:750/0*QOZm9X5er1Y0r5-t"
+          "imgPath": ""
         },
         {
           "title": "Business Startup",
           "description": "Design & Development",
-          "imgPath": "https://miro.medium.com/v2/resize:fit:750/0*QOZm9X5er1Y0r5-t"
+          "imgPath": ""
         },
         {
           "title": "Business Startup",
           "description": "Design & Development",
-          "imgPath": "https://miro.medium.com/v2/resize:fit:750/0*QOZm9X5er1Y0r5-t"
+          "imgPath": ""
         },
         {
           "title": "Business Startup",
