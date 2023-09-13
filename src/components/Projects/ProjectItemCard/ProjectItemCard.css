@@ -19,7 +19,7 @@
 }
 .proj-imgbx:hover::before {
   /* height: 100%; */
-  opacity: 0.70;
+  opacity: 0.90;
   height: 30%;
 }
 .proj-imgbx:hover {

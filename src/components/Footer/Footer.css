@@ -1,6 +1,6 @@
 /** footer **/
 .footer {
-  background-image: linear-gradient( var(--container_color), var(--container_color)), url('../../assets/img/footer-bg.png');
+  background-image: linear-gradient( var(--container_color5), var(--container_color5)), url('../../assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,7 +22,6 @@
 }
 .new-email-bx::before {
   content: "";
-  /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
   background-color: #161621;
   border-radius: 20px;
   position: absolute;
