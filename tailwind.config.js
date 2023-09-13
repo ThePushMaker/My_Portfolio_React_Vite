@@ -26,6 +26,7 @@ export default {
       'border_color2': 'var(--border_color2)',
       'bg_color1': 'var(--bg_color1)',
       'highlighted_text_color': 'var(--highlighted_text_color)',
+      'text_dark-gray': 'var(--text_dark-gray)',
       'link_color': 'var(--link_color)',
       'link_color_hover': 'var(--link_color_hover)',
       'dark_link_color': 'var(--dark_link_color)',

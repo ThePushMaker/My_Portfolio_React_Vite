@@ -30,7 +30,7 @@ const BreadCrumb = (props) => {
   return(
     <>
     
-      <div className='text-start py-2 italic mb-3 text-[black]'>
+      <div className='text-start py-2 italic mb-3 text-text_dark-gray'>
         {breadcrumbItems.map((item, index) => (
           <React.Fragment key={item.to}>
             <Link to={item.to} 

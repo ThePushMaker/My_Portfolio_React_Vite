@@ -7,14 +7,14 @@ const ProjectsCategoryCommon = ({ title, description, categories, URL, category,
   return (
     <>
       <div className="degradado5 rounded-t-[64px] w-full py-[35px]">
-        <h1 className="text-center font-bold text-white text-4xl">
+        <h1 className="text-center font-bold text-white text-[42px]">
           {title || category}
         </h1>
       </div>
 
       <div className="pt-5 pb-[70px] px-[28px] md:px-[40px] lg:px-24 bg-container_color3 shadow-2xl rounded-b-[64px]">
         <BreadCrumb URL={URL} />
-        <p className="mx-auto text-[black] mb-10 text-center w-[90%] md:w-[100%] lg:mx-30">
+        <p className="mx-auto text-text_dark-gray mb-10 text-center w-[90%] md:w-[100%] lg:mx-30">
           {description}
         </p>
 
@@ -24,8 +24,8 @@ const ProjectsCategoryCommon = ({ title, description, categories, URL, category,
             {/* categories links list */}
               {categories &&
                 <>
-                  <span className="text-2xl text-[black]">Categories:</span>
-                  <ul className="mt-2 list-disc text-[black] mt-2">
+                  <span className="text-2xl text-text_dark-gray">Categories:</span>
+                  <ul className="mt-2 list-disc text-text_dark-gray mt-2">
                     {categories.map((category, index)=> (
                       <li className="py-2" key={index}>
                         <Link
@@ -43,7 +43,7 @@ const ProjectsCategoryCommon = ({ title, description, categories, URL, category,
               {/* project items list */}
               {projects && (
                 <>
-                  <span className="text-2xl text-[black]">Projects:</span>
+                  <span className="text-3xl text-text_dark-gray">Projects:</span>
                   <div className="mt-5 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project, index) => (
                       <ProjectItemCard key={index} {...project} />
