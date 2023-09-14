@@ -153,11 +153,12 @@
 }
 
 /* Aplicar la animación al navbar */
-.mobileNavbar {
+
+.navbar-animation {
   animation: slideIn 0.4s ease;
 }
 
-.mobileNavbar.close {
+.navbar-animation-close {
   animation: slideOut 0.4s ease;
   animation-fill-mode: forwards; /* Esto hará que la animación retenga el estado final */
 }

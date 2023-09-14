@@ -8,6 +8,7 @@ import ProjectsCategoriesIndex from './views/Projects/ProjectsCategoriesIndex';
 import MoreAboutMe from './views/MoreAboutMe';
 import ProjectDisplay from './views/Projects/ProjectDisplay';
 import ArticleProjectsLayout from './layouts/ArticleProjectsLayout';
+import routes from './routes';
 
 const router = createBrowserRouter([
     {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
                         element: <ArticleProjectsLayout />,
                         children: [
                             {
-                                path: '/projects',
+                                path: routes['Projects'],
                                 element: <ProjectsCategoriesIndex />
                             },
                             {
@@ -38,15 +39,15 @@ const router = createBrowserRouter([
                         ]
                     },
                     {
-                        path: '/projects/web-apps',
+                        path: routes['Web Platforms & Applications'],
                         element: <ProjectsCategoryOverview categoryIndex='0' />
                     },
                     {
-                        path: '/projects/ux',
+                        path: routes['User Experience (UX)'],
                         element: <ProjectsCategoryOverview categoryIndex='1' />
                     },
                     {
-                        path: '/projects/community',
+                        path: routes['Community Contributions'],
                         element: <ProjectsCategoryOverview categoryIndex='2' />
                     },
                     {
@@ -56,7 +57,7 @@ const router = createBrowserRouter([
                 ]
             },
             {
-                path: '/about-me',
+                path: routes['About Me'],
                 element: <MoreAboutMe />
                 
             }

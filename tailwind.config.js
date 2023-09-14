@@ -39,7 +39,6 @@ export default {
       'container_color4': 'var(--container_color4)',
       
       'default_md_text_size': 'var(--default_md_text_size)',
-      'default_sm_text_size': 'var(--default_sm_text_size)',
       'gradient_color1': 'var(--gradient_color1)',
       'gradient_color2': 'var(--gradient_color2)',
       'neon_color1': 'var(--neon_color1)',

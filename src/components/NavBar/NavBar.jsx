@@ -111,11 +111,13 @@ const NavBar = () => {
                     className="visible inline lg:invisible lg:hidden svg_link2"
                     type="button" onClick={toggleMenu}
                   >
-                    <svg className="w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H14M4 18H9" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    <svg className="w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H14M4 18H9" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
                   </button>
                   {/*hamburger menu  */}
-                  { (
-                    <div className={`{${openMobileNavbar === true ? 'visible inline' :' close'} ${navbarPaddings} 
+                  { openMobileNavbar && (
+                    <div
+                      className={`${openMobileNavbar ? "navbar-animation" : "navbar-animation-close"} 
+                       ${navbarPaddings} 
                       mobileNavbar absolute top-0 backdrop-blur-md right-0 w-[64vw] md:w-[45vw] 
                       bg-[black] shadow-2xl shadow-border_color1 text-white bg-opacity-[90%] h-screen 
                       lg:invisible lg:hidden`} 

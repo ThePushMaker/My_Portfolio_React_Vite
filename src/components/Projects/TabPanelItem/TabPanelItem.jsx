@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import ProjectItemCard from "../ProjectItemCard/ProjectItemCard.jsx";
+import routes from '../../../routes.js'
 
 const variants = {
   open: { opacity: 1 },
@@ -16,10 +17,7 @@ const TabPanel = (props) => {
     e.preventDefault();
     // console.log(props.category);    
     
-    const newURL = props.category === 'Web Platforms & Applications' ? '/projects/web-apps' : '' 
-    || props.category === 'User Experience (UX)' ? '/projects/ux' : ''
-    || props.category === 'Community Contributions' ? '/projects/community' : '';
-    
+    const newURL = routes[props.category] || ''; 
     
     navigate(newURL); // Perform navigation immediately
 
