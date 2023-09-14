@@ -29,7 +29,7 @@ const NavBar = () => {
 
   const navLinkStyles = 'navbar-link lg:text-[17px] lgxl:text-xl';
   
-  const navbarPaddings = 'px-6 md:px-12 lg:px-16 py-6';
+  const navbarPaddings = 'px-12 lg:px-16 py-6';
   
   return (
     <>

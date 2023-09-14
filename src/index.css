@@ -275,8 +275,6 @@ p.danger {
 }
 .svg_link1:hover svg path {
   fill: var(--link_color_hover);
-}
-.svg_link2:hover svg path {
   stroke: var(--link_color_hover);
 }
 
