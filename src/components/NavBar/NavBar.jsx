@@ -82,7 +82,7 @@ const NavBar = () => {
               
             </div>
 
-            <div className="invisible hidden lg:visible lg:flex items-center navbar-text ">
+            <div className="invisible hidden lg:visible lg:flex items-center navbar-text">
               <SocialIcons />
               <a href="#contact">
                 <button className="lg:px-5 py-4 lgxl:px-8">

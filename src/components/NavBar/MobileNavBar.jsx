@@ -59,7 +59,7 @@ const MobileNavBar = ({ navbarPaddings }) => {
                 </li>
               ))}
             </ul>
-            <div className="flex justify-center">
+            <div className="flex justify-center absolute bottom-0 left-0 w-[100%] text-center py-[50px] ">
               <SocialIcons /> 
             </div>
         </div>
