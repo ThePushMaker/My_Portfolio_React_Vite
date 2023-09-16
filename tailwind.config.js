@@ -8,6 +8,7 @@ export default {
       boxShadow: {
         'large1': '0 20px 25px -20px rgba(0, 0, 0, 0.3)',
         'large2': '0 20px 20px -20px rgba(0, 0, 0, 0.3)',
+        'shadowTop': '0px 0px 50px 20px rgba(0, 0, 0, 1)',
       }
     },
     colors: {

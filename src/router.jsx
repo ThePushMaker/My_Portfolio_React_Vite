@@ -6,9 +6,9 @@ import IndexLayout from './layouts/IndexLayout'
 import ProjectsCategoryOverview from './views/Projects/ProjectsCategoryOverview';
 import ProjectsCategoriesIndex from './views/Projects/ProjectsCategoriesIndex';
 import MoreAboutMe from './views/MoreAboutMe';
-import ProjectDisplay from './views/Projects/ProjectDisplay';
 import ArticleProjectsLayout from './layouts/ArticleProjectsLayout';
 import routes from './routes';
+import ProjectDetail from './views/Projects/ProjectDetail';
 
 const router = createBrowserRouter([
     {
@@ -33,33 +33,33 @@ const router = createBrowserRouter([
                                 element: <ProjectsCategoriesIndex />
                             },
                             {
+                                path: routes['Web Platforms & Applications'],
+                                element: <ProjectsCategoryOverview categoryIndex='0' />
+                            },
+                            {
+                                path: routes['User Experience (UX)'],
+                                element: <ProjectsCategoryOverview categoryIndex='1' />
+                            },
+                            {
+                                path: routes['Community Contributions'],
+                                element: <ProjectsCategoryOverview categoryIndex='2' />
+                            },
+                            {
+                                path: '/projects/:idCategory/:idProject',
+                                element: <ProjectDetail />
+                            },
+                            {
                                 path: '/project/1',
-                                element: <ProjectDisplay />
-                            }
+                                element: <ProjectDetail />
+                            },
                         ]
                     },
-                    {
-                        path: routes['Web Platforms & Applications'],
-                        element: <ProjectsCategoryOverview categoryIndex='0' />
-                    },
-                    {
-                        path: routes['User Experience (UX)'],
-                        element: <ProjectsCategoryOverview categoryIndex='1' />
-                    },
-                    {
-                        path: routes['Community Contributions'],
-                        element: <ProjectsCategoryOverview categoryIndex='2' />
-                    },
-                    {
-                        path: '/projects/:idProjectsCategory/:idProject',
-                        element: <ProjectDisplay />
-                    },
+                    
                 ]
             },
             {
                 path: routes['About Me'],
                 element: <MoreAboutMe />
-                
             }
         ]
     },

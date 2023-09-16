@@ -22,7 +22,7 @@ const BreadCrumb = (props) => {
     
     // Agrega el elemento al breadcrumb
     breadcrumbItems.push({ to: currentUrl, label: part });
-    console.log(breadcrumbItems)
+    // console.log(breadcrumbItems)
   
   }, []);
  

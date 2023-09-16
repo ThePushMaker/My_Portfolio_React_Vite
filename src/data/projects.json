@@ -3,7 +3,6 @@
   "categories": [
     {
       "category": "Web Platforms & Applications",
-      "route": "web-apps",
       "description": "I can create cross-platform (responsive) web solutions that meet your specific needs. From planning and documentation to implementation and maintenance, I am committed to providing you with the best web platform and applications that will maximize your company's efficiency and management.",
       "projects": [
         {
@@ -55,7 +54,6 @@
     },
     {
       "category": "User Experience (UX)",
-      "route": "ux",
       "description": "I'm passionate about designing captivating user interfaces that are not only visually appealing but also highly functional. I strive to provide users with an unforgettable experience when interacting with the application. From initial user research to prototyping and optimization, I am dedicated to elevating the user experience to the highest level possible.",
       "projects": [
         {
@@ -97,7 +95,6 @@
     },
     {
       "category": "Community Contributions",
-      "route": "community",
       "description": "In Community Contributions, I think about giving back to the community a bit of everything it has given me. I collaborate on open-source projects and actively engage in the development community in various ways. My goal is to share my humble knowledge and experience while delving deeper into the topics I know.",
       "projects": [
         {

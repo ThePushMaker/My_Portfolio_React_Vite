@@ -10,7 +10,7 @@ const Footer = () => {
   let location = useLocation();
   // console.log(location.pathname) 
   return(
-    <footer className='footer px-6 md:px-14 lg:px-20'>
+    <footer className='footer px-6 md:px-14 lg:px-20 footer_shadow'>
       <div className='container mx-auto pt-16 pb-16'>
         <div className='flex flex-wrap items-center'>
           {location.pathname==='/' && <MailchimpForm />}

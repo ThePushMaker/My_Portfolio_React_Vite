@@ -43,10 +43,10 @@
   --dark_link_color_hover:#f6ff00;
   --dark_link_color_hover2:#0059e8;
   --container_color:#171939; /*used in project tabs*/
-  --container_color2:#17152c; /*used in skills*/
+  --container_color2:#181634; /*used in skills*/
   --container_color3:#f0f0f0;/*Used in articles*/
   --container_color4:#b9b9e7;/*Used in articles*/
-  --container_color5:#13142f; /*used in footer*/
+  --container_color5:#0d0f26; /*used in footer*/
   --bg_color1:#172565;
   --success_color:rgb(146, 255, 146);
   --success_dark_color:rgb(46, 107, 46);
@@ -57,7 +57,7 @@
   --button-font-size: 18px;
   --gradient_color1: #8a44db; /*used in project tabs*/
   --gradient_color2: #1f53cc;/*used in project tabs*/
-  --degradado1: linear-gradient(90deg, #171939 5.58%, #171939 95.91%); /*used in Articles*/
+  --degradado1: linear-gradient(90deg, #20224d 5.58%, #21244d9c 95.91%); /*used in Articles*/
   --degradado2: linear-gradient(90.21deg, #3b77c5 -5.91%, #722fca 111.58%); /*user in projectItem */
   --degradado3: linear-gradient(180deg, rgba(36, 31, 128, 0) 90.58%, rgb(50, 50, 165) 100.91%); /*used in skills*/
   --degradado4: linear-gradient(90deg, rgba(70, 111, 149, 0.697) -10.58%, rgba(33, 50, 130, 0.766) 95.91%); /*used in contacto*/

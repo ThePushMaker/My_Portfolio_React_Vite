@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-const IndexLayout = ({ menuVisible  }) => {
+const IndexLayout = () => {
 
   return(
     <>

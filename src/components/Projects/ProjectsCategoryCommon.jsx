@@ -2,13 +2,19 @@ import { Link } from "react-router-dom";
 import BreadCrumb from "../../components/BreadCrumb/Breadcrumb";
 import AnimatedButton from "../../components/AnimatedButton/AnimatedButton";
 import ProjectItemCard from "./ProjectItemCard/ProjectItemCard";
+import routes from "../../routes";
 
-const ProjectsCategoryCommon = ({ title, description, categories, URL, category, projects }) => {
+const ProjectsCategoryCommon = ({ URL, title, description, categories, projects }) => {
+  
+  const getRoute = (category) => {
+    return routes[category] || '';
+  }
+
   return (
     <>
       <div className="degradado5 rounded-t-[64px] w-full py-[35px]">
         <h1 className="text-center font-bold text-white text-[42px]">
-          {title || category}
+          { title }
         </h1>
       </div>
 
@@ -25,11 +31,11 @@ const ProjectsCategoryCommon = ({ title, description, categories, URL, category,
               {categories &&
                 <>
                   <span className="text-2xl text-text_dark-gray">Categories:</span>
-                  <ul className="mt-2 list-disc text-text_dark-gray mt-2">
+                  <ul className="mt-2 list-disc text-text_dark-gray">
                     {categories.map((category, index)=> (
                       <li className="py-2" key={index}>
                         <Link
-                          to={`/projects/${category.route}`}
+                          to={`${getRoute(category.category)}`}
                           className="text-dark_link_color hover:text-dark_link_color_hover2 hover:underline"
                         >
                           {category.category}

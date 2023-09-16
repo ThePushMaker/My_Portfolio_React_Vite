@@ -1,19 +1,14 @@
-
-import { useLocation } from "react-router-dom";
-import projectsJSON from "../../data/projects.json";
-import ProjectsCategoryCommon from "../../components/Projects/ProjectsCategoryCommon";
-
 import { useContext } from "react";
 import { MyContext } from "../../MyContext";
+import ProjectsCategoryCommon from "../../components/Projects/ProjectsCategoryCommon";
 
 const ProjectsCategoryOverview = (props) => {
-  const location = useLocation();
+  const { projectsJSON, URL } = useContext(MyContext);
   const { categories } = projectsJSON;
   const Selectedcategory = categories[props.categoryIndex];
   const { category, description, projects } = Selectedcategory;
-  const URL = location.pathname;
 
-  return <ProjectsCategoryCommon category={category} description={description} projects={projects} URL={URL} />;
+  return <ProjectsCategoryCommon title={category} description={description} projects={projects} URL={URL} />;
 };
 
 export default ProjectsCategoryOverview;
