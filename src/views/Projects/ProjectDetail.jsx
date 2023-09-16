@@ -18,10 +18,24 @@ const ProjectDetail= (props) => {
   
   const { projectsJSON} = useContext(MyContext);
   const { categories } = projectsJSON;
-  const Selectedcategory = categories[0];
-  const { category, description, projects } = Selectedcategory;
+ 
+  const category = categories.find((category) => category.category === idCategory);
+  if (category) {
+    // 
+  } 
+  else {
+    console.error(new Error("No se encontró la categoria."))
+  }
+  
+  const projectsInfo = category.projects[idProject-1]
 
-  return <ProjectsCategoryCommon title={category} description={description} projects={projects} URL={URL} />;
+  return <ProjectsCategoryCommon 
+            projectCategory={category.category} 
+            projectInfo={projectsInfo} 
+            title={`Project: ${projectsInfo.title}`} 
+            description={idProject} 
+            URL={URL} 
+        />;
 };
 
 export default ProjectDetail;

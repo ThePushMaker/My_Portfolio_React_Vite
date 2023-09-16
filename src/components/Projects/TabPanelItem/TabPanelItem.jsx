@@ -1,8 +1,7 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
-import ProjectItemCard from "../ProjectItemCard/ProjectItemCard.jsx";
+import { useNavigate } from "react-router-dom";
 import routes from '../../../routes.js'
+import ProjectsListGrid from "../ProjectsListGrid/ProjectsListGrid.jsx"
 
 const variants = {
   open: { opacity: 1 },
@@ -38,24 +37,11 @@ const TabPanel = (props) => {
         <p className="text-center m-auto pb-[25px] w-[85%] md:w-[90%] lg:pb-[35px] lg:w-[70%]">
           {props.description}
         </p>
-        <div
-          className="grid grid-cols-1 gap-6
-          md:grid-cols-2 lg:grid-cols-3"
-        >
-          {mostrarRegistros.map((project, index) => {
-            return (
-                <React.Fragment key={index}>
-  
-                  <Link to={`/projects/${props.category}/${index+1}`}>
-                    <ProjectItemCard 
-                      {...project} 
-                      />
-                    </Link>
-       
-                </React.Fragment>
-              )
-          })}
-        </div>
+        
+        <ProjectsListGrid 
+          projects={mostrarRegistros} 
+          category={props.category} 
+        />
         
         <div className="">
           {props.projects.length > 6 && (

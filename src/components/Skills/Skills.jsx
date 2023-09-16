@@ -121,7 +121,7 @@ const Skills = () => {
                 </div>
                 <div className='item'>
                   <img src={meter7} alt="Tailwind" />
-                  <h5>Tailwind</h5>
+                  <h5>Tailwind CSS</h5>
                 </div>
                 <div className='item'>
                   <img src={meter8} alt="Bootstrap" />
