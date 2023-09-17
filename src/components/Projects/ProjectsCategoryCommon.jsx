@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import BreadCrumb from "../../components/BreadCrumb/Breadcrumb";
 import AnimatedButton from "../../components/AnimatedButton/AnimatedButton";
-import ProjectItemCard from "./ProjectItemCard/ProjectItemCard";
 import routes from "../../routes";
 import ProjectsListGrid from "./ProjectsListGrid/ProjectsListGrid";
 import ProjectImage from "./ProjectImage/ProjectImage";

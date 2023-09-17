@@ -6,9 +6,120 @@
       "description": "I can create cross-platform (responsive) web solutions that meet your specific needs. From planning and documentation to implementation and maintenance, I am committed to providing you with the best web platform and applications that will maximize your company's efficiency and management.",
       "projects": [
         {
-          "title": "Business Startup",
-          "description": "Design & Development",
-          "imgPath": ""
+          "title": "Potafolio Profesional",
+          "description": "Design, Development and Deploy",
+          "participantes": "Martín Calderón",
+          "imgPath": "",
+          "sections": [
+            {
+              "title": "Portada y Resumen Ejecutivo",
+              "data" : [
+                {
+                  "type": "image",
+                  "value": ""
+                },
+                {
+                  "type": "subtitle",
+                  "value": "Proposito del Proyecto"
+                },
+                {
+                  "type": "text",
+                  "value": "Consequat qui amet consectetur culpa velit dolore nisi laborum reprehenderit veniam sint consectetur fugiat magna."
+                },
+                {
+                  "type": "subtitle",
+                  "value": "Objetivos Generales"
+                },
+                {
+                  "type": "text",
+                  "value": "Consequat qui amet consectetur culpa velit dolore nisi laborum reprehenderit veniam sint consectetur fugiat magna."
+                },
+                {
+                  "type": "subtitle",
+                  "value": "Logros"
+                },
+                {
+                  "type": "text",
+                  "value": "Consequat qui amet consectetur culpa velit dolore nisi laborum reprehenderit veniam sint consectetur fugiat magna."
+                }
+              ]
+            },
+            {
+              "title": "Diseño y Arquitectura",
+              "data" : [
+                {
+                  "type": "subtitle",
+                  "value": "Estructura de navegación"
+                },
+                {
+                  "type": "image",
+                  "value": ""
+                },
+                {
+                  "type": "text",
+                  "value": "Consequat qui amet consectetur culpa velit dolore nisi laborum reprehenderit veniam sint consectetur fugiat magna."
+                }
+              ]
+            },
+            {
+              "title": "Implementación",
+              "data" : [
+                {
+                  "type": "subtitle",
+                  "value": "Lenguaje de programación utilizado"
+                },
+                {
+                  "type": "text",
+                  "value": "Proident proident Lorem ex excepteur deserunt."
+                },
+                {
+                  "type": "subtitle",
+                  "value": "Herramientas y tecnologías"
+                },
+                {
+                  "type": "text",
+                  "value": "Enim id sint magna sint ullamco ut esse Lorem sint incididunt sunt sit non quis."
+                },
+                {
+                  "type": "subtitle",
+                  "value": "Desafios enfrentados"
+                },
+                {
+                  "type": "text",
+                  "value": "Anim pariatur ut irure ut aliquip voluptate est culpa tempor veniam."
+                }
+              ]
+            },
+            {
+              "title": "Caracteristicas principales",
+              "data" : [
+                {
+                  "type": "subtitle",
+                  "value": "Laborum in id eiusmod enim dolore excepteur."
+                },
+                {
+                  "type": "image",
+                  "value": ""
+                },
+                {
+                  "type": "text",
+                  "value": "Proident proident Lorem ex excepteur deserunt."
+                },
+                {
+                  "type": "subtitle",
+                  "value": "Laborum in id eiusmod enim dolore excepteur."
+                },
+                {
+                  "type": "image",
+                  "value": ""
+                },
+                {
+                  "type": "text",
+                  "value": "Proident proident Lorem ex excepteur deserunt."
+                } 
+              ]
+            }
+          ]
         },
         {
           "title": "Business Staraaatup",
