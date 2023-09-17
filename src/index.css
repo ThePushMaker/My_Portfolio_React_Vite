@@ -160,7 +160,9 @@ p,
 a,
 li,
 button,
-ul {
+ul,
+button, input, optgroup, select, textarea
+ {
   margin: 0;
   padding: 0;
   line-height: normal;

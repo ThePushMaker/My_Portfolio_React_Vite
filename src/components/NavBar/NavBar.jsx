@@ -4,6 +4,7 @@ import "./NavBar.css";
 import { Link } from "react-router-dom";
 import SocialIcons from "../SocialIcons/SocialIcons"
 import MobileNavBar from "./MobileNavBar";
+import SelectLanguage from "./SelectLanguage/SelectLanguage";
 
 const NavBar = () => {
   const [activateLink, setActiveLink] = useState('home');
@@ -27,9 +28,9 @@ const NavBar = () => {
     setActiveLink(value);
   };
 
-  const navLinkStyles = 'navbar-link lg:text-[17px] lgxl:text-xl';
+  const navLinkStyles = 'navbar-link text-[17px] xl:text-xl py-0 px-[17px] xl:px-[25px]';
   
-  const navbarPaddings = 'px-12 lg:px-16 py-6';
+  const navbarPaddings = 'px-10 xl:px-16 py-6';
   
   return (
     <>
@@ -78,16 +79,19 @@ const NavBar = () => {
               <MobileNavBar 
                 navbarPaddings = {navbarPaddings}
               />
-                
               
             </div>
 
             <div className="invisible hidden lg:visible lg:flex items-center navbar-text">
+      
               <SocialIcons />
+              <div className="pl-2 xl:pl-3">
+                <SelectLanguage />
+              </div>
               <a href="#contact">
-                <button className="lg:px-5 py-4 lgxl:px-8">
+                <button className="px-2 py-4 xl:px-8">
                   {'< '}
-                    <label className="text-styled-font-family1">
+                    <label className="text-styled-font-family1 text-[17px] xl:text-xl">
                       CONTACT ME
                     </label>
                   {' />'}
