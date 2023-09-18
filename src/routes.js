@@ -26,4 +26,15 @@ const routes = {
   'About Me': '/about-me',
 };
 
-export {routes, getNameByURL, getParentURLByCurrentURL};
+const NavbarRoutesHome = [
+  {URL: '/#top', name: 'Home'},
+  {URL: '/#skills', name: 'Skills'},
+  {URL: '/#projects', name: 'Projects'},
+]
+
+const NavbarRoutes = [
+  {URL: routes['Home'], name: 'Home'},
+  {URL: routes['Projects'], name: 'Projects'},
+]
+
+export {routes, NavbarRoutesHome, getNameByURL, getParentURLByCurrentURL};

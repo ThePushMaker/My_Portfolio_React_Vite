@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import SocialIcons from "../SocialIcons/SocialIcons";
 
-const MobileNavBar = ({ navbarPaddings, URLListHome }) => {
+const MobileNavBar = ({ navbarPaddings, NavbarRoutesHome }) => {
 
   const [openMobileNavbar, setOpenMobileNavbar] = useState(false);
   const navbarRef = useRef(null);
@@ -47,7 +47,7 @@ const MobileNavBar = ({ navbarPaddings, URLListHome }) => {
             shadow-border_color1 text-white bg-opacity-[90%] h-screen lg:invisible lg:hidden`} 
           >
             <ul className="space-y-8 py-8 flex flex-col">
-              {URLListHome.map((item, index) => (
+              {NavbarRoutesHome.map((item, index) => (
                 <li key={index} className="relative">
                   <a href={item.URL} className="text-[1.45rem] font-bold hover:text-link_color_hover ease-in-out duration-300"> {item.name}</a>
                 </li>

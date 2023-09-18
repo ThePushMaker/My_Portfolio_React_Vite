@@ -5,22 +5,11 @@ import { Link } from "react-router-dom";
 import SocialIcons from "../SocialIcons/SocialIcons"
 import MobileNavBar from "./MobileNavBar";
 import SelectLanguage from "./SelectLanguage/SelectLanguage";
-import { routes } from '../../routes';
+import { routes, NavbarRoutesHome } from '../../routes';
 
 const NavBar = () => {
   const [activateLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
-
-  const URLListHome = [
-    {URL: '/#top', name: 'Home'},
-    {URL: '/#skills', name: 'Skills'},
-    {URL: '/#projects', name: 'Projects'},
-    {URL: '/#contact', name: 'Contact'},
-  ]
-  const URLList = [
-    {URL: routes['Home'], name: 'Home'},
-    {URL: routes['Projects'], name: 'Projects'},
-  ]
 
 //  detectar su se ha hecho scroll en la pagina
   useEffect(() => {
@@ -59,31 +48,12 @@ const NavBar = () => {
                     <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-[140px] lg:mr-8"/>
                   </a>
                   <div className="invisible hidden lg:inline lg:visible">
-                    <a href="#top" className={`${
-                        activateLink === "home" ? "active" : ""
+                    {NavbarRoutesHome.map((item, index) => (
+                      <a href={item.URL} key={index} className={`${
+                        activateLink === item.name ? "active" : ""
                       }  ${navLinkStyles}`}
-                      onClick={() => onUpdateActiveLink("home")}
-                    >
-                      Home
-                    </a>
-                    <a
-                      href="#skills"
-                      className={`${
-                        activateLink === "skills" ? "active" : ""
-                      } ${navLinkStyles}`}
-                      onClick={() => onUpdateActiveLink("skills")}
-                    >
-                      Skills
-                    </a>
-                    <a
-                      href="#projects"
-                      className={`${
-                        activateLink === "projects" ? "active" : ""
-                      }  ${navLinkStyles}`}
-                      onClick={() => onUpdateActiveLink("projects")}
-                    >
-                      Projects
-                    </a>
+                      onClick={() => onUpdateActiveLink(item.name)}> {item.name}</a>
+                    ))}
                     </div>
                   </>
                 )}
@@ -124,7 +94,7 @@ const NavBar = () => {
               
               
               <MobileNavBar 
-                URLListHome = {URLListHome}
+                NavbarRoutesHome = {NavbarRoutesHome}
                 navbarPaddings = {navbarPaddings}
               />
               
