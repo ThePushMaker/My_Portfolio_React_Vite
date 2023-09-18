@@ -1,8 +1,10 @@
 import React from 'react'
 import ProjectItemCard from '../ProjectItemCard/ProjectItemCard'
 import { Link } from 'react-router-dom'
+import { routes } from '../../../routes'
 
 const ProjectsListGrid = ({ projects, category }) => {
+  
   return (
     <div
       className="grid grid-cols-1 gap-6
@@ -12,7 +14,7 @@ const ProjectsListGrid = ({ projects, category }) => {
         return (
             <React.Fragment key={index}>
 
-              <Link to={`/projects/${category}/${index+1}`}>
+              <Link to={`${routes[category]}/${index+1}`}>
                 <ProjectItemCard 
                   {...project}
                 />

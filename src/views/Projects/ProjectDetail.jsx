@@ -3,18 +3,17 @@ import { MyContext } from "../../MyContext";
 import ProjectsCategoryCommon from "../../components/Projects/ProjectsCategoryCommon";
 
 import { useParams } from 'react-router-dom';
-import routes from "../../routes";
+import { routes } from '../../routes';
 
-const ProjectDetail= (props) => {
+const ProjectDetail= () => {
   const { idCategory } = useParams();
   const { idProject } = useParams();
   
   console.log(idCategory)
   console.log(idProject)
   
-  // getData from routes, url by name
-  const URL = routes[idCategory] || ''; 
-  console.log(URL)
+  const URL = routes[idCategory];
+  console.log(URL);
   
   const { projectsJSON} = useContext(MyContext);
   const { categories } = projectsJSON;

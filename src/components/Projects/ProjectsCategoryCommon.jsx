@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
 import BreadCrumb from "../../components/BreadCrumb/Breadcrumb";
 import AnimatedButton from "../../components/AnimatedButton/AnimatedButton";
-import routes from "../../routes";
+import { routes } from '../../routes';
 import ProjectsListGrid from "./ProjectsListGrid/ProjectsListGrid";
 import ProjectImage from "./ProjectImage/ProjectImage";
 
 const ProjectsCategoryCommon = ({ URL, title, description, categories, projects, projectInfo, projectCategory }) => {
   
-  const getRoute = (category) => {
-    return routes[category] || '';
-  }
+
 
   return (
     <>
@@ -21,7 +19,7 @@ const ProjectsCategoryCommon = ({ URL, title, description, categories, projects,
 
       
       <div className="pt-5 pb-[70px] px-[28px] md:px-[40px] lg:px-24 bg-container_color3 shadow-2xl rounded-b-[64px] text-text_dark-gray">
-        <BreadCrumb URL={URL} />
+        {/* <BreadCrumb URL={URL} /> */}
         { !projectInfo &&
           <p className="mx-auto text-text_dark-gray mb-10 text-center w-[90%] md:w-[100%] lg:mx-30">
             {description}
@@ -39,7 +37,7 @@ const ProjectsCategoryCommon = ({ URL, title, description, categories, projects,
                     {categories.map((category, index)=> (
                       <li className="py-2" key={index}>
                         <Link
-                          to={`${getRoute(category.category)}`}
+                          to={`${routes[category]}`}
                           className="text-dark_link_color hover:text-dark_link_color_hover2 hover:underline"
                         >
                           {category.category}

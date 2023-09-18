@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import routes from '../../../routes.js'
+import { routes } from '../../../routes';
 import ProjectsListGrid from "../ProjectsListGrid/ProjectsListGrid.jsx"
 
 const variants = {
@@ -17,8 +17,8 @@ const TabPanel = (props) => {
     e.preventDefault();
     // console.log(props.category);    
     
-    // getData from routes, url by name
-    const newURL = routes[props.category] || ''; 
+    const newURL = routes[props.category];
+
     
     navigate(newURL); // Perform navigation immediately
 

@@ -7,7 +7,7 @@ import ProjectsCategoryOverview from './views/Projects/ProjectsCategoryOverview'
 import ProjectsCategoriesIndex from './views/Projects/ProjectsCategoriesIndex';
 import MoreAboutMe from './views/MoreAboutMe';
 import ArticleProjectsLayout from './layouts/ArticleProjectsLayout';
-import routes from './routes';
+import { routes } from './routes';
 import ProjectDetail from './views/Projects/ProjectDetail';
 
 const router = createBrowserRouter([

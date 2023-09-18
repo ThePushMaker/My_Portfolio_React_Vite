@@ -1,3 +1,4 @@
+
 // routes.js
 const routes = {
   'Home': '/',
@@ -8,4 +9,4 @@ const routes = {
   'About Me': '/about-me',
 };
 
-export default routes;
+export {routes};
