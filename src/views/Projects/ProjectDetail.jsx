@@ -6,16 +6,13 @@ import { useParams } from 'react-router-dom';
 import { getNameByURL, getParentURLByCurrentURL } from '../../routes';
 
 const ProjectDetail= () => {
-  const { URL, projectsJSON} = useContext(MyContext);
+  const { URL, projectsJSON } = useContext(MyContext);
   const { categories } = projectsJSON;
 
   const { idProject } = useParams();
   
 
   const categoryName = getNameByURL(getParentURLByCurrentURL(URL));
-
-  console.log(idProject)
-  
 
   const categoryData = categories.find((category) => category.category === categoryName);
   if (!categoryData) {

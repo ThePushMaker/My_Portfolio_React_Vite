@@ -1,18 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import SocialIcons from "../SocialIcons/SocialIcons";
 
-const MobileNavBar = ({ navbarPaddings }) => {
+const MobileNavBar = ({ navbarPaddings, URLListHome }) => {
 
   const [openMobileNavbar, setOpenMobileNavbar] = useState(false);
   const navbarRef = useRef(null);
   
-  const URLList = [
-    {URL: '/#top', name: 'Home'},
-    {URL: '/#skills', name: 'Skills'},
-    {URL: '/#projects', name: 'Projects'},
-    {URL: '/#contact', name: 'Contact'},
-    {URL: '/about-me', name: 'About Me'},
-  ]
+  
 
   // Manejador de clics fuera de la navbar
   useEffect(() => {
@@ -53,7 +47,7 @@ const MobileNavBar = ({ navbarPaddings }) => {
             shadow-border_color1 text-white bg-opacity-[90%] h-screen lg:invisible lg:hidden`} 
           >
             <ul className="space-y-8 py-8 flex flex-col">
-              {URLList.map((item, index) => (
+              {URLListHome.map((item, index) => (
                 <li key={index} className="relative">
                   <a href={item.URL} className="text-[1.45rem] font-bold hover:text-link_color_hover ease-in-out duration-300"> {item.name}</a>
                 </li>

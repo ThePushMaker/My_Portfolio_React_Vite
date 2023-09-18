@@ -5,12 +5,22 @@ import { Link } from "react-router-dom";
 import SocialIcons from "../SocialIcons/SocialIcons"
 import MobileNavBar from "./MobileNavBar";
 import SelectLanguage from "./SelectLanguage/SelectLanguage";
+import { routes } from '../../routes';
 
 const NavBar = () => {
   const [activateLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
-
+  const URLListHome = [
+    {URL: '/#top', name: 'Home'},
+    {URL: '/#skills', name: 'Skills'},
+    {URL: '/#projects', name: 'Projects'},
+    {URL: '/#contact', name: 'Contact'},
+  ]
+  const URLList = [
+    {URL: routes['Home'], name: 'Home'},
+    {URL: routes['Projects'], name: 'Projects'},
+  ]
 
 //  detectar su se ha hecho scroll en la pagina
   useEffect(() => {
@@ -40,20 +50,22 @@ const NavBar = () => {
           
             <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start">
             
-              <Link to="/" className="navbar-brand">
-                <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-[140px] lg:mr-8"/>
-              </Link>
-              <div className="invisible hidden lg:inline lg:visible">
-                <Link to="/" className={`${
-                    activateLink === "home" ? "active" : ""
-                  }  ${navLinkStyles}`}
-                  onClick={() => onUpdateActiveLink("home")}
-                >
-                  Home
-                </Link>
+              
+
                 {/* menu lg */}
                 {location.pathname === '/' && (
                   <>
+                  <a href="/#top" className="navbar-brand">
+                    <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-[140px] lg:mr-8"/>
+                  </a>
+                  <div className="invisible hidden lg:inline lg:visible">
+                    <a href="#top" className={`${
+                        activateLink === "home" ? "active" : ""
+                      }  ${navLinkStyles}`}
+                      onClick={() => onUpdateActiveLink("home")}
+                    >
+                      Home
+                    </a>
                     <a
                       href="#skills"
                       className={`${
@@ -72,11 +84,47 @@ const NavBar = () => {
                     >
                       Projects
                     </a>
+                    </div>
                   </>
                 )}
-              </div>
+                {location.pathname !== '/' && (
+                  <>
+                    <Link to="/" className="navbar-brand">
+                      <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-[140px] lg:mr-8"/>
+                    </Link>
+                    <div className="invisible hidden lg:inline lg:visible">
+                    <Link to="/" className={`${
+                        activateLink === "home" ? "active" : ""
+                      }  ${navLinkStyles}`}
+                      onClick={() => onUpdateActiveLink("home")}
+                    >
+                      Home
+                    </Link>
+                    <a
+                      href="#skills"
+                      className={`${
+                        activateLink === "skills" ? "active" : ""
+                      } ${navLinkStyles}`}
+                      onClick={() => onUpdateActiveLink("skills")}
+                    >
+                      Skills
+                    </a>
+                    <a
+                      href="#projects"
+                      className={`${
+                        activateLink === "projects" ? "active" : ""
+                      }  ${navLinkStyles}`}
+                      onClick={() => onUpdateActiveLink("projects")}
+                    >
+                      Projects
+                    </a>
+                    </div>
+                  </>
+                )}
+              
               
               <MobileNavBar 
+                URLListHome = {URLListHome}
                 navbarPaddings = {navbarPaddings}
               />
               

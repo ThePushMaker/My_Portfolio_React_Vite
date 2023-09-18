@@ -18,7 +18,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 index: true,
-                element: <Home />
+                element: <Home /> 
             },
             {
                 // basename: '/article',
@@ -47,11 +47,7 @@ const router = createBrowserRouter([
                             {
                                 path: '/projects/:idCategory/:idProject',
                                 element: <ProjectDetail />
-                            },
-                            {
-                                path: '/project/1',
-                                element: <ProjectDetail />
-                            },
+                            }
                         ]
                     },
                     
