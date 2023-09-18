@@ -1,5 +1,10 @@
 {
   "navbar": {
-    "hello-world": "hello world"
+    "Spanish": "Spanish",
+    "English": "English",
+    "Home": "Home",
+    "Skills": "Skills",
+    "Projects": "Projects",
+    "CONTACT ME": "CONTACT ME"
   }
 }

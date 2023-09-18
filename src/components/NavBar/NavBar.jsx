@@ -13,7 +13,6 @@ const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const [ t, i18n ] = useTranslation("global");  
-  const lng = navigator.language
 
   //  detectar su se ha hecho scroll en la pagina
   useEffect(() => {
@@ -42,32 +41,24 @@ const NavBar = () => {
         <div className="mx-auto max-w-[1500px] flex justify-between ">
           
             <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start">
-            
-                <h5>
-                {t('navbar.hello-world')}
-                </h5>
-                <br/><br/>
-                <button onClick={() => i18n.changeLanguage("es")}>Es</button>
-                <button onClick={() => i18n.changeLanguage("en")}>En</button>
-                <span>
-                  Browser Language {lng}
-                </span>
 
                 {/* menu lg */}
                 {location.pathname === '/' && (
                   <>
-                  <a href="/#top" className="navbar-brand">
-                    <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-[140px] lg:mr-8"/>
-                  </a>
-                  <div className="invisible hidden lg:inline lg:visible">
-                  
-                    {NavbarRoutesHome.map((item, index) => (
-                      <a href={item.URL} key={index} className={`${
-                        activateLink === item.name ? "active" : ""
-                      }  ${navLinkStyles}`}
-                      onClick={() => onUpdateActiveLink(item.name)}> {item.name}</a>
-                    ))}
-                  
+                    <a href="/#top" className="navbar-brand">
+                      <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-[140px] lg:mr-8"/>
+                    </a>
+                    <div className="invisible hidden lg:inline lg:visible">
+                    
+                      {NavbarRoutesHome.map((item, index) => (
+                        <a href={item.URL} key={index} className={`${
+                          activateLink === item.name ? "active" : ""
+                          }  ${navLinkStyles}`}
+                          onClick={() => onUpdateActiveLink(item.name)}
+                        > 
+                          {t(`navbar.${item.name}`)}
+                        </a>
+                      ))}
                     </div>
                   </>
                 )}
@@ -105,7 +96,7 @@ const NavBar = () => {
                 <button className="px-2 py-4 xl:px-8 ml-3">
                   {'< '}
                     <label className="text-styled-font-family1 text-[17px] xl:text-xl">
-                      CONTACT ME
+                      {t(`navbar.CONTACT ME`)}
                     </label>
                   {' />'}
                 </button>
