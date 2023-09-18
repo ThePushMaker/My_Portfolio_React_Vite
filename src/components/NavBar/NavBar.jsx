@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import SocialIcons from "../SocialIcons/SocialIcons"
 import MobileNavBar from "./MobileNavBar";
 import SelectLanguage from "./SelectLanguage/SelectLanguage";
-import { routes, NavbarRoutesHome } from '../../routes';
+import { NavbarRoutesHome, NavbarRoutes } from '../../routes';
 
 const NavBar = () => {
   const [activateLink, setActiveLink] = useState('home');
@@ -48,12 +48,14 @@ const NavBar = () => {
                     <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-[140px] lg:mr-8"/>
                   </a>
                   <div className="invisible hidden lg:inline lg:visible">
+                  
                     {NavbarRoutesHome.map((item, index) => (
                       <a href={item.URL} key={index} className={`${
                         activateLink === item.name ? "active" : ""
                       }  ${navLinkStyles}`}
                       onClick={() => onUpdateActiveLink(item.name)}> {item.name}</a>
                     ))}
+                  
                     </div>
                   </>
                 )}
@@ -63,31 +65,12 @@ const NavBar = () => {
                       <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-[140px] lg:mr-8"/>
                     </Link>
                     <div className="invisible hidden lg:inline lg:visible">
-                    <Link to="/" className={`${
-                        activateLink === "home" ? "active" : ""
-                      }  ${navLinkStyles}`}
-                      onClick={() => onUpdateActiveLink("home")}
-                    >
-                      Home
-                    </Link>
-                    <a
-                      href="#skills"
-                      className={`${
-                        activateLink === "skills" ? "active" : ""
-                      } ${navLinkStyles}`}
-                      onClick={() => onUpdateActiveLink("skills")}
-                    >
-                      Skills
-                    </a>
-                    <a
-                      href="#projects"
-                      className={`${
-                        activateLink === "projects" ? "active" : ""
-                      }  ${navLinkStyles}`}
-                      onClick={() => onUpdateActiveLink("projects")}
-                    >
-                      Projects
-                    </a>
+                      {NavbarRoutes.map((item, index) => (
+                        <Link to={item.URL} key={index} className={`${
+                          activateLink === item.name ? "active" : ""
+                        }  ${navLinkStyles}`}
+                        onClick={() => onUpdateActiveLink(item.name)}> {item.name}</Link>
+                      ))}
                     </div>
                   </>
                 )}
@@ -95,6 +78,7 @@ const NavBar = () => {
               
               <MobileNavBar 
                 NavbarRoutesHome = {NavbarRoutesHome}
+                NavbarRoutes = {NavbarRoutes}
                 navbarPaddings = {navbarPaddings}
               />
               

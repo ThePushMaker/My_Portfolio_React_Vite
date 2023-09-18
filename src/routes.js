@@ -37,4 +37,4 @@ const NavbarRoutes = [
   {URL: routes['Projects'], name: 'Projects'},
 ]
 
-export {routes, NavbarRoutesHome, getNameByURL, getParentURLByCurrentURL};
+export {routes, NavbarRoutesHome, NavbarRoutes, getNameByURL, getParentURLByCurrentURL};
