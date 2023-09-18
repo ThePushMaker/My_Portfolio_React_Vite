@@ -83,13 +83,12 @@ const NavBar = () => {
             </div>
 
             <div className="invisible hidden lg:visible lg:flex items-center navbar-text">
-      
-              <SocialIcons />
-              <div className="pl-2 xl:pl-3">
+              <div className="mr-3">
                 <SelectLanguage />
               </div>
+              <SocialIcons />
               <a href="#contact">
-                <button className="px-2 py-4 xl:px-8">
+                <button className="px-2 py-4 xl:px-8 ml-3">
                   {'< '}
                     <label className="text-styled-font-family1 text-[17px] xl:text-xl">
                       CONTACT ME
