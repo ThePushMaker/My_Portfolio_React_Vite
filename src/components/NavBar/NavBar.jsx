@@ -6,12 +6,16 @@ import SocialIcons from "../SocialIcons/SocialIcons"
 import MobileNavBar from "./MobileNavBar";
 import SelectLanguage from "./SelectLanguage/SelectLanguage";
 import { NavbarRoutesHome, NavbarRoutes } from '../../routes';
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
   const [activateLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
-//  detectar su se ha hecho scroll en la pagina
+  const [ t, i18n ] = useTranslation("global");  
+  const lng = navigator.language
+
+  //  detectar su se ha hecho scroll en la pagina
   useEffect(() => {
     const onScroll = () => {
       window.scrollY > 50 ? setScrolled(true) : setScrolled(false);
@@ -39,7 +43,15 @@ const NavBar = () => {
           
             <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start">
             
-              
+                <h5>
+                {t('navbar.hello-world')}
+                </h5>
+                <br/><br/>
+                <button onClick={() => i18n.changeLanguage("es")}>Es</button>
+                <button onClick={() => i18n.changeLanguage("en")}>En</button>
+                <span>
+                  Browser Language {lng}
+                </span>
 
                 {/* menu lg */}
                 {location.pathname === '/' && (
