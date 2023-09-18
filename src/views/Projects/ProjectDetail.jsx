@@ -3,33 +3,29 @@ import { MyContext } from "../../MyContext";
 import ProjectsCategoryCommon from "../../components/Projects/ProjectsCategoryCommon";
 
 import { useParams } from 'react-router-dom';
-import { routes } from '../../routes';
+import { getNameByURL, getParentURLByCurrentURL } from '../../routes';
 
 const ProjectDetail= () => {
-  const { idCategory } = useParams();
+  const { URL, projectsJSON} = useContext(MyContext);
+  const { categories } = projectsJSON;
+
   const { idProject } = useParams();
   
-  console.log(idCategory)
+
+  const categoryName = getNameByURL(getParentURLByCurrentURL(URL));
+
   console.log(idProject)
   
-  const URL = routes[idCategory];
-  console.log(URL);
-  
-  const { projectsJSON} = useContext(MyContext);
-  const { categories } = projectsJSON;
- 
-  const category = categories.find((category) => category.category === idCategory);
-  if (category) {
-    // 
-  } 
-  else {
+
+  const categoryData = categories.find((category) => category.category === categoryName);
+  if (!categoryData) {
     console.error(new Error("No se encontró la categoria."))
   }
   
-  const projectsInfo = category.projects[idProject-1]
+  const projectsInfo = categoryData.projects[idProject-1]
 
   return <ProjectsCategoryCommon 
-            projectCategory={category.category} 
+            projectCategory={categoryData.category} 
             projectInfo={projectsInfo} 
             title={`Project: ${projectsInfo.title}`} 
             description={idProject} 

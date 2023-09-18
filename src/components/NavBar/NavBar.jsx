@@ -83,7 +83,7 @@ const NavBar = () => {
             </div>
 
             <div className="invisible hidden lg:visible lg:flex items-center navbar-text">
-              <div className="mr-3">
+              <div>
                 <SelectLanguage />
               </div>
               <SocialIcons />

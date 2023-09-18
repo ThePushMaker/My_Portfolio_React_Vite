@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { routes } from '../../../routes';
-import ProjectsListGrid from "../ProjectsListGrid/ProjectsListGrid.jsx"
+import ProjectsListGrid from "../ProjectsListGrid/ProjectsListGrid";
 
 const variants = {
   open: { opacity: 1 },
