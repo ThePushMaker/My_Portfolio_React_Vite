@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { MyContext } from '../MyContext'
 
-import projectsJSON from '../data/projects.json'
+import projectsJSON from '../data/en/projects.json'
 
 const ArticleProjectsLayout = () => {
   const location = useLocation();  

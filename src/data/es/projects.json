@@ -1,0 +1,264 @@
+{
+  "description": "My goal is to create technological solutions that range from robust web platforms and customized applications to captivating interface design, with a continuous commitment to the development community. At the core of my approach lies a passion for technology, excellence in design, and an ongoing desire to contribute to the growth and success of both my contractors and the community at large.",
+  "categories": [
+    {
+      "category": "Web Platforms & Applications",
+      "description": "I can create cross-platform (responsive) web solutions that meet your specific needs. From planning and documentation to implementation and maintenance, I am committed to providing you with the best web platform and applications that will maximize your company's efficiency and management.",
+      "projects": [
+        {
+          "title": "Potafolio Profesional",
+          "description": "Design, Development and Deploy",
+          "participantes": "Martín Calderón",
+          "imgPath": "",
+          "sections": [
+            {
+              "title": "Portada y Resumen Ejecutivo",
+              "data" : [
+                {
+                  "type": "image",
+                  "value": ""
+                },
+                {
+                  "type": "subtitle",
+                  "value": "Proposito del Proyecto"
+                },
+                {
+                  "type": "text",
+                  "value": "Consequat qui amet consectetur culpa velit dolore nisi laborum reprehenderit veniam sint consectetur fugiat magna."
+                },
+                {
+                  "type": "subtitle",
+                  "value": "Objetivos Generales"
+                },
+                {
+                  "type": "text",
+                  "value": "Consequat qui amet consectetur culpa velit dolore nisi laborum reprehenderit veniam sint consectetur fugiat magna."
+                },
+                {
+                  "type": "subtitle",
+                  "value": "Logros"
+                },
+                {
+                  "type": "text",
+                  "value": "Consequat qui amet consectetur culpa velit dolore nisi laborum reprehenderit veniam sint consectetur fugiat magna."
+                }
+              ]
+            },
+            {
+              "title": "Diseño y Arquitectura",
+              "data" : [
+                {
+                  "type": "subtitle",
+                  "value": "Estructura de navegación"
+                },
+                {
+                  "type": "image",
+                  "value": ""
+                },
+                {
+                  "type": "text",
+                  "value": "Consequat qui amet consectetur culpa velit dolore nisi laborum reprehenderit veniam sint consectetur fugiat magna."
+                }
+              ]
+            },
+            {
+              "title": "Implementación",
+              "data" : [
+                {
+                  "type": "subtitle",
+                  "value": "Lenguaje de programación utilizado"
+                },
+                {
+                  "type": "text",
+                  "value": "Proident proident Lorem ex excepteur deserunt."
+                },
+                {
+                  "type": "subtitle",
+                  "value": "Herramientas y tecnologías"
+                },
+                {
+                  "type": "text",
+                  "value": "Enim id sint magna sint ullamco ut esse Lorem sint incididunt sunt sit non quis."
+                },
+                {
+                  "type": "subtitle",
+                  "value": "Desafios enfrentados"
+                },
+                {
+                  "type": "text",
+                  "value": "Anim pariatur ut irure ut aliquip voluptate est culpa tempor veniam."
+                }
+              ]
+            },
+            {
+              "title": "Caracteristicas principales",
+              "data" : [
+                {
+                  "type": "subtitle",
+                  "value": "Laborum in id eiusmod enim dolore excepteur."
+                },
+                {
+                  "type": "image",
+                  "value": ""
+                },
+                {
+                  "type": "text",
+                  "value": "Proident proident Lorem ex excepteur deserunt."
+                },
+                {
+                  "type": "subtitle",
+                  "value": "Laborum in id eiusmod enim dolore excepteur."
+                },
+                {
+                  "type": "image",
+                  "value": ""
+                },
+                {
+                  "type": "text",
+                  "value": "Proident proident Lorem ex excepteur deserunt."
+                } 
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Business Staraaatup",
+          "description": "Deaaasign & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        }
+      ]
+    },
+    {
+      "category": "Interface Design",
+      "description": "I'm passionate about designing captivating user interfaces that are not only visually appealing but also highly functional. I strive to provide users with an unforgettable experience when interacting with the application. From initial user research to prototyping and optimization, I am dedicated to elevating the user experience to the highest level possible.",
+      "projects": [
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        }
+      ]
+    },
+    {
+      "category": "Community Contributions",
+      "description": "In Community Contributions, I think about giving back to the community a bit of everything it has given me. I collaborate on open-source projects and actively engage in the development community in various ways. My goal is to share my humble knowledge and experience while delving deeper into the topics I know.",
+      "projects": [
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        },
+        {
+          "title": "Business Startup",
+          "description": "Design & Development",
+          "imgPath": ""
+        }
+      ]
+    }
+  ]
+}

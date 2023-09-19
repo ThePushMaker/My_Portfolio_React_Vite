@@ -14,7 +14,8 @@ i18n
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
     debug: true,
-    fallbackLng: 'en',
+    // lng: 'en', // Establece el idioma predeterminado
+    fallbackLng: 'en', // Idioma de respaldo en caso de que falte una traducción
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },

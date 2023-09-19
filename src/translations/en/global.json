@@ -30,5 +30,10 @@
     "description2": "specializing in React, Laravel, and Vue.Js",
     "description3": ", regarding them as my primary areas of expertise.",
     "english_spanish": "English & Spanish"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "",
+    "select_category": "Select a category below to view the projects I've developed in that specific area"
   }
 }

@@ -174,10 +174,6 @@ const Skills = () => {
         </div>
       </section>
 
-    
-    
-    
-      
     </>
   );
 }
