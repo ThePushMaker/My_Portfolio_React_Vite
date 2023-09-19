@@ -21,7 +21,7 @@ export const routes = {
   'Home': '/',
   'Projects': '/projects',
     'Web Platforms & Applications': '/projects/web-apps',
-    'User Experience (UX)': '/projects/ux',
+    'Interface Design': '/projects/designs',
     'Community Contributions': '/projects/community',
   'About Me': '/about-me',
 };

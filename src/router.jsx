@@ -37,7 +37,7 @@ const router = createBrowserRouter([
                                 element: <ProjectsCategoryOverview categoryIndex='0' />
                             },
                             {
-                                path: routes['User Experience (UX)'],
+                                path: routes['Interface Design'],
                                 element: <ProjectsCategoryOverview categoryIndex='1' />
                             },
                             {

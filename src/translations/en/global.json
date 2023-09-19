@@ -8,5 +8,27 @@
     "CONTACT ME": "CONTACT ME",
     "YouTube Channel": "YouTube Channel",
     "WakaTime Stats": "WakaTime Stats"
+  },
+  "banner": {
+    "welcome": "Welcome to my portfolio",
+    "hi": "Hi, I'm Martín Calderón!",
+    "description_p1": "I'm a 23-years-old ",
+    "description_p2": "Full Stack Web Developer",
+    "description_p3": " who's passionate about all forms of virtual art creation. Although my youth may limit my experience a bit, my motivation is powerful and drives me every day to advance and learn much more. I would like to demonstrate through my efforts that software is not merely cold and mechanical logic; it's not just a tool, but it has the potential to become something authentically artistic, fascinating, and brimming with identity. Software is not a thing of tomorrow; it is of today.",
+    "description_tooltip": "Where one person juggles both the front-end and back-end with the grace of a one-person band. 🎸",
+    "typeAnimation_1": "Full Stack Web Developer",
+    "typeAnimation_2": "Web Designer",
+    "typeAnimation_3": "YouTube Educator",
+    "typeAnimation_4": "Code Blog Author",
+    "follow_me1": "Follow me on ",
+    "follow_me2": "my social media",
+    "connect": "Let's Connect!"
+  },
+  "skills": {
+    "skills": "Skills",
+    "description1": "Over the course of more than 8 years of studying programming since my high school days, I have learned to work with a diverse range of technologies. Nevertheless, I have particularly focused on honing my skills and ",
+    "description2": "specializing in React, Laravel, and Vue.Js",
+    "description3": ", regarding them as my primary areas of expertise.",
+    "english_spanish": "English & Spanish"
   }
 }

@@ -33,12 +33,12 @@ const NavBar = () => {
 
   const navLinkStyles = 'navbar-link text-[17px] xl:text-xl py-0 px-[14px] xl:px-[25px]';
   
-  const navbarPaddings = 'px-5 xl:px-16 py-6';
+
   
   return (
     <>
     <div>
-      <nav className={`${scrolled ? 'scrolled backdrop-blur-sm py-[10px]' : ''} navbar  ${navbarPaddings}`}>
+      <nav className={`${scrolled ? 'scrolled backdrop-blur-sm py-[10px]' : ''} navbar  px-5 xl:px-16 py-6`}>
         <div className="mx-auto max-w-[1500px] flex justify-between ">
           
             <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start">
@@ -83,7 +83,6 @@ const NavBar = () => {
               <MobileNavBar 
                 NavbarRoutesHome = {NavbarRoutesHome}
                 NavbarRoutes = {NavbarRoutes}
-                navbarPaddings = {navbarPaddings}
               />
               
             </div>

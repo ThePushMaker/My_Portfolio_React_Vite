@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import SelectLanguage from "./SelectLanguage/SelectLanguage";
 import { useTranslation } from "react-i18next";
 
-const MobileNavBar = ({ navbarPaddings, NavbarRoutesHome, NavbarRoutes }) => {
+const MobileNavBar = ({ NavbarRoutesHome, NavbarRoutes }) => {
   const [ t ] = useTranslation("global");  
   const [openMobileNavbar, setOpenMobileNavbar] = useState(false);
   const navbarRef = useRef(null);
@@ -45,7 +45,7 @@ const MobileNavBar = ({ navbarPaddings, NavbarRoutesHome, NavbarRoutes }) => {
           <div
             id="navbar"
             className={`${openMobileNavbar ? '#navbar active' : '#navbar'} 
-            ${navbarPaddings} fixed top-0 right-[-75vw] md:right-[-50vw] w-[70vw] md:w-[45vw] 
+            px-11 py-6 fixed top-0 right-[-75vw] md:right-[-50vw] w-[70vw] md:w-[45vw] 
             ease-in-out duration-300 backdrop-blur-md bg-[black] shadow-2xl 
             shadow-border_color1 text-white bg-opacity-[90%] h-screen lg:invisible lg:hidden`} 
           >

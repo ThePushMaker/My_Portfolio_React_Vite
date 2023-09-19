@@ -2,21 +2,31 @@ import { useEffect, useState } from "react";
 import headerImg from "../../assets/img/pfp/difuminado2.png";
 import './Banner.css';
 import TypeAnimation from './TypeAnimation/TypeAnimation'
+import { useTranslation } from "react-i18next";
 
-const fullStackDefinition = "Fullstack Web Developer (Desarrollador Web 'Todo-Terreno'): Un ser mágico capaz de navegar por las profundidades de los códigos front-end y back-end con la gracia de un equilibrista. Su habilidad para hablar en múltiples lenguajes de programación es tan impresionante como su capacidad para lidiar con los errores en medio de la noche. Se dice que los Fullstack Web Developers tienen una relación cercana con el café y una paciencia inquebrantable para lidiar con los problemas técnicos. ¡Convierte el caos digital en elegantes sitios web y aplicaciones, todo mientras mantiene una sonrisa en el rostro!"
 
-const description = 
-<span>
-  I{"'"}m a 23-years-old{' '}
-  <a className="hover:underline  hover:decoration-link_color_hover" target="_blank" rel="noreferrer" href="https://www.google.com/search?q=Full+Stack+Developer&oq=Full+Stack+Developer&aqs=chrome..69i57j0i512l9.387j0j7&sourceid=chrome&ie=UTF-8&bshm=rimc/1">
-    <span className="text-link_color hover:text-link_color_hover"> 
-      <strong data-tooltip-id="myTooltip" data-tooltip-content="Where one person juggles both the front-end and back-end with the grace of a one-person band. 🎸" data-tip="myTooltip" >Full Stack Web Developer</strong>
-    </span>
-  </a>
-  {' '}who{"'"}s passionate about all forms of virtual art creation. Although my youth may limit my experience a bit, my motivation is powerful and drives me every day to advance and learn much more. I would like to demonstrate through my efforts that software is not merely cold and mechanical logic; it{"'"}s not just a tool, but it has the potential to become something authentically artistic, fascinating, and brimming with identity. Software is not a thing of tomorrow; it is of today.
-</span>
 
 const Banner = () => {
+  const [ t ] = useTranslation("global");  
+  
+  const typeAnimationArray = [
+                    t(`banner.typeAnimation_1`), 
+                    t(`banner.typeAnimation_2`),
+                    t(`banner.typeAnimation_3`),
+                    t(`banner.typeAnimation_4`)
+                  ]; 
+  
+  const description = 
+  <span>
+    {t(`banner.description_p1`)}
+    <a className="hover:underline  hover:decoration-link_color_hover" target="_blank" rel="noreferrer" href="https://www.google.com/search?q=Full+Stack+Developer&oq=Full+Stack+Developer&aqs=chrome..69i57j0i512l9.387j0j7&sourceid=chrome&ie=UTF-8&bshm=rimc/1">
+      <span className="text-link_color hover:text-link_color_hover"> 
+        <strong data-tooltip-id="myTooltip" data-tooltip-content={t(`banner.description_tooltip`)} data-tip="myTooltip" >{t(`banner.description_p2`)}</strong>
+      </span>
+    </a>
+    {t(`banner.description_p3`)}
+  </span>
+  
   const [text, setText] = useState('');
   const [fontSize, setFontSize] = useState(16); // Tamaño de fuente inicial en píxeles
 
@@ -35,20 +45,20 @@ const Banner = () => {
           <div className="items-center flex flex-wrap">
             <div className="w-full lg:w-7/12">
               <div>
-                <span className="tagline text-link_disabled_color text-xl">Welcome to my portfolio</span>
-                <h1 className="text-4xl md:text-5xl lg:text-5xl mb-3"><span className="textShadow">{"Hi, I'm Martín Calderón! "}</span>                       
+                <span className="tagline text-link_disabled_color text-xl">{t(`banner.welcome`)}</span>
+                <h1 className="text-4xl md:text-5xl lg:text-5xl mb-3"><span className="textShadow">{t(`banner.hi`)}</span>                       
                   <div className="h-16 lg:h-12 mt-2">
-                    <span className="wrap text-highlighted_text_color" style={{ fontSize: `${fontSize}px` }}>{ <TypeAnimation />}</span>
+                    <span className="wrap text-highlighted_text_color" style={{ fontSize: `${fontSize}px` }}>{ <TypeAnimation {...typeAnimationArray}/>}</span>
                   </div>
                 </h1>
                 <p className="mb-2 textShadow">{description}</p>
-                <p className="textShadow">Follow me on <a className="text-link_color hover:text-link_color_hover hover:underline" target="_blank" rel="noreferrer" href="https://linktr.ee/martin_calderon"> my social media</a>.</p>
+                <p className="textShadow"> {t(`banner.follow_me1`)} <a className="text-link_color hover:text-link_color_hover hover:underline" target="_blank" rel="noreferrer" href="https://linktr.ee/martin_calderon"> {t(`banner.follow_me2`)} </a>.</p>
               </div>
               <div>
                 <a href="#contact" className="flex justify-center md:justify-start" >
-                  <button className="mt-6" onClick={() => console.log('connect')}>
+                  <button className="mt-6">
                     <label className="text-link_color hover:text-link_color_hover hover:underline textShadow">
-                      {"Let's Connect!"}
+                      {t(`banner.connect`)}
                     </label>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path fillRule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path></svg>
                   </button>

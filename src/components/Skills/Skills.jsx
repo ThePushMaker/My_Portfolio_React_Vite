@@ -1,6 +1,8 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from '../../assets/img/color-sharp.png';
+import './Skills.css';
+import { useTranslation } from 'react-i18next';
 import meter1 from '../../assets/img/skill_icons/react.png';
 import meter2 from '../../assets/img/skill_icons/laravel.svg';
 import meter3 from '../../assets/img/skill_icons/vue.png';
@@ -15,7 +17,7 @@ import meter11 from '../../assets/img/skill_icons/css.png';
 import meter12 from '../../assets/img/skill_icons/html.png';
 import meter13 from '../../assets/img/skill_icons/figma.png';
 import meter14 from '../../assets/img/skill_icons/languages.jpg';
-import './Skills.css';
+
 
 const responsive = {
   superLargeDesktop: {
@@ -41,16 +43,78 @@ const responsive = {
   }
 };
 
-const skills_description = 
-  <span>
-    Over the course of more than 8 years of studying programming since my high school days,
-    I have learned to work with a diverse range of technologies. Nevertheless, I have particularly
-    focused on honing my skills and <span className="text-highlighted_text_color"><strong>specializing in React, Laravel, and Vue.Js</strong></span>, regarding them as
-    my primary areas of expertise.
-  </span>
-;
+
 
 const Skills = () => {
+  const [ t ] = useTranslation("global");
+  
+  const skills_description = 
+    <span>
+      {t(`skills.description1`)}
+      <span className="text-highlighted_text_color"><strong>{t(`skills.description2`)}</strong></span>
+      {t(`skills.description3`)}
+    </span>
+  ;
+  
+  const imgCarousel = [
+    {
+      "img": meter1,
+      "label": "React"
+    },
+    {
+      "img": meter2,
+      "label": "Laravel"
+    },
+    {
+      "img": meter3,
+      "label": "Vue.Js"
+    },
+    {
+      "img": meter4,
+      "label": "Javascript"
+    },
+    {
+      "img": meter5,
+      "label": "PHP"
+    },
+    {
+      "img": meter6,
+      "label": "Node.Js"
+    },
+    {
+      "img": meter7,
+      "label": "Tailwind CSS"
+    },
+    {
+      "img": meter8,
+      "label": "Bootstrap"
+    },
+    {
+      "img": meter9,
+      "label": "Wordpress"
+    },
+    {
+      "img": meter10,
+      "label": "MySQL"
+    },
+    {
+      "img": meter11,
+      "label": "CSS3"
+    },
+    {
+      "img": meter12,
+      "label": "HTML5"
+    },
+    {
+      "img": meter13,
+      "label": "Wireframes & Mockups"
+    },
+    {
+      "img": meter14,
+      "label": t('skills.english_spanish')
+    }
+  ]
+  
   return(
     <>
       <section className='degradado3 pb-20' id='skills'>
@@ -58,7 +122,7 @@ const Skills = () => {
           <div className='skill'>
             <div className=' mx-auto px-6 md:px-14 lg:px-14 '>
               <div className=' skill-bx bg-container_color2 shadow-2xl pt-12 pb-16 px-[28px] md:py-[50px] md:px-[40px] lg:px-24'>
-                <h2>Skills</h2>
+                <h2>{t(`skills.skills`)}</h2>
                 <p className='text-center mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'
                 > 
                   {skills_description} 
@@ -95,62 +159,12 @@ const Skills = () => {
                 // transitionDuration={10}
                 containerClass=""
               >
-                <div className='item'>
-                  <img src={meter1} alt="React" />
-                  <h5>React</h5>
-                </div>
-                <div className='item'>
-                  <img src={meter2} alt="Laravel" />
-                  <h5>Laravel</h5>
-                </div>
-                <div className='item'>
-                  <img src={meter3} alt="Vue.Js" />
-                  <h5>Vue.Js</h5>
-                </div>
-                <div className='item'>
-                  <img src={meter4} alt="Javascript" />
-                  <h5>Javascript</h5>
-                </div>
-                <div className='item'>
-                  <img src={meter5} alt="PHP" />
-                  <h5>PHP</h5>
-                </div>
-                <div className='item'>
-                <img src={meter6} alt="Node.Js" />
-                  <h5>Node.Js</h5>
-                </div>
-                <div className='item'>
-                  <img src={meter7} alt="Tailwind" />
-                  <h5>Tailwind CSS</h5>
-                </div>
-                <div className='item'>
-                  <img src={meter8} alt="Bootstrap" />
-                  <h5>Bootstrap</h5>
-                </div>
-                <div className='item'>
-                  <img src={meter9} alt="Wordpress" />
-                  <h5>Wordpress</h5>
-                </div>
-                <div className='item'>
-                  <img src={meter10} alt="MySQL" />
-                  <h5>MySQL</h5>
-                </div>
-                <div className='item'>
-                  <img src={meter11} alt="CSS3" />
-                  <h5>CSS3</h5>
-                </div>
-                <div className='item'>
-                  <img src={meter12} alt="HTML5" />
-                  <h5>HTML5</h5>
-                </div>
-                <div className='item'>
-                  <img src={meter13} alt="Wireframes & Mockups" />
-                  <h5>Wireframes & Mockups</h5>
-                </div>
-                <div className='item'>
-                  <img src={meter14} alt="English & Spanish" />
-                  <h5>English & Spanish</h5>
-                </div>
+                  {imgCarousel.map((item, index) => (
+                    <div className='item' key={index}>
+                      <img src={item.img} alt={item.label} />
+                      <h5>{item.label}</h5>
+                    </div>
+                  ))}
               </Carousel>              
               
               </div>

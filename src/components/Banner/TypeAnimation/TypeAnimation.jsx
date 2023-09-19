@@ -1,17 +1,16 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 
 import './TypeAnimation.css'
-function TypedText() {
+import { useTranslation } from 'react-i18next';
+function TypedText(typeAnimationArray) {
   const typedRef = useRef(null);
-
+  
+  const Textarray =  Object.values(typeAnimationArray);
+  
   useEffect(() => {
     const options = {
-      strings: ['Full Stack Web Developer', 
-                'Web Designer',
-                'YouTube Educator',
-                'Code Blog Author'
-               ],
+      strings: [... Textarray],
       typeSpeed: 80, // Velocidad de escritura en milisegundos
       backSpeed: 25, // Velocidad de borrado en milisegundos
       loop: true, // Repetir el ciclo
@@ -23,15 +22,15 @@ function TypedText() {
         typed.destroy(); // Destruir Typed.js al desmontar el componente
       };
     }
-  }, []);
+  }, [typeAnimationArray]);
 
   return <span ref={typedRef}></span>;
 }
 
-function App() {
+function App(typeAnimationArray) {
   return (
     <div className="App">
-      <TypedText />
+      <TypedText {... typeAnimationArray}/>
     </div>
   );
 }
