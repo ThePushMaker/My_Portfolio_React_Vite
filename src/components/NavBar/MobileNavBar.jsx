@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import { Link } from "react-router-dom";
+import SelectLanguage from "./SelectLanguage/SelectLanguage";
+import { useTranslation } from "react-i18next";
 
 const MobileNavBar = ({ navbarPaddings, NavbarRoutesHome, NavbarRoutes }) => {
-
+  const [ t ] = useTranslation("global");  
   const [openMobileNavbar, setOpenMobileNavbar] = useState(false);
   const navbarRef = useRef(null);
   
@@ -52,7 +54,7 @@ const MobileNavBar = ({ navbarPaddings, NavbarRoutesHome, NavbarRoutes }) => {
                 <>
                   {NavbarRoutesHome.map((item, index) => (
                     <li key={index} className="relative">
-                      <a href={item.URL} className="text-[1.45rem] font-bold hover:text-link_color_hover ease-in-out duration-300"> {item.name}</a>
+                      <a href={item.URL} className="text-[1.45rem] font-bold hover:text-link_color_hover ease-in-out duration-300"> {t(`navbar.${item.name}`)}</a>
                     </li>
                   ))}
                 </>
@@ -61,13 +63,16 @@ const MobileNavBar = ({ navbarPaddings, NavbarRoutesHome, NavbarRoutes }) => {
                 <>
                   {NavbarRoutes.map((item, index) => (
                     <li key={index} className="relative">
-                      <Link to={item.URL} className="text-[1.45rem] font-bold hover:text-link_color_hover ease-in-out duration-300"> {item.name}</Link>
+                      <Link to={item.URL} className="text-[1.45rem] font-bold hover:text-link_color_hover ease-in-out duration-300"> {t(`navbar.${item.name}`)}</Link>
                     </li>
                   ))}
                 </>
               )}
             </ul>
             <div className="flex justify-center absolute bottom-0 left-0 w-[100%] text-center py-[50px] ">
+              <div>
+                <SelectLanguage />
+              </div>
               <SocialIcons /> 
             </div>
         </div>

@@ -12,7 +12,8 @@ const NavBar = () => {
   const [activateLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
-  const [ t, i18n ] = useTranslation("global");  
+  // const [ t, i18n ] = useTranslation("global");  
+  const [ t ] = useTranslation("global");  
 
   //  detectar su se ha hecho scroll en la pagina
   useEffect(() => {
@@ -30,9 +31,9 @@ const NavBar = () => {
     setActiveLink(value);
   };
 
-  const navLinkStyles = 'navbar-link text-[17px] xl:text-xl py-0 px-[17px] xl:px-[25px]';
+  const navLinkStyles = 'navbar-link text-[17px] xl:text-xl py-0 px-[14px] xl:px-[25px]';
   
-  const navbarPaddings = 'px-10 xl:px-16 py-6';
+  const navbarPaddings = 'px-5 xl:px-16 py-6';
   
   return (
     <>
@@ -95,7 +96,7 @@ const NavBar = () => {
               <a href="#contact">
                 <button className="px-2 py-4 xl:px-8 ml-3">
                   {'< '}
-                    <label className="text-styled-font-family1 text-[17px] xl:text-xl">
+                    <label className="text-styled-font-family1 text-[16px] xl:text-xl">
                       {t(`navbar.CONTACT ME`)}
                     </label>
                   {' />'}
