@@ -43,8 +43,6 @@ const responsive = {
   }
 };
 
-
-
 const Skills = () => {
   const [ t ] = useTranslation("global");
   

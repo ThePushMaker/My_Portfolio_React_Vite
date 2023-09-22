@@ -17,7 +17,7 @@
     "description_p3": " who's passionate about all forms of virtual art creation. Although my youth may limit my experience a bit, my motivation is powerful and drives me every day to advance and learn much more. I would like to demonstrate through my efforts that software is not merely cold and mechanical logic; it's not just a tool, but it has the potential to become something authentically artistic, fascinating, and brimming with identity. Software is not a thing of tomorrow; it is of today.",
     "description_tooltip": "Where one person juggles both the front-end and back-end with the grace of a one-person band. 🎸",
     "typeAnimation_1": "Full Stack Web Developer",
-    "typeAnimation_2": "Web Designer",
+    "typeAnimation_2": "User Interface Designer",
     "typeAnimation_3": "YouTube Educator",
     "typeAnimation_4": "Code Blog Author",
     "follow_me1": "Follow me on ",
@@ -33,7 +33,6 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "",
     "select_category": "Select a category below to view the projects I've developed in that specific area"
   }
 }

@@ -2,12 +2,11 @@ import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "../../../constants/constants";
 
 const SelectLanguage = () => { 
-  const languageCode = navigator.language
   const [ t, i18n ] = useTranslation("global"); 
   
-    // Utilizamos el método split para dividir la cadena en función del guión '-'
+  const languageCode = navigator.language;
+  // Utilizamos el método split para dividir la cadena en función del guión '-'
   const parts = languageCode.split('-');
-
   // La parte que queremos está en la primera posición del array resultante
   const lng = parts[0]; // Esto contendrá 'es'
              

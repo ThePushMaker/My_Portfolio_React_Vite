@@ -1,11 +1,14 @@
 import { Outlet } from "react-router-dom";
+import { LanguageProvider } from "../contexts/LanguageContext";
 
 const IndexLayout = () => {
 
   return(
     <>
       <div>
-        <Outlet />
+        <LanguageProvider>
+          <Outlet />
+        </LanguageProvider>
       </div>
     </>
   );

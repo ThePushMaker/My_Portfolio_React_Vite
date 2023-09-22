@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { MyContext } from "../../MyContext";
+import { ArticleProjectsContext } from "../../contexts/ArticleProjectsContext";
 import ProjectsCategoryCommon from "../../components/Projects/ProjectsCategoryCommon";
 
 import { useParams } from 'react-router-dom';
 import { getNameByURL, getParentURLByCurrentURL } from '../../routes';
 
 const ProjectDetail= () => {
-  const { URL, projectsJSON } = useContext(MyContext);
+  const { URL, projectsJSON } = useContext(ArticleProjectsContext);
   const { categories } = projectsJSON;
 
   const { idProject } = useParams();

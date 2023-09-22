@@ -4,6 +4,11 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import global_es from './translations/es/global.json'
 import global_en from './translations/en/global.json'
 
+import projectsJSON_en from './data/en/projects.json'
+import projectsJSON_es from './data/es/projects.json'
+
+
+
 i18n
   // detect user language
   // learn more: https://github.com/i18next/i18next-browser-languageDetector
@@ -21,10 +26,12 @@ i18n
     },
     resources: {
       es: {
-        global: global_es
+        global: global_es,
+        projectsjson: projectsJSON_es
       },
       en: {
-        global: global_en
+        global: global_en,
+        projectsjson: projectsJSON_en
       }
     }
   });

@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from "react-router-dom";
-import { MyContext } from '../MyContext'
+import { ArticleProjectsContext } from '../contexts/ArticleProjectsContext'
 
 import projectsJSON from '../data/en/projects.json'
 
@@ -9,9 +9,9 @@ const ArticleProjectsLayout = () => {
 
   return(
     <>
-      <MyContext.Provider value={{ projectsJSON, URL }}>
+      <ArticleProjectsContext.Provider value={{ projectsJSON, URL }}>
         <Outlet />
-      </MyContext.Provider>
+      </ArticleProjectsContext.Provider>
     </>
   );
 }

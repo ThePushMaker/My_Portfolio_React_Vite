@@ -1,8 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import TabPanelItem from '../TabPanelItem/TabPanelItem';
 import { useEffect, useState } from 'react';
 
 
 const Tabs = ({categories}) => {
+  const [ t ] = useTranslation("global", "projectsjson");
+  
   // Estado local para rastrear la pestaña activa
   const [activeTab, setActiveTab] = useState(1);
 
@@ -75,7 +78,7 @@ const Tabs = ({categories}) => {
                     md:text-[18px] lg:text-[20px]
                     lg:font-[500]"
                     >
-                    {tab.category}
+                    {t(`project_categories.${tab.category}`)}
                   </span>
                 </button>
               );

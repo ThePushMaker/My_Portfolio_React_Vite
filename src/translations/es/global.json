@@ -17,7 +17,7 @@
     "description_p3": " apasionado por todas las formas de creación de arte virtual. Aunque mi juventud puede limitar un poco mi experiencia, mi motivación es poderosa y me impulsa todos los días a avanzar y aprender mucho más. Me gustaría demostrar a través de mis esfuerzos que el software no es meramente lógica fría y mecánica; no es solo una herramienta, sino que tiene el potencial para convertirse en algo auténticamente artístico, fascinante y lleno de identidad. El software no es cosa del mañana; es de hoy.",
     "description_tooltip": "Donde una persona maneja tanto el front-end como el back-end con la gracia de una banda de una sola persona. 🎸",
     "typeAnimation_1": "Desarrollador Web Full Stack",
-    "typeAnimation_2": "Diseñador Web",
+    "typeAnimation_2": "Diseñador de Interfaces",
     "typeAnimation_3": "YouTuber Educador",
     "typeAnimation_4": "Autor de blog de Programación",
     "follow_me1": "Sigueme en ",
@@ -30,5 +30,10 @@
     "description2": " con React, Laravel, y Vue.Js",
     "description3": ", considerándolos mis principales áreas de experiencia.",
     "english_spanish": "Inglés y Español"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "select_category": "Selecciona una categoría a continuación para ver los proyectos que he desarrollado en esa área específica"
   }
+
 }
