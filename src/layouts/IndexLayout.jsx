@@ -3,7 +3,7 @@ import { LanguageProvider } from "../contexts/LanguageContext";
 
 const IndexLayout = () => {
 
-  return(
+  return( 
     <>
       <div>
         <LanguageProvider>
