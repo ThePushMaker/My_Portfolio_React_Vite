@@ -6,24 +6,27 @@ import { useEffect, useState } from "react";
 const SelectLanguage = () => { 
   const [ t, i18n ] = useTranslation("global"); 
   const { language, updateLanguage } = useMyLanguageContext();
-  const [navLng, setNavLng] = useState('en');
+  const [defNavLng, setDefNavLng] = useState('en');
+  
+  const changeLang = newLng => {
+    updateLanguage(newLng)
+    i18n.changeLanguage(newLng);
+  }
   
   const handleLanguageChange = (e) => {
     const selectLanguage = e.target.value;
-    i18n.changeLanguage(selectLanguage);
-    setNavLng(selectLanguage); 
+    changeLang(selectLanguage)
     // updateLanguage(selectLanguage);
   }
-
   
   useEffect(() => {
+    // get navigator default langugage & convert to a compatible code
     const languageCode = navigator.language;
     const parts = languageCode.split('-');
-    const navLng = parts[0];
-
-    setNavLng(navLng);
-    i18n.changeLanguage(navLng);
+    const defNavLng = parts[0];
     
+    setDefNavLng(defNavLng); 
+    changeLang(defNavLng)
   }, []);  
 
   return(
@@ -31,7 +34,7 @@ const SelectLanguage = () => {
       <div className="py-[4px] px-2 xl:px-5">
         <select 
           className={`navbar-link text-[17px] xl:text-xl active bg-transparent w-24`} 
-          value={navLng} 
+          value={defNavLng} 
           onChange={handleLanguageChange}
         >
         {

@@ -5,29 +5,39 @@ import projectsJSON_en from "../../data/en/projects.json";
 import projectsJSON_es from "../../data/es/projects.json";
 import Tabs from "./Tabs/Tabs.jsx";
 import { useTranslation } from "react-i18next";
-import { useContext } from "react";
-import { LanguageContext } from "../../contexts/LanguageContext";
+import { useContext, useEffect } from "react";
+import { LanguageContext, useMyLanguageContext } from "../../contexts/LanguageContext";
 
 // proximamente category 'Research and Experimentation'
 
 const Projects = () => {
   const [ t ] = useTranslation("global");
+  const { language, updateLanguage } = useMyLanguageContext();
   
-  const { language, setLanguage } = useContext(LanguageContext);
+  
+  console.log("inicio")
+  console.log(language)
+  
+  // const { language, setLanguage } = useContext(LanguageContext);
+  
   let categories, description;
+  useEffect(() => {
+    console.log("cambiooo")
+    console.log(language);
+    if(language === 'en') {
+      ({ categories, description } = projectsJSON_en);
+    }
+    if(language === 'es') {
+      ({ categories, description } = projectsJSON_es);
+    }
+    
+    // Ahora puedes usar categories y description en el resto de tu código
+    console.log(categories);
+    console.log(description);
+      
+  },[language])
   
-  console.log(language);
-  if(language === 'en') {
-    ({ categories, description } = projectsJSON_en);
-  }
-  if(language === 'es') {
-    ({ categories, description } = projectsJSON_es);
-  }
-  
-  // Ahora puedes usar categories y description en el resto de tu código
-console.log(categories);
-console.log(description);
-  
+
   // const categories = t("projectsjson:categories")
   // console.log(categories)
   return (
