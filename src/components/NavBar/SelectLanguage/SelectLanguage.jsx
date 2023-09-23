@@ -6,27 +6,27 @@ import { useEffect, useState } from "react";
 const SelectLanguage = () => { 
   const [ t, i18n ] = useTranslation("global"); 
   const { language, updateLanguage } = useMyLanguageContext();
-  const [defNavLng, setDefNavLng] = useState('en');
+  
+  const [navLang, setNavLng] = useState('en');
   
   const changeLang = newLng => {
-    updateLanguage(newLng)
     i18n.changeLanguage(newLng);
+    setNavLng(newLng); 
+    updateLanguage(newLng)
   }
   
   const handleLanguageChange = (e) => {
     const selectLanguage = e.target.value;
     changeLang(selectLanguage)
-    // updateLanguage(selectLanguage);
   }
   
   useEffect(() => {
     // get navigator default langugage & convert to a compatible code
     const languageCode = navigator.language;
     const parts = languageCode.split('-');
-    const defNavLng = parts[0];
+    const navLang = parts[0];
     
-    setDefNavLng(defNavLng); 
-    changeLang(defNavLng)
+    changeLang(navLang)
   }, []);  
 
   return(
@@ -34,7 +34,7 @@ const SelectLanguage = () => {
       <div className="py-[4px] px-2 xl:px-5">
         <select 
           className={`navbar-link text-[17px] xl:text-xl active bg-transparent w-24`} 
-          value={defNavLng} 
+          value={navLang} 
           onChange={handleLanguageChange}
         >
         {
@@ -48,11 +48,6 @@ const SelectLanguage = () => {
             ))
           }
         </select>
-        
-        <div>
-          <p>{language}</p>
-          <button onClick={() => updateLanguage('en')}>en</button>
-        </div>
       </div>
   
     </>
