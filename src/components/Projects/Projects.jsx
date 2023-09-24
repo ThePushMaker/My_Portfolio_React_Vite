@@ -12,7 +12,7 @@ import { LanguageContext, useMyLanguageContext } from "../../contexts/LanguageCo
 
 const Projects = () => {
   const [ t ] = useTranslation("global");
-  const { language, updateLanguage } = useMyLanguageContext();
+  const { language } = useMyLanguageContext();
   const [description, setDescription] = useState("");
   const [categories, setCategories] = useState([]); 
   
@@ -27,14 +27,6 @@ const Projects = () => {
     }
   },[language])
   
-  // Ahora puedes usar categories y description en el resto de tu código
-  console.log(categories);
-  console.log(description);
-    
-  
-
-  // const categories = t("projectsjson:categories")
-  // console.log(categories)
   return (
     <>
       <section className="project bg-container_color px-4 md:px-14 lg:px-24 pt-12 pb-16 lg:pb-16" id="projects">
@@ -53,9 +45,9 @@ const Projects = () => {
               {t('projects.select_category')}:
             </p>
      
-              {/* <Tabs
+              <Tabs
                 categories={categories}
-              /> */}
+              />
             
           </div>
         </div>
