@@ -34,5 +34,8 @@
   "projects": {
     "title": "Projects",
     "select_category": "Select a category below to view the projects I've developed in that specific area"
+  },
+  "TabPanelItem": {
+    "display_more": "DISPLAY MORE"
   }
 }

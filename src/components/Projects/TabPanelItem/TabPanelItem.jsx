@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { routes } from '../../../routes';
 import ProjectsListGrid from "../ProjectsListGrid/ProjectsListGrid";
+import { useTranslation } from "react-i18next";
 
 const variants = {
   open: { opacity: 1 },
@@ -9,6 +10,7 @@ const variants = {
 }
 
 const TabPanel = (props) => {
+  const [ t ] = useTranslation("global");
   let navigate = useNavigate();
 
   const mostrarRegistros = props.projects.slice(0, 6);
@@ -53,7 +55,7 @@ const TabPanel = (props) => {
               onClick={toggleMostrarMas}
             >
               <span>
-                DISPLAY MORE
+                {t('TabPanelItem.display_more')}
                 {/* {mostrarMas ? "Display Less" : "Display More"} */}
               </span>
               

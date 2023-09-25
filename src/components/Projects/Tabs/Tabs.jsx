@@ -42,9 +42,6 @@ const Tabs = ({ categories }) => {
   };
   
   useEffect(() => {
-    // actualiza el indicador después del primer renderizado
-    updateIndicator(activeTab);
-
     // Función que se ejecutará cuando cambie el tamaño de la pantalla
     const handleResize = () => {
       updateIndicator(activeTab);
@@ -56,13 +53,11 @@ const Tabs = ({ categories }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [activeTab]);
+  }, []);
   
   useEffect(()=> {
     updateIndicator(activeTab);
-    // setActiveTab(1)
-    console.log(activeTab)
-  })
+  });
   
   
   
