@@ -31,14 +31,14 @@ const NavBar = () => {
     setActiveLink(value);
   };
 
-  const navLinkStyles = 'navbar-link text-[17px] xl:text-xl py-0 px-[14px] xl:px-[25px]';
+  const navLinkStyles = 'navbar-link text-[17px] xlNavbar:text-xlNavbar py-0 px-[14px] xlNavbar:px-[25px]';
   
 
   
   return (
     <>
     <div>
-      <nav className={`${scrolled ? 'scrolled backdrop-blur-sm py-[10px]' : ''} navbar  px-5 xl:px-16 py-6`}>
+      <nav className={`${scrolled ? 'scrolled backdrop-blur-sm py-[10px]' : ''} navbar  px-5 xlNavbar:px-16 py-6`}>
         <div className="mx-auto max-w-[1500px] flex justify-between ">
           
             <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start">
@@ -84,9 +84,11 @@ const NavBar = () => {
               
             </div>
             
-            <div className="items-center navbar-text inline-flex">
+            <div className="items-center inline-flex">
               <div className="inline-flex">
-                <SelectLanguage />
+                <div className="mr-3 lg:mr-0">
+                  <SelectLanguage />
+                </div>
                 <MobileNavBar 
                   NavbarRoutesHome = {NavbarRoutesHome}
                   NavbarRoutes = {NavbarRoutes}
@@ -94,18 +96,20 @@ const NavBar = () => {
               </div>
             
               <div className="invisible hidden lg:visible lg:flex ">
-              <div className="my-auto">
-                <SocialIcons />
-              </div>
+                <div className="my-auto">
+                  <SocialIcons />
+                </div>
+
                 <a href="#contact">
-                  <button className="contact_button px-2 py-4 xl:px-8 ml-3">
+                  <button className="contact_button px-4 py-4 xlNavbar:px-6 ml-3">
                     {'< '}
-                      <label className="text-styled-font-family1 text-[16px] xl:text-xl">
+                      <label className="text-styled-font-family1 text-[16px] xlNavbar:text-xlNavbar">
                         {t(`navbar.CONTACT ME`)}
                       </label>
                     {' />'}
                   </button>
                 </a>
+
               </div>
             </div>
           

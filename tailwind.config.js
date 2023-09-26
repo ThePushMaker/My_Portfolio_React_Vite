@@ -58,8 +58,8 @@ export default {
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
 
-      'lgxl': '1100px',
-      // => @media (min-width: 1100px) { ... }
+      'xlNavbar': '1300px',
+      // => @media (min-width: 1300px) { ... }
 
       'xl': '1280px',
       // => @media (min-width: 1280px) { ... }
