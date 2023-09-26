@@ -80,27 +80,33 @@ const NavBar = () => {
                 )}
               
               
-              <MobileNavBar 
-                NavbarRoutesHome = {NavbarRoutesHome}
-                NavbarRoutes = {NavbarRoutes}
-              />
+         
               
             </div>
-
-            <div className="invisible hidden lg:visible lg:flex items-center navbar-text">
-              <div>
+            
+            <div className="items-center navbar-text inline-flex">
+              <div className="inline-flex">
                 <SelectLanguage />
+                <MobileNavBar 
+                  NavbarRoutesHome = {NavbarRoutesHome}
+                  NavbarRoutes = {NavbarRoutes}
+                />
               </div>
-              <SocialIcons />
-              <a href="#contact">
-                <button className="px-2 py-4 xl:px-8 ml-3">
-                  {'< '}
-                    <label className="text-styled-font-family1 text-[16px] xl:text-xl">
-                      {t(`navbar.CONTACT ME`)}
-                    </label>
-                  {' />'}
-                </button>
-              </a>
+            
+              <div className="invisible hidden lg:visible lg:flex ">
+              <div className="my-auto">
+                <SocialIcons />
+              </div>
+                <a href="#contact">
+                  <button className="contact_button px-2 py-4 xl:px-8 ml-3">
+                    {'< '}
+                      <label className="text-styled-font-family1 text-[16px] xl:text-xl">
+                        {t(`navbar.CONTACT ME`)}
+                      </label>
+                    {' />'}
+                  </button>
+                </a>
+              </div>
             </div>
           
         </div>

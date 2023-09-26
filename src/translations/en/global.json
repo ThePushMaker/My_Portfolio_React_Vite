@@ -37,5 +37,22 @@
   },
   "TabPanelItem": {
     "display_more": "DISPLAY MORE"
+  },
+  "contact": {
+    "header": "Web development is an art, and your project is our masterpiece",
+    "subtitle": "Let's build something great together!",
+    "placeholder_name": "Full Name",
+    "placeholder_email": "Email Address",
+    "placeholder_message": "Message",
+    "submit": "SEND"
+  },
+  "newsletter": {
+    "main_message": "Subscribe to this Newsletter and Never miss important updates about my new contributions",
+    "placeholder_email":"Email Adress",
+    "submit": "SUBSCRIBE"
+  },
+  "footer": {
+    "copyright": "© 2023 Martín Calderón. All Rights Reserved",
+    "technologies_used": "This website has been developed with React, Tailwind, and Vite"
   }
 }

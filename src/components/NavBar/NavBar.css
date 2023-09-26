@@ -1,7 +1,6 @@
 
 /* navbar */
 
-
 .navbar{
   position: fixed;
   width: 100%;
@@ -58,7 +57,7 @@
   transform: scale(1.05);
   transition: 0.3s ease-in-out;
 }
-.navbar-text button {
+.contact_button {
   font-weight: 700;
   color: #fff;
   border: 1px solid #fff;

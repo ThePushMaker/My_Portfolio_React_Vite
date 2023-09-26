@@ -1,8 +1,10 @@
 import '../../components/Contact/Contact.css'
 import { useState } from 'react';
 import contactImg from '../../assets/img/contact-img.png'
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const [ t] = useTranslation("global"); 
   const formInitialDetails = {
     fullName: '',
     email: '',
@@ -54,8 +56,8 @@ const Contact = () => {
               <img src={contactImg} alt="contact_image" />
             </div>
             <div className='w-full md:w-1/2 mt-10 md:mt-0'>
-              <h2 className='text-[40px] mb-5'>"Web development is an art, and your project is our masterpiece."</h2>
-              <p className='mb-5 text-center'>Let{"'"}s build something great together!</p>
+              <h2 className='text-[40px] mb-5'>"{t(`contact.header`)}."</h2>
+              <p className='mb-5 text-center'> {t(`contact.subtitle`)}</p>
               <form onSubmit={handleSubmit}>
                 <div className='flex flex-wrap'>
                   <div className='w-full'>
@@ -63,7 +65,7 @@ const Contact = () => {
                       className='bg-[white] bg-opacity-[4%]'
                       type="text" 
                       value={formDetails.fullName} 
-                      placeholder='Full Name' 
+                      placeholder={t(`contact.placeholder_name`)}
                       onChange={(e) => onFormUpdate('fullName', e.target.value)} 
                       />
                   </div>
@@ -72,7 +74,7 @@ const Contact = () => {
                       className='bg-[white] bg-opacity-[4%]'
                       type="email" 
                       value={formDetails.email} 
-                      placeholder='Email Address' 
+                      placeholder={t(`contact.placeholder_email`)}
                       onChange={(e) => onFormUpdate('email', e.target.value)} 
                     />
                   </div>
@@ -80,7 +82,7 @@ const Contact = () => {
                     <textarea 
                       className='bg-[white] bg-opacity-[4%]'
                       value={formDetails.message} 
-                      placeholder='Message' 
+                      placeholder= {t(`contact.placeholder_message`)}
                       onChange={(e) => onFormUpdate('message', e.target.value)} 
                     ></textarea>
                   </div>
@@ -92,7 +94,7 @@ const Contact = () => {
                       ' 
                       >
                       <button type="submit">
-                      <span> SEND <span className='styledFontFamily' >{'>'}</span></span>
+                      <span> {t(`contact.submit`)} <span className='styledFontFamily' >{'>'}</span></span>
                       </button>
                     </div>
                   </div>

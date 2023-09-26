@@ -3,10 +3,12 @@ import logo from '../../assets/img/logo.svg';
 import MailchimpForm from "../MailchimpForm/MailchimpForm";
 import { useLocation } from "react-router-dom";
 import SocialIcons from '../SocialIcons/SocialIcons';
+import { useTranslation } from 'react-i18next';
 
 const smTextSize = 'text-[17px]'
 
 const Footer = () => {
+  const [ t] = useTranslation("global"); 
   let location = useLocation();
   // console.log(location.pathname) 
   return(
@@ -19,8 +21,8 @@ const Footer = () => {
           </div>
           <div className='w-full md:w-1/2 text-end'>
             <SocialIcons />
-            <p className={smTextSize}>© 2023 Martín Calderón. All Rights Reserved.</p>
-            <p className={smTextSize}>This website has been developed with React, Tailwind, and Vite.</p>
+            <p className={smTextSize}> {t(`footer.copyright`)}.</p>
+            <p className={smTextSize}> {t(`footer.technologies_used`)}.</p>
           </div>
         </div>
       </div>

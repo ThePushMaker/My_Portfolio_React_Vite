@@ -37,6 +37,23 @@
   },
   "TabPanelItem": {
     "display_more": "MOSTRAR MÁS"
+  },
+  "contact": {
+    "header": "El desarrollo web es un arte, y tu proyecto es nuestra obra maestra",
+    "subtitle": "¡Construyamos algo grandioso juntos!",
+    "placeholder_name": "Nombre completo",
+    "placeholder_email": "Correo Electrónico",
+    "placeholder_message": "Mensaje",
+    "submit": "ENVIAR"
+  },
+  "newsletter": {
+    "main_message": "Suscríbete a este boletín y nunca te pierdas actualizaciones importantes sobre mis nuevas contribuciones",
+    "placeholder_email":"Correo Electrónico",
+    "submit": "SUSCRIBIRSE"
+  },
+  "footer": {
+    "copyright": "© 2023 Martín Calderón. Todos los derechos reservados",
+    "technologies_used": "Este sitio web ha sido desarrollado con React, Tailwind y Vite"
   }
 
 }

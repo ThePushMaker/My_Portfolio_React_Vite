@@ -70,9 +70,6 @@ const MobileNavBar = ({ NavbarRoutesHome, NavbarRoutes }) => {
               )}
             </ul>
             <div className="flex justify-center absolute bottom-0 left-0 w-[100%] text-center py-[50px] ">
-              <div>
-                <SelectLanguage />
-              </div>
               <SocialIcons /> 
             </div>
         </div>

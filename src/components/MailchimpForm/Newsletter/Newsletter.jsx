@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const Newsletter = ({ onValidated, status, message }) => {
+  const [ t] = useTranslation("global"); 
   const [email, setEmail] = useState('');
   const [isValidated, setIsValidated] = useState('');
 
@@ -41,7 +43,7 @@ const clearFields = () => {
       lg:py-[85px] lg:px-[125px]">
         <div className="flex flex-wrap items-center w-full">
           <div className="w-full lg:w-5/12 py-3">
-            <p className="text-[1.2rem] md:text-[1.35rem] lg:mr-4 text-[black] font-bold text-center">Subscribe to this Newsletter and Never miss important updates about my new contributions</p>
+            <p className="text-[1.2rem] md:text-[1.35rem] lg:mr-4 text-[black] font-bold text-center"> {t(`newsletter.main_message`)} </p>
           </div>
           <div className="w-full lg:w-7/12 py-3">
             <form onSubmit={handleSubmit}>
@@ -54,7 +56,7 @@ const clearFields = () => {
                     value={email} 
                     type="email" 
                     onChange={(e) => setEmail(e.target.value)} 
-                    placeholder="Email Adress" 
+                    placeholder= {t(`newsletter.placeholder_email`)}
                     />
                 </div>
                 <div className=" w-52 m-auto 
@@ -62,8 +64,7 @@ const clearFields = () => {
                 >
                   <button className="newsletter_button w-full bg-[black] bg-opacity-[88%]" type="submit">
                     <span>
-                      SUBMIT
-                      
+                      {t(`newsletter.submit`)}
                     </span>
                   </button>
                 </div>
