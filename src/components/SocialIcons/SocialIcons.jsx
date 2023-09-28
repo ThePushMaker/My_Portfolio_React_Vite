@@ -6,7 +6,7 @@ import navIcon3 from '../../assets/img/icons/nav-icon3.svg';
 import navIcon4 from '../../assets/img/icons/nav-icon4.svg';
 import { useTranslation } from 'react-i18next';
 
-const stylesLink = 'w-9 h-9 xl:w-11 xl:h-11  mx-1.5 lg:mx-[3px] xl:mx-[3px]';
+const stylesLink = 'w-9 h-9 xl:w-11 xl:h-11 mx-1.5 lg:mx-[3px] xl:mx-[3px]';
 
 const SocialIcons = () => {
   const [ t ] = useTranslation("global");  

@@ -31,7 +31,7 @@ const NavBar = () => {
     setActiveLink(value);
   };
 
-  const navLinkStyles = 'navbar-link text-[17px] xlNavbar:text-xlNavbar py-0 px-[14px] xlNavbar:px-[25px]';
+  const navLinkStyles = 'navbar-link text-[17px] xl:text-xl py-0 px-[14px] xlNavbar:px-[25px]';
   
 
   
