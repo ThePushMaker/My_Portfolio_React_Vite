@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import './SelectLanguage.css'
 import flagUS from '../../../assets/img/flags/flag-us.svg'
 import flagMX from '../../../assets/img/flags/flag-mx.svg'
+import iconUp from '../../../assets/img/icons/up-chevron.svg'
 
 const SelectLanguage = () => { 
   const [ t, i18n ] = useTranslation("global"); 
@@ -36,13 +37,13 @@ const SelectLanguage = () => {
     <>
       <div className="py-[4px] px-2 xl:px-5">
         <select 
-          className={`navbar-link text-[17px] xl:text-xl active bg-transparent w-24`} 
+          className={`navbar-link text-[17px] xl:text-xl active bg-transparent w-fit px-2`} 
           value={navLang} 
           onChange={handleLanguageChange}
         >
         {
           LANGUAGES.map(({ code, label }) => (
-            <option className="bg-purple"
+            <option className="text-[black]"
               key={code}
               value={code}
             >
@@ -53,39 +54,7 @@ const SelectLanguage = () => {
         </select>
       </div>
       
-      
-      <form id="app-cover">
-  <div id="select-box">
-    <input type="checkbox" id="options-view-button"/>
-    <div id="select-button" className="brd">
-      <div id="selected-value">
-        <span>Select a Language</span>
-      </div>
-      <div id="chevrons">
-        {flagUS}
-        {flagMX}
-      </div>
-    </div>
-    <div id="options">
-      <div className="option">
-        <input className="s-c top" type="radio" name="platform" value="codepen"/>
-        <input className="s-c bottom" type="radio" name="platform" value="codepen"/>
-        <i className="fab fa-codepen"></i>
-        <span className="label">English</span>
-        <span className="opt-val">English</span>
-      </div>
-      <div className="option">
-        <input className="s-c top" type="radio" name="platform" value="dribbble"/>
-        <input className="s-c bottom" type="radio" name="platform" value="dribbble"/>
-        <i className="fab fa-dribbble"></i>
-        <span className="label">Spanish</span>
-        <span className="opt-val">Spanish</span>
-      </div>
-      <div id="option-bg"></div>
-    </div>
-  </div>
-</form>
-  
+    
     </>
   );
 }
