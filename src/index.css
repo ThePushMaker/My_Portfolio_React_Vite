@@ -99,7 +99,7 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--highlighted_text_color);
+  background: var(--link_disabled_color);
 }
 /* hasta aqui scrollbar */
 
