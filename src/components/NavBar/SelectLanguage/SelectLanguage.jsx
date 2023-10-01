@@ -3,8 +3,7 @@ import { LANGUAGES } from "../../../constants/constants";
 import {useMyLanguageContext} from '../../../contexts/LanguageContext'
 import { useEffect, useState } from "react";
 import './SelectLanguage.css'
-import flagUS from '../../../assets/img/flags/flag-us.svg'
-import flagMX from '../../../assets/img/flags/flag-mx.svg'
+
 import iconUp from '../../../assets/img/icons/up-chevron.svg'
 import Select from "../../UI/Select.jsx/Select";
 

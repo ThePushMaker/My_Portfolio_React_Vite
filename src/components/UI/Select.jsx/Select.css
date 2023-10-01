@@ -1,7 +1,10 @@
 
+:root {
+  --elementWidth: 160px;
+}
 .wrapper {
   color: #555;
-  width: 200px;
+  width: var(--elementWidth);
   margin: 0 auto 0;
 }
 .select-btn, .options li {
@@ -12,7 +15,7 @@
 .select-btn {
   border-radius: 7px;
   color: white;
-  border: white solid 1px;
+  /* border: white solid 1px; */
   background: transparent;
   font-size: 23px;
   height: 50px;
@@ -29,13 +32,15 @@
 }
 .content {
   display: none;
-  padding: 20px;
+  padding: 14px;
   margin-top: 15px;
   border-radius: 7px;
   background: #fff;
 }
 .wrapper.active .content {
   display: block;
+  position: absolute;
+  width: var(--elementWidth);
 }
 .content .search {
   position: relative;
@@ -43,7 +48,7 @@
   align-items: center;
 }
 .search img {
-  width: 26px;
+  width: 20px;
   left: 15px;
   color: #555;
   font-size: 20px;
@@ -82,7 +87,7 @@
   height: 50px;
   border-radius: 5px;
   padding: 0 13px;
-  font-size: 21px;
+  font-size: 20px;
 }
 .options li:hover, li.selected {
   background: #f2f2f2;

@@ -4,19 +4,22 @@ import arrowDownIcon from '../../../assets/img/icons/angle-down.svg'
 import searchIcon from '../../../assets/img/icons/search.svg'
 import flagUS from '../../../assets/img/flags/flag-us.svg'
 import flagMX from '../../../assets/img/flags/flag-mx.svg'
+import { LANGUAGES } from "../../../constants/constants";
 
 const Select = () => {
   const [isActive, setIsActive] = useState(false);
   const [selectBtn, setSelectBtn] = useState("Spanish");
   const [searchData, setSearchData] = useState({
     searchInp: '',
-    filteredCountries: [],
+    filteredData: [],
     hasSearched: false,
   });
   const [selectedItem, setSelectedItem] = useState(null);
 
   const wrapperRef = useRef(null); // Ref para el div contenedor del select
   const inputRef = useRef(null); // Ref para el elemento input del campo de búsqueda
+
+  const dataArray = [...LANGUAGES];
 
   const toggleSelect = () => {
     setIsActive(!isActive);
@@ -27,7 +30,7 @@ const Select = () => {
     setSearchData(prevData => ({
       ...prevData,
       searchInp: '', // Establecer el campo de búsqueda en una cadena vacía al cerrar el select
-      filteredCountries: countries,
+      filteredData: dataArray,
     }));
   }
 
@@ -57,8 +60,6 @@ const Select = () => {
     }
   }, [isActive, selectedItem]);
 
-  const countries = ["English", "Spanish"];
-
   const updateName = (selectedLi) => {
     setSelectBtn(selectedLi)
     setSelectedItem(selectedLi);
@@ -71,7 +72,7 @@ const Select = () => {
       ...prevData,
       searchInp: inputValue,
       hasSearched: true,
-      filteredCountries: countries.filter(data => data.toLowerCase().includes(inputValue.toLowerCase())),
+      filteredData: dataArray.filter(data => data.label.toLowerCase().includes(inputValue.toLowerCase())),
     }));
   }
 
@@ -95,27 +96,27 @@ const Select = () => {
           </div>
           <ul className="options">
             {searchData.hasSearched ? (
-              searchData.filteredCountries.length > 0 ? (
-                searchData.filteredCountries.map((item, index) => (
+              searchData.filteredData.length > 0 ? (
+                searchData.filteredData.map((item, index) => (
                   <li
                     key={index}
-                    onClick={() => updateName(item)}
-                    className={selectedItem === item ? 'selected' : ''}
+                    onClick={() => updateName(item.label)}
+                    className={selectedItem === item.label ? 'selected' : ''}
                   >
-                    {item}
+                    {item.label}
                   </li>
                 ))
               ) : (
                 <p>Oops! Language not found</p>
               )
             ) : (
-              countries.map((item, index) => (
+              dataArray.map((item, index) => (
                 <li
                   key={index}
-                  onClick={() => updateName(item)}
-                  className={selectedItem === item ? 'selected' : ''}
+                  onClick={() => updateName(item.label)}
+                  className={selectedItem === item.label ? 'selected' : ''}
                 >
-                  {item}
+                  {item.label}
                 </li>
               ))
             )}
