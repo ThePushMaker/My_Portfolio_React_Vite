@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 
 // context
@@ -12,14 +12,6 @@ function LanguageProvider ({ children }) {
   const updateLanguage = (newData) => {
     setLanguage(newData);
   };
-
-  // const languageCode = navigator.language;
-  // useEffect(() => {
-    // const parts = languageCode.split('-');
-    // const language1 = parts[0];
-    // setLanguage(language1);
-    // console.log(language1)
-  // }, []); // Este efecto se ejecutará solo una vez al montar el componente
 
   // Puedes incluir otras funciones o lógica aquí
 

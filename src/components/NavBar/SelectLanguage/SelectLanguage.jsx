@@ -29,26 +29,33 @@ const SelectLanguage = () => {
   const inputRef = useRef(null); // Ref para el elemento input del campo de búsqueda
 
   const dataArray = [...LANGUAGES];
-
-
-  
+ 
   const changeLang = newLng => {
     i18n.changeLanguage(newLng);
     setNavLng(newLng); 
     updateLanguage(newLng)
+    
+    // localStorage.setItem('language', newLng);
+    
+    const storedLanguage = localStorage.getItem('language');
+    console.log("language",storedLanguage)
   }
   
+
+  // get navigator default langugage & convert to a compatible code
   useEffect(() => {
-    // get navigator default langugage & convert to a compatible code
-    const languageCode = navigator.language;
-    const parts = languageCode.split('-');
-    const navLang = parts[0];
-    
-    changeLang(navLang)
+    const storedLanguage = localStorage.getItem('language');
+    if(!storedLanguage) {
+      const languageCode = navigator.language;
+      const parts = languageCode.split('-');
+      const navLang = parts[0];
+      
+      // changeLang(navLang)
+    }
   }, []); 
 
 
-// whem the select is open or closed
+// when select is open or closed
   const toggleSelect = () => {
     setIsActive(!isActive);
   }
