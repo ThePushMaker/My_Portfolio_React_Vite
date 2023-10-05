@@ -11,9 +11,8 @@ import './SelectLanguage.css'
 
 const SelectLanguage = () => {
   const [ t, i18n ] = useTranslation("global"); 
-  const { languageContext, updateLanguageContext } = useMyLanguageContext();
+  // const { languageContext, updateLanguageContext } = useMyLanguageContext();
 
-  
   const [isActive, setIsActive] = useState(false);
   const [selectedElement, setSelectedElement] = useState("Language");
   const [selectedItem, setSelectedItem] = useState(null);
@@ -45,8 +44,9 @@ const SelectLanguage = () => {
       
       changeLang(navLang)
     }else { 
-      if(storedLanguage==='es') setSelectedElement('Spanish')
       if(storedLanguage==='en') setSelectedElement('English')
+      else if(storedLanguage==='es') setSelectedElement('Spanish')
+      else setSelectedElement('English') //falbackLng en
       // console.log("ya habia storedlanguage",storedLanguage)
     }
   }, []); 
@@ -90,6 +90,7 @@ const SelectLanguage = () => {
     };
   }, []);
 
+  // autofocus
   useEffect(() => {
     if (isActive) {
       // Cuando se activa el select, establece el enfoque en el campo de búsqueda
@@ -97,6 +98,7 @@ const SelectLanguage = () => {
     }
   }, [isActive]);
 
+  // sets the selected style to the selected item
   useEffect(() => {
     if (isActive && selectedItem) {
       setSelectedElement(selectedItem);
@@ -111,6 +113,7 @@ const SelectLanguage = () => {
     closeSelect();
   }
 
+  // search functionality
   const handleSearchInputChange = (event) => {
     const inputValue = event.target.value;
     setSearchData(prevData => ({

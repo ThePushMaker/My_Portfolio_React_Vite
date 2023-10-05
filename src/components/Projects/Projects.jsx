@@ -6,27 +6,29 @@ import projectsJSON_es from "../../data/es/projects.json";
 import Tabs from "./Tabs/Tabs.jsx";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
-import { useMyLanguageContext } from "../../contexts/LanguageContext";
+// import { useMystoredLanguage } from "../../contexts/storedLanguage";
 
 // proximamente category 'Research and Experimentation'
 
 const Projects = () => {
   const [ t ] = useTranslation("global");
-  const { languageContext } = useMyLanguageContext();
+  // const { storedLanguage } = useMystoredLanguage();
   
   const [description, setDescription] = useState("");
   const [categories, setCategories] = useState([]); 
   
+  const storedLanguage = localStorage.getItem('language');
+  
   useEffect(() => {
-    if(languageContext === 'en') {
+    if(storedLanguage === 'en') {
       setDescription(projectsJSON_en.description)
       setCategories(projectsJSON_en.categories)
     }
-    if(languageContext === 'es') {
+    if(storedLanguage === 'es') {
       setDescription(projectsJSON_es.description)
       setCategories(projectsJSON_es.categories)
     }
-  },[languageContext])
+  },[storedLanguage])
   
   return (
     <>
