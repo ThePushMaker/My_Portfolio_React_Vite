@@ -11,18 +11,17 @@ import './SelectLanguage.css'
 
 const SelectLanguage = () => {
   const [ t, i18n ] = useTranslation("global"); 
-  const { language, updateLanguage } = useMyLanguageContext();
-  
-  const [navLang, setNavLng] = useState('en');
+  const { languageContext, updateLanguageContext } = useMyLanguageContext();
+
   
   const [isActive, setIsActive] = useState(false);
-  const [selectBtn, setSelectBtn] = useState("Spanish");
+  const [selectedElement, setSelectedElement] = useState("Language");
+  const [selectedItem, setSelectedItem] = useState(null);
   const [searchData, setSearchData] = useState({
     searchInp: '',
     filteredData: [],
     hasSearched: false,
   });
-  const [selectedItem, setSelectedItem] = useState(null);
   
   
   const wrapperRef = useRef(null); // Ref para el div contenedor del select
@@ -30,30 +29,39 @@ const SelectLanguage = () => {
 
   const dataArray = [...LANGUAGES];
  
-  const changeLang = newLng => {
-    i18n.changeLanguage(newLng);
-    setNavLng(newLng); 
-    updateLanguage(newLng)
-    
-    // localStorage.setItem('language', newLng);
-    
-    const storedLanguage = localStorage.getItem('language');
-    console.log("language",storedLanguage)
-  }
-  
-
-  // get navigator default langugage & convert to a compatible code
+ 
+ 
+  // get navigator default langugage & convert it to a compatible code to set it as the app language
   useEffect(() => {
     const storedLanguage = localStorage.getItem('language');
+    
+    // if there isn't
     if(!storedLanguage) {
+      // console.log("no habia storedlanguage",storedLanguage)
       const languageCode = navigator.language;
       const parts = languageCode.split('-');
       const navLang = parts[0];
+      console.log("navLang ",navLang)
       
-      // changeLang(navLang)
+      changeLang(navLang)
+    }else { 
+      if(storedLanguage==='es') setSelectedElement('Spanish')
+      if(storedLanguage==='en') setSelectedElement('English')
+      // console.log("ya habia storedlanguage",storedLanguage)
     }
   }, []); 
-
+ 
+ 
+  const changeLang = newLng => {
+    i18n.changeLanguage(newLng);
+    // updateLanguageContext(newLng)
+    setSelectedElement(newLng)
+    // const storedLanguage = 
+    localStorage.setItem('language', newLng);
+    
+    console.log("language",newLng)
+  }
+  
 
 // when select is open or closed
   const toggleSelect = () => {
@@ -91,15 +99,15 @@ const SelectLanguage = () => {
 
   useEffect(() => {
     if (isActive && selectedItem) {
-      setSelectBtn(selectedItem);
+      setSelectedElement(selectedItem);
     }
   }, [isActive, selectedItem]);
 
 // when an item is selected
-  const handleItemSelection = (selectedLi, selectedLanguageCode) => {
-    changeLang(selectedLanguageCode)
-    setSelectBtn(selectedLi)
-    setSelectedItem(selectedLi);
+  const handleItemSelection = (selectedLngLabel, selectedLngCode) => {
+    changeLang(selectedLngCode)
+    setSelectedElement(selectedLngLabel)
+    setSelectedItem(selectedLngLabel);
     closeSelect();
   }
 
@@ -117,7 +125,7 @@ const SelectLanguage = () => {
     <div className=''>
       <div className={`wrapper ${isActive ? 'active' : ''}`} ref={wrapperRef}>
         <div className="select-btn" onClick={toggleSelect}>
-          <span>{selectBtn}</span>
+          <span>{selectedElement}</span>
           <img src={arrowDownIcon} alt="arrowDownIcon" />          
         </div>
         <div className="content">

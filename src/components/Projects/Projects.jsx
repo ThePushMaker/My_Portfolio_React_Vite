@@ -12,21 +12,21 @@ import { useMyLanguageContext } from "../../contexts/LanguageContext";
 
 const Projects = () => {
   const [ t ] = useTranslation("global");
-  const { language } = useMyLanguageContext();
+  const { languageContext } = useMyLanguageContext();
   
   const [description, setDescription] = useState("");
   const [categories, setCategories] = useState([]); 
   
   useEffect(() => {
-    if(language === 'en') {
+    if(languageContext === 'en') {
       setDescription(projectsJSON_en.description)
       setCategories(projectsJSON_en.categories)
     }
-    if(language === 'es') {
+    if(languageContext === 'es') {
       setDescription(projectsJSON_es.description)
       setCategories(projectsJSON_es.categories)
     }
-  },[language])
+  },[languageContext])
   
   return (
     <>

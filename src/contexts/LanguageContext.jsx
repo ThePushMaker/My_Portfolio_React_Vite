@@ -7,16 +7,16 @@ const LanguageContext = createContext();
 
 function LanguageProvider ({ children }) {
   // Define el estado o las funciones que deseas compartir
-  const [language, setLanguage] = useState(null)
+  const [languageContext, setLanguageContext] = useState(null)
 
-  const updateLanguage = (newData) => {
-    setLanguage(newData);
+  const updateLanguageContext = (newData) => {
+    setLanguageContext(newData);
   };
 
   // Puedes incluir otras funciones o lógica aquí
 
   return (
-    <LanguageContext.Provider value = {{ language, updateLanguage }}>
+    <LanguageContext.Provider value = {{ languageContext, updateLanguageContext }}>
       {children}
     </LanguageContext.Provider>
   );
