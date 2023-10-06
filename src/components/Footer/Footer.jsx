@@ -2,8 +2,8 @@ import './Footer.css'
 import logo from '../../assets/img/logo.svg';
 import MailchimpForm from "../MailchimpForm/MailchimpForm";
 import { useLocation } from "react-router-dom";
-import SocialIcons from '../SocialIcons/SocialIcons';
 import { useTranslation } from 'react-i18next';
+import SocialIconsSmall from '../SocialIconsSmall/SocialIconsSmall';
 
 const smTextSize = 'text-[17px]'
 
@@ -20,7 +20,7 @@ const Footer = () => {
             <img src={logo} alt="logo" />
           </div>
           <div className='w-full md:w-1/2 text-end'>
-            <SocialIcons />
+            <SocialIconsSmall />
             <p className={smTextSize}> {t(`footer.copyright`)}.</p>
             <p className={smTextSize}> {t(`footer.technologies_used`)}.</p>
           </div>
