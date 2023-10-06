@@ -55,7 +55,7 @@
 .banner button:hover svg {
   margin-left: 25px;
 }
-.banner img {
+.banner .animatedImg {
   animation: updown 9s linear infinite;
    /* border: 3px solid black; */
 }

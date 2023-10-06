@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import BreadCrumb from "../../components/BreadCrumb/Breadcrumb";
-import AnimatedButton from "../../components/AnimatedButton/AnimatedButton";
 import { routes } from '../../routes';
 import ProjectsListGrid from "./ProjectsListGrid/ProjectsListGrid";
 import ProjectImage from "./ProjectImage/ProjectImage";
@@ -102,8 +101,6 @@ const ProjectsCategoryCommon = ({ URL, title, description, categories, projects,
 
         
       </div>
-
-      <AnimatedButton />
     </>
   );
 };

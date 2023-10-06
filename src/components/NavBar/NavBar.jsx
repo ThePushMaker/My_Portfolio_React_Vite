@@ -31,14 +31,12 @@ const NavBar = () => {
     setActiveLink(value);
   };
 
-  const navLinkStyles = 'navbar-link text-[17px] xl:text-xl py-0 px-[14px] xlNavbar:px-[25px]';
-  
-
+  const navLinkStyles = 'navbar-link text-xl py-0 px-[14px] xlNavbar:px-[25px]';
   
   return (
     <>
     <div>
-      <nav className={`${scrolled ? 'scrolled backdrop-blur-sm py-[10px]' : ''} navbar  px-5 xlNavbar:px-16 py-6`}>
+      <nav className={`${scrolled ? 'scrolled backdrop-blur-sm py-[10px]' : ''} navbar px-10 lg:px-16 py-6`}>
         <div className="mx-auto max-w-[1500px] flex justify-between ">
           
             <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start">
@@ -96,11 +94,7 @@ const NavBar = () => {
               </div>
             
               <div className="invisible hidden lg:visible lg:flex ">
-                <div className="my-auto">
-                  <SocialIcons />
-                </div>
-
-                <a href="#contact">
+                  <a href="#contact">
                   <button className="contact_button px-4 py-4 xlNavbar:px-6 ml-3">
                     {'< '}
                       <label className="text-styled-font-family1 text-[16px] xlNavbar:text-xlNavbar">

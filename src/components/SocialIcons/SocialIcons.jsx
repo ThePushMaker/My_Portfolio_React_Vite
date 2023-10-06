@@ -5,6 +5,7 @@ import navIcon2 from '../../assets/img/icons/nav-icon2.svg';
 import navIcon3 from '../../assets/img/icons/nav-icon3.svg';
 import navIcon4 from '../../assets/img/icons/nav-icon4.svg';
 import { useTranslation } from 'react-i18next';
+import './SocialIcons.css'
 
 const stylesLink = 'w-9 h-9 xl:w-11 xl:h-11 mx-1.5 lg:mx-[3px] xl:mx-[3px]';
 
@@ -44,6 +45,7 @@ const SocialIcons = () => {
       {imagesArray.map((item, index) => (
         <a key={index} className={stylesLink} data-tooltip-id='myTooltip' data-tooltip-content={item.dataTooltip}  href={item.href} target='_blank' rel='noreferrer' >
           <img src={item.src} />
+          <label>LinkedIn</label>
         </a>
       ))}
       <Tooltip id={'myTooltip'} place='top' type='dark' effect='solid' style={{fontSize:'17px'}}/>

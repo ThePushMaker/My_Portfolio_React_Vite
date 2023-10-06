@@ -56,7 +56,7 @@ const Contact = () => {
               <img src={contactImg} alt="contact_image" />
             </div>
             <div className='w-full md:w-1/2 mt-10 md:mt-0'>
-              <h2 className='text-[40px] mb-5'>"{t(`contact.header`)}."</h2>
+              <h2 className='text-[40px] mb-5'>{t(`contact.header`)}</h2>
               <p className='mb-5 text-center'> {t(`contact.subtitle`)}</p>
               <form onSubmit={handleSubmit}>
                 <div className='flex flex-wrap'>
@@ -88,13 +88,13 @@ const Contact = () => {
                   </div>
                   <div className='w-full'>
                     <div 
-                      className='mx-auto my-4 w-fit button_transparent_rounded flex justify-center border-[1.5px] 
-                      border-solid border-white bg-[black] bg-opacity-[30%]
+                      className='mx-auto my-4 w-fit flex justify-center 
                       
                       ' 
                       >
-                      <button type="submit">
-                      <span> {t(`contact.submit`)} <span className='styledFontFamily' >{'>'}</span></span>
+                      <button type="submit" className='button_transparent_rounded border-[1.5px] 
+                      border-solid border-white bg-[black] bg-opacity-[30%]'>
+                        <span> {t(`contact.submit`)} <span className='styledFontFamily' >{'>'}</span></span>
                       </button>
                     </div>
                   </div>

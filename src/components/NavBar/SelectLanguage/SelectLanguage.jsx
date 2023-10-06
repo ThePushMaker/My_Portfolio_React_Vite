@@ -57,7 +57,6 @@ const SelectLanguage = () => {
  
   const changeLang = newLng => {
     i18n.changeLanguage(newLng);
-    // updateLanguageContext(newLng)
     setSelectedElement(newLng)
     // const storedLanguage = 
     localStorage.setItem('language', newLng);

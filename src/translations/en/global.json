@@ -14,7 +14,7 @@
     "hi": "Hi, I'm Martín Calderón!",
     "description_p1": "I'm a 23-years-old ",
     "description_p2": "Full Stack Web Developer",
-    "description_p3": " who's passionate about all forms of virtual art creation. Although my youth may limit my experience a bit, my motivation is powerful and drives me every day to advance and learn much more. I would like to demonstrate through my efforts that software is not merely cold and mechanical logic; it's not just a tool, but it has the potential to become something authentically artistic, fascinating, and brimming with identity. Software is not a thing of tomorrow; it is of today.",
+    "description_p3": " who's passionate about all forms of virtual art creation. I would like to demonstrate through my efforts that software is not merely cold and mechanical logic; it's not just a tool, but it has the potential to become something authentically artistic, fascinating, and brimming with identity. Software is not a thing of tomorrow; it is of today",
     "description_tooltip": "Where one person juggles both the front-end and back-end with the grace of a one-person band. 🎸",
     "typeAnimation_1": "Full Stack Web Developer",
     "typeAnimation_2": "User Interface Designer",
@@ -39,8 +39,8 @@
     "display_more": "DISPLAY MORE"
   },
   "contact": {
-    "header": "Web development is an art, and your project is our masterpiece",
-    "subtitle": "Let's build something great together!",
+    "header": "Contacting me is very easy",
+    "subtitle": "If you have any questions or need more information, please don't hesitate to contact me. I'm here to help you create something great together. I look forward to hearing from you soon!",
     "placeholder_name": "Full Name",
     "placeholder_email": "Email Address",
     "placeholder_message": "Message",
