@@ -6,13 +6,10 @@ import projectsJSON_es from "../../data/es/projects.json";
 import Tabs from "./Tabs/Tabs.jsx";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
-// import { useMystoredLanguage } from "../../contexts/storedLanguage";
-
-// proximamente category 'Research and Experimentation'
+// soon: category 'Research and Experimentation'
 
 const Projects = () => {
   const [ t ] = useTranslation("global");
-  // const { storedLanguage } = useMystoredLanguage();
   
   const [description, setDescription] = useState("");
   const [categories, setCategories] = useState([]); 

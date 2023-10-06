@@ -5,13 +5,12 @@ import searchIcon from '../../../assets/img/icons/search.svg'
 import flagUS from '../../../assets/img/flags/flag-us.svg'
 import flagMX from '../../../assets/img/flags/flag-mx.svg'
 import { LANGUAGES } from "../../../constants/constants";
-import { useMyLanguageContext } from '../../../contexts/LanguageContext';
 import { useTranslation } from 'react-i18next';
 import './SelectLanguage.css'
 
 const SelectLanguage = () => {
   const [ t, i18n ] = useTranslation("global"); 
-  // const { languageContext, updateLanguageContext } = useMyLanguageContext();
+
 
   const [isActive, setIsActive] = useState(false);
   const [selectedElement, setSelectedElement] = useState("Language");
@@ -22,6 +21,11 @@ const SelectLanguage = () => {
     hasSearched: false,
   });
   
+  // Objeto que mapea códigos de idioma a rutas de imágenes de banderas
+  const flagImages = {
+    en: flagUS,
+    es: flagMX,
+  };
   
   const wrapperRef = useRef(null); // Ref para el div contenedor del select
   const inputRef = useRef(null); // Ref para el elemento input del campo de búsqueda
@@ -36,7 +40,6 @@ const SelectLanguage = () => {
     
     // if there isn't
     if(!storedLanguage) {
-      // console.log("no habia storedlanguage",storedLanguage)
       const languageCode = navigator.language;
       const parts = languageCode.split('-');
       const navLang = parts[0];
@@ -151,6 +154,7 @@ const SelectLanguage = () => {
                     onClick={() => handleItemSelection(item.label, item.code)}
                     className={selectedItem === item.label ? 'selected' : ''}
                   >
+                    <img className='w-7 pr-2' src={flagImages[item.code]} alt={item.code}/>
                     {item.label}
                   </li>
                 ))
@@ -164,6 +168,7 @@ const SelectLanguage = () => {
                   onClick={() => handleItemSelection(item.label, item.code)}
                   className={selectedItem === item.label ? 'selected' : ''}
                 >
+                  <img className='w-7 pr-2' src={flagImages[item.code]} alt={item.code}/>
                   {t(`navbar.${item.label}`)}
                 </li>
               ))
