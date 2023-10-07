@@ -1,6 +1,7 @@
 .social-icon a {
+  margin: 0 0.3rem;
   /* background: rgba(217, 217, 217, 0.0); */
-  width: 150px;
+  width: 140px;
   display: inline-flex;
   border-radius: 1rem;
   align-items: center;
@@ -10,7 +11,7 @@
 }
 .social-icon a::before {
   content: "";
-  width: 150px;
+  width: 140px;
   height: 42px;
   border-radius: 1rem;
   position: absolute;
@@ -22,6 +23,7 @@
 .social-icon a:hover label {
   color: black;
   z-index: 0;
+  transition: 0.3s ease-in-out;
 }
 .social-icon a:hover::before {
   transform: scale(1);
@@ -39,4 +41,7 @@
 .social-icon a:hover {
   transform: scale(1.05);
   transition: 0.3s ease-in-out;
+}
+.social-icon label {
+  font-size: 18px;
 }
