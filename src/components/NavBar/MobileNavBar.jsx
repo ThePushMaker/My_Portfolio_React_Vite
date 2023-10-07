@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import menuImg from '../../assets/img/icons/menu.svg'
 
 const MobileNavBar = ({ NavbarRoutesHome, NavbarRoutes }) => {
   const [ t ] = useTranslation("global");  
@@ -77,7 +76,7 @@ const MobileNavBar = ({ NavbarRoutesHome, NavbarRoutes }) => {
           <div className={`visible inline lg:invisible lg:hidden svg_link1`} >
             {!openMobileNavbar ? (
               // hamburguer
-              <svg className="h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H14M4 18H9" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+              <svg className="h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H14M4 18H9" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
               ) : (
               // x
               <svg className="h-6 w-8" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier">

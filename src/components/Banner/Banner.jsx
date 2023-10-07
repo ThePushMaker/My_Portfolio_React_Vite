@@ -94,8 +94,8 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        <div className="mt-40 mb-40">
-          <p className={paragraphStyles}>{t(`banner.paragraph2`)}.</p>
+        <div className="mt-40 mb-40 flex justify-end ">
+          <p className={`${paragraphStyles} w-3/5 text-right`}>{t(`banner.paragraph2`)}.</p>
         </div>
       </section>
     </>
