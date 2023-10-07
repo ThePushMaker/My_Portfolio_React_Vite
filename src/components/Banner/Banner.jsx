@@ -39,13 +39,14 @@ const Banner = () => {
   }, [text]);
   
   const linkStyles = 'text-link_color hover:text-link_color_hover hover:underline textShadow cursor-pointer'
+  const paragraphStyles = 'mb-2 textShadow text-[#ddd]'
 
 
   return(
     <>
       <section className="banner px-6 md:px-14 lg:px-24 text-center md:text-start mt-0 pt-[260px] pb-[140px]" id="home">
         <div className="mt-36 mb-96">
-          <h2 className="mb-2 textShadow">"Web development is an art, and your project is our masterpiece."</h2>
+          <h2 className={paragraphStyles}>{'"'}{t(`banner.slogan`)}{'."'}</h2>
         </div>
         <div className="container mx-auto flex">
           <div className="items-center flex flex-wrap">
@@ -57,14 +58,14 @@ const Banner = () => {
                     <span className="wrap text-highlighted_text_color" style={{ fontSize: `${fontSize}px` }}>{ <TypeAnimation {...typeAnimationArray}/>}</span>
                   </div>
                 </h1>
-                <p className="mb-2 textShadow">{description}</p>
-                <p className="textShadow"> {t(`banner.follow_me1`)} <a className="text-link_color hover:text-link_color_hover hover:underline" target="_blank" rel="noreferrer" href="https://linktr.ee/martin_calderon"> {t(`banner.follow_me2`)} </a>.</p>
+                <p className={paragraphStyles}>{description}</p>
+                <p className={paragraphStyles}> {t(`banner.follow_me1`)} <a className={linkStyles} target="_blank" rel="noreferrer" href="https://linktr.ee/martin_calderon">{t(`banner.follow_me2`)}</a>.</p>
               </div>
   
-                <div className="flex ">
+                <div className="flex mb-6 ">
                   <div className="pr-16">
                     <a href="#contact">
-                      <button className="mt-5">
+                      <button>
                         <label className={linkStyles}>
                           {t(`banner.connect`)}
                         </label>
@@ -73,16 +74,16 @@ const Banner = () => {
                     </a>
                   </div>
                   <div>
-                    <Link className="">
-                      <button className="mt-5">
-                        <label className={linkStyles}>More About Me</label>
+                    <Link>
+                      <button>
+                        <label className={linkStyles}>{t(`banner.more_about_me`)}</label>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path fillRule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path></svg>
                       </button>
                     </Link>
                   </div>
         
               </div>
-              <div className="mt-7">
+              <div>
                   <SocialIcons />
               </div>
             </div>
@@ -94,7 +95,7 @@ const Banner = () => {
           </div>
         </div>
         <div className="mt-40 mb-40">
-          <p className="mb-2 textShadow text-[#ddd]">While my age may suggest a relatively shorter professional journey, my unwavering motivation propels me forward every day. As a full-stack software developer, I'm constantly seeking innovative ways to craft more meaningful and artistic websites and designs. My youth is not a limitation; it's an asset that allows me to approach challenges with fresh perspectives and boundless creativity. With a strong commitment to continuous learning and growth, I eagerly embrace each opportunity to expand my skills and contribute to the ever-evolving world of web development.</p>
+          <p className={paragraphStyles}>{t(`banner.paragraph2`)}.</p>
         </div>
       </section>
     </>

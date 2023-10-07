@@ -5,7 +5,7 @@
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 9999;
+  z-index:10;
 }
 .scrolled {
   /* background-color: rgba(18, 18, 18, 0.85); */
@@ -125,4 +125,7 @@
 
 #navbar.active {
   right: 0px;
+}
+.mobileNavbarMenu {
+  z-index: -1 !important;
 }

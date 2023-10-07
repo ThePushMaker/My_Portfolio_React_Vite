@@ -9,19 +9,22 @@
     "WakaTime Stats": "Estadísticas WakaTime"
   },
   "banner": {
+    "slogan": "El desarrollo web es un arte y tu proyecto es nuestra obra maestra",
     "welcome": "Bienvenido a mi portafolio",
     "hi": "Hola, soy Martín Calderón!",
     "description_p1": "Tengo 23 años de edad, ",
     "description_p2": "soy un desarrollador Web Full Stack",
     "description_p3": " apasionado por todas las formas de creación de arte virtual. Aunque mi juventud puede limitar un poco mi experiencia, mi motivación es poderosa y me impulsa todos los días a avanzar y aprender mucho más. Me gustaría demostrar a través de mis esfuerzos que el software no es meramente lógica fría y mecánica; no es solo una herramienta, sino que tiene el potencial para convertirse en algo auténticamente artístico, fascinante y lleno de identidad. El software no es cosa del mañana; es de hoy.",
-    "description_tooltip": "Donde una persona maneja tanto el front-end como el back-end con la habilidad de un Hombre Orquesta. 🎸",
+    "description_tooltip": "Donde una persona maneja tanto el front-end como el back-end con la habilidad de un Hombre Orquesta 🎸",
     "typeAnimation_1": "Desarrollador Web Full Stack",
     "typeAnimation_2": "Diseñador de Interfaces",
     "typeAnimation_3": "YouTuber Educador",
     "typeAnimation_4": "Autor de blog de Programación",
     "follow_me1": "Sigueme en ",
     "follow_me2": "mis redes sociales",
-    "connect": "Conectemos!"
+    "connect": "Conectemos!",
+    "more_about_me": "Más sobre mí",
+    "paragraph2": "Si bien mi edad puede sugerir un viaje profesional relativamente más corto, mi inquebrantable motivación me impulsa hacia adelante todos los días. Como desarrollador de software full-stack, estoy constantemente buscando formas innovadoras de crear sitios web y diseños más significativos y artísticos. Mi juventud no es una limitación; es un activo que me permite abordar desafíos con perspectivas frescas y creatividad ilimitada. Con un fuerte compromiso con el aprendizaje continuo y el crecimiento, abrazo con entusiasmo cada oportunidad para ampliar mis habilidades y contribuir al mundo en constante evolución del desarrollo web"
   },
   "skills": {
     "skills": "Habilidades",

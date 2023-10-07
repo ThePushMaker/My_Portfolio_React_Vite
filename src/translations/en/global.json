@@ -10,19 +10,22 @@
     "WakaTime Stats": "WakaTime Stats"
   },
   "banner": {
+    "slogan": "Web development is an art, and your project is our masterpiece",
     "welcome": "Welcome to my portfolio",
     "hi": "Hi, I'm Martín Calderón!",
     "description_p1": "I'm a 23-years-old ",
     "description_p2": "Full Stack Web Developer",
     "description_p3": " who's passionate about all forms of virtual art creation. I would like to demonstrate through my efforts that software is not merely cold and mechanical logic; it's not just a tool, but it has the potential to become something authentically artistic, fascinating, and brimming with identity. Software is not a thing of tomorrow; it is of today",
-    "description_tooltip": "Where one person juggles both the front-end and back-end with the grace of a one-person band. 🎸",
+    "description_tooltip": "Where one person juggles both the front-end and back-end with the grace of a one-person band 🎸",
     "typeAnimation_1": "Full Stack Web Developer",
     "typeAnimation_2": "User Interface Designer",
     "typeAnimation_3": "YouTube Educator",
     "typeAnimation_4": "Code Blog Author",
     "follow_me1": "Follow me on ",
     "follow_me2": "my social media",
-    "connect": "Let's Connect!"
+    "connect": "Let's Connect!",
+    "more_about_me": "More About Me",
+    "paragraph2": "While my age may suggest a relatively shorter professional journey, my unwavering motivation propels me forward every day. As a full-stack software developer, I'm constantly seeking innovative ways to craft more meaningful and artistic websites and designs. My youth is not a limitation; it's an asset that allows me to approach challenges with fresh perspectives and boundless creativity. With a strong commitment to continuous learning and growth, I eagerly embrace each opportunity to expand my skills and contribute to the ever-evolving world of web development"
   },
   "skills": {
     "skills": "Skills",

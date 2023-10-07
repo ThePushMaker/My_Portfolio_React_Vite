@@ -28,7 +28,7 @@ const SocialIcons = () => {
     {
       id: 3,
       src: navIcon3,
-      dataTooltip: t(`navbar.YouTube Channel`),
+      dataTooltip: 'Programación para Todos',
       href: 'https://www.youtube.com/channel/UCNy0OJqXOCyhThyXTcLLCJA?sub_confirmation=1'
     },
     {
