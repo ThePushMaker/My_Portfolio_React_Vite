@@ -36,7 +36,7 @@ const Projects = () => {
             <p className="mt-[14px] mx-auto mb-[35px] text-center w-[90%] md:w-[100%]
               lg:mx-30"
             >
-              {description}              
+              {description}{'.'}  
             </p>
             <p className="mt-[55px] mx-auto mb-[30px] text-center w-[90%]
               lg:w-[70%] font-bold">

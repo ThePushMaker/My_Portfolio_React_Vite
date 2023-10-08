@@ -1,9 +1,9 @@
 {
-  "description": "I specialize in creating technological solutions ranging from robust web platforms and customized applications to expressive and functional interface design, advancing with a continuous commitment to the development community. My motivation is a passion for technology, the pursuit of excellence in design, and an ever-constant desire to contribute to the growth and success of both my clients and the community at large",
+  "description": "I specialize in creating technological solutions, from robust web platforms to expressive and functional interfaces. I am constantly engaged with the development community, driven by my passion for creation, the pursuit of excellence in design, and the constant desire to contribute to the success of my clients and the community at large",
   "categories": [
     {
       "category": "Web Platforms & Applications",
-      "description": "I can create cross-platform (responsive) web solutions that meet your specific needs. From planning and documentation to implementation and maintenance, I am committed to providing you with the best web platform and applications that will maximize your company's efficiency and management.",
+      "description": "I can create cross-platform web solutions tailored to your specific needs. From planning and documentation to implementation and maintenance, my commitment is to provide you with the best web platform and applications that will maximize your company's productivity and management",
       "projects": [
         {
           "title": "Professional Portfolio",
@@ -165,7 +165,7 @@
     },
     {
       "category": "Interface Design",
-      "description": "I'm passionate about designing captivating user interfaces that are not only visually appealing but also highly functional. I strive to provide users with an unforgettable experience when interacting with the application. From initial user research to prototyping and optimization, I am dedicated to elevating the user experience to the highest level possible",
+      "description": "Passionate about designing user interfaces that are both appealing and functional. My goal is to provide users with a memorable experience. From the initial user research to prototyping and continuous optimization, I am dedicated to elevating the user experience to the highest level possible",
       "projects": [
         {
           "title": "Business Startup",
@@ -206,7 +206,7 @@
     },
     {
       "category": "Community Contributions",
-      "description": "In Community Contributions, I think about giving back to the community a bit of everything it has given me. I collaborate on open-source projects and actively engage in the development community in various ways. My goal is to share my work, experience, and knowledge while delving deeper into the topics I master",
+      "description": "I contribute to the community through open-source projects and active participation in content creation. My goal is to share experience and knowledge while delving even deeper into my areas of expertise",
       "projects": [
         {
           "title": "Business Startup",

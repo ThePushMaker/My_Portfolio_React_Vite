@@ -15,7 +15,7 @@
     "hi": "Hi, I'm Martín Calderón!",
     "description_p1": "I'm a 23-years-old ",
     "description_p2": "Full Stack Web Developer",
-    "description_p3": " who's passionate about all forms of virtual art creation. I would like to demonstrate through my efforts that software is not merely cold and mechanical logic; it's not just a tool, but it has the potential to become something authentically artistic, fascinating, and brimming with identity. Software is not a thing of tomorrow; it is of today",
+    "description_p3": " passionate about all forms of virtual art creation. I would like to demonstrate through my efforts that software is not merely cold and mechanical logic; it's not just a tool, but it has the potential to become something authentically artistic, fascinating, and brimming with identity. Software is not a thing of tomorrow; it's of today",
     "description_tooltip": "Where one person juggles both the front-end and back-end with the grace of a one-person band 🎸",
     "typeAnimation_1": "Full Stack Web Developer",
     "typeAnimation_2": "User Interface Designer",
@@ -25,7 +25,7 @@
     "follow_me2": "my social media",
     "connect": "Let's Connect!",
     "more_about_me": "More About Me",
-    "paragraph2": "While my age may suggest a relatively shorter professional journey, my unwavering motivation propels me forward every day. As a full-stack software developer, I'm constantly seeking innovative ways to craft more meaningful and artistic websites and designs. My youth is not a limitation; it's an asset that allows me to approach challenges with fresh perspectives and boundless creativity. With a strong commitment to continuous learning and growth, I eagerly embrace each opportunity to expand my skills and contribute to the ever-evolving world of web development"
+    "paragraph2": "My youth is an advantage that allows me to approach challenges with creativity and freshness, always committed to continuous learning and improvement. My constant motivation drives me to create meaningful websites and designs as a full-stack developer"
   },
   "skills": {
     "skills": "Skills",
@@ -43,7 +43,7 @@
   },
   "contact": {
     "header": "Contacting me is very easy",
-    "subtitle": "If you have any questions or need more information, please don't hesitate to contact me. I'm here to help you create something great together. I look forward to hearing from you soon!",
+    "subtitle": "If you have any questions or need more information, please don't hesitate to contact me. I'm here to help you create something great. I look forward to hearing from you soon!",
     "placeholder_name": "Full Name",
     "placeholder_email": "Email Address",
     "placeholder_message": "Message",

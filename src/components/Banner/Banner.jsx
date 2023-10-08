@@ -26,7 +26,7 @@ const Banner = () => {
         <strong data-tooltip-id="myTooltip" data-tooltip-content={t(`banner.description_tooltip`)} data-tip="myTooltip" >{t(`banner.description_p2`)}</strong>
       </span>
     </a>
-    {t(`banner.description_p3`)}
+    {t(`banner.description_p3`)}{'.'}
   </span>
   
   const [text, setText] = useState('');
@@ -95,7 +95,7 @@ const Banner = () => {
           </div>
         </div>
         <div className="mt-40 mb-40 flex justify-end ">
-          <p className={`${paragraphStyles} w-3/5 text-right`}>{t(`banner.paragraph2`)}.</p>
+          <p className={`${paragraphStyles} w-full lg:w-7/12 text-right`}>{t(`banner.paragraph2`)}.</p>
         </div>
       </section>
     </>
