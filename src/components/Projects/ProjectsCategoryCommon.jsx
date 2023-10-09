@@ -68,7 +68,7 @@ const ProjectsCategoryCommon = ({ URL, title, description, categories, projects,
             {projectInfo &&
               <div className="">
                 <h2 className="text-4xl text-text_dark-gray">Project Information:</h2>
-                  <div className="w-full md:w-3/4 mx-auto my-6">
+                  <div className="w-full md:w-3/4 mx-auto my-6 proj_imgbx_large ">
                     <ProjectImage 
                       imgPath = { projectInfo.imgPath }
                       title = { projectInfo.title }
