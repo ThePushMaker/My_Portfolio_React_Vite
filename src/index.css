@@ -52,7 +52,7 @@
   --success_dark_color:rgb(46, 107, 46);
   --danger_color:rgb(255, 99, 99);
   --danger_dark_color:rgb(141, 53, 53);
-  --default_md_text_size: 21px; /*parrafos y demás*/
+  --default_md_text_size: 21.5px; /*parrafos y demás*/
   --input-font-size: 19.5px;
   --button-font-size: 18px;
   --gradient_color1: #8a44db; /*used in project tabs*/
