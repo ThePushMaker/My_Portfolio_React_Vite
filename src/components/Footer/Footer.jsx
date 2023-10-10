@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import SocialIconsSmall from '../SocialIconsSmall/SocialIconsSmall';
 
-const smTextSize = 'text-[17px]'
+const smTextSize = 'text-[18.5px]'
 
 const Footer = () => {
   const [ t] = useTranslation("global"); 
