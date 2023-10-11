@@ -9,7 +9,7 @@
 }
 .scrolled {
   /* background-color: rgba(18, 18, 18, 0.85); */
-  box-shadow: inset 0px 150px 10px -70px rgba(0,0,0,0.90);
+  box-shadow: inset 0px 150px 10px -70px rgba(0, 4, 18, 0.9);
 }
 .navbar-link {
   font-weight: 400;

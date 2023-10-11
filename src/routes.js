@@ -30,8 +30,8 @@ export const routes = {
 
 export const NavbarRoutesHome = [
   {URL: '/#top', name: 'Home'},
-  {URL: '/#skills', name: 'Skills'},
   {URL: '/#aboutMe', name: 'About Me'},
+  {URL: '/#skills', name: 'Skills'},
   {URL: '/#projects', name: 'Projects'},
 ]
 
