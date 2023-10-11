@@ -4,6 +4,7 @@ import Skills from '../../components/Skills/Skills';
 import Projects from '../../components/Projects/Projects';
 import Contact from '../../components/Contact/Contact';
 import Footer from '../../components/Footer/Footer';
+import AboutMe from '../AboutMe/AboutMe';
 
 function Home() {
   
@@ -13,6 +14,7 @@ function Home() {
       <div className="app-container">
         <div className='bgBanner1'>
           <Banner />
+          <AboutMe />
           <Skills />
         </div>
         <Projects />

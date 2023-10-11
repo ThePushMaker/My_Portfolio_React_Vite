@@ -4,6 +4,7 @@
     "Home": "Inicio",
     "Skills": "Habilidades",
     "Projects": "Proyectos",
+    "About Me": "Acerca de mí",
     "CONTACT ME": "CONTÁCTAME",
     "YouTube": "YouTube",
     "WakaTime Stats": "Estadísticas WakaTime"
@@ -12,8 +13,8 @@
     "slogan": "El desarrollo web es un arte y tu proyecto es nuestra obra maestra",
     "welcome": "Bienvenido a mi portafolio",
     "hi": "Hola, soy Martín Calderón!",
-    "description_p1": "Tengo 23 años de edad, ",
-    "description_p2": "soy un desarrollador Web Full Stack",
+    "description_p1": "Tengo 23 años de edad, soy Ingeniero en Desarrollo de Software proximo a egresar y ",
+    "description_p2": "desarrollador Web Full Stack",
     "description_p3": " apasionado por todas las formas de creación de arte virtual. Me gustaría demostrar a través de mis esfuerzos que el software no es simplemente lógica fría y mecánica; no es solo una herramienta, sino que tiene el potencial de convertirse en algo auténticamente artístico, fascinante y rebosante de identidad. El software no es algo del mañana; es de hoy",
     "description_tooltip": "Donde una persona maneja tanto el front-end como el back-end con la habilidad de un Hombre Orquesta 🎸",
     "typeAnimation_1": "Desarrollador Web Full Stack",
@@ -24,7 +25,10 @@
     "follow_me2": "mis redes sociales",
     "connect": "Conectemos!",
     "more_about_me": "Más sobre mí",
-    "paragraph2": "Mi juventud es una ventaja que me permite abordar desafíos con creatividad y frescura, siempre comprometido con el aprendizaje y la mejora continua. Mi constante motivación me impulsa a crear sitios web y diseños significativos como desarrollador full-stack"
+    "img_description": "Nota del editor: Este no soy yo, soy el editor",
+    "paragraph2": "Soy un desarrollador full-stack con sede en La Paz, Baja California Sur, México. Tengo experiencia trabajando con una variedad de lenguajes de programación y tecnologías, incluyendo React, Laravel, Vue.Js, JavaScript, PHP, CSS, SQL, entre otros. Me encuentro actualmente proximo a egresar en el ultimo semestre de mi carrera como Ingeniero en Desarrollo de Software en la Universidad Autonóma de Baja California Sur manteniendo un promedio de 92 sobre 100. A lo largo del complejo mapa de materias descubrí que sin lugar a dudas mi mayor fuerte es la programación",
+    "paragraph3": "Soy una persona ambiciosa y perfeccionista, pero procuro evitar perder el tiempo en los detalles porque mi mayor prioridad en todo lo que hago es siempre la productividad. Estoy motivado por mi constante búsqueda de la excelencia e innovación, y estoy siempre buscando nuevas formas de mejorar mis habilidades. Deseo de verdad llegar lejos en mi camino profesional y por ello he estado trabajando en eliminar todas las distracciones en mi dia dia hasta el punto que a día de hoy puedo mantenerme programando hasta 18 horas al día",
+    "paragraph4": "Actualmente estoy trabajando en proyectos independientes que ayuden a las personas a aprender a programar. Estoy emocionado de ver cómo estos proyectos impactan positivamente en la vida de los demás"
   },
   "skills": {
     "skills": "Habilidades",

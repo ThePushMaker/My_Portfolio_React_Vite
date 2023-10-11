@@ -5,7 +5,6 @@ import ArticleLayout from './layouts/ArticleLayout';
 import IndexLayout from './layouts/IndexLayout'
 import ProjectsCategoryOverview from './views/Projects/ProjectsCategoryOverview';
 import ProjectsCategoriesIndex from './views/Projects/ProjectsCategoriesIndex';
-import MoreAboutMe from './views/MoreAboutMe';
 import ArticleProjectsLayout from './layouts/ArticleProjectsLayout';
 import { routes } from './routes';
 import ProjectDetail from './views/Projects/ProjectDetail';
@@ -53,10 +52,10 @@ const router = createBrowserRouter([
                     
                 ]
             },
-            {
-                path: routes['About Me'],
-                element: <MoreAboutMe />
-            }
+            // {
+            //     path: routes['About Me'],
+            //     element: <MoreAboutMe />
+            // }
         ]
     },
     

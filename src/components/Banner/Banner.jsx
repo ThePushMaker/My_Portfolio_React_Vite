@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import headerImg from "../../assets/img/pfp/difuminado2.png";
+
 import './Banner.css';
 import TypeAnimation from './TypeAnimation/TypeAnimation'
 import { useTranslation } from "react-i18next";
@@ -42,9 +43,10 @@ const Banner = () => {
   const paragraphStyles = 'mb-2 textShadow text-[#ddd]'
 
 
+
   return(
     <>
-      <section className="banner px-6 md:px-14 lg:px-24 text-center md:text-start mt-0 pt-[260px] pb-[140px]" id="home">
+      <section className="banner px-6 md:px-14 lg:px-24 text-center md:text-start mt-0 pt-[260px] pb-[40px]" id="home">
         <div className="mt-36 mb-96">
           <h2 className={paragraphStyles}>{'"'}{t(`banner.slogan`)}{'."'}</h2>
         </div>
@@ -52,7 +54,7 @@ const Banner = () => {
           <div className="items-center flex flex-wrap">
             <div className="w-full lg:w-7/12">
               <div>
-                <span className="tagline text-link_disabled_color text-xl">{t(`banner.welcome`)}</span>
+                <span className="tagline text-link_disabled_color text-xl">{t(`banner.welcome`)} {'🌐'}</span>
                 <h1 className="text-4xl md:text-5xl lg:text-5xl mb-3"><span className="textShadow">{t(`banner.hi`)}</span>                       
                   <div className="h-16 lg:h-12 mt-2">
                     <span className="wrap text-highlighted_text_color" style={{ fontSize: `${fontSize}px` }}>{ <TypeAnimation {...typeAnimationArray}/>}</span>
@@ -93,9 +95,6 @@ const Banner = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="mt-40 mb-40 flex justify-end ">
-          <p className={`${paragraphStyles} w-full lg:w-7/12 text-right`}>{t(`banner.paragraph2`)}.</p>
         </div>
       </section>
     </>

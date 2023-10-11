@@ -26,12 +26,12 @@ export const routes = {
     'Diseño de Interfaces': '/projects/designs',
     'Community Contributions': '/projects/community',
     'Contribuciones a la Comunidad': '/projects/community',
-  'About Me': '/about-me',
 };
 
 export const NavbarRoutesHome = [
   {URL: '/#top', name: 'Home'},
   {URL: '/#skills', name: 'Skills'},
+  {URL: '/#aboutMe', name: 'About Me'},
   {URL: '/#projects', name: 'Projects'},
 ]
 
