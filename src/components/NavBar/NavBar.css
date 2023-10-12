@@ -130,3 +130,7 @@
   z-index: 1 !important;
 }
 
+.mobileNavbarButton svg{
+  transition: all;
+  transition-duration: 300ms;
+}
