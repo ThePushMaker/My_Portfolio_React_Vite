@@ -43,7 +43,7 @@ const Projects = () => {
               {description}{'.'}  
             </p>
             <p className="mt-[55px] mx-auto mb-[30px] text-center w-[90%]
-              lg:w-[70%] font-bold">
+              lg:w-[70%] font-bold text-pink_color2">
               {t('projects.select_category')}:
             </p>
      

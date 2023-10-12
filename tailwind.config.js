@@ -34,6 +34,7 @@ export default {
       'dark_link_color_hover': 'var(--dark_link_color_hover)',
       'dark_link_color_hover2': 'var(--dark_link_color_hover2)',
       'link_disabled_color': 'var(--link_disabled_color)',
+      'pink_color2': 'var(--pink_color2)',
       'container_color': 'var(--container_color)',
       'container_color2': 'var(--container_color2)',
       'container_color3': 'var(--container_color3)',

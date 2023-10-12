@@ -84,7 +84,7 @@ const NavBar = () => {
             
             <div className="items-center inline-flex">
               <div className="inline-flex">
-                <div className="mr-3 lg:mr-0 z-0">
+                <div className="lg:mr-0 z-0">
                   <SelectLanguage />
                 </div>
                 <MobileNavBar 

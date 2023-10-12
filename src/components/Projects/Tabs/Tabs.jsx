@@ -79,7 +79,7 @@ const Tabs = ({ categories }) => {
                 onClick={() => handleTabClick(index+1)}
               >
                 <span
-                  className="text-md font-thin 
+                  className="text-[20.5px] font-thin 
                   md:text-[18px] lg:text-[20px]
                   lg:font-[500]"
                 >

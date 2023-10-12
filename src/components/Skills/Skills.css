@@ -45,10 +45,12 @@
 }
 .react-multiple-carousel__arrow--left {
   left: 0;
+  z-index: 0;
 }
 
 .react-multiple-carousel__arrow--right {
   right: 0;
+  z-index: 0;
 }
 .react-multi-carousel-dot--active button {
   background-color: white;
