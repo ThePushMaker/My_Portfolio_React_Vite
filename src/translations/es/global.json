@@ -10,7 +10,10 @@
     "WakaTime Stats": "Estadísticas WakaTime"
   },
   "banner": {
-    "slogan": "El desarrollo web es un arte y tu proyecto es nuestra obra maestra",
+    "slogan1": "El ",
+    "slogan2": "desarrollo web",
+    "slogan3": " es un arte y tu proyecto es nuestra ",
+    "slogan4": "obra maestra",
     "welcome": "Bienvenido a mi portafolio",
     "hi": "Hola, soy Martín Calderón!",
     "description_p1": "Tengo 23 años de edad, soy Ingeniero en Desarrollo de Software proximo a egresar y ",

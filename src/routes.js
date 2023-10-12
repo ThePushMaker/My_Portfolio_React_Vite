@@ -21,11 +21,11 @@ export const routes = {
   'Home': '/',
   'Projects': '/projects',
     'Web Platforms & Applications': '/projects/web-apps',
-    'Apps y Platformas web': '/projects/web-apps',
+    'Apps y Plataformas Web': '/projects/web-apps',
     'Interface Design': '/projects/designs',
     'Diseño de Interfaces': '/projects/designs',
     'Community Contributions': '/projects/community',
-    'Contribuciones a la Comunidad': '/projects/community',
+    'Contribuciones a Comunidad': '/projects/community',
 };
 
 export const NavbarRoutesHome = [

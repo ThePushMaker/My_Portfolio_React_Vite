@@ -46,9 +46,20 @@ const Banner = () => {
 
   return(
     <>
-      <section className="banner px-6 md:px-14 lg:px-24 text-center md:text-start mt-0 pt-[260px] pb-[40px]" id="home">
-        <div className="mt-36 mb-96">
-          <h2 className={paragraphStyles}>{'"'}{t(`banner.slogan`)}{'."'}</h2>
+      <section className="banner px-6 md:px-14 lg:px-24 text-center md:text-start mt-0" id="home">
+        <div className="h-screen flex items-center mb-10">
+          <h2 className={`${paragraphStyles} text-[3.7rem] w-[90%] mx-auto`}>
+            {'"'}
+            {t(`banner.slogan1`)}
+            <bold className="text-link_color">
+              {t(`banner.slogan2`)}
+            </bold>
+            {t(`banner.slogan3`)}
+            <bold className="text-highlighted_text_color underline underline-offset-8">
+              {t(`banner.slogan4`)}
+            </bold>
+            {'."'}
+          </h2>
         </div>
         <div className="container mx-auto flex">
           <div className="items-center flex flex-wrap">

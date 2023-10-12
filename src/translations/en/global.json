@@ -11,7 +11,10 @@
     "WakaTime Stats": "WakaTime Stats"
   },
   "banner": {
-    "slogan": "Web development is an art, and your project is our masterpiece",
+    "slogan1": "",
+    "slogan2": "Web development",
+    "slogan3": " is an art, and your project is our ",
+    "slogan4": "masterpiece",
     "welcome": "Welcome to my portfolio",
     "hi": "Hi, I'm Martín Calderón!",
     "description_p1": "I am 23-years-old Software Development Engineer about to graduate and I am also a ",
