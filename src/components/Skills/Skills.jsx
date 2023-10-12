@@ -120,7 +120,11 @@ const Skills = () => {
           <div className='skill'>
             <div className=' mx-auto px-6 md:px-14 lg:px-14 '>
               <div className=' skill-bx bg-container_color2 shadow-2xl pt-12 pb-16 px-[28px] md:py-[50px] md:px-[40px] lg:px-24'>
-              <h2><span className='text-[32px]'>📚 </span>{t(`skills.skills`)}<span className='text-[32px]'> 📚</span></h2>
+              <h2>
+                <span className='emoji_size'>📚 </span>
+                  {t(`skills.skills`)}
+                <span className='emoji_size'> 📚</span>
+              </h2>
                 <p className='text-center mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'
                 > 
                   {skills_description} 

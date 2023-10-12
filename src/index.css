@@ -43,7 +43,8 @@
   --dark_link_color_hover:#f6ff00;
   --dark_link_color_hover2:#0059e8;
   --container_color:#171939; /*used in project tabs*/
-  --container_color2:#181634; /*used in skills*/
+  --container_color2:rgb(var(--container_color2_aux)); /*used in skills*/
+  --container_color2_aux:19, 19, 50; /*used in skills*/
   --container_color3:#f0f0f0;/*Used in articles*/
   --container_color4:#b9b9e7;/*Used in articles*/
   --container_color5:#0d0f26; /*used in footer*/
@@ -290,4 +291,8 @@ p.danger {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.emoji_size {
+  font-size: 30px;
 }

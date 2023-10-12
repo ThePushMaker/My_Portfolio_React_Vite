@@ -32,7 +32,11 @@ const Projects = () => {
       <section className="project bg-container_color px-4 md:px-14 lg:px-24 pt-12 pb-16 lg:pb-16" id="projects">
         <div className="container m-auto">
           <div className="w-full">
-            <h2>{t('projects.title')}</h2>
+            <h2>
+              <span className='emoji_size'>🗂️ </span>
+                {t('projects.title')}
+              <span className='emoji_size'> 🗂️</span>
+            </h2>
             <p className="mt-[14px] mx-auto mb-[35px] text-center w-[90%] md:w-[100%]
               lg:mx-30"
             >
