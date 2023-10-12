@@ -8,8 +8,8 @@ const AboutMe = () => {
   const paragraphStyles = 'mb-2 textShadow text-[#ddd]'
   
   return(
-    <section className="text-center md:text-start mt-0 mx-auto flex " id="aboutMe">
-      <div className="my-32 bg_aboutme px-4 md:px-14 lg:px-24 pt-12 pb-16">
+    <section className="text-center md:text-start mt-0" id="aboutMe">
+      <div className="my-32 bg_aboutme px-6 md:px-14 lg:px-24 pt-12 pb-16 mx-auto">
         <div className="flex flex-wrap">
           <div className="w-full lg:w-5/12 lg:pr-32 my-auto flex justify-center">
             <div className="animatedImg w-96 md:w-80 lg:w-[400px]">
@@ -18,7 +18,7 @@ const AboutMe = () => {
             </div>
           </div>
           <div className="w-full lg:w-7/12 text-center lg:text-left">
-            <h2 className="lg:text-right mb-4">
+            <h2 className="md:text-[50px] lg:text-right mb-4">
               <span className='emoji_size'>🚀 </span>
                 {t(`about_me.more_about_me`)}
               <span className='emoji_size'> 🚀</span>
