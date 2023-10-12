@@ -23,12 +23,16 @@
     "typeAnimation_4": "Autor de blog de Programación",
     "follow_me1": "Sigueme en ",
     "follow_me2": "mis redes sociales",
-    "connect": "Conectemos!",
+    "connect": "Conectemos!"
+  },
+  "about_me": {
     "more_about_me": "Más sobre mí",
     "img_description": "Nota del editor: Este no soy yo, soy el editor",
-    "paragraph2": "Soy un desarrollador full-stack con sede en La Paz, Baja California Sur, México. Tengo experiencia trabajando con una variedad de lenguajes de programación y tecnologías, incluyendo React, Laravel, Vue.Js, JavaScript, PHP, CSS, SQL, entre otros. Me encuentro actualmente proximo a egresar en el ultimo semestre de mi carrera como Ingeniero en Desarrollo de Software en la Universidad Autonóma de Baja California Sur manteniendo un promedio de 92 sobre 100. A lo largo del complejo mapa de materias descubrí que sin lugar a dudas mi mayor fuerte es la programación",
+    "paragraph2": "Soy un desarrollador Full Stack con sede en La Paz, Baja California Sur, México. Tengo experiencia trabajando con una variedad de lenguajes de programación y tecnologías, incluyendo React, Laravel, Vue.Js, JavaScript, PHP, CSS, SQL, entre otros. Me encuentro actualmente proximo a egresar en el ultimo semestre de mi carrera como Ingeniero en Desarrollo de Software en la Universidad Autonóma de Baja California Sur manteniendo un promedio de 92 sobre 100. A lo largo del complejo mapa de materias descubrí que sin lugar a dudas mi mayor fuerte es la programación",
     "paragraph3": "Soy una persona ambiciosa y perfeccionista que valora la productividad por encima de todo. Mi constante búsqueda de excelencia e innovación me motiva a mejorar constantemente mis habilidades. Dedico numerosas horas diarias a mi trabajo por deseo propio, trabajando constantemente en eliminar distracciones para alcanzar mis metas profesionales",
-    "paragraph4": "Actualmente estoy trabajando en proyectos independientes que ayuden a las personas a aprender a programar. Estoy emocionado de ver cómo estos proyectos impactan positivamente en la vida de los demás"
+    "paragraph4": "Actualmente estoy trabajando en proyectos independientes que ayuden a las personas a aprender a programar. Estoy emocionado de ver cómo estos proyectos impactan positivamente en la vida de los demás",
+    "classifications": "Clasificaciones",
+    "enneagram": "Eneagrama"
   },
   "skills": {
     "skills": "Habilidades",

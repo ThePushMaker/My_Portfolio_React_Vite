@@ -126,7 +126,7 @@ const Skills = () => {
                 <span className='emoji_size'> 📚</span>
               </h2>
                 <p className='text-center mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'
-                > 
+              > 
                   {skills_description} 
                 </p>
               

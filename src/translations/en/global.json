@@ -14,7 +14,7 @@
     "slogan": "Web development is an art, and your project is our masterpiece",
     "welcome": "Welcome to my portfolio",
     "hi": "Hi, I'm Martín Calderón!",
-    "description_p1": "I'm a 23-years-old ",
+    "description_p1": "I am 23-years-old Software Development Engineer about to graduate and I am also a ",
     "description_p2": "Full Stack Web Developer",
     "description_p3": " passionate about all forms of virtual art creation. I would like to demonstrate through my efforts that software is not merely cold and mechanical logic; it's not just a tool, but it has the potential to become something authentically artistic, fascinating, and brimming with identity. Software is not a thing of tomorrow; it's of today",
     "description_tooltip": "Where one person juggles both the front-end and back-end with the grace of a one-person band 🎸",
@@ -24,9 +24,16 @@
     "typeAnimation_4": "Code Blog Author",
     "follow_me1": "Follow me on ",
     "follow_me2": "my social media",
-    "connect": "Let's Connect!",
+    "connect": "Let's Connect!"
+  },
+  "about_me": {
     "more_about_me": "More About Me",
-    "paragraph2": "My youth is an advantage that allows me to approach challenges with creativity and freshness, always committed to continuous learning and improvement. My constant motivation drives me to create meaningful websites and designs as a full-stack developer"
+    "img_description": "Editor's note: This is not me; I am the editor",
+    "paragraph2": "I am a Full Stack developer based in La Paz, Baja California Sur, Mexico. I have experience working with a variety of programming languages and technologies, including React, Laravel, Vue.js, JavaScript, PHP, CSS, SQL, among others. I am currently in my final semester of my major in Software Development Engineering at the Autonomous University of Baja California Sur, maintaining an average of 92 out of 100. Throughout the complex curriculum, I have discovered that my greatest strength is undoubtedly programming",
+    "paragraph3": "I'm an ambitious and perfectionistic individual who values productivity above all else. My constant pursuit of excellence and innovation motivates me to continually enhance my skills. I dedicate numerous hours each day to my work by choice, consistently working to eliminate distractions in order to achieve my professional goals",
+    "paragraph4": "I'm currently working on independent projects aimed at helping people learn to program. I'm excited to see how these projects positively impact the lives of others",
+    "classifications": "Classifications",
+    "enneagram": "Enneagram"
   },
   "skills": {
     "skills": "Skills",
