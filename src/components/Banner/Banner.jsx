@@ -51,13 +51,13 @@ const Banner = () => {
           <h2 className={`${paragraphStyles} text-[3.7rem] w-[90%] mx-auto`}>
             {'"'}
             {t(`banner.slogan1`)}
-            <bold className="text-link_color">
+            <strong className="text-link_color">
               {t(`banner.slogan2`)}
-            </bold>
+            </strong>
             {t(`banner.slogan3`)}
-            <bold className="text-highlighted_text_color underline underline-offset-8">
+            <strong className="text-highlighted_text_color underline underline-offset-8">
               {t(`banner.slogan4`)}
-            </bold>
+            </strong>
             {'."'}
           </h2>
         </div>

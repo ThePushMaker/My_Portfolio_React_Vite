@@ -57,12 +57,23 @@
     "placeholder_name": "Nombre completo",
     "placeholder_email": "Correo Electrónico",
     "placeholder_message": "Mensaje",
-    "submit": "ENVIAR"
+    "submit": "ENVIAR",
+    "fill_out_all": "Por favor, complete todos los campos",
+    "message_sent": "El mensaje se envió exitosamente",
+    "something_wrong": "Algo salió mal, por favor inténtelo de nuevo más tarde",
+    "sending": "Enviando..."
   },
   "newsletter": {
     "main_message": "Suscríbete a este boletín y nunca te pierdas actualizaciones importantes sobre mis nuevas contribuciones",
     "placeholder_email":"Correo Electrónico",
-    "submit": "SUSCRIBIRSE"
+    "submit": "SUSCRIBIRSE",
+    "write_email": "Por favor, escribe tu correo electrónico",
+    "error_invalid_email": "La parte del dominio de la dirección de correo electrónico no es válida",
+    "sending": "Enviando...",
+    "subscribed": "¡Gracias por suscribirte!",
+    "already_subscribed": "Ya estás suscrito, tu perfil ha sido actualizado. ¡Gracias!",
+    "chill_out": "Demasiados intentos de suscripción para esta dirección de correo electrónico. Por favor, inténtalo de nuevo en unos 5 minutos",
+    "chill_out2": "El destinatario \"elmcwl@gmail.com\" tiene demasiadas solicitudes de registro recientes"
   },
   "footer": {
     "copyright": "© 2023 Martín Calderón. Todos los derechos reservados",

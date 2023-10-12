@@ -7,10 +7,21 @@ const Newsletter = ({ onValidated, status, message }) => {
   const [isValidated, setIsValidated] = useState('');
 
   useEffect(() => {
+    if(message != null){
+      var indiceParentesis = message.indexOf('(');
+      // Extraer la parte del mensaje antes del paréntesis
+      var mensajeSinParentesis = message.substring(0, indiceParentesis).trim();
+    }
+    
     if (status === 'success'){
+      if(message === 'Thank you for subscribing!') {message=t(`newsletter.subscribed`)}
+      if(message === 'You\'re already subscribed, your profile has been updated. Thank you!') {message=t(`newsletter.already_subscribed`)}
       setIsValidated({ status: "success", message: message });
       clearFields();
     } else if (status === 'error'){
+      if(mensajeSinParentesis === '0 - La parte del dominio de la dirección de correo electrónico no es válida') {message=t(`newsletter.error_invalid_email`)}
+      if(message === 'Too many subscribe attempts for this email address. Please try again in about 5 minutes. (#5624)') {message=t(`newsletter.chill_out`)}
+      if(message === 'Recipient "elmcwl@gmail.com" has too many recent signup requests') {message=t(`newsletter.chill_out2`)}
       setIsValidated({ status: "error", message: message });
       clearFields();
     } 
@@ -21,7 +32,7 @@ const Newsletter = ({ onValidated, status, message }) => {
     e.preventDefault();
     
     if(!email){
-      setIsValidated({ status: "blankData", message: "Please write your email." });
+      setIsValidated({ status: "blankData", message: t(`newsletter.write_email`) });
     }else {
       email && 
       email.indexOf("@") > -1 &&
@@ -53,6 +64,7 @@ const clearFields = () => {
                 >
                   <input 
                     className="focus:outline-border_color1 focus:ring-border_color1 w-full"
+                    id="email2"
                     value={email} 
                     type="email" 
                     onChange={(e) => setEmail(e.target.value)} 
@@ -74,10 +86,10 @@ const clearFields = () => {
         </div>
         <div className="text-center flex justify-center">
             {status === 'sending' && 
-              <div className="left-50 border px-4 rounded-lg relative bottom-[-50px] py-6" 
+              <div className="border px-4 rounded-lg relative bottom-[-50px] py-6" 
                 role="alert"
               >
-                <strong className="font-bold">sending...</strong>
+                <strong className="font-bold">{t(`newsletter.sending`)}</strong>
               </div>
             }
             {isValidated.status === 'error' && 

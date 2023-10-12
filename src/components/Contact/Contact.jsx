@@ -25,9 +25,9 @@ const Contact = () => {
     e.preventDefault();
     // validate data
     if(!formDetails.fullName ||!formDetails.email || !formDetails.message){
-      setStatus({ success: false, message: "Please fill out all the fields" });
+      setStatus({ success: false, message: t(`contact.fill_out_all`) });
     } else {
-      setButtonText("sending...");
+      setButtonText(t(`contact.sending`));
       let response = await fetch(import.meta.env.VITE_APP_NODEMAILER_URL, {
         method: "POST",
         headers: {
@@ -36,13 +36,13 @@ const Contact = () => {
         body: JSON.stringify(formDetails),
       })
       
-      setButtonText("SEND")
+      setButtonText(t(`contact.submit`))
       let result = await response.json();
       setFormDetails(formInitialDetails);
       if (result.code == 200){
-        setStatus ({ success: true, message: "Message was sent successfully" });
+        setStatus ({ success: true, message: t(`contact.message_sent`) });
       } else {
-        setStatus({ success: false, message: "something went wrong, please try again later." });
+        setStatus({ success: false, message: t(`contact.something_wrong`) });
       }
     }
   };
@@ -63,6 +63,7 @@ const Contact = () => {
                   <div className='w-full'>
                     <input 
                       className='bg-[white] bg-opacity-[4%]'
+                      id='fullName'
                       type="text" 
                       value={formDetails.fullName} 
                       placeholder={t(`contact.placeholder_name`)}
@@ -72,6 +73,8 @@ const Contact = () => {
                   <div className='w-full'>
                     <input 
                       className='bg-[white] bg-opacity-[4%]'
+                      id='email'
+                      autoComplete='on'
                       type="email" 
                       value={formDetails.email} 
                       placeholder={t(`contact.placeholder_email`)}
@@ -81,6 +84,7 @@ const Contact = () => {
                   <div className='w-full'>
                     <textarea 
                       className='bg-[white] bg-opacity-[4%]'
+                      id='message'
                       value={formDetails.message} 
                       placeholder= {t(`contact.placeholder_message`)}
                       onChange={(e) => onFormUpdate('message', e.target.value)} 
@@ -88,9 +92,7 @@ const Contact = () => {
                   </div>
                   <div className='w-full'>
                     <div 
-                      className='mx-auto my-4 w-fit flex justify-center 
-                      
-                      ' 
+                      className='mx-auto my-4 w-fit flex justify-center' 
                       >
                       <button type="submit" className='button_transparent_rounded border-[1.5px] 
                       border-solid border-white bg-[black] bg-opacity-[30%]'>

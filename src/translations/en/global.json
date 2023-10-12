@@ -31,7 +31,7 @@
   },
   "about_me": {
     "more_about_me": "More About Me",
-    "img_description": "Editor's note: This is not me; I am the editor",
+    "img_description": "Editor's note: He is not me; I am the editor",
     "paragraph2": "I am a Full Stack developer based in La Paz, Baja California Sur, Mexico. I have experience working with a variety of programming languages and technologies, including React, Laravel, Vue.js, JavaScript, PHP, CSS, SQL, among others. I am currently in my final semester of my major in Software Development Engineering at the Autonomous University of Baja California Sur, maintaining an average of 92 out of 100. Throughout the complex curriculum, I have discovered that my greatest strength is undoubtedly programming",
     "paragraph3": "I'm an ambitious and perfectionistic individual who values productivity above all else. My constant pursuit of excellence and innovation motivates me to continually enhance my skills. I dedicate numerous hours each day to my work by choice, consistently working to eliminate distractions in order to achieve my professional goals",
     "paragraph4": "I'm currently working on independent projects aimed at helping people learn to program. I'm excited to see how these projects positively impact the lives of others",
@@ -58,12 +58,23 @@
     "placeholder_name": "Full Name",
     "placeholder_email": "Email Address",
     "placeholder_message": "Message",
-    "submit": "SEND"
+    "submit": "SEND",
+    "fill_out_all": "Please fill out all the fields",
+    "message_sent": "Message was sent successfully",
+    "something_wrong": "something went wrong, please try again later",
+    "sending": "Sending..."
   },
   "newsletter": {
     "main_message": "Subscribe to this Newsletter and Never miss important updates about my new contributions",
     "placeholder_email":"Email Adress",
-    "submit": "SUBSCRIBE"
+    "submit": "SUBSCRIBE",
+    "write_email": "Please write your email",
+    "error_invalid_email": "The domain part of the email address is not valid",
+    "sending": "Sending...",
+    "subscribed": "Thank you for subscribing!",
+    "already_subscribed": "You're already subscribed, your profile has been updated. Thank you!",
+    "chill_out": "Too many subscribe attempts for this email address. Please try again in about 5 minutes. (#5624)",
+    "chill_out2": "Recipient \"elmcwl@gmail.com\" has too many recent signup requests"
   },
   "footer": {
     "copyright": "© 2023 Martín Calderón. All Rights Reserved",

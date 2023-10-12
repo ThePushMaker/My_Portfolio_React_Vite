@@ -138,6 +138,7 @@ const SelectLanguage = () => {
             <img src={searchIcon} alt="searchIcon" />       
             <input
               type="text"
+              id='searchLanguage'
               placeholder='Search'
               value={searchData.searchInp}
               onChange={handleSearchInputChange}
