@@ -70,8 +70,11 @@ const NavBar = () => {
                       {NavbarRoutes.map((item, index) => (
                         <Link to={item.URL} key={index} className={`${
                           activateLink === item.name ? "active" : ""
-                        }  ${navLinkStyles}`}
-                        onClick={() => onUpdateActiveLink(item.name)}> {item.name}</Link>
+                          }  ${navLinkStyles}`}
+                          onClick={() => onUpdateActiveLink(item.name)}
+                        >
+                          {t(`navbar.${item.name}`)}
+                        </Link>
                       ))}
                     </div>
                   </>

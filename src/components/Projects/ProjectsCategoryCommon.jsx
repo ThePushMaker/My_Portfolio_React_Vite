@@ -3,9 +3,10 @@ import BreadCrumb from "../../components/BreadCrumb/Breadcrumb";
 import { routes } from '../../routes';
 import ProjectsListGrid from "./ProjectsListGrid/ProjectsListGrid";
 import ProjectImage from "./ProjectImage/ProjectImage";
+import { useTranslation } from "react-i18next";
 
 const ProjectsCategoryCommon = ({ URL, title, description, categories, projects, projectInfo, projectCategory }) => {
-  
+  const [ t] = useTranslation("global"); 
 
 
   return (
@@ -67,7 +68,7 @@ const ProjectsCategoryCommon = ({ URL, title, description, categories, projects,
             {/* Project detail  */}
             {projectInfo &&
               <div className="">
-                <h2 className="text-4xl text-text_dark-gray">Project Information:</h2>
+                <h2 className="text-4xl text-text_dark-gray">{t(`projectDetail.subtitle`)+':'}</h2>
                   <div className="w-full md:w-3/4 mx-auto my-6 proj_imgbx_large ">
                     <ProjectImage 
                       imgPath = { projectInfo.imgPath }
@@ -76,8 +77,8 @@ const ProjectsCategoryCommon = ({ URL, title, description, categories, projects,
                   </div>
              
                 <div>
-                  <h3 className="text-3xl">
-                    Description: 
+                  <h3 className="text-3xl"> 
+                    {t(`projectDetail.Description`)+':'}
                   </h3>
                   <p className="text-text_dark-gray">
                     {projectInfo.description}
@@ -86,7 +87,7 @@ const ProjectsCategoryCommon = ({ URL, title, description, categories, projects,
                 
                 <div>
                   <h3 className="text-3xl">
-                    Category: 
+                    {t(`projectDetail.Category`)+':'}
                   </h3>
                   <p className="text-text_dark-gray">
                     {projectCategory}

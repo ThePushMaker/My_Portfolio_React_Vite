@@ -21,7 +21,7 @@ const Projects = () => {
       setDescription(projectsJSON_en.description)
       setCategories(projectsJSON_en.categories)
     }
-    if(storedLanguage === 'es') {
+    else if(storedLanguage === 'es') {
       setDescription(projectsJSON_es.description)
       setCategories(projectsJSON_es.categories)
     }

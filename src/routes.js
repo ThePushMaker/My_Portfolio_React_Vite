@@ -1,9 +1,14 @@
 
 
 // function to find the name using the URL
-export const getNameByURL = (urlToFind) => {
-  for (const name in routes) {
-    if (routes[name] === urlToFind) {
+export const getNameByURL = (urlToFind, language) => {
+  let routesData=null;
+  if(language==='en') routesData=routes
+  else if(language==='es') routesData=routesES
+  
+  for (const name in routesData) {
+    if (routesData[name] === urlToFind) {
+      console.log("name",name)
       return name;
     }
   }
@@ -25,6 +30,13 @@ export const routes = {
     'Interface Design': '/projects/designs',
     'Diseño de Interfaces': '/projects/designs',
     'Community Contributions': '/projects/community',
+    'Contribuciones a Comunidad': '/projects/community',
+};
+export const routesES = {
+  'Home': '/',
+  'Projects': '/projects',
+    'Apps y Plataformas Web': '/projects/web-apps',
+    'Diseño de Interfaces': '/projects/designs',
     'Contribuciones a Comunidad': '/projects/community',
 };
 
