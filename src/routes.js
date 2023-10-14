@@ -8,7 +8,6 @@ export const getNameByURL = (urlToFind, language) => {
   
   for (const name in routesData) {
     if (routesData[name] === urlToFind) {
-      console.log("name",name)
       return name;
     }
   }
