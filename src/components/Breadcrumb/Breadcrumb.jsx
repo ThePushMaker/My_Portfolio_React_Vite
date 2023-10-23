@@ -1,9 +1,9 @@
-import React,{ useEffect } from 'react';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 const BreadCrumb = (props) => {
-  useEffect(() => {
-  });
+  const [ t ] = useTranslation("global");
   // console.log(props.URL)
 
   // Divide la URL en partes usando la barra diagonal como separador
@@ -16,15 +16,21 @@ const BreadCrumb = (props) => {
   let currentUrl = '';
   
   // Itera sobre las partes de la URL y crea dinámicamente los elementos del breadcrumb
-  URLParts.forEach((part, index) => {
+  URLParts.forEach((part, index) => { 
     // Construye la URL actual
     currentUrl += `/${part}`;
     
+    console.log(part)
+    
+    if(part === 'web-apps'){
+      part='apps'
+      console.log(part)
+    }
+    
     // Agrega el elemento al breadcrumb
     breadcrumbItems.push({ to: currentUrl, label: part });
-    // console.log(breadcrumbItems)
-  
   }, []);
+  console.log(breadcrumbItems)
  
   
   return(
@@ -35,7 +41,8 @@ const BreadCrumb = (props) => {
           <React.Fragment key={item.to}>
             <Link to={item.to} 
               className='text-dark_link_color hover:text-dark_link_color_hover2 hover:underline'> 
-              {item.label}
+              
+              {t(`navbar.${item.label}`)}
             </Link>
             { index < breadcrumbItems.length - 1 && ' / ' }
             {/* {' / '} */}

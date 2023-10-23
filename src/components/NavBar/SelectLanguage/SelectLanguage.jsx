@@ -17,8 +17,7 @@ const SelectLanguage = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [searchData, setSearchData] = useState({
     searchInp: '',
-    filteredData: [],
-    hasSearched: false,
+    arrayData: [...LANGUAGES],
   });
   
   // Objeto que mapea códigos de idioma a rutas de imágenes de banderas
@@ -29,8 +28,6 @@ const SelectLanguage = () => {
   
   const wrapperRef = useRef(null); // Ref para el div contenedor del select
   const inputRef = useRef(null); // Ref para el elemento input del campo de búsqueda
-
-  const dataArray = [...LANGUAGES];
  
  
  
@@ -43,7 +40,6 @@ const SelectLanguage = () => {
       const languageCode = navigator.language;
       const parts = languageCode.split('-');
       const navLang = parts[0];
-      console.log("navLang ",navLang)
       
       changeLang(navLang)
     }else { 
@@ -58,10 +54,7 @@ const SelectLanguage = () => {
   const changeLang = newLng => {
     i18n.changeLanguage(newLng);
     setSelectedElement(newLng)
-    // const storedLanguage = 
     localStorage.setItem('language', newLng);
-    
-    console.log("language",newLng)
   }
   
 
@@ -75,7 +68,7 @@ const SelectLanguage = () => {
     setSearchData(prevData => ({
       ...prevData,
       searchInp: '', // Establecer el campo de búsqueda en una cadena vacía al cerrar el select
-      filteredData: dataArray,
+      arrayData: [...LANGUAGES],
     }));
   }
 
@@ -118,11 +111,14 @@ const SelectLanguage = () => {
   // search functionality
   const handleSearchInputChange = (event) => {
     const inputValue = event.target.value;
+    let eventsFiltered = [...LANGUAGES];
+
+    eventsFiltered = eventsFiltered.filter(item => item.label.toLocaleLowerCase().includes(inputValue.toLocaleLowerCase()));
+  
     setSearchData(prevData => ({
       ...prevData,
       searchInp: inputValue,
-      hasSearched: true,
-      filteredData: dataArray.filter(data => data.label.toLowerCase().includes(inputValue.toLowerCase())),
+      arrayData: [...eventsFiltered],
     }));
   }
 
@@ -146,9 +142,9 @@ const SelectLanguage = () => {
             />
           </div>
           <ul className="options">
-            {searchData.hasSearched ? (
-              searchData.filteredData.length > 0 ? (
-                searchData.filteredData.map((item, index) => (
+            {searchData.arrayData ? (
+              searchData.arrayData.length > 0 ? (
+                searchData.arrayData.map((item, index) => (
                   <li
                     key={index}
                     onClick={() => handleItemSelection(item.label, item.code)}
@@ -161,18 +157,7 @@ const SelectLanguage = () => {
               ) : (
                 <p>Oops! Language not found</p>
               )
-            ) : (
-              dataArray.map((item, index) => (
-                <li
-                  key={index}
-                  onClick={() => handleItemSelection(item.label, item.code)}
-                  className={selectedItem === item.label ? 'selected' : ''}
-                >
-                  <img className='w-7 pr-2' src={flagImages[item.code]} alt={item.code}/>
-                  {t(`navbar.${item.label}`)}
-                </li>
-              ))
-            )}
+            ) : ''}
           </ul>
         </div>
       </div>

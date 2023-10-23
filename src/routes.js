@@ -1,18 +1,19 @@
 
 
-// function to find the name using the URL
+// function to find the name (id) inside the array using the URL
 export const getNameByURL = (urlToFind, language) => {
-  let routesData=null;
+  let routesData=null
+  // find the correct language for the data;
   if(language==='en') routesData=routes
   else if(language==='es') routesData=routesES
   
+  // find id looking for url
   for (const name in routesData) {
     if (routesData[name] === urlToFind) {
       return name;
-    }
+    } 
   }
-  // Si no se encuentra la URL, puedes devolver un valor por defecto o lanzar un error, según tus necesidades.
-  return null; // Cambia esto si deseas un valor por defecto diferente.
+  return null; // default value
 };
 
 export const getParentURLByCurrentURL = (URL) => {
