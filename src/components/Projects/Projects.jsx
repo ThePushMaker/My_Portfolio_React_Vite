@@ -29,7 +29,7 @@ const Projects = () => {
   
   return (
     <>
-      <section className="project bg-container_color px-4 md:px-14 lg:px-24 pt-12 pb-16 lg:pb-16" id="projects">
+      <section className="project bg_semitransparent px-4 md:px-14 lg:px-24 pt-12 pb-16 lg:pb-16" id="projects">
         <div className="container m-auto">
           <div className="w-full">
             <h2>

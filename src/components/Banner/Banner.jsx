@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import headerImg from "../../assets/img/pfp/difuminado2.png";
+import arrowDown from "../../assets/img/icons/arrow-down.svg";
 
 import './Banner.css';
 import TypeAnimation from './TypeAnimation/TypeAnimation'
@@ -40,28 +41,36 @@ const Banner = () => {
   }, [text]);
   
   const linkStyles = 'text-link_color hover:text-link_color_hover hover:underline textShadow cursor-pointer'
-  const paragraphStyles = 'mb-2 textShadow text-[#ddd]'
+  const paragraphStyles = 'mb-2 textShadow text-[#ccc]'
+  const paragraphStyles2 = 'mb-2 textShadow text-[#eee]'
 
 
 
   return(
     <>
-      <section className="banner px-6 md:px-14 lg:px-24 text-center md:text-start mt-0" id="home">
-        <div className="h-screen flex items-center mb-10">
-          <h2 className={`${paragraphStyles} text-[3.7rem] w-[90%] mx-auto`}>
-            {'"'}
-            {t(`banner.slogan1`)}
-            <strong className="text-link_color">
-              {t(`banner.slogan2`)}
-            </strong>
-            {t(`banner.slogan3`)}
-            <strong className="text-highlighted_text_color underline underline-offset-8">
-              {t(`banner.slogan4`)}
-            </strong>
-            {'."'}
-          </h2>
+      <section className="banner px-6 md:px-14 lg:px-24 text-center md:text-start mt-0 pb-[160px]" id="home">
+        <div>
+          <div className="h-screen flex items-center mb-10">
+            <h2 className={`${paragraphStyles2} text-[3.7rem] w-[90%] mx-auto`}>
+              {'"'}
+              {t(`banner.slogan1`)}
+              <strong className="text-link_color">
+                {t(`banner.slogan2`)}
+              </strong>
+              {t(`banner.slogan3`)}
+              <strong className="text-highlighted_text_color underline underline-offset-8">
+                {t(`banner.slogan4`)}
+              </strong>
+              {'."'}
+            </h2>
+          </div>
+          <div className="flex justify-center">
+            <a href="/#banner">
+              <img src={arrowDown} className="animatedImg w-10 mt-[-10vw] hover:w-12 transition-all duration-150" alt="arrow-down" />
+            </a>
+          </div>
         </div>
-        <div className="container mx-auto flex">
+        <div className="container mx-auto flex" id="banner">
           <div className="items-center flex flex-wrap">
             <div className="w-full lg:w-7/12">
               <div>
@@ -77,7 +86,7 @@ const Banner = () => {
   
                 <div className="flex mb-6 ">
                   <div className="w-6/12">
-                    <a href="#contact">
+                    <a href="/#contact">
                       <button>
                         <label className={linkStyles}>
                           {t(`banner.connect`)}
@@ -89,14 +98,14 @@ const Banner = () => {
                     </a>
                   </div>
                   <div className="w-6/12">
-                    <Link>
+                    <a href="/#aboutMe">
                       <button>
                         <label className={`${linkStyles} text-right`}>{t(`about_me.more_about_me`)}</label>
                         <div className="my-0 flex self-start">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path fillRule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path></svg>
                         </div>
                       </button>
-                    </Link>
+                    </a>
                   </div>
         
               </div>

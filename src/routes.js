@@ -42,9 +42,9 @@ export const routesES = {
 
 export const NavbarRoutesHome = [
   {URL: '/#top', name: 'Home'},
-  {URL: '/#aboutMe', name: 'About Me'},
   {URL: '/#skills', name: 'Skills'},
   {URL: '/#projects', name: 'Projects'},
+  {URL: '/#aboutMe', name: 'About Me'},
 ]
 
 export const NavbarRoutes = [

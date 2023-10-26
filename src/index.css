@@ -43,9 +43,9 @@
   --dark_link_color:#0040a6;
   --dark_link_color_hover:#f6ff00;
   --dark_link_color_hover2:#0059e8;
-  --container_color:#171939; /*used in project tabs*/
-  --container_color2:rgb(var(--container_color2_aux)); /*used in skills*/
-  --container_color2_aux:19, 19, 50; /*used in skills*/
+  --container_color:#171939; /*used in skills*/
+  --container_color2:rgb(var(--container_color2_aux)); /*used in about-me and projects*/
+  --container_color2_aux:23, 25, 57; /*used in skills*/
   --container_color3:#f0f0f0;/*Used in articles*/
   --container_color4:#b9b9e7;/*Used in articles*/
   --container_color5:#0d0f26; /*used in footer*/
@@ -301,4 +301,32 @@ p.danger {
 
 .emoji_size {
   font-size: 30px;
+}
+
+.bg_semitransparent {
+  background: rgba(var(--container_color2_aux), 0.90);
+}
+
+/* hr separator */
+hr {
+  padding: 40px 0;
+}
+.hr5 {
+  border: 0;
+  border-top: medium double var(--border_color1);
+  height: 1px;
+  overflow: visible;
+  padding: 0;
+  /* color: #fff; */
+  text-align: center;
+}
+
+.hr5::after {
+  /* content: "¶"; */
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.4em;
+  padding: 0 0.3em;
+  /* background: white; */
 }

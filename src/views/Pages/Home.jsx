@@ -14,10 +14,10 @@ function Home() {
       <div className="app-container">
         <div className='bgBanner1'>
           <Banner />
-          <AboutMe />
           <Skills />
+          <Projects />
+          <AboutMe />
         </div>
-        <Projects />
         <Contact />
       </div>
       <Footer />

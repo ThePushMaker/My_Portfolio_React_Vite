@@ -1,16 +1,16 @@
 import { useTranslation } from "react-i18next";
-import './AboutMe.css'
 
 const AboutMe = () => {
   const [ t ] = useTranslation("global");  
   
   const linkStyles = 'text-link_color hover:text-link_color_hover hover:underline textShadow cursor-pointer'
-  const paragraphStyles = 'mb-2 textShadow text-[#ddd]'
+  const paragraphStyles = 'mb-2 textShadow text-[#ccc]'
   
   return(
     <section className="text-center md:text-start mt-0" id="aboutMe">
-      <div className="my-32 bg_aboutme px-6 md:px-14 lg:px-24 pt-12 pb-16 mx-auto">
-        <div className="flex flex-wrap">
+      <div className="bg_semitransparent px-6 md:px-14 lg:px-24 pt-0 pb-16 mx-auto">
+      <hr className="hr5"/>
+        <div className="flex flex-wrap pt-14">
           <div className="w-full lg:w-5/12 lg:pr-32 my-auto flex justify-center">
             <div className="animatedImg w-96 md:w-80 lg:w-[400px]">
               <img className=" rounded-md opacity-[92%] shadow-2xl mb-3" src={'https://i.gifer.com/3AyY.gif'} alt="Header Img2" />
@@ -18,7 +18,7 @@ const AboutMe = () => {
             </div>
           </div>
           <div className="w-full lg:w-7/12 text-center lg:text-left">
-            <h2 className="md:text-[50px] lg:text-right mb-4">
+            <h2 className="md:text-[50px] lg:text-left mb-4">
               <span className='emoji_size'>🚀 </span>
                 {t(`about_me.more_about_me`)}
               <span className='emoji_size'> 🚀</span>
