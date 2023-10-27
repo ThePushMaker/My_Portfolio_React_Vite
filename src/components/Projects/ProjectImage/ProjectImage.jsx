@@ -2,7 +2,7 @@ import './ProjectImage.css'
 
 const ProjectImage = ({ imgPath, title }) => {
   if(!imgPath){
-    imgPath='https://i.imgur.com/zDjPFJa.png'
+    imgPath='https://i.imgur.com/r07386D.png'
   }
   
   return (
