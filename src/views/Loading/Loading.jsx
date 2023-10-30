@@ -1,10 +1,29 @@
 import './Loading.css'
 import loadingImg from '../../assets/img/loading1.svg'
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 const Loading = () => {
-  const [ t ] = useTranslation("global");
+  const [ t, i18n ] = useTranslation("global");
 
+  // get navigator default langugage & convert it to a compatible code to set it as the app language
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem('language');
+    
+    // if doesn't exist
+    if(!storedLanguage) {
+      const languageCode = navigator.language;
+      const parts = languageCode.split('-');
+      
+      changeLang(parts[0])
+    }
+  }, []); 
+  
+  const changeLang = newLng => {
+    i18n.changeLanguage(newLng);
+    localStorage.setItem('language', newLng);
+  }
+  
   return(
     <div className='bg flex h-screen justify-center items-center text-[white]'>
       <div className='main_container'>

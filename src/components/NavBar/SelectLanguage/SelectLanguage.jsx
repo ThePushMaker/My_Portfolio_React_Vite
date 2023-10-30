@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 import './SelectLanguage.css'
 
 const SelectLanguage = () => {
-  const [ t, i18n ] = useTranslation("global"); 
+  const [ t, i18n ] = useTranslation("global"); //'t' it's used in changelanguage functionality
 
 
   const [isActive, setIsActive] = useState(false);
