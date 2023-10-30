@@ -35,13 +35,12 @@ const SelectLanguage = () => {
   useEffect(() => {
     const storedLanguage = localStorage.getItem('language');
     
-    // if there isn't
+    // if doesn't exist
     if(!storedLanguage) {
       const languageCode = navigator.language;
       const parts = languageCode.split('-');
-      const navLang = parts[0];
       
-      changeLang(navLang)
+      changeLang(parts[0])
     }else { 
       if(storedLanguage==='en') setSelectedElement('English')
       else if(storedLanguage==='es') setSelectedElement('Spanish')

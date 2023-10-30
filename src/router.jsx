@@ -1,6 +1,5 @@
 import {createBrowserRouter} from 'react-router-dom'
 
-import Home from './views/pages/Home';
 import ArticleLayout from './layouts/ArticleLayout';
 import IndexLayout from './layouts/IndexLayout'
 import ProjectsCategoryOverview from './views/Projects/ProjectsCategoryOverview';
@@ -8,6 +7,7 @@ import ProjectsCategoriesIndex from './views/Projects/ProjectsCategoriesIndex';
 import ArticleProjectsLayout from './layouts/ArticleProjectsLayout';
 import { routes } from './routes';
 import ProjectDetail from './views/Projects/ProjectDetail';
+import App from './App';
 
 const router = createBrowserRouter([
     {
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 index: true,
-                element: <Home /> 
+                element: <App /> 
             },
             {
                 // basename: '/article',

@@ -1,4 +1,7 @@
 {
+  "default":{
+    "loading":"Loading"
+  },
   "navbar": {
     "Spanish": "Spanish",
     "English": "English",
