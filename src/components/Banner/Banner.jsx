@@ -6,9 +6,6 @@ import './Banner.css';
 import TypeAnimation from './TypeAnimation/TypeAnimation'
 import { useTranslation } from "react-i18next";
 import SocialIcons from "../SocialIcons/SocialIcons";
-import { Link } from "react-router-dom";
-
-
 
 const Banner = () => {
   const [ t ] = useTranslation("global");  
