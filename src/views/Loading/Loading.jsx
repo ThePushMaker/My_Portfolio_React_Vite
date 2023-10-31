@@ -26,7 +26,7 @@ const Loading = () => {
   
   return(
     <div className='bg flex h-screen justify-center items-center text-[white]'>
-      <div className='main_container'>
+      <div>
         <span className='text-[45px]'>
           {t(`default.loading`)}{'...'}
           <img src={loadingImg} alt='loading-img' />
