@@ -1,6 +1,9 @@
 {
   "default":{
-    "loading":"Cargando"
+    "loading":"Cargando",
+    "not_found_title":"No encontrado",
+    "not_found_message":"Esta página no se puedo encontrar",
+    "not_found_button":"Volver a la página de inicio"
   },
   "navbar": {
     "Spanish": "Spanish",
