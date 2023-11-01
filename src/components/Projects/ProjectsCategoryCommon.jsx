@@ -5,7 +5,7 @@ import ProjectsListGrid from "./ProjectsListGrid/ProjectsListGrid";
 import ProjectImage from "./ProjectImage/ProjectImage";
 import { useTranslation } from "react-i18next";
 
-const ProjectsCategoryCommon = ({ URL, title, description, categories, projects, projectInfo, projectCategory }) => {
+const ProjectsCategoryCommon = ({ title, description, categories, projects, projectInfo, projectCategory }) => {
   const [ t] = useTranslation("global"); 
 
 
@@ -19,7 +19,7 @@ const ProjectsCategoryCommon = ({ URL, title, description, categories, projects,
 
       
       <div className="pt-5 pb-[70px] px-[28px] md:px-[40px] lg:px-24 bg-container_color3 shadow-2xl rounded-b-[64px] text-text_dark-gray">
-        <BreadCrumb URL={URL} />
+        <BreadCrumb />
         { !projectInfo &&
           <p className="mx-auto text-text_dark-gray mb-10 text-center w-[90%] md:w-[100%] lg:mx-30">
             {description}

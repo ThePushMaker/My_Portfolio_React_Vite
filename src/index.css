@@ -330,3 +330,6 @@ hr {
   padding: 0 0.3em;
   /* background: white; */
 }
+.simple_background {
+  background: rgb(16, 16, 38);  
+}

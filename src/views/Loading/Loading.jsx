@@ -1,4 +1,3 @@
-import './Loading.css'
 import loadingImg from '../../assets/img/loading1.svg'
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
@@ -25,7 +24,7 @@ const Loading = () => {
   }
   
   return(
-    <div className='bg flex h-screen justify-center items-center text-[white]'>
+    <div className='simple_background flex h-screen justify-center items-center text-[white]'>
       <div>
         <span className='text-[45px]'>
           {t(`default.loading`)}{'...'}

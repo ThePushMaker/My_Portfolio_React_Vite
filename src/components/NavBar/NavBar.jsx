@@ -79,6 +79,7 @@ const NavBar = () => {
                     </div>
                   </>
                 )}
+                
               
               
          
@@ -96,18 +97,33 @@ const NavBar = () => {
                 />
               </div>
             
-              <div className="invisible hidden lg:visible lg:flex ">
-                  <a href="#contact">
-                  <button className="contact_button px-4 py-4 xlNavbar:px-6 ml-3">
-                    {'< '}
-                      <label className="text-styled-font-family1 text-[16px] xlNavbar:text-xlNavbar">
-                        {t(`navbar.CONTACT ME`)}
-                      </label>
-                    {' />'}
-                  </button>
-                </a>
-
-              </div>
+              {location.pathname === '/' && (
+                  <div className="invisible hidden lg:visible lg:flex ">
+                    <a href="#contact">
+                      <button className="contact_button px-4 py-4 xlNavbar:px-6 ml-3">
+                        {'< '}
+                          <label className="text-styled-font-family1 text-[16px] xlNavbar:text-xlNavbar">
+                            {t(`navbar.CONTACT ME`)}
+                          </label>
+                        {' />'}
+                      </button>
+                    </a>
+                  </div>
+                )}
+              {location.pathname !== '/' && (
+                  <div className="invisible hidden lg:visible lg:flex ">
+                  <Link to="/">
+                    <button className="contact_button px-4 py-4 xlNavbar:px-6 ml-3">
+                      {'< '}
+                        <label className="text-styled-font-family1 text-[16px] xlNavbar:text-xlNavbar">
+                          {t(`navbar.CONTACT ME`)}
+                        </label>
+                      {' />'}
+                    </button>
+                  </Link>
+                </div>
+                )}
+              
             </div>
           
         </div>

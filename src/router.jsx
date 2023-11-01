@@ -8,6 +8,7 @@ import ArticleProjectsLayout from './layouts/ArticleProjectsLayout';
 import { routes } from './routes';
 import ProjectDetail from './views/Projects/ProjectDetail';
 import App from './App';
+import NotFound from './views/NotFound/NotFound';
 
 const router = createBrowserRouter([
     {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
                     
                 ]
             },
+            {
+                path: '*',
+                element: <NotFound />
+            }
             // {
             //     path: routes['About Me'],
             //     element: <MoreAboutMe />

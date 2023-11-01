@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { ArticleProjectsContext } from "../../contexts/ArticleProjectsContext";
 import ProjectsCategoryCommon from "../../components/Projects/ProjectsCategoryCommon";
 
@@ -47,8 +47,7 @@ const ProjectDetail= () => {
             projectCategory={categoryData.category} 
             projectInfo={projectsInfo} 
             title={t(`projectDetail.title`)+`: ${projectsInfo.title}`} 
-            description={idProject} 
-            URL={URL} 
+            description={idProject}  
         />
     </>
   );

@@ -17,13 +17,12 @@ const Projects = () => {
   const storedLanguage = localStorage.getItem('language');
   
   useEffect(() => {
-    if(storedLanguage === 'en') {
-      setDescription(projectsJSON_en.description)
-      setCategories(projectsJSON_en.categories)
-    }
-    else if(storedLanguage === 'es') {
+    if(storedLanguage === 'es') {
       setDescription(projectsJSON_es.description)
       setCategories(projectsJSON_es.categories)
+    } else {
+      setDescription(projectsJSON_en.description)
+      setCategories(projectsJSON_en.categories)
     }
   },[storedLanguage])
   

@@ -2,35 +2,30 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-const BreadCrumb = (props) => {
-  const [ t ] = useTranslation("global");
-  // console.log(props.URL)
-
-  // Divide la URL en partes usando la barra diagonal como separador
-  const URLParts = props.URL.split('/').filter(part => part !== '');
+const BreadCrumb = () => {
+  const [ t ] = useTranslation("global");  
+  
+  console.log(location.pathname);
+  //split the actual url using the '/' separator when crumb is not an empty string
+  const crumbs = location.pathname.split('/')
+    .filter(crumb => crumb !== '');
   
   // Inicializa el array de elementos del breadcrumb con el enlace a la página de inicio
   const breadcrumbItems = [{ to: '/', label: 'Home' }];
   
-  // Variable para rastrear la URL actual
-  let currentUrl = '';
-  
+
+  let currentUrl = '';  
   // Itera sobre las partes de la URL y crea dinámicamente los elementos del breadcrumb
-  URLParts.forEach((part, index) => { 
+  crumbs.forEach((crumb, index) => { 
     // Construye la URL actual
-    currentUrl += `/${part}`;
+    currentUrl += `/${crumb}`;
     
-    console.log(part)
-    
-    if(part === 'web-apps'){
-      part='apps'
-      console.log(part)
-    }
-    
+    console.log(crumb)
+  
     // Agrega el elemento al breadcrumb
-    breadcrumbItems.push({ to: currentUrl, label: part });
+    breadcrumbItems.push({ to: currentUrl, label: crumb });
   }, []);
-  console.log(breadcrumbItems)
+
  
   
   return(

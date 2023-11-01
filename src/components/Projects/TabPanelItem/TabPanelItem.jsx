@@ -58,7 +58,6 @@ const TabPanel = (props) => {
                 {t('TabPanelItem.display_more')}
                 {/* {mostrarMas ? "Display Less" : "Display More"} */}
               </span>
-              
             </button>
       
           )}
