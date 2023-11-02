@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import logo from "../../assets/img/logo.svg";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
-import SocialIcons from "../SocialIcons/SocialIcons"
 import MobileNavBar from "./MobileNavBar";
 import SelectLanguage from "./SelectLanguage/SelectLanguage";
 import { NavbarRoutesHome, NavbarRoutes } from '../../routes';
@@ -31,12 +30,12 @@ const NavBar = () => {
     setActiveLink(value);
   };
 
-  const navLinkStyles = 'navbar-link text-xl py-0 px-[14px] xlNavbar:px-[25px]';
+  const navLinkStyles = 'navbar-link text-[17px] xlNavbar:text-[20px] py-0 px-[14px] xlNavbar:px-[25px]';
   
   return (
     <>
     <div>
-      <nav className={`${scrolled ? 'scrolled backdrop-blur-sm py-[10px]' : ''} navbar px-10 lg:px-16 py-6`}>
+      <nav className={`${scrolled ? 'scrolled backdrop-blur-sm py-[10px]' : ''} navbar px-10 xlNavbar:px-16 py-6`}>
         <div className="mx-auto max-w-[1500px] flex justify-between ">
           
             <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start">
@@ -45,7 +44,7 @@ const NavBar = () => {
                 {location.pathname === '/' && (
                   <>
                     <a href="/#top" className="navbar-brand">
-                      <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-[140px] lg:mr-8"/>
+                      <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-28 xlNavbar:w-[140px] lg:mr-4 xl:mr-8"/>
                     </a>
                     <div className="invisible hidden lg:inline lg:visible">
                     
@@ -64,7 +63,7 @@ const NavBar = () => {
                 {location.pathname !== '/' && (
                   <>
                     <Link to="/" className="navbar-brand">
-                      <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-[140px] lg:mr-8"/>
+                      <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-28 xlNavbar:w-[140px]  lg:mr-4 xl:mr-8"/>
                     </Link>
                     <div className="invisible hidden lg:inline lg:visible">
                       {NavbarRoutes.map((item, index) => (
@@ -102,7 +101,7 @@ const NavBar = () => {
                     <a href="#contact">
                       <button className="contact_button px-4 py-4 xlNavbar:px-6 ml-3">
                         {'< '}
-                          <label className="text-styled-font-family1 text-[16px] xlNavbar:text-xlNavbar">
+                          <label className="text-styled-font-family1 text-[14px] xlNavbar:text-xlNavbar">
                             {t(`navbar.CONTACT ME`)}
                           </label>
                         {' />'}
@@ -115,7 +114,7 @@ const NavBar = () => {
                   <Link to="/">
                     <button className="contact_button px-4 py-4 xlNavbar:px-6 ml-3">
                       {'< '}
-                        <label className="text-styled-font-family1 text-[16px] xlNavbar:text-xlNavbar">
+                        <label className="text-styled-font-family1 text-[14px] xlNavbar:text-xlNavbar">
                           {t(`navbar.CONTACT ME`)}
                         </label>
                       {' />'}

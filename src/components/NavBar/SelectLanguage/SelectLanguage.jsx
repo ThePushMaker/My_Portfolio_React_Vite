@@ -125,7 +125,7 @@ const SelectLanguage = () => {
     <div className=''>
       <div className={`wrapper ${isActive ? 'active' : ''}`} ref={wrapperRef}>
         <div className="select-btn" onClick={toggleSelect}>
-          <span>{selectedElement}</span>
+          <span className='text-[21px] xlNavbar:text-[23px]'>{selectedElement}</span>
           <img src={arrowDownIcon} alt="arrowDownIcon" />          
         </div>
         <div className="content">
