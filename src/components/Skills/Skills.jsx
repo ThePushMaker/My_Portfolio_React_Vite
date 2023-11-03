@@ -125,7 +125,7 @@ const Skills = () => {
                   {t(`skills.skills`)}
                 <span className='emoji_size'> 📚</span>
               </h2>
-                <p className='text-center mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'
+                <p className='text-center w-[90%] md:w-5/6 mx-auto mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'
               > 
                   {skills_description} 
                 </p>

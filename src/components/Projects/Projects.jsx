@@ -36,7 +36,7 @@ const Projects = () => {
                 {t('projects.title')}
               <span className='emoji_size'> 🗂️</span>
             </h2>
-            <p className="mt-[14px] mx-auto mb-[35px] text-center w-[90%] md:w-[100%]
+            <p className="mt-[14px] mx-auto mb-[35px] text-center w-[90%] md:w-5/6
               lg:mx-30"
             >
               {description}{'.'}  

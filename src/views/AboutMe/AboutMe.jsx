@@ -11,21 +11,23 @@ const AboutMe = () => {
       <div className="bg_semitransparent px-6 md:px-14 lg:px-24 pt-0 pb-16 mx-auto">
       <hr className="hr5"/>
         <div className="flex flex-wrap pt-14">
-          <div className="w-full lg:w-5/12 lg:pr-32 my-auto flex justify-center">
-            <div className="animatedImg w-96 md:w-80 lg:w-[400px]">
+          <div className="w-full lg:w-6/12 lg:px-8 my-auto flex justify-center">
+            <div className="animatedImg w-96 md:w-80 lg:w-[500px]">
               <img className=" rounded-md opacity-[92%] shadow-2xl mb-3" src={'https://i.gifer.com/3AyY.gif'} alt="Header Img2" />
               <p className={`${paragraphStyles} text-[18px]`}>{t(`about_me.img_description`)}.</p>
             </div>
           </div>
-          <div className="w-full lg:w-7/12 text-center lg:text-left">
+          <div className="w-full lg:w-6/12 text-center lg:text-left">
             <h2 className="md:text-[50px] lg:text-left mb-4">
               <span className='emoji_size'>🚀 </span>
                 {t(`about_me.more_about_me`)}
               <span className='emoji_size'> 🚀</span>
             </h2>
-            <p className={`${paragraphStyles}`}>{t(`about_me.paragraph2`)}.</p>
-            <p className={`${paragraphStyles}`}>{t(`about_me.paragraph3`)}.</p>
-            <p className={`${paragraphStyles}`}>{t(`about_me.paragraph4`)}.</p>
+            <div className="w-[90%] mx-auto lg:ml-0 text-left">
+              <p className={`${paragraphStyles} pb-4`}>{t(`about_me.paragraph2`)}.</p>
+              <p className={`${paragraphStyles} pb-4`}>{t(`about_me.paragraph3`)}.</p>
+              <p className={`${paragraphStyles} pb-4`}>{t(`about_me.paragraph4`)}.</p>
+            </div>
             <h3 className="text-[1.6rem] mb-3 text-center">{t(`about_me.classifications`)}<span className="text-[21px]">🤓</span>:</h3>
             <p className={`${paragraphStyles} text-center`}>
               <a className={linkStyles} target="_blank" rel="noreferrer" href="https://www.google.com/search?q=intj&oq=intj&gs_lcrp=EgZjaHJvbWUyDggAEEUYORhDGLEDGIoFMgkIARAAGEMYigUyCQgCEAAYQxiKBTIJCAMQABhDGIoFMgkIBBAAGEMYigUyCQgFEAAYQxiKBTIJCAYQABhDGIoFMgkIBxAAGEMYigUyBwgIEAAYjwIyBwgJEAAYjwLSAQc1OTFqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"> 
