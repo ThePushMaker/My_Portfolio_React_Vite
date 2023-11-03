@@ -35,8 +35,8 @@ const BreadCrumb = () => {
           <React.Fragment key={item.to}>
             <Link to={item.to} 
               className='text-dark_link_color hover:text-dark_link_color_hover2 hover:underline'> 
-              
-              {t(`navbar.${item.label}`)}
+              {item.label}
+              {/* {t(`navbar.${item.label}`)} */}
             </Link>
             { index < breadcrumbItems.length - 1 && ' / ' }
             {/* {' / '} */}
