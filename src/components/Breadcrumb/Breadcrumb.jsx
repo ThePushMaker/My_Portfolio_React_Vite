@@ -30,11 +30,11 @@ const BreadCrumb = () => {
   
   return(
     <>
-      <div className='text-start py-2 italic mb-3 text-text_dark-gray'>
+      <div className='text-start italic mb-3 text-text_dark-gray bg-container_color6 px-7 py-4 rounded-full w-fit'>
         {breadcrumbItems.map((item, index) => (
           <React.Fragment key={item.to}>
             <Link to={item.to} 
-              className='text-dark_link_color hover:text-dark_link_color_hover2 hover:underline'> 
+              className='text-[20.5px] text-dark_link_color hover:text-dark_link_color_hover2 hover:underline px-2'> 
               {item.label}
               {/* {t(`navbar.${item.label}`)} */}
             </Link>
