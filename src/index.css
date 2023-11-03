@@ -309,9 +309,7 @@ p.danger {
 }
 
 /* hr separator */
-hr {
-  padding: 40px 0;
-}
+
 .hr5 {
   border: 0;
   border-top: medium double var(--border_color1);

@@ -18,12 +18,16 @@ const ProjectsCategoryCommon = ({ title, description, categories, projects, proj
       </div>
 
       
-      <div className="pt-5 pb-[70px] px-[28px] md:px-[40px] lg:px-24 bg-container_color3 shadow-2xl rounded-b-[64px] text-text_dark-gray">
-        <BreadCrumb />
+      <div className="pt-3 pb-[70px] px-[28px] md:px-[40px] lg:px-24 bg-container_color3 shadow-2xl rounded-b-[64px] text-text_dark-gray">
+        <div className="mb-7">
+          <BreadCrumb />
+        </div>
         { !projectInfo &&
-          <p className="mx-auto text-text_dark-gray mb-10 text-center w-[90%] md:w-[100%] lg:mx-30">
-            {description}
-          </p>
+         <>
+            <p className="mx-auto text-text_dark-gray mb-7 w-[90%] md:w-4/5 lg:mx-30">
+              {description}
+            </p>
+         </>
         }
 
         <div className="justify-center text-center">
@@ -31,11 +35,12 @@ const ProjectsCategoryCommon = ({ title, description, categories, projects, proj
             {/* categories links list */}
             { categories &&
               <div className="flex justify-center">
-                <div>
-                  <span className="text-2xl text-text_dark-gray">Categories:</span>
-                  <ul className="mt-2 list-disc text-text_dark-gray">
+                <div className="w-full">
+                  <span className="text-[1.78rem] text-text_dark-gray mb-2">Categories:</span>
+                  <hr className="mb-3 w-1/3 mx-auto" />
+                  <ul className="w-fit mx-auto mt-2 list-disc text-text_dark-gray">
                     {categories.map((category, index)=> (
-                      <li className="py-2" key={index}>
+                      <li className="py-2 px-3" key={index}>
                         <Link
                           to={`${routes[category.category]}`}
                           className="text-dark_link_color hover:text-dark_link_color_hover2 hover:underline"
@@ -52,12 +57,8 @@ const ProjectsCategoryCommon = ({ title, description, categories, projects, proj
             {/* project items list */}
             {projects && (
               <>
-                <span className="text-3xl text-text_dark-gray">Projects:</span>
-                {/* <div className="mt-5 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                  {projects.map((project, index) => (
-                    <ProjectItemCard key={index} {...project} />
-                    ))}
-                </div> */}
+                <h3 className="text-[1.78rem] text-text_dark-gray mb-2">Projects list:</h3>
+                <hr className="mb-6 w-1/3 mx-auto" />
                 <ProjectsListGrid 
                   projects={projects} 
                   category={title} 
