@@ -38,7 +38,7 @@ const BreadCrumb = () => {
               {item.label}
               {/* {t(`navbar.${item.label}`)} */}
             </Link>
-            { index < breadcrumbItems.length - 1 && ' / ' }
+            { index < breadcrumbItems.length - 1 && (<span className='normal_font_family_aux'> {'>'} </span>) }
             {/* {' / '} */}
           </React.Fragment>
         ))}

@@ -332,3 +332,6 @@ p.danger {
 .simple_background {
   background: rgb(16, 16, 38);  
 }
+.normal_font_family_aux {
+  font-family: var(--normal-font-family);
+}
