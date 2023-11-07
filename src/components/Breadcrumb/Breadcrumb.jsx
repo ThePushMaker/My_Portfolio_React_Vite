@@ -30,7 +30,7 @@ const BreadCrumb = () => {
   
   return(
     <>
-      <div className='text-start italic mb-3 text-text_dark-gray bg-container_color6 px-7 py-4 rounded-full w-fit'>
+      <div className='text-start italic mb-3 text-text_dark-gray bg-container_color6 px-7 py-4 rounded-[1.2rem] w-fit'>
         {breadcrumbItems.map((item, index) => (
           <React.Fragment key={item.to}>
             <Link to={item.to} 

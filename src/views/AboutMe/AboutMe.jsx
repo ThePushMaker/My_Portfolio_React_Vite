@@ -33,8 +33,8 @@ const AboutMe = () => {
               <a className={linkStyles} target="_blank" rel="noreferrer" href="https://www.google.com/search?q=intj&oq=intj&gs_lcrp=EgZjaHJvbWUyDggAEEUYORhDGLEDGIoFMgkIARAAGEMYigUyCQgCEAAYQxiKBTIJCAMQABhDGIoFMgkIBBAAGEMYigUyCQgFEAAYQxiKBTIJCAYQABhDGIoFMgkIBxAAGEMYigUyBwgIEAAYjwIyBwgJEAAYjwLSAQc1OTFqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"> 
                 MBTI: INTJ 
               </a>{' | '}  
-              <a className={linkStyles} target="_blank" rel="noreferrer" href="https://www.google.com/search?q=5w4&oq=5w4&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBBzIwNWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8">
-              {t(`about_me.enneagram`)} : 5w4 
+              <a className={linkStyles} target="_blank" rel="noreferrer" href="https://www.google.com/search?q=1w9&sca_esv=579932655&ei=L2lJZef6J8zokPIPhLe30Ak&ved=0ahUKEwinzo3KtrCCAxVMNEQIHYTbDZoQ4dUDCBA&uact=5&oq=1w9&gs_lp=Egxnd3Mtd2l6LXNlcnAiAzF3OTIHEAAYigUYQzIFEAAYgAQyBxAAGIoFGEMyBxAAGIoFGEMyBRAAGIAEMgUQABiABDIHEAAYigUYQzIFEAAYgAQyBRAAGIAEMgUQABiABEiJDlDGBVj9C3ABeAGQAQCYAYgBoAGPA6oBAzAuM7gBA8gBAPgBAcICChAAGEcY1gQYsAPCAgoQABiKBRiwAxhDwgILEAAYigUYsQMYgwHCAggQABiABBixA8ICCxAAGIAEGLEDGIMB4gMEGAAgQYgGAZAGCg&sclient=gws-wiz-serp">
+              {t(`about_me.enneagram`)} : 1w9 
               </a>{' | '}  
               <a className={linkStyles} target="_blank" rel="noreferrer" href="https://www.google.com/search?q=disc+dc&oq=disc+dc&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yCAgFEAAYFhgeMggIBhAAGBYYHjIICAcQABgWGB4yCAgIEAAYFhgeMggICRAAGBYYHtIBCDEyMzFqMWo3qAIAsAIA&sourceid=chrome&ie=UTF-8">
                 DISC: DC
