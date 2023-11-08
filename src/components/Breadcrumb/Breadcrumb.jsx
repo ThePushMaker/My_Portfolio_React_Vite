@@ -1,13 +1,17 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { getSlugByURL } from '../../routes';
 
 const BreadCrumb = () => {
   const [ t ] = useTranslation("global");  
   
-  console.log(location.pathname);
+  const url=location.pathname;
+  // p
+  console.log('slug', getSlugByURL(url));
+  
   //split the actual url using the '/' separator when crumb is not an empty string
-  const crumbs = location.pathname.split('/')
+  const crumbs = url.split('/')
     .filter(crumb => crumb !== '');
   
   // Inicializa el array de elementos del breadcrumb con el enlace a la página de inicio
@@ -20,7 +24,7 @@ const BreadCrumb = () => {
     // Construye la URL actual
     currentUrl += `/${crumb}`;
     
-    console.log(crumb)
+    console.log(crumb)  
   
     // Agrega el elemento al breadcrumb
     breadcrumbItems.push({ to: currentUrl, label: crumb });
