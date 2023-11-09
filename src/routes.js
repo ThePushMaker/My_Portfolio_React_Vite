@@ -22,15 +22,27 @@ export const getParentURLByCurrentURL = (URL) => {
 }
 
 // function that returns the last part of the URL: it splits url into different parts using '/' as separator and then extracts the last part of the URL array
-export const getSlugByURL = (URL) => {
+export const getSlugFromURL = (URL) => {
   const parts = URL.split('/'); 
   return 'slug', parts[parts.length - 1]
 }
 
 // p
+export const getURLFromSlug = (slug) => {
+  for (const key in routes) {
+    if (routes[key].endsWith(`/${slug}`)) {
+      console.log(`La URL correspondiente al slug "${slug}" es: ${routes[key]}`);
+      return key;
+    }
+  }
+  console.log(`No se encontró una URL para el slug "${slug}"`);
+  return null; // Devuelve null si el slug no se encuentra en las rutas
+}
+
+// p
 export const urlRoutes = [
-  {URL : '/', slug : '/', label : 'Home'},
-  {URL : '/projects', slug : 'projects', label : 'Projects'},
+  {URL : '/', label : 'Home'},
+  {URL : '/projects', label : 'Projects'},
 ]
 
 // routes.js

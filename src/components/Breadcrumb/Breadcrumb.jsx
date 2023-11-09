@@ -1,14 +1,14 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { getSlugByURL } from '../../routes';
+import { getSlugFromURL, getURLFromSlug } from '../../routes';
 
 const BreadCrumb = () => {
   const [ t ] = useTranslation("global");  
   
   const url=location.pathname;
   // p
-  console.log('slug', getSlugByURL(url));
+  // console.log('slug', getSlugFromURL(url));
   
   //split the actual url using the '/' separator when crumb is not an empty string
   const crumbs = url.split('/')
@@ -25,6 +25,7 @@ const BreadCrumb = () => {
     currentUrl += `/${crumb}`;
     
     console.log(crumb)  
+    console.log('url from slug', getURLFromSlug(crumb))
   
     // Agrega el elemento al breadcrumb
     breadcrumbItems.push({ to: currentUrl, label: crumb });

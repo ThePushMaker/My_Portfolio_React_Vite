@@ -46,10 +46,9 @@
   --container_color:#171939; /*used in skills*/
   --container_color2:rgb(var(--container_color2_aux)); /*used in about-me and projects*/
   --container_color2_aux:23, 25, 57; /*used in skills*/
-  --container_color3:rgb(227, 227, 239);/*Used in articles*/
+  --container_color3:rgb(226, 226, 237);/*Used in articles*/
   --container_color4:#b9b9e7;/*Used in articles*/
-  --container_color5:#0d0f26; /*used in footer*/
-  --container_color6:#d6dceb; /*used in breadcrumb*/
+  --container_color5:#121533; /*used in footer*/
   --container_color7:#1f256c; /*used in projects_category_common*/
   --bg_color1:#172565;
   --success_color:rgb(146, 255, 146);
