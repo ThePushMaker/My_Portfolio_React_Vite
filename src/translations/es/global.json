@@ -89,7 +89,7 @@
   },
   "footer": {
     "copyright": "© 2023 Martín Calderón. Todos los derechos reservados",
-    "technologies_used": "Este sitio web ha sido desarrollado con React, Tailwind y Vite"
+    "technologies_used": "Este sitio web ha sido desarrollado con React y Vite"
   },
   "projectDetail": {
     "title": "Proyecto",
