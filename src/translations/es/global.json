@@ -38,6 +38,20 @@
     "follow_me2": "mis redes sociales",
     "cv": "Click aquí para ver mi curriculum vitae"
   },
+  "skills": {
+    "skills": "Habilidades",
+    "description1": "Desde preparatoria llevo",
+    "description2": " más de 8 años programando",
+    "description3": ". He aprendido a trabajar con una amplia gama de tecnologías. Sin embargo, me especializo en",
+    "description4": " React y Laravel",
+    "description5": ", considerándolos mis principales áreas de experiencia. También cuento con experiencia trabajando con",
+    "description6": " SCRUM",
+    "english_spanish": "Inglés y Español"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "select_category": "Selecciona una categoría para ver los proyectos que he desarrollado en esa área"
+  },
   "about_me": {
     "more_about_me": "Acerca de mí",
     "img_description": "Nota del editor: Este no soy yo, soy el editor",
@@ -46,19 +60,6 @@
     "paragraph4": "Actualmente estoy trabajando en proyectos independientes que ayuden a las personas a aprender a programar. Estoy emocionado de ver cómo estos proyectos impactan positivamente en la vida de los demás",
     "classifications": "Clasificaciones",
     "enneagram": "Eneagrama"
-  },
-  "skills": {
-    "skills": "Habilidades",
-    "description1": "Desde preparatoria llevo",
-    "description2": " más de 8 años programando",
-    "description3": ". He aprendido a trabajar con una amplia gama de tecnologías. Sin embargo, me especializo en",
-    "description4": " React y Laravel",
-    "description5": ", considerándolos mis principales áreas de experiencia.",
-    "english_spanish": "Inglés y Español"
-  },
-  "projects": {
-    "title": "Proyectos",
-    "select_category": "Selecciona una categoría a continuación para ver los proyectos que he desarrollado en esa área específica"
   },
   "TabPanelItem": {
     "display_more": "MOSTRAR MÁS"

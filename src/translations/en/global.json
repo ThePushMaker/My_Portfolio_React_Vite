@@ -44,6 +44,20 @@
     "follow_me2": "my social media",
     "cv": "Click here to view my resume"
   },
+  "skills": {
+    "skills": "Skills",
+    "description1": "Since high school, I've been",
+    "description2": " programming for over 8 years",
+    "description3": ". I've learned to work with a wide range of technologies. However, I specialize in",
+    "description4": " React & Laravel",
+    "description5": ", considering them my main areas of expertise. Also, I have experience working with",
+    "description6": " SCRUM",
+    "english_spanish": "English & Spanish"
+  },
+  "projects": {
+    "title": "Projects",
+    "select_category": "Select a category to view the projects I've developed in that area"
+  },
   "about_me": {
     "more_about_me": "About Me",
     "img_description": "Editor's note: This is not me; I am the editor",
@@ -52,19 +66,6 @@
     "paragraph4": "I'm currently working on independent projects aimed at helping people learn to program. I'm excited to see how these projects positively impact the lives of others",
     "classifications": "Classifications",
     "enneagram": "Enneagram"
-  },
-  "skills": {
-    "skills": "Skills",
-    "description1": "Since high school, I've been",
-    "description2": " programming for over 8 years",
-    "description3": ". I've learned to work with a wide range of technologies. However, I specialize in",
-    "description4": " React & Laravel",
-    "description5": ", considering them my main areas of expertise.",
-    "english_spanish": "English & Spanish"
-  },
-  "projects": {
-    "title": "Projects",
-    "select_category": "Select a category below to view the projects I've developed in that specific area"
   },
   "TabPanelItem": {
     "display_more": "DISPLAY MORE"
