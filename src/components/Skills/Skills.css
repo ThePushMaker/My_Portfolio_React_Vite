@@ -21,13 +21,15 @@
   /* width: 50%; */
   width: 90px;
   margin: auto 0 auto 0;
-  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+.skill-slider .item h5 {
+  margin-top: 0.5rem;
 }
 
 @media (min-width: 400) {
   .skill-slider .item img {
     width: 20px !important;
-
   }
 }
 
