@@ -42,8 +42,9 @@
 
 .skill img {
   align-self: center; /*alinear imagenes centro x*/
+  padding-bottom: 0.5rem;
 }
-.react-multiple-carousel__arrow--left {
+/* .react-multiple-carousel__arrow--left {
   left: 0;
   z-index: 0;
 }
@@ -55,4 +56,4 @@
 .react-multi-carousel-dot--active button {
   background-color: white;
   
-}
+} */

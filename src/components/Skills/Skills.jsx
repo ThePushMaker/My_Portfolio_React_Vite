@@ -134,7 +134,7 @@ const Skills = () => {
                   {skills_description} 
                 </p>
               
-              <Carousel
+              {/* <Carousel
                 additionalTransfrom={0}
                 arrows
                 autoPlay={true}
@@ -171,7 +171,16 @@ const Skills = () => {
                       <h5>{item.label}</h5>
                     </div>
                   ))}
-              </Carousel>              
+              </Carousel>      */}
+              
+              <div className='grid grid-cols-7 gap-8 skill-slider pb-10 mb-4 lg:mb-0'>
+              {imgCarousel.map((item, index) => (
+                <div className='item mx-10' key={index}>
+                  <img src={item.img} alt={item.label} />
+                  <h5>{item.label}</h5>
+                </div>
+              ))}         
+              </div>
               
               </div>
             </div>
