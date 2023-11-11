@@ -30,6 +30,7 @@
 /* 80d2ff lightblue2 */
 /* 1f1d36 bg gray  */
 :root {
+  /* xd */
   --text_dark-gray: #24243a;
   --neon_color1:rgba(65, 135, 255, 0.659); /*used in projectItem*/
   --neon_color2: #0062ff;
