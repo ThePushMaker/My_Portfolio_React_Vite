@@ -51,6 +51,8 @@ const Skills = () => {
       {t(`skills.description1`)}
       <span className="text-highlighted_text_color"><strong>{t(`skills.description2`)}</strong></span>
       {t(`skills.description3`)}
+      <span className="text-highlighted_text_color"><strong>{t(`skills.description4`)}</strong></span>
+      {t(`skills.description5`)}
     </span>
   ;
   

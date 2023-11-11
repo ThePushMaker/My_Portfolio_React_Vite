@@ -20,17 +20,23 @@ const Banner = () => {
   const description = 
   <span>
     <a className="hover:underline  hover:decoration-link_color_hover" target="_blank" rel="noreferrer" href="https://www.google.com/search?q=software+development+engineer&sca_esv=580697965&ei=Sk1MZanzOtTDkPIPwJKL2A0&oq=softwar+development+en&gs_lp=Egxnd3Mtd2l6LXNlcnAiFnNvZnR3YXIgZGV2ZWxvcG1lbnQgZW4qAggAMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAESJxuUABYtGlwBngBkAEAmAGuAaABjCmqAQQwLjQwuAEDyAEA-AEBqAIUwgILEAAYgAQYsQMYgwHCAg4QLhiABBixAxjHARjRA8ICDRAuGIoFGMcBGNEDGEPCAgUQABiABMICCBAAGIoFGLEDwgINEAAYigUYsQMYgwEYQ8ICBxAAGIoFGEPCAgoQABiKBRixAxhDwgIIEAAYgAQYsQPCAgoQABiABBixAxgKwgIHEAAYgAQYCsICEBAAGIoFGOoCGLQCGEPYAQHCAh0QABiKBRjlAhjlAhjqAhi0AhiKAxi3AxjUA9gBAcICFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQLCAhYQLhgDGI8BGOUCGOoCGLQCGIwD2AECwgILEAAYigUYsQMYgwHCAhEQLhiABBixAxiDARjHARjRA8ICERAuGIMBGMcBGLEDGNEDGIAEwgIJEAAYDRiABBgKwgIGEAAYHhgNwgIIEAAYHhgNGArCAgsQABgeGA0Y8QQYCuIDBBgAIEGIBgG6BgQIARgHugYGCAIQARgK&sclient=gws-wiz-serp">
-      <span className="text-link_color hover:text-link_color_hover"> 
-        <strong>{t(`banner.description_p1_1`)}</strong>
-      </span>
+        <strong className="text-link_color hover:text-link_color_hover">
+          {t(`banner.description1`)}
+        </strong>
     </a>
-    {t(`banner.description_p1_2`)}
+    {t(`banner.description2`)}
+    <a className="hover:underline  hover:decoration-link_color_hover" target="_blank" rel="noreferrer" href="https://www.google.com/search?q=Technical+High+School+Diploma+in+Programming&oq=Technical+High+School+Diploma+in+Programming&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigAdIBBzQ5NWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8">
+        <strong className="text-link_color hover:text-link_color_hover">
+        {t(`banner.description3`)}
+        </strong>
+    </a>
+    {t(`banner.description4`)}
     <a className="hover:underline  hover:decoration-link_color_hover" target="_blank" rel="noreferrer" href="https://www.google.com/search?q=Full+Stack+Developer&oq=Full+Stack+Developer&aqs=chrome..69i57j0i512l9.387j0j7&sourceid=chrome&ie=UTF-8&bshm=rimc/1">
-      <span className="text-link_color hover:text-link_color_hover"> 
-        <strong data-tooltip-id="myTooltip" data-tooltip-content={t(`banner.description_tooltip`)} data-tip="myTooltip" >{t(`banner.description_p2`)}</strong>
-      </span>
+        <strong className="text-link_color hover:text-link_color_hover" data-tooltip-id="myTooltip" data-tooltip-content={t(`banner.description_tooltip`)} data-tip="myTooltip" >
+          {t(`banner.description5`)}
+        </strong>
     </a>
-    {t(`banner.description_p3`)}{'.'}
+    {t(`banner.description6`)}{'.'}
   </span>
   
   const [text, setText] = useState('');
@@ -91,7 +97,7 @@ const Banner = () => {
                     <a target="_blank" rel="noreferrer" href="https://www.google.com/search?q=software+development+engineer&sca_esv=580697965&ei=Sk1MZanzOtTDkPIPwJKL2A0&oq=softwar+development+en&gs_lp=Egxnd3Mtd2l6LXNlcnAiFnNvZnR3YXIgZGV2ZWxvcG1lbnQgZW4qAggAMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAESJxuUABYtGlwBngBkAEAmAGuAaABjCmqAQQwLjQwuAEDyAEA-AEBqAIUwgILEAAYgAQYsQMYgwHCAg4QLhiABBixAxjHARjRA8ICDRAuGIoFGMcBGNEDGEPCAgUQABiABMICCBAAGIoFGLEDwgINEAAYigUYsQMYgwEYQ8ICBxAAGIoFGEPCAgoQABiKBRixAxhDwgIIEAAYgAQYsQPCAgoQABiABBixAxgKwgIHEAAYgAQYCsICEBAAGIoFGOoCGLQCGEPYAQHCAh0QABiKBRjlAhjlAhjqAhi0AhiKAxi3AxjUA9gBAcICFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQLCAhYQLhgDGI8BGOUCGOoCGLQCGIwD2AECwgILEAAYigUYsQMYgwHCAhEQLhiABBixAxiDARjHARjRA8ICERAuGIMBGMcBGLEDGNEDGIAEwgIJEAAYDRiABBgKwgIGEAAYHhgNwgIIEAAYHhgNGArCAgsQABgeGA0Y8QQYCuIDBBgAIEGIBgG6BgQIARgHugYGCAIQARgK&sclient=gws-wiz-serp">
                       <button>
                         <label className={linkStyles}>
-                          {t(`banner.cv`)}
+                        {'📑 '}{t(`banner.cv`)}
                         </label>
                         <div className="justify-start">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="25" height="25" fill="currentColor"><path fillRule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path></svg>

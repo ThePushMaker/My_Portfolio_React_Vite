@@ -8,7 +8,6 @@ import { useTranslation } from "react-i18next";
 const ProjectsCategoryCommon = ({ title, description, categories, projects, projectInfo, projectCategory }) => {
   const [ t] = useTranslation("global"); 
 
-
   return (
     <>
       <div className="pb-[150px] bg-container_color3 min-h-screen shadow-2xl text-text_dark-gray">
@@ -29,7 +28,6 @@ const ProjectsCategoryCommon = ({ title, description, categories, projects, proj
               </p>
           </>
           }
-
           <div className="justify-center text-center">
               
               {/* categories links list */}
