@@ -54,7 +54,7 @@ const clearFields = () => {
       lg:py-[85px] lg:px-24 xl:px-[125px]">
         <div className="flex flex-wrap items-center w-full">
           <div className="w-full lg:w-5/12 py-3">
-            <p className="text-[1.2rem] md:text-[1.35rem] lg:mr-4 text-[black] font-bold text-center"> {t(`newsletter.main_message`)} </p>
+            <p className="text-[1.2rem] md:text-[1.5rem] lg:mr-4 text-container_color5 font-bold text-center"> {t(`newsletter.main_message`)} </p>
           </div>
           <div className="w-full lg:w-7/12 py-3">
             <form onSubmit={handleSubmit}>

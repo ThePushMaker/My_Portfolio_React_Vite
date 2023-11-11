@@ -47,7 +47,6 @@
   --container_color2:rgb(var(--container_color2_aux)); /*used in about-me and projects*/
   --container_color2_aux:23, 25, 57; /*used in skills*/
   --container_color3:rgb(224, 224, 233);/*Used in articles*/
-  --container_color4:#b9b9e7;/*Used in articles*/
   --container_color5:#15193e; /*used in footer*/
   --container_color7:#1f256c; /*used in projects_category_common*/
   --bg_color1:#172565;

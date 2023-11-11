@@ -38,7 +38,7 @@ export default {
       'container_color': 'var(--container_color)',
       'container_color2': 'var(--container_color2)',
       'container_color3': 'var(--container_color3)',
-      'container_color4': 'var(--container_color4)',
+      'container_color5': 'var(--container_color5)',
       'container_color6': 'var(--container_color6)',
       
       'default_md_text_size': 'var(--default_md_text_size)',
