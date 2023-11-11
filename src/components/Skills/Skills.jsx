@@ -90,12 +90,16 @@ const Skills = () => {
       "label": "Node.Js"
     },
     {
-      "img": meter7,
-      "label": "Tailwind CSS"
+      "img": meter11,
+      "label": "CSS3"
     },
     {
       "img": meter8,
       "label": "Bootstrap"
+    },
+    {
+      "img": meter7,
+      "label": "Tailwind CSS"
     },
     {
       "img": meter9,
@@ -104,10 +108,6 @@ const Skills = () => {
     {
       "img": meter10,
       "label": "MySQL"
-    },
-    {
-      "img": meter11,
-      "label": "CSS3"
     },
     {
       "img": meter12,
@@ -203,7 +203,7 @@ const Skills = () => {
                   ))}
               </Carousel>      */}
               
-              <div className='grid grid-cols-7 gap-8 skill-slider pb-10 mb-4 lg:mb-0'>
+              <div className='skills_grid skill-slider lg:mb-0'>
               {imgCarousel.map((item, index) => (
                 <div className='item mx-10' key={index}>
                   <img src={item.img} alt={item.label} />
