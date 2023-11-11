@@ -21,6 +21,7 @@
   /* width: 50%; */
   width: 90px;
   margin: auto 0 auto 0;
+  padding-bottom: 0.5rem;
 }
 
 @media (min-width: 400) {
@@ -38,11 +39,11 @@
 .item {
   display: flex;
   flex-direction: column;
+  font-size: 1.2rem;
 }
 
 .skill img {
   align-self: center; /*alinear imagenes centro x*/
-  padding-bottom: 0.5rem;
 }
 /* .react-multiple-carousel__arrow--left {
   left: 0;
