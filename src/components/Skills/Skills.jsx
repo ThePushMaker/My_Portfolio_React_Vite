@@ -1,4 +1,4 @@
-import Carousel from 'react-multi-carousel';
+// import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from '../../assets/img/color-sharp.png';
 import './Skills.css';
@@ -17,31 +17,37 @@ import meter11 from '../../assets/img/skill_icons/css.png';
 import meter12 from '../../assets/img/skill_icons/html.png';
 import meter13 from '../../assets/img/skill_icons/figma.png';
 import meter14 from '../../assets/img/skill_icons/languages.jpg';
+import meter15 from '../../assets/img/skill_icons/electron.png';
+import meter16 from '../../assets/img/skill_icons/git.png';
+import meter17 from '../../assets/img/skill_icons/postman.png';
+import meter18 from '../../assets/img/skill_icons/scrum.png';
+import meter19 from '../../assets/img/skill_icons/photoshop.png';
+import img_adobexd from '../../assets/img/skill_icons/adobexd.png';
 
 
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 7,
-    partialVisibilityGutter: 40
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 7,
-    partialVisibilityGutter: 40
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 4,
-    partialVisibilityGutter: 30
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 3,
-    partialVisibilityGutter: 30
-  }
-};
+// const responsive = {
+//   superLargeDesktop: {
+//     // the naming can be any, depends on you.
+//     breakpoint: { max: 4000, min: 3000 },
+//     items: 7,
+//     partialVisibilityGutter: 40
+//   },
+//   desktop: {
+//     breakpoint: { max: 3000, min: 1024 },
+//     items: 7,
+//     partialVisibilityGutter: 40
+//   },
+//   tablet: {
+//     breakpoint: { max: 1024, min: 464 },
+//     items: 4,
+//     partialVisibilityGutter: 30
+//   },
+//   mobile: {
+//     breakpoint: { max: 464, min: 0 },
+//     items: 3,
+//     partialVisibilityGutter: 30
+//   }
+// };
 
 const Skills = () => {
   const [ t ] = useTranslation("global");
@@ -109,11 +115,35 @@ const Skills = () => {
     },
     {
       "img": meter13,
-      "label": "Wireframes & Mockups"
+      "label": "Figma"
+    },
+    {
+      "img": img_adobexd,
+      "label": "Adobe XD"
     },
     {
       "img": meter14,
       "label": t('skills.english_spanish')
+    },
+    {
+      "img": meter15,
+      "label": "Electron"
+    },
+    {
+      "img": meter16,
+      "label": "Git"
+    },
+    {
+      "img": meter17,
+      "label": "Postman"
+    },
+    {
+      "img": meter18,
+      "label": "SCRUM"
+    },
+    {
+      "img": meter19,
+      "label": "Photoshop"
     }
   ]
   
