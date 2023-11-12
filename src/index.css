@@ -82,29 +82,29 @@
   } */
 }
 
-/* Configuraciones de scrollbar */
+/* scrollbar */
 /* width */
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 0.45rem;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: #292934;
-  border-radius: 5px;
+  border-radius: 0.2rem;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--link_color);
-  border-radius: 5px;
+  border-radius: 0.2rem;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--link_disabled_color);
 }
-/* hasta aqui scrollbar */
+/* ends scrollbar */
 
 
 /* default css */
