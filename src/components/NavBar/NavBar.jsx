@@ -35,7 +35,7 @@ const NavBar = () => {
   return (
     <>
     <div>
-      <nav className={`${scrolled ? 'scrolled backdrop-blur-sm py-[10px]' : ''} navbar px-10 xlNavbar:px-16 py-6`}>
+      <nav className={`${scrolled ? 'scrolled' : ''} navbar px-10 xlNavbar:px-16 py-6`}>
         <div className="mx-auto max-w-[1500px] flex justify-between ">
           
             <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start">
