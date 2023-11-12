@@ -30,7 +30,6 @@
 /* 80d2ff lightblue2 */
 /* 1f1d36 bg gray  */
 :root {
-  /* xd */
   --text_dark-gray: #24243a;
   --neon_color1:rgba(65, 135, 255, 0.659); /*used in projectItem*/
   --neon_color2: #0062ff;
@@ -48,6 +47,7 @@
   --container_color2:rgb(var(--container_color2_aux)); /*used in about-me and projects*/
   --container_color2_aux:23, 25, 57; /*used in skills*/
   --container_color3:rgb(224, 224, 233);/*Used in articles*/
+  --container_color4:#b9b9e7;/*Used in select tab projects*/
   --container_color5:#15193e; /*used in footer*/
   --container_color7:#1f256c; /*used in projects_category_common*/
   --bg_color1:#172565;
@@ -293,7 +293,7 @@ p.danger {
 }
 
 .bgBanner1 {
-  background-image: linear-gradient(to right, rgba(6, 1, 21, 1), rgba(14, 0, 17, 0.525)), url("./assets/img/bg1.jpg");
+  background-image: linear-gradient(to right, rgb(11, 2, 38), rgba(21, 2, 25, 0.51)), url("./assets/img/bg1.jpg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
