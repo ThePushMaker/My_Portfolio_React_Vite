@@ -37,7 +37,6 @@ const NavBar = () => {
     <div>
       <nav className={`${scrolled ? 'scrolled' : ''} navbar`}>
         <div className="mx-auto max-w-[1500px] flex justify-between ">
-          
             <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start">
 
                 {/* menu lg */}
@@ -101,9 +100,9 @@ const NavBar = () => {
                     <a href="#contact">
                       <button className="contact_button px-4 py-4 xlNavbar:px-6 ml-3">
                         {'< '}
-                          <label className="text-styled-font-family1 text-[14px] xlNavbar:text-xlNavbar">
+                          <span className="text-styled-font-family1 text-[14px] xlNavbar:text-xlNavbar">
                             {t(`navbar.CONTACT ME`)}
-                          </label>
+                          </span>
                         {' />'}
                       </button>
                     </a>

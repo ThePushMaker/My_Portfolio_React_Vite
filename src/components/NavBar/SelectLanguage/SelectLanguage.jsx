@@ -128,7 +128,7 @@ const SelectLanguage = () => {
           <span className='text-[21px] xlNavbar:text-[23px]'>{selectedElement}</span>
           <img src={arrowDownIcon} alt="arrowDownIcon" />          
         </div>
-        <div className="content">
+        <div className={`${isActive ? 'active opacity-100' : 'opacity-0'} content transition-all duration-500 ease-in-out`}>
           <div className="search">
             <img src={searchIcon} alt="searchIcon" />       
             <input

@@ -40,10 +40,9 @@ const MobileNavBar = ({ NavbarRoutesHome, NavbarRoutes }) => {
         {/*mobile navbar menu  */}      
           <div
             id="navbar"
-            className={`${openMobileNavbar ? '#navbar active' : '#navbar'} 
-            mobileNavbarMenu px-11 py-6 fixed top-0 right-[-75vw] md:right-[-50vw] w-[70vw] md:w-[45vw] 
-            ease-in-out duration-300 backdrop-blur-md bg-[black] shadow-2xl 
-            shadow-border_color1 text-white bg-opacity-[90%] h-screen lg:invisible lg:hidden`} 
+            className={`${openMobileNavbar ? 'active' : ''} 
+            mobileNavbarMenu px-11 py-6 fixed top-[4rem] right-[-75vw] md:right-[-50vw] w-[70vw] md:w-[45vw] 
+            shadow-2xl shadow-border_color1 text-white bg-opacity-[90%] h-screen lg:invisible lg:hidden`} 
           >
             <ul className="space-y-8 py-8 flex flex-col">
               {location.pathname === '/' && (
