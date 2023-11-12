@@ -6,7 +6,12 @@
   top: 0;
   z-index:10;
   transition: 0.3s ease-in-out;
-  padding: 0.6rem;
+  padding: 0.6rem 2.5rem;
+}
+@media (min-width: 1400px) {
+  .navbar{
+    padding: 0.6rem 4rem;
+  }
 }
 .scrolled {
   backdrop-filter: blur(4px);

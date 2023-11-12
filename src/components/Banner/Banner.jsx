@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import headerImg from "../../assets/img/pfp/difuminado2.png";
+import headerImg from "../../assets/img/pfp/difuminado5.png";
 import arrowDown from "../../assets/img/icons/arrow-down.svg";
 
 import './Banner.css';
