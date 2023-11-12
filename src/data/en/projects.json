@@ -1,9 +1,9 @@
 {
-  "description": "I specialize in creating technological solutions, from robust web platforms to expressive and functional interfaces. I am constantly engaged with the development community, driven by my passion for creation, the pursuit of excellence in design, and the constant desire to contribute to the success of my clients and the community at large",
+  "description": "I specialize in web development: from interfaces to expressive and functional platforms. Always striving for excellence, committed to delivering quality results",
   "categories": [
     {
       "category": "Web Platforms & Applications",
-      "description": "I can create cross-platform web solutions tailored to your specific needs. From planning and documentation to implementation and maintenance, my commitment is to provide you with the best web platform and applications that will maximize your company's productivity and management",
+      "description": "Multi-platform web solutions tailored to meet your specific needs. From planning, documentation, and development to implementation and maintenance, my commitment is to provide you with the best web platform that will maximize your company's productivity and management",
       "projects": [
         {
           "title": "Professional Portfolio",
@@ -165,7 +165,7 @@
     },
     {
       "category": "Interface Design",
-      "description": "Passionate about designing user interfaces that are both appealing and functional. My goal is to provide users with a memorable experience. From the initial user research to prototyping and continuous optimization, I am dedicated to elevating the user experience to the highest level possible",
+      "description": "Designing attractive and functional user interfaces. My goal is to provide users with a comfortable yet memorable experience",
       "projects": [
         {
           "title": "Business Startup",
