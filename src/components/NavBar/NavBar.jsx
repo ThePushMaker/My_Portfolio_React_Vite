@@ -50,7 +50,7 @@ const NavBar = () => {
                       {NavbarRoutesHome.map((item, index) => (
                         <a href={item.URL} key={index} className={`${
                           activateLink === item.name ? "active" : ""
-                          }  ${navLinkStyles}`}
+                          }  ${navLinkStyles} hover:text-link_color_hover`}
                           onClick={() => onUpdateActiveLink(item.name)}
                         > 
                           {t(`navbar.${item.name}`)}

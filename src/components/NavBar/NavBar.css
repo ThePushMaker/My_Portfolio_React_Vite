@@ -8,14 +8,13 @@
   transition: 0.3s ease-in-out;
   padding: 1.5rem 0;
 }
-@media (min-width: 1400px) {
+@media (min-width: 768px) {
   .navbar{
-    
     padding: 2rem 0;
   }
 }
-
 .scrolled {
+  transition: all 0.4s ease-in-out;
   padding: 0.45rem 0;
   backdrop-filter: blur(4px);
   /* box-shadow: inset 0px 146px 10px -70px rgba(0, 4, 18, 0.9); */
@@ -36,9 +35,9 @@
 
 .navbar-link {
   font-weight: 400;
-  color: #fff !important;
   letter-spacing: 0.8px;
-  opacity: 0.60;
+  opacity: 0.6;
+  font-size: 1.25rem;
   transition: 0.15s ease-in-out;
 }
 .navbar-link:hover,
