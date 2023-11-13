@@ -41,7 +41,8 @@
   transition: opacity 0.25s linear;
 }
 .wrapper.active .content {
-  /* display: block; */
+  display: block;
+  background: red;
   opacity:100;
 }
 .content .search {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../../assets/img/logo.svg";
+import logo from "../../assets/img/logo.png";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 import MobileNavBar from "./MobileNavBar";
@@ -36,14 +36,14 @@ const NavBar = () => {
     <>
     <div>
       <nav className={`${scrolled ? 'scrolled' : ''} navbar`}>
-        <div className="mx-auto max-w-[1500px] flex justify-between ">
+        <div className="mx-auto max-w-[90vw] flex justify-between ">
             <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start">
 
                 {/* menu lg */}
                 {location.pathname === '/' && (
                   <>
                     <a href="/#top" className="navbar-brand">
-                      <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-28 xlNavbar:w-[140px] lg:mr-4 xl:mr-8"/>
+                      <img src={logo} alt="Logo" className="logoImgNavbar"/>
                     </a>
                     <div className="invisible hidden lg:inline lg:visible">
                     
@@ -62,7 +62,7 @@ const NavBar = () => {
                 {location.pathname !== '/' && (
                   <>
                     <Link to="/" className="navbar-brand">
-                      <img src={logo} alt="Logo" className="object-contain w-[120px] md:w-[130px] lg:w-28 xlNavbar:w-[140px]  lg:mr-4 xl:mr-8"/>
+                      <img src={logo} alt="Logo" className="logoImgNavbar"/>
                     </Link>
                     <div className="invisible hidden lg:inline lg:visible">
                       {NavbarRoutes.map((item, index) => (
