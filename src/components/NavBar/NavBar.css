@@ -37,12 +37,28 @@
   font-weight: 400;
   letter-spacing: 0.8px;
   opacity: 0.6;
-  font-size: 1.25rem;
-  transition: 0.15s ease-in-out;
+  font-size: 1.25rem; 
+  transition: all 0.2s ease-in-out;
 }
 .navbar-link:hover,
 .navbar-link.active {
   opacity: 1;
+  position: relative;
+}
+.navbar-link.active span::before {
+  content: "< ";
+}
+.navbar-link.active span::after {
+  content: " >";
+}
+.navbar-link:hover::after {
+  content: "";
+  width: 80%;
+  height: 1px;
+  background-color: var(--link_color) !important;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 10%;
 }
 .contact_button {
   font-weight: 700;
@@ -134,7 +150,7 @@
 
 
 /* decoración bajo enlace */
-#navbar li a:hover::after {
+#mobileNavbar li a:hover::after {
   content: "";
   width: 30%;
   height: 2px;
@@ -144,7 +160,7 @@
   left: 0px
 }
 
-#navbar.active {
+#mobileNavbar.active {
   right: 0px;
 }
 .mobileNavbarMenu {

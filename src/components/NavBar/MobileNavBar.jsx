@@ -39,7 +39,7 @@ const MobileNavBar = ({ NavbarRoutesHome, NavbarRoutes }) => {
        
         {/*mobile navbar menu  */}      
           <div
-            id="navbar"
+            id="mobileNavbar"
             className={`${openMobileNavbar ? 'active' : ''} 
             mobileNavbarMenu px-11 py-6 fixed top-[4rem] right-[-75vw] md:right-[-50vw] w-[70vw] md:w-[45vw] 
             shadow-2xl shadow-border_color1 text-white bg-opacity-[90%] h-screen lg:invisible lg:hidden`} 
@@ -49,7 +49,11 @@ const MobileNavBar = ({ NavbarRoutesHome, NavbarRoutes }) => {
                 <>
                   {NavbarRoutesHome.map((item, index) => (
                     <li key={index} className="relative">
-                      <a href={item.URL} className="text-[1.45rem] font-bold hover:text-link_color_hover ease-in-out duration-300"> {t(`navbar.${item.name}`)}</a>
+                      <a href={item.URL} className="text-[1.45rem] font-bold hover:text-link_color_hover ease-in-out duration-300"> 
+                        <span>
+                          {t(`navbar.${item.name}`)}
+                        </span>
+                      </a>
                     </li>
                   ))}
                 </>

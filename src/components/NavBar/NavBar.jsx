@@ -46,16 +46,22 @@ const NavBar = () => {
                       <img src={logo} alt="Logo" className="logoImgNavbar"/>
                     </a>
                     <div className="invisible hidden lg:inline lg:visible">
-                    
+                      
+                      <ul className="flex">
                       {NavbarRoutesHome.map((item, index) => (
-                        <a href={item.URL} key={index} className={`${
-                          activateLink === item.name ? "active" : ""
+                        <li key={index}>
+                          <a href={item.URL} className={`${
+                            activateLink === item.name ? "active" : ""
                           }  ${navLinkStyles} hover:text-link_color_hover`}
                           onClick={() => onUpdateActiveLink(item.name)}
-                        > 
-                          {t(`navbar.${item.name}`)}
-                        </a>
+                          > 
+                            <span>
+                              {t(`navbar.${item.name}`)}
+                            </span>
+                          </a>
+                        </li>
                       ))}
+                      </ul>
                     </div>
                   </>
                 )}
