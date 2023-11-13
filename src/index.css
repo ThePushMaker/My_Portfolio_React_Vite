@@ -307,6 +307,10 @@ p.danger {
 .bg_semitransparent {
   background: rgba(var(--container_color2_aux), 0.90);
 }
+.bgContainer2 {
+  background: var(--container_color2);
+  
+}
 
 /* hr separator */
 

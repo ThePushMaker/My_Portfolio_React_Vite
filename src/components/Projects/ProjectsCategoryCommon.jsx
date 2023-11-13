@@ -10,7 +10,7 @@ const ProjectsCategoryCommon = ({ title, description, categories, projects, proj
 
   return (
     <>
-      <div className="pb-[150px] bg-container_color3 min-h-screen shadow-2xl text-text_dark-gray">
+      <div className="pb-[150px] bgContainer2 min-h-screen shadow-2xl text-white">
         <div className="w-full pt-24 pb-14 bg_projects_category_common mb-7">
           <h1 className="text-center font-bold text-white text-[3rem] ">
             { title }
@@ -23,7 +23,7 @@ const ProjectsCategoryCommon = ({ title, description, categories, projects, proj
           </div>
           { !projectInfo &&
           <>
-              <p className="mx-auto text-text_dark-gray mb-7 w-[90%] md:w-4/5 lg:mx-30">
+              <p className="mx-auto text-white mb-7 w-[90%] md:w-4/5 lg:mx-30">
                 {description}
               </p>
           </>
@@ -34,14 +34,14 @@ const ProjectsCategoryCommon = ({ title, description, categories, projects, proj
               { categories &&
                 <div className="flex justify-center">
                   <div className="w-full">
-                    <span className="text-[1.78rem] text-text_dark-gray mb-2">Categories:</span>
+                    <span className="text-[1.78rem] text-white mb-2">Categories:</span>
                     <hr className="mb-3 w-1/3 mx-auto" />
-                    <ul className="w-fit mx-auto mt-2 list-disc text-text_dark-gray">
+                    <ul className="w-fit mx-auto mt-2 list-disc text-white">
                       {categories.map((category, index)=> (
                         <li className="py-2 px-3" key={index}>
                           <Link
                             to={`${routes[category.category]}`}
-                            className="text-dark_link_color hover:text-dark_link_color_hover2 hover:underline"
+                            className="text-link_color hover:text-link_color_hover hover:underline"
                           >
                             {category.category}
                           </Link>
@@ -55,7 +55,7 @@ const ProjectsCategoryCommon = ({ title, description, categories, projects, proj
               {/* project items list */}
               {projects && (
                 <>
-                  <h3 className="text-[1.78rem] text-text_dark-gray mb-2">Projects list:</h3>
+                  <h3 className="text-[1.78rem] text-white mb-2">Projects list:</h3>
                   <hr className="mb-6 w-1/3 mx-auto" />
                   <ProjectsListGrid 
                     projects={projects} 
@@ -67,7 +67,7 @@ const ProjectsCategoryCommon = ({ title, description, categories, projects, proj
               {/* Project detail  */}
               {projectInfo &&
                 <div className="">
-                  <h2 className="text-4xl text-text_dark-gray">{t(`projectDetail.subtitle`)+':'}</h2>
+                  <h2 className="text-4xl text-white">{t(`projectDetail.subtitle`)+':'}</h2>
                     <div className="w-full md:w-3/4 mx-auto my-6 proj_imgbx_large ">
                       <ProjectImage 
                         imgPath = { projectInfo.imgPath }
@@ -79,7 +79,7 @@ const ProjectsCategoryCommon = ({ title, description, categories, projects, proj
                     <h3 className="text-3xl"> 
                       {t(`projectDetail.Description`)+':'}
                     </h3>
-                    <p className="text-text_dark-gray">
+                    <p className="text-white">
                       {projectInfo.description}
                     </p>
                   </div>
@@ -88,7 +88,7 @@ const ProjectsCategoryCommon = ({ title, description, categories, projects, proj
                     <h3 className="text-3xl">
                       {t(`projectDetail.Category`)+':'}
                     </h3>
-                    <p className="text-text_dark-gray">
+                    <p className="text-white">
                       {projectCategory}
                     </p>
                   </div>

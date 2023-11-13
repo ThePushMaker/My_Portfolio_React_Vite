@@ -39,11 +39,11 @@ const BreadCrumb = () => {
         {breadcrumbItems.map((item, index) => (
           <React.Fragment key={item.to}>
             <Link to={item.to} 
-              className='text-[20.5px] text-dark_link_color hover:text-dark_link_color_hover2 hover:underline px-[0.8rem]'> 
+              className='text-[20.5px] text-link_color hover:text-link_color_hover hover:underline px-[0.8rem]'> 
               {item.label}
               {/* {t(`navbar.${item.label}`)} */}
             </Link>
-            { index < breadcrumbItems.length - 1 && (<span className='normal_font_family_aux'> {'/'} </span>) }
+            { index < breadcrumbItems.length - 1 && (<span className='normal_font_family_aux text-white'> {'/'} </span>) }
             {/* {' / '} */}
           </React.Fragment>
         ))}
