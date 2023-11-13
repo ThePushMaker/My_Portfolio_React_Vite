@@ -43,7 +43,7 @@
   --dark_link_color:#0040a6;
   --dark_link_color_hover:#f6ff00;
   --dark_link_color_hover2:#0059e8;
-  --container_color:#171939; /*used in skills*/
+  /* --container_color:#171939; used in skills */
   --container_color2:rgb(var(--container_color2_aux)); /*used in about-me and projects*/
   --container_color2_aux:23, 25, 57; /*used in skills*/
   --container_color3:rgb(224, 224, 233);/*Used in articles*/
@@ -337,4 +337,7 @@ p.danger {
 }
 .bg_projects_category_common {
   background-image: linear-gradient( var(--container_color7), var(--container_color7));
+}
+.containerShadow1{
+  box-shadow: 0 7px 10px 2px rgba(0,0,0,0.5);
 }

@@ -153,7 +153,7 @@ const Skills = () => {
         <div>
           <div className='skill'>
             <div className=' mx-auto px-3 md:px-14 lg:px-14 '>
-              <div className=' skill-bx bg-container_color2 shadow-2xl pt-12 pb-16 px-[28px] md:py-[50px] md:px-[40px] lg:px-24'>
+              <div className='containerShadow1 skill-bx shadow-2xl pt-12 pb-16 px-[28px] md:py-[50px] md:px-[40px] lg:px-24'>
               <h2>
                 <span className='emoji_size'>📚 </span>
                   {t(`skills.skills`)}

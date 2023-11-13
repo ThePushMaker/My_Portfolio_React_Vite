@@ -1,5 +1,6 @@
 
 /** skills **/
+
 .background-image-left {
   top:28%;
   position: absolute;
@@ -11,6 +12,7 @@
   border-radius: 64px;
   text-align: center;
   margin-top: -60px;
+  background-color: rgba(var(--container_color2_aux), 0.8);
 }
 .skill-slider {
   width: 100%;
