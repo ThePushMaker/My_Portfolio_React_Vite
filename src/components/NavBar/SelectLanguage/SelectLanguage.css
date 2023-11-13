@@ -20,6 +20,7 @@
   height: 50px;
   padding: 0 20px;
   justify-content: space-between;
+  transition: color 0.3s ease-in-out;
 }
 .select-btn:hover {
   color: var(--link_color_hover);
