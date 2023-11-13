@@ -61,9 +61,14 @@
   "about_me": {
     "more_about_me": "About Me",
     "img_description": "Editor's note: This is not me; I am the editor",
-    "paragraph2": "Full Stack Developer based in La Paz, Mexico. I'm about to graduate in my Software Development Engineering career at the Autonomous University of Baja California Sur, maintaining an average of 92 out of 100",
-    "paragraph3": "Throughout time, I've discovered that undoubtedly my greatest strength lies in programming. I enjoy creating awesome things. I aspire to demonstrate through my efforts that software isn't just cold, mechanical logic; it's not just a tool, but has the potential to become something authentically artistic, fascinating, and brimming with style",
-    "paragraph4": "I'm currently working on independent projects aimed at helping people learn to program. I'm excited to see how these projects positively impact the lives of others",
+    "paragraph1_1": "Full Stack Developer based in La Paz, Mexico. I am about to graduate in my career as a Software Development Engineer at the Autonomous University of Baja California Sur",
+    "paragraph1_2": " maintaining an average of 92 out of 100",
+    "paragraph2_1": "Over time, I discovered without a doubt that",
+    "paragraph2_2": " my greatest strength is programming.",
+    "paragraph2_3": " I enjoy creating awesome things. I aspire to demonstrate through my efforts that software isn't just cold, mechanical logic; it's not merely a tool, but has the potential to become something authentically artistic, fascinating, and overflowing with style",
+    "paragraph3_1": "Currently,",
+    "paragraph3_2": " I'm working on independent projects aimed at helping people learn how to program",
+    "paragraph3_3": ". I'm excited to see how these projects positively impact the lives of others",
     "classifications": "Classifications",
     "enneagram": "Enneagram"
   },

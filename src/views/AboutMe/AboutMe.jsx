@@ -24,9 +24,23 @@ const AboutMe = () => {
               <span className='emoji_size'> 🚀</span>
             </h2>
             <div className="w-[90%] mx-auto lg:ml-0 text-left">
-              <p className={`${paragraphStyles} pb-4`}>{t(`about_me.paragraph2`)}.</p>
-              <p className={`${paragraphStyles} pb-4`}>{t(`about_me.paragraph3`)}.</p>
-              <p className={`${paragraphStyles} pb-4`}>{t(`about_me.paragraph4`)}.</p>
+              <p className={`${paragraphStyles} pb-4`}>
+                {t(`about_me.paragraph1_1`)}
+                <strong className="text-highlighted_text_color">{t(`about_me.paragraph1_2`)}</strong>
+                {'.'}
+              </p>
+              <p className={`${paragraphStyles} pb-4`}>
+                {t(`about_me.paragraph2_1`)}
+                <strong className="text-highlighted_text_color">{t(`about_me.paragraph2_2`)}</strong>
+                {t(`about_me.paragraph2_3`)}
+                {'.'}
+              </p>
+              <p className={`${paragraphStyles} pb-4`}>
+                {t(`about_me.paragraph3_1`)}
+                <strong className="text-highlighted_text_color">{t(`about_me.paragraph3_2`)}</strong>
+                {t(`about_me.paragraph3_3`)}
+                {'.'}
+              </p>
             </div>
             <h3 className="text-[1.6rem] mb-3 text-center">{t(`about_me.classifications`)}<span className="text-[21px]">🤓</span>:</h3>
             <p className={`${paragraphStyles} text-center`}>
