@@ -1,4 +1,21 @@
 
+.projectItemCard {
+  margin: 0 auto;
+  /* border: 2.15rem solid var(--neon_color1); */
+  border-radius: 2rem;
+  padding: 0.6rem 0.6rem;
+  background: var(--degradado6);
+}
+.projectItemCard .textContainer {
+  margin: 1.5rem auto;
+  text-align: center;
+}
+.projectItemCard .textContainer h4 {
+  font-size: 1.6rem;
+  color: var(--highlighted_text_color);
+  font-weight: 700;
+}
+
 .proj-imgbx {
   position: relative;
   border-radius: 30px;

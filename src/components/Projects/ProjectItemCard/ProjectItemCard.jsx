@@ -5,7 +5,7 @@ import ProjectImage from "../ProjectImage/ProjectImage"
 const ProjectItemCard = ( {title, description, imgPath} ) => {
  
   return (
-    <motion.div animate={{scale: [0, 1]}} transition={{duration: 0.5}} className="mx-auto">
+    <motion.div animate={{scale: [0, 1]}} transition={{duration: 0.5}} className="projectItemCard">
         <div className="proj-imgbx border-[1px] border-border_color2 flex hover:shadow-md hover:shadow-neon_color2 
           h-[270px]" 
         >
@@ -14,10 +14,10 @@ const ProjectItemCard = ( {title, description, imgPath} ) => {
             title = { title }
           />
           
-          <div className="proj-txtx">
-            <h4>{title}</h4>
-            <span>{description}</span>
-          </div>
+        </div>
+        <div className="textContainer">
+          <h4>{title}</h4>
+          <span>{description}</span>
         </div>
     </motion.div>
       
