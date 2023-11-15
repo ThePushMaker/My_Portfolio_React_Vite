@@ -49,6 +49,7 @@
   --container_color3:rgb(224, 224, 233);/*Used in articles*/
   --container_color4:#b9b9e7;/*Used in select tab projects*/
   --container_color5:#15193e; /*used in footer*/
+  --container_color6:rgba(22, 20, 64, 0.8); /*used in skills*/
   --container_color7:#1f256c; /*used in projects_category_common*/
   --bg_color1:#172565;
   --success_color:rgb(146, 255, 146);
