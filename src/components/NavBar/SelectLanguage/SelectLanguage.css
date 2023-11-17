@@ -20,7 +20,7 @@
   height: 50px;
   padding: 0 20px;
   justify-content: space-between;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 .select-btn:hover {
   color: var(--link_color_hover);
@@ -47,8 +47,11 @@
 }
 .wrapper.active .content {
   display: block;
-  background: red;
   opacity:100;
+  pointer-events: all;
+}
+.wrapper .content {
+  pointer-events: none;
 }
 .content .search {
   position: relative;

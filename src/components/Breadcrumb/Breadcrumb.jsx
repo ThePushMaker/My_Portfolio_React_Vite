@@ -17,7 +17,6 @@ const BreadCrumb = () => {
   // Inicializa el array de elementos del breadcrumb con el enlace a la página de inicio
   const breadcrumbItems = [{ to: '/', label: 'Home' }];
   
-
   let currentUrl = '';  
   // Itera sobre las partes de la URL y crea dinámicamente los elementos del breadcrumb
   crumbs.forEach((crumb, index) => { 
