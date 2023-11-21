@@ -1,22 +1,4 @@
-.degradado4 {
-  background: var(--degradado4);
-}
-
-.bgBannerContacto {
-  background-image: linear-gradient(to right, rgb(55, 0, 255), rgba(14, 0, 17, 0.73)), url("../../assets/img/bg2.jpg");
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-/** Contact **/
-.contact img {
-  width: 92%;
-}
-
-
-
+.transparentInput
 
 .contact form input, .contact form textarea {
   width: 100%;

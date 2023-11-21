@@ -2,6 +2,7 @@ import '../../components/Contact/Contact.css'
 import { useState } from 'react';
 import contactImg from '../../assets/img/contact-img.png'
 import { useTranslation } from 'react-i18next';
+import EmailDisplay from '../EmailDisplay/EmailDisplay';
 
 const Contact = () => {
   const [ t] = useTranslation("global"); 
@@ -14,12 +15,15 @@ const Contact = () => {
   const [buttonText, setButtonText] = useState('SEND');
   const [status, setStatus] = useState({useState});
   
+  const contactEmail = import.meta.env.REACT_APP_NODEMAILER_RECIPIENT;
+  
   const onFormUpdate = (category, value) => {
     setFormDetails({
       ...formDetails,
       [category]: value
     })
   }
+	
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -113,6 +117,10 @@ const Contact = () => {
                   </div>
                 </div>
               </form>
+              
+              {/* copy email component */}
+              <EmailDisplay email={contactEmail} />          
+                  
             </div>
           </div>
         </div>
