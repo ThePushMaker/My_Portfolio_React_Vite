@@ -1,7 +1,8 @@
+import './TransparentInput.css'
 const TransparentInput = ({ autoComplete, name, onChange, placeholder, type, value }) => {
 
   return(
-    <div className='w-full'>
+    <div className='w-full transparentInput'>
       <input 
         autoComplete={autoComplete}
         className='bg-[white] bg-opacity-[4%]'
