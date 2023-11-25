@@ -1,8 +1,8 @@
-const CustomHeader = ({ emoji, text }) => {
+const CustomHeader = ({ emoji, text, align }) => {
 
   return(
 
-    <h2 className="md:text-[50px] lg:text-left mb-4">
+    <h2 className={`${align==='left'? 'lg:text-left' : ''} ${align==='center'? 'lg:text-center' : ''} ${align==='right'? 'lg:text-right' : ''}   md:text-[50px]  mb-4`}>
       <span className='emoji_size'>{emoji} </span>
         {text}
       <span className='emoji_size'> {emoji}</span>

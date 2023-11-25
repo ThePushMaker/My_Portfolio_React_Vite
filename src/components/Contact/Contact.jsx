@@ -4,6 +4,7 @@ import contactImg from '../../assets/img/contact-img.png'
 import { useTranslation } from 'react-i18next';
 import EmailDisplay from '../EmailDisplay/EmailDisplay';
 import TransparentInput from '../UI/TransparentInput/TransparentInput';
+import CustomHeader from '../UI/CustomHeader/CustomHeader';
 
 const Contact = () => {
   const [ t] = useTranslation("global"); 
@@ -67,7 +68,11 @@ const Contact = () => {
               <img src={contactImg} alt="contact_image" />
             </div>
             <div className='w-full md:w-1/2 mt-10 md:mt-0'>
-              <h2 className='text-[40px] mb-5'>{t(`contact.header`)}</h2>
+              <CustomHeader
+                align='center'
+                emoji='🚀'
+                text={t(`contact.header`)}
+              />
               <p className='mb-5 text-center'> {t(`contact.subtitle`)}</p>
               
               <form onSubmit={handleSubmit}>

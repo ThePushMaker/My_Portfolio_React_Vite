@@ -20,7 +20,8 @@ const AboutMe = () => {
           </div>
           <div className="w-full lg:w-6/12 text-center lg:text-left">
             <CustomHeader
-              emoji="🚀"
+              align='left'
+              emoji='🚀'
               text={t(`about_me.more_about_me`)}
             />
             <div className="w-[90%] mx-auto lg:ml-0 text-left">
