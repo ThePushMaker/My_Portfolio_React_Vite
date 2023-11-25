@@ -23,6 +23,7 @@ import meter17 from '../../assets/img/skill_icons/postman.png';
 import meter18 from '../../assets/img/skill_icons/scrum.png';
 import meter19 from '../../assets/img/skill_icons/photoshop.png';
 import img_adobexd from '../../assets/img/skill_icons/adobexd.png';
+import CustomHeader from '../UI/CustomHeader/CustomHeader';
 
 
 // const responsive = {
@@ -154,11 +155,11 @@ const Skills = () => {
           <div className='skill'>
             <div className=' mx-auto px-3 md:px-14 lg:px-14 '>
               <div className='containerShadow1 skill-bx shadow-2xl pt-12 pb-16 px-[28px] md:py-[50px] md:px-[40px] lg:px-24'>
-              <h2>
-                <span className='emoji_size'>📚 </span>
-                  {t(`skills.skills`)}
-                <span className='emoji_size'> 📚</span>
-              </h2>
+              <CustomHeader
+                align='center'
+                emoji='📚'
+                text={t(`skills.skills`)}
+              />
                 <p className='text-center w-[90%] md:w-5/6 mx-auto mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'
               > 
                   {skills_description} 

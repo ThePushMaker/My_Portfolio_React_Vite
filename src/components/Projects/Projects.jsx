@@ -6,6 +6,7 @@ import projectsJSON_es from "../../data/es/projects.json";
 import Tabs from "./Tabs/Tabs.jsx";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
+import CustomHeader from "../UI/CustomHeader/CustomHeader.jsx";
 // soon: category 'Research and Experimentation'
 
 const Projects = () => {
@@ -31,11 +32,11 @@ const Projects = () => {
       <section className="project bg_semitransparent px-4 md:px-14 lg:px-24 pt-12 pb-16 lg:pb-16" id="projects">
         <div className="container m-auto">
           <div className="w-full">
-            <h2>
-              <span className='emoji_size'>🗂️ </span>
-                {t('projects.title')}
-              <span className='emoji_size'> 🗂️</span>
-            </h2>
+            <CustomHeader
+                align='center'
+                emoji='🗂️'
+                text={t(`projects.title`)}
+              />
             <p className="mt-[14px] mx-auto mb-[35px] text-center w-[90%] md:w-5/6
               lg:mx-30"
             >

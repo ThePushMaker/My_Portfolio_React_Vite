@@ -70,7 +70,7 @@ const Contact = () => {
             <div className='w-full md:w-1/2 mt-10 md:mt-0'>
               <CustomHeader
                 align='center'
-                emoji='🚀'
+                emoji='📧'
                 text={t(`contact.header`)}
               />
               <p className='mb-5 text-center'> {t(`contact.subtitle`)}</p>
