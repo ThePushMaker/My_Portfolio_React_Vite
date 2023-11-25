@@ -19,9 +19,7 @@ const Contact = () => {
   const [formData, setFormData] = useState(resetFormData);
   const [buttonText, setButtonText] = useState('');
   const [status, setStatus] = useState({useState});
-  
-  const contactEmail = import.meta.env.REACT_APP_NODEMAILER_RECIPIENT;	
-  
+    
   const handleInputChange= (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -127,7 +125,7 @@ const Contact = () => {
               </form>
               
               {/* copy email component */}
-              <EmailDisplay email={contactEmail} />
+              <EmailDisplay contactEmail={import.meta.env.VITE_APP_CONTACT_EMAIL} />
             </div>
           </div>
         </div>

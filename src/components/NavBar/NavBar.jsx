@@ -34,7 +34,7 @@ const NavBar = () => {
   
   return (
     <>
-    <div>
+    <header>
       <nav className={`${scrolled ? 'scrolled' : ''} navbar`}>
         <div className="mx-auto max-w-[90vw] flex justify-between ">
             <div className="flex items-center w-full justify-between lg:w-fit lg:justify-start">
@@ -132,7 +132,7 @@ const NavBar = () => {
           
         </div>
       </nav>
-      </div>
+      </header>
       <div className="floating-button svg_link2" id="back-to-top-button">
         <a href='#top'>
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path className="stroke-link_color" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#FFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path> <g opacity="1"> <path d="M12 15.5V9.5" stroke="#FFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path> <path d="M9 11.5L12 8.5L15 11.5" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path> </g> </g></svg>
