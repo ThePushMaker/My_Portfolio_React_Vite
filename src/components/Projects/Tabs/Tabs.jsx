@@ -75,7 +75,7 @@ const Tabs = ({ categories }) => {
               <button
                 key={index}
                 id={`tab-${index + 1}`}
-                className="w-[100%] tab nav-item nav-link hover:underline hover:decoration-link_color_hover text-dark_link_color hover:text-dark_link_color_hover"
+                className="w-[100%] tab nav-item nav-link hover:underline hover:decoration-link_color_hover text-dark_link_color hover:text-dark_link_color_hover transition-all duration-300"
                 onClick={() => handleTabClick(index+1)}
               >
                 <span
