@@ -6,7 +6,7 @@
   top: 0;
   z-index: 10;
   padding: 2rem 0;
-  transition: padding 1s ease-in-out;
+  transition: padding 0.8s ease-in-out;
 
 }
 @media (min-width: 768px) {
