@@ -3,6 +3,7 @@ import { useState } from 'react';
 import contactImg from '../../assets/img/contact-img.png'
 import { useTranslation } from 'react-i18next';
 import EmailDisplay from '../EmailDisplay/EmailDisplay';
+import TransparentInput from '../UI/TransparentInput/TransparentInput';
 
 const Contact = () => {
   const [ t] = useTranslation("global"); 
@@ -52,7 +53,7 @@ const Contact = () => {
         setStatus ({ success: true, message: t(`contact.message_sent`) });
       } else {
         console.log(resonseJSON)
-        setStatus({ success: false, message: resonseJSON + t(`contact.something_wrong`) });
+        setStatus({ success: false, message: resonseJSON.code + ' ' + t(`contact.something_wrong`) });
       }
     }
   };
@@ -71,27 +72,22 @@ const Contact = () => {
               
               <form onSubmit={handleSubmit}>
                 <div className='flex flex-wrap'>
-                  <div className='w-full'>
-                    <input 
-                      className='bg-[white] bg-opacity-[4%]'
-                      type="text" 
-                      placeholder={t(`contact.placeholder_name`)}
-                      name="fullName"
-                      value={formData.fullName}
-                      onChange={handleInputChange}
-                      />
-                  </div>
-                  <div className='w-full'>
-                    <input 
-                      className='bg-[white] bg-opacity-[4%]'
-                      type="email" 
-                      autoComplete='on'
-                      placeholder={t(`contact.placeholder_email`)}
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                    />
-                  </div>
+                  <TransparentInput
+                    autoComplete='off'
+                    name={"fullName"}
+                    onChange={handleInputChange}
+                    placeholder={t(`contact.placeholder_name`)}
+                    type={"text"}
+                    value={formData.fullName}
+                  />
+                  <TransparentInput
+                    autoComplete='on'
+                    name={"email"}
+                    onChange={handleInputChange}
+                    placeholder={t(`contact.placeholder_email`)}
+                    type={"email"}
+                    value={formData.email}
+                  />
                   <div className='w-full'>
                     <textarea 
                       className='bg-[white] bg-opacity-[4%]'
