@@ -13,7 +13,7 @@ app.use(express.json());
 app.use("/", router);
 app.listen(5000, () => console.log("Server Running"));
 // console.log(process.env.REACT_APP_NODEMAILER_USER);
-// console.log(process.env.EMAIL_PASS);
+// console.log(process.env.REACT_APP_NODEMAILER_PASS);
 
 const contactEmail = nodemailer.createTransport({
   service: 'outlook',

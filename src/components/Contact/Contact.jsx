@@ -6,47 +6,53 @@ import EmailDisplay from '../EmailDisplay/EmailDisplay';
 
 const Contact = () => {
   const [ t] = useTranslation("global"); 
-  const formInitialDetails = {
+  
+  const resetFormData = {
     fullName: '',
     email: '',
     message: ''
   }
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('SEND');
+  // pborrar
+  // const [formData, setformData] = useState(resetFormData);
+  const [formData, setFormData] = useState(resetFormData);
+  const [buttonText, setButtonText] = useState('');
   const [status, setStatus] = useState({useState});
   
-  const contactEmail = import.meta.env.REACT_APP_NODEMAILER_RECIPIENT;
+  const contactEmail = import.meta.env.REACT_APP_NODEMAILER_RECIPIENT;	
   
-  const onFormUpdate = (category, value) => {
-    setFormDetails({
-      ...formDetails,
-      [category]: value
+  const handleInputChange= (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
     })
   }
-	
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+  
     // validate data
-    if(!formDetails.fullName ||!formDetails.email || !formDetails.message){
+    if(!formData.fullName ||!formData.email || !formData.message){
       setStatus({ success: false, message: t(`contact.fill_out_all`) });
     } else {
+      console.log(formData)
       setButtonText(t(`contact.sending`));
       let response = await fetch(import.meta.env.VITE_APP_NODEMAILER_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
         },
-        body: JSON.stringify(formDetails),
+        body: JSON.stringify(formData),
       })
       
       setButtonText(t(`contact.submit`))
-      let result = await response.json();
-      setFormDetails(formInitialDetails);
-      if (result.code == 200){
+      let resonseJSON = await response.json();
+      // setFormData(resetFormData);
+      if (resonseJSON.code == 200){
         setStatus ({ success: true, message: t(`contact.message_sent`) });
       } else {
-        setStatus({ success: false, message: t(`contact.something_wrong`) });
+        console.log(resonseJSON)
+        setStatus({ success: false, message: resonseJSON + t(`contact.something_wrong`) });
       }
     }
   };
@@ -62,36 +68,37 @@ const Contact = () => {
             <div className='w-full md:w-1/2 mt-10 md:mt-0'>
               <h2 className='text-[40px] mb-5'>{t(`contact.header`)}</h2>
               <p className='mb-5 text-center'> {t(`contact.subtitle`)}</p>
+              
               <form onSubmit={handleSubmit}>
                 <div className='flex flex-wrap'>
                   <div className='w-full'>
                     <input 
                       className='bg-[white] bg-opacity-[4%]'
-                      id='fullName'
                       type="text" 
-                      value={formDetails.fullName} 
                       placeholder={t(`contact.placeholder_name`)}
-                      onChange={(e) => onFormUpdate('fullName', e.target.value)} 
+                      name="fullName"
+                      value={formData.fullName}
+                      onChange={handleInputChange}
                       />
                   </div>
                   <div className='w-full'>
                     <input 
                       className='bg-[white] bg-opacity-[4%]'
-                      id='email'
-                      autoComplete='on'
                       type="email" 
-                      value={formDetails.email} 
+                      autoComplete='on'
                       placeholder={t(`contact.placeholder_email`)}
-                      onChange={(e) => onFormUpdate('email', e.target.value)} 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                     />
                   </div>
                   <div className='w-full'>
                     <textarea 
                       className='bg-[white] bg-opacity-[4%]'
-                      id='message'
-                      value={formDetails.message} 
                       placeholder= {t(`contact.placeholder_message`)}
-                      onChange={(e) => onFormUpdate('message', e.target.value)} 
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
                     ></textarea>
                   </div>
                   <div className='w-full'>
@@ -119,8 +126,7 @@ const Contact = () => {
               </form>
               
               {/* copy email component */}
-              <EmailDisplay email={contactEmail} />          
-                  
+              <EmailDisplay email={contactEmail} />
             </div>
           </div>
         </div>
