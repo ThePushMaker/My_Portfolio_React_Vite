@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import CustomHeader from '../../components/UI/CustomHeader/CustomHeader'
 
 const AboutMe = () => {
   const [ t ] = useTranslation("global");  
@@ -18,11 +19,10 @@ const AboutMe = () => {
             </div>
           </div>
           <div className="w-full lg:w-6/12 text-center lg:text-left">
-            <h2 className="md:text-[50px] lg:text-left mb-4">
-              <span className='emoji_size'>🚀 </span>
-                {t(`about_me.more_about_me`)}
-              <span className='emoji_size'> 🚀</span>
-            </h2>
+            <CustomHeader
+              emoji="🚀"
+              text={t(`about_me.more_about_me`)}
+            />
             <div className="w-[90%] mx-auto lg:ml-0 text-left">
               <p className={`${paragraphStyles} pb-4`}>
                 {t(`about_me.paragraph1_1`)}
