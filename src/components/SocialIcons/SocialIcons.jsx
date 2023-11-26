@@ -31,13 +31,6 @@ const SocialIcons = () => {
       href: 'https://www.youtube.com/channel/UCNy0OJqXOCyhThyXTcLLCJA?sub_confirmation=1',
       label: t(`navbar.YouTube`)
     },
-    {
-      id: 4,
-      src: navIcon4,
-      dataTooltip: t(`navbar.WakaTime Stats`),
-      href: 'https://wakatime.com/@dsw47',
-      label: 'WakaTime'
-    },
   ];
   
   return(

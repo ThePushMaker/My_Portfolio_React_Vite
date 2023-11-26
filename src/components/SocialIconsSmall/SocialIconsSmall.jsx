@@ -31,12 +31,6 @@ const SocialIcons = () => {
       dataTooltip: 'Programación para Todos',
       href: 'https://www.youtube.com/channel/UCNy0OJqXOCyhThyXTcLLCJA?sub_confirmation=1'
     },
-    {
-      id: 4,
-      src: navIcon4,
-      dataTooltip: t(`navbar.WakaTime Stats`),
-      href: 'https://wakatime.com/@dsw47'
-    },
   ];
   
   return(
