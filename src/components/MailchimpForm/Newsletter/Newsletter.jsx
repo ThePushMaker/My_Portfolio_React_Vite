@@ -47,21 +47,16 @@ const clearFields = () => {
 }
   
   return(
-    <div className="w-full">
-      <div className="newsletter-bx
-      py-[20px]
-      md:py-[50px] px-10  
-      lg:py-[85px] lg:px-24 xl:px-[125px]">
-        <div className="flex flex-wrap items-center w-full">
-          <div className="w-full lg:w-5/12 py-3">
-            <p className="text-[1.2rem] md:text-[1.5rem] lg:mr-4 text-container_color5 font-bold text-center"> {t(`newsletter.main_message`)} </p>
+   
+      <section className="newsletter-bx py-6 md:py-9 px-10 lg:py-[85px] w-full">
+        <div className="flex flex-wrap items-center w-full xl:w-10/12 mx-auto">
+          <div className="w-full lg:w-4/12">
+            <p className="text-[1.45rem] lg:mr-4 text-container_color5 font-bold text-center"> {t(`newsletter.main_message`)} </p>
           </div>
-          <div className="w-full lg:w-7/12 py-3">
+          <div className="w-full lg:w-8/12 py-5">
             <form onSubmit={handleSubmit}>
-               <div className="flex flex-wrap justify-end">
-                <div className="new-email-bx w-full mb-3 md:m-0 
-                  md:w-7/12"
-                >
+               <div className="flex flex-wrap justify-end w-full">
+                <div className="new-email-bx w-full mb-3 md:m-0 md:w-8/12">
                   <input 
                     className="focus:outline-border_color1 focus:ring-border_color1 w-full"
                     id="email2"
@@ -71,10 +66,9 @@ const clearFields = () => {
                     placeholder= {t(`newsletter.placeholder_email`)}
                     />
                 </div>
-                <div className="w-fit m-auto 
-                   md:m-0 md:pl-3 "
+                <div className="w-fit m-auto md:m-0 mt-2 nd:mt-0 md:pl-3"
                 >
-                  <button className="newsletter_button  bg-[black] bg-opacity-[88%] w-fit" type="submit">
+                  <button className="newsletter_button bg-[black] bg-opacity-[88%] w-fit" type="submit">
                     <span className="">
                       {t(`newsletter.submit`)}
                     </span>
@@ -114,8 +108,8 @@ const clearFields = () => {
               </div>
             }
             </div>
-      </div>
-    </div>
+      </section>
+   
   );
 }
 
