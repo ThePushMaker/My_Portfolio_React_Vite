@@ -26,8 +26,7 @@ const EmailDisplay = ({ contactEmail }) => {
         </div>
         <div className='mt-5 lg:mt-0'>
           <button  
-            className="button_transparent_rounded shadow-sm shadow-border_color1 hover:shadow-md hover:shadow-neon_color2
-            flex justify-center items-center w-fit border-[1.5px] border-solid border-border_color1 bg-[black] bg-opacity-40" 
+            className="button_transparent_rounded" 
             onClick={copyToClipboard}
             >
             <span className='hover:text-black'>

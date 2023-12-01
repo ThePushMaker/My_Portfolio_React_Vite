@@ -4,7 +4,9 @@
 
 @layer components {
   .button_transparent_rounded {
-    @apply px-11 py-[1.1rem] 
+    @apply px-11 py-[1.1rem] shadow-sm shadow-border_color1 hover:shadow-md hover:shadow-neon_color2
+    flex justify-center items-center w-fit border-[1.5px] border-solid border-border_color1 bg-[black] bg-opacity-40
+  text-white font-bold relative transition-all duration-300 ease-in-out rounded-[1.3rem]
   }
   
 }
@@ -248,14 +250,6 @@ p.danger {
 }
 
 
-.button_transparent_rounded {
-  font-weight: 700;
-  color: #ffffff;
-  position: relative;
-  transition: 0.3s ease-in-out;
-  /* background-color: transparent; */
-  border-radius: 20px;
-}
 .button_transparent_rounded span {
   z-index: 1;
   position: relative;
