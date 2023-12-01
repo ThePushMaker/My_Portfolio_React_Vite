@@ -24,7 +24,7 @@ const EmailDisplay = ({ contactEmail }) => {
             value={contactEmail}
           />
         </div>
-        <div className='mt-5 lg:mt-0'>
+        <div className='mt-3 lg:mt-0'>
           <button  
             className="button_transparent_rounded" 
             onClick={copyToClipboard}

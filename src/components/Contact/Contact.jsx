@@ -59,13 +59,13 @@ const Contact = () => {
   
   return(
     <section className='bgBannerContacto'>
-      <div className='contact degradado4 px-6 md:px-14 lg:px-28 pt-[60px] pb-[200px] ' id="contact">
-        <div className='container mx-auto w-full h-full'>
-          <div className='flex flex-wrap items-center'>
-            <div className='w-full md:w-1/2'>
+      <div className='contact degradado4 px-6 md:px-6 lg:px-6 xl:px-28 pt-[60px] pb-[200px] ' id="contact">
+        <div className='container mx-auto w-full h-full '>
+          <div className='flex flex-wrap items-center '>
+            <div className='w-full lg:w-5/12 xl:w-1/2'>
               <img src={contactImg} alt="contact_image" />
             </div>
-            <div className='w-full md:w-1/2 mt-10 md:mt-0'>
+            <div className='w-full mt-10 md:mt-0 lg:w-7/12 xl:w-6/12'>
               <CustomHeader
                 align='center'
                 emoji='📧'
@@ -102,10 +102,9 @@ const Contact = () => {
                   </div>
                   <div className='w-full'>
                     <div 
-                      className='mx-auto my-4 w-fit flex justify-center' 
+                      className='mx-auto my-3 w-fit flex justify-center' 
                       >
-                      <button type="submit" className='button_transparent_rounded border-[1.5px] 
-                      border-solid border-white bg-[black] bg-opacity-[30%]'>
+                      <button type="submit" className='button_transparent_rounded border-white bg-opacity-[30%]'>
                         <span> {t(`contact.submit`)} <span className='styledFontFamily' >{'>'}</span></span>
                       </button>
                     </div>
@@ -123,7 +122,8 @@ const Contact = () => {
                   </div>
                 </div>
               </form>
-              
+            </div>
+            <div className='w-full lg:w-9/12 xl:w-8/12 2xl:w-7/12 mx-auto'>
               {/* copy email component */}
               <EmailDisplay contactEmail={import.meta.env.VITE_APP_CONTACT_EMAIL} />
             </div>
