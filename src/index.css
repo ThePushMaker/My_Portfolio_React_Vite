@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .button_transparent_rounded {
+    @apply px-11 py-[1.1rem] 
+  }
+  
+}
+
 @font-face {
   font-family: Cyber;
   src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
@@ -246,7 +253,6 @@ p.danger {
   color: #ffffff;
   position: relative;
   transition: 0.3s ease-in-out;
-  padding: 18px 60px;
   /* background-color: transparent; */
   border-radius: 20px;
 }
