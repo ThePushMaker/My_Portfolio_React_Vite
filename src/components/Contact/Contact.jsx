@@ -59,7 +59,7 @@ const Contact = () => {
   
   return(
     <section className='bgBannerContacto'>
-      <div className='contact degradado4 px-6 md:px-6 lg:px-6 xl:px-28 pt-[40px] pb-[170px] ' id="contact">
+      <div className='contact degradado4 px-6 md:px-6 lg:px-6 xl:px-28 pt-[50px] pb-[170px] ' id="contact">
         <div className='container mx-auto w-full h-full '>
           <div className='flex flex-wrap items-center '>
             <div className='w-full lg:w-5/12 xl:w-1/2'>
