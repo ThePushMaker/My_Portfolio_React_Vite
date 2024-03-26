@@ -32,9 +32,9 @@ const Contact = () => {
     e.preventDefault();
   
     // validate data
-    if(!formData.fullName ||!formData.email || !formData.message){
-      setStatus({ success: false, message: t(`contact.fill_out_all`) });
-    } else {
+    // if(!formData.fullName ||!formData.email || !formData.message){
+    //   setStatus({ success: false, message: t(`contact.fill_out_all`) });
+    // } else {
       console.log(formData)
       setButtonText(t(`contact.sending`));
       let response = await fetch(import.meta.env.VITE_APP_NODEMAILER_URL, {
@@ -54,7 +54,7 @@ const Contact = () => {
         console.log(resonseJSON)
         setStatus({ success: false, message: resonseJSON.code + ' ' + t(`contact.something_wrong`) });
       }
-    }
+    // }
   };
   
   return(
@@ -63,7 +63,7 @@ const Contact = () => {
         <div className='container mx-auto w-full h-full '>
           <div className='flex flex-wrap items-center '>
             <div className='w-full lg:w-5/12 xl:w-1/2'>
-              <img src={contactImg} alt="contact_image" />
+              <img src={contactImg} alt="contact_image" className='contact-img' />
             </div>
             <div className='w-full mt-10 md:mt-0 lg:w-7/12 xl:w-6/12'>
               <CustomHeader
@@ -82,6 +82,7 @@ const Contact = () => {
                     placeholder={t(`contact.placeholder_name`)}
                     type={"text"}
                     value={formData.fullName}
+                    required
                   />
                   <TransparentInput
                     autoComplete='on'
@@ -90,6 +91,7 @@ const Contact = () => {
                     placeholder={t(`contact.placeholder_email`)}
                     type={"email"}
                     value={formData.email}
+                    required
                   />
                   <div className='w-full'>
                     <textarea 
@@ -98,6 +100,7 @@ const Contact = () => {
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
+                      required
                     ></textarea>
                   </div>
                   <div className='w-full'>

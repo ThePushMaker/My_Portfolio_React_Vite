@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import BreadCrumb from "../../components/BreadCrumb/Breadcrumb";
+import BreadCrumb from "../../components/Breadcrumb/Breadcrumb";
 import { routes } from '../../routes';
 import ProjectsListGrid from "./ProjectsListGrid/ProjectsListGrid";
 import ProjectImage from "./ProjectImage/ProjectImage";

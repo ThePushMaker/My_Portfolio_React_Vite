@@ -14,15 +14,15 @@ const SocialIcons = () => {
   const imagesArray = [
     {
       id: 1,
-      src: navIcon1,
-      href: 'https://www.linkedin.com/in/martin-calderon-dev',
-      label: 'LinkedIn'
+      src: navIcon2,
+      href: 'https://github.com/MSCO-2000',
+      label: 'GitHub'
     },
     {
       id: 2,
-      src: navIcon2,
-      href: 'https://github.com/DSW-47',
-      label: 'GitHub'
+      src: navIcon1,
+      href: 'https://www.linkedin.com/in/martin-calderon-dev',
+      label: 'LinkedIn'
     },
     {
       id: 3,
