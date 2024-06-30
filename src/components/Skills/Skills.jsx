@@ -151,73 +151,71 @@ const Skills = () => {
   return(
     <>
       <section className='degradado3 pb-20' id='skills'>
-        <div>
           <div className='skill'>
             <div className=' mx-auto px-3 md:px-14 lg:px-14 '>
               <div className='containerShadow1 skill-bx shadow-2xl pt-12 pb-16 px-[28px] md:py-[50px] md:px-[40px] lg:px-24'>
-              <CustomHeader
-                align='center'
-                emoji='📚'
-                text={t(`skills.skills`)}
-              />
-                <p className='text-center w-[90%] md:w-5/6 mx-auto mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'
-              > 
-                  {skills_description} 
-                </p>
-              
-              {/* <Carousel
-                additionalTransfrom={0}
-                arrows
-                autoPlay={true}
-                autoPlaySpeed={3000}
-                centerMode={false}
-                className="owl-carousel owl-theme skill-slider pb-10 mb-4 lg:mb-0"
-                dotListClass=""
-                draggable={true}
-                focusOnSelect={false}
-                itemClass=""
-                infinite={true}
-                keyBoardControl={true}
-                minimumTouchDrag={80}
-                pauseOnHover
-                renderArrowsWhenDisabled={false}
-                renderButtonGroupOutside={false}
-                renderDotsOutside={false}
-                responsive={responsive}
-                rewind={false}
-                rtl={false}
-                shouldResetAutoplay
-                showDots={true}
-                sliderClass=''
-                slidesToSlide={1}
-                swipeable={true}
-                ssr={true} // means to render carousel on server-side.
-                // customTransition="all"
-                // transitionDuration={10}
-                containerClass=""
-              >
+                <CustomHeader
+                  align='center'
+                  emoji='📚'
+                  text={t(`skills.skills`)}
+                />
+                  <p className='text-center w-[90%] md:w-5/6 mx-auto mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'
+                > 
+                    {skills_description} 
+                  </p>
+                
+                {/* <Carousel
+                  additionalTransfrom={0}
+                  arrows
+                  autoPlay={true}
+                  autoPlaySpeed={3000}
+                  centerMode={false}
+                  className="owl-carousel owl-theme skill-slider pb-10 mb-4 lg:mb-0"
+                  dotListClass=""
+                  draggable={true}
+                  focusOnSelect={false}
+                  itemClass=""
+                  infinite={true}
+                  keyBoardControl={true}
+                  minimumTouchDrag={80}
+                  pauseOnHover
+                  renderArrowsWhenDisabled={false}
+                  renderButtonGroupOutside={false}
+                  renderDotsOutside={false}
+                  responsive={responsive}
+                  rewind={false}
+                  rtl={false}
+                  shouldResetAutoplay
+                  showDots={true}
+                  sliderClass=''
+                  slidesToSlide={1}
+                  swipeable={true}
+                  ssr={true} // means to render carousel on server-side.
+                  // customTransition="all"
+                  // transitionDuration={10}
+                  containerClass=""
+                >
+                    {imgCarousel.map((item, index) => (
+                      <div className='item' key={index}>
+                        <img src={item.img} alt={item.label} />
+                        <h5>{item.label}</h5>
+                      </div>
+                    ))}
+                </Carousel>      */}
+                
+                <div className='skills_grid skill-slider lg:mb-0'>
                   {imgCarousel.map((item, index) => (
-                    <div className='item' key={index}>
+                    <div className='item mx-10' key={index}>
                       <img src={item.img} alt={item.label} />
                       <h5>{item.label}</h5>
                     </div>
                   ))}
-              </Carousel>      */}
-              
-              <div className='skills_grid skill-slider lg:mb-0'>
-              {imgCarousel.map((item, index) => (
-                <div className='item mx-10' key={index}>
-                  <img src={item.img} alt={item.label} />
-                  <h5>{item.label}</h5>
                 </div>
-              ))}         
-              </div>
               
               </div>
             </div>
           </div>
           <img className='background-image-left opacity-50' src={colorSharp} alt="ImageBackground" />
-        </div>
       </section>
 
     </>
