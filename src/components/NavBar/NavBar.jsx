@@ -14,7 +14,7 @@ const NavBar = () => {
   // const [ t, i18n ] = useTranslation("global");  
   const [ t ] = useTranslation("global");  
 
-  //  detectar su se ha hecho scroll en la pagina
+  //  detectar si se ha hecho scroll en la pagina
   useEffect(() => {
     const onScroll = () => {
       window.scrollY > 50 ? setScrolled(true) : setScrolled(false);

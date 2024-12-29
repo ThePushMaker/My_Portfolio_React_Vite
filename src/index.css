@@ -6,9 +6,20 @@
   .button_transparent_rounded {
     @apply px-11 py-[1.1rem] shadow-sm shadow-border_color1 hover:shadow-md hover:shadow-neon_color2
     flex justify-center items-center w-fit border-[1.5px] border-solid border-border_color1 bg-[black] bg-opacity-40
-  text-white font-bold relative transition-all duration-300 ease-in-out rounded-[1.3rem]
+  text-white font-bold relative transition-all duration-300 ease-in-out rounded-[1.3rem];
   }
-  
+  .linkStyles {
+    @apply text-link_color hover:text-link_color_hover hover:underline textShadow cursor-pointer;
+  }
+  .paragraphStyles {
+    @apply mb-2 textShadow text-[#ccc];
+  }
+  .paragraphStyles2 { 
+    @apply mb-2 textShadow text-[#eee];
+  }
+  .textShadow {
+    text-shadow: 1px 1px 20px rgba(0, 0, 0, 1); 
+  }
 }
 
 @font-face {

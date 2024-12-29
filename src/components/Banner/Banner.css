@@ -6,10 +6,6 @@
   animation: typedjsBlink 0.7s infinite;
 }
 
-.textShadow {
-  text-shadow: 1px 1px 20px rgba(0, 0, 0, 1); 
-}
-
 /* welcome box */
 .banner .tagline {
   font-weight: 700;
