@@ -14,6 +14,8 @@ const ProjectItemCard = ( {title, description, imgPath} ) => {
         </div>
         <div className="textContainer">
           <h4>{title}</h4>
+          <h5>Tecnologías</h5>
+          <h5>React, Javascript</h5>
           <span>{description}</span>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laudantium voluptate, in cumque assumenda perferendis aspernatur officia maxime tempore expedita, commodi vero nisi? Nam vero exercitationem fugit dicta voluptate inventore.

@@ -3,7 +3,7 @@ import TabPanelItem from '../TabPanelItem/TabPanelItem';
 import { useEffect, useRef, useState } from 'react';
 
 
-const Tabs = ({ categories }) => {
+const ProjectTabs = ({ categories }) => {
   const [ t ] = useTranslation("global");
   const [activeTab, setActiveTab] = useState(1);
   const indicatorRef = useRef(null); 
@@ -113,4 +113,4 @@ const Tabs = ({ categories }) => {
   );
 }
 
-export default Tabs;
+export default ProjectTabs;

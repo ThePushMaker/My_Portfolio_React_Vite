@@ -10,6 +10,7 @@
           "description": "Diseño, Desarrollo y Despliegue",
           "participantes": "Martín Calderón",
           "imgPath": "",
+          "tecnologias": ["React", "JavaScript", "Vite", "TailwindCSS", "Framer Motion", "react-tooltip", "react-router-dom", "react-mailchimp-subscribe", "i18next", "nodemailer", "cors", "dotenv"],
           "sections": [
             {
               "title": "Portada y Resumen Ejecutivo",

@@ -3,7 +3,7 @@ import colorSharp2 from "../../assets/img/color-sharp2.png";
 import "./Projects.css"
 import projectsJSON_en from "../../data/en/projects.json";
 import projectsJSON_es from "../../data/es/projects.json";
-import Tabs from "./Tabs/Tabs.jsx";
+import ProjectTabs from "./Tabs/ProjectTabs.jsx";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import CustomHeader from "../UI/CustomHeader/CustomHeader.jsx";
@@ -29,7 +29,10 @@ const Projects = () => {
   
   return (
     <>
-      <section className="project bg_semitransparent px-4 md:px-14 lg:px-24 pt-12 pb-16 lg:pb-16" id="projects">
+      <section 
+        className="project bg_semitransparent px-4 md:px-14 lg:px-24 pt-12 pb-16 lg:pb-16" 
+          id="projects"
+        >
         <div className="container m-auto">
           <div className="w-full">
             <CustomHeader
@@ -47,7 +50,7 @@ const Projects = () => {
               {t('projects.select_category')}:
             </p>
      
-              <Tabs
+              <ProjectTabs
                 categories={categories}
               />
             

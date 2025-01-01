@@ -164,6 +164,7 @@ const Skills = () => {
                     {skills_description} 
                   </p>
                 
+                {/* carrusel en desuso por impracticidad al tener que hacer click continuamente para ver todos los items*/}
                 {/* <Carousel
                   additionalTransfrom={0}
                   arrows
