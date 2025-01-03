@@ -95,19 +95,22 @@ const ProjectTabs = ({ categories }) => {
 
       {/* Contenido de las pestañas */}
       <div className='mt-8'>
+      
         {categories.map((category, index) => {
           // console.log(project)
           return (
+            
             <TabPanelItem
               key={index} 
               index={index}
               activeTab={activeTab}
               {...category}
             />
+            
             )
-          })} 
+          })}
+        
       </div>
-      
 
     </div>
   );
