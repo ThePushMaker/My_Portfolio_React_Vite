@@ -17,6 +17,9 @@
   .paragraphStyles2 { 
     @apply mb-2 textShadow text-[#eee];
   }
+  .bannerList {
+    @apply py-0.5 px-0.5 
+  }
   .textShadow {
     text-shadow: 1px 1px 20px rgba(0, 0, 0, 1); 
   }

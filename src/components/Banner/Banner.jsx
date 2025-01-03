@@ -71,7 +71,6 @@ const Banner = () => {
                 </h1>
                 
                 {/* main description paragraph */}
-                
                 <p className="paragraphStyles">
                   {t(`banner.p1`)}
                   <a 
@@ -108,39 +107,43 @@ const Banner = () => {
                   </a>
                 </p>
                 
-                <div className="ml-[40px]">
-                  <li className="paragraphStyles py-0.5 px-3">
+                {/* list */}
+                <ul className="ml-10 list-disc">
+                
+                  <li className="paragraphStyles bannerList">
                     <strong className="text-highlighted_text_color">{t(`banner.description_aprendio`)}</strong>
                   </li>
                   
-                  <li className="paragraphStyles py-0.5 px-3">
-                    {t(`banner.p4`)}
-                    <strong className="text-highlighted_text_color">{t(`banner.description_tecnologias1`)}</strong>
+                  <li className="paragraphStyles bannerList">
+                    <span>
+                        {t(`banner.p4`)}
+                        <strong className="text-highlighted_text_color">{t(`banner.description_tecnologias1`)}</strong>
+                    </span>
                   </li>
                   
-                  <li className="paragraphStyles py-0.5 px-3">
+                  <li className="paragraphStyles bannerList">
                       {t(`banner.description_enfocado_en`)}
                       <strong className="text-highlighted_text_color">{t(`banner.description_tecnologias2`)}</strong>
                       {t(`banner.p7`)}
                   </li>
                   
-                  <li className="paragraphStyles py-0.5 px-3">
+                  <li className="paragraphStyles bannerList">
                       {t(`banner.description_es`)}
                   </li>
                   
-                  <li className="paragraphStyles py-0.5 px-3">
+                  <li className="paragraphStyles bannerList">
                       {t(`banner.description_curiosidad`)}
                   </li>
                   
-                  <li className="paragraphStyles py-0.5 px-3">
+                  <li className="paragraphStyles bannerList">
                     {t(`banner.description_prioriza`)}
                   </li>
 
-                  <li className="paragraphStyles py-0.5 px-3">
+                  <li className="paragraphStyles bannerList">
                     {t(`banner.description_mision`)}
                   </li>
                   
-                </div>
+                </ul>
                 
 
                 
