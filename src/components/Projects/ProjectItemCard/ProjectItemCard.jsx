@@ -3,10 +3,7 @@ import { motion } from "framer-motion"
 import ProjectImage from "../ProjectImage/ProjectImage"
 
 const ProjectItemCard = ( {title, main_technologies, description, imgPath} ) => {
-  console.log(main_technologies)
-  console.log(Array.isArray(main_technologies)); // Debería imprimir `true`
-  
-  const TechnologiesArray = main_technologies ?Object.values(main_technologies) : ["null"];
+  const TechnologiesArray = main_technologies ?Object.values(main_technologies) : [];
   
   return (
     <motion.div animate={{scale: [0, 1]}} transition={{duration: 0.5}} className="projectItemCard border-[1px] border-border_color2 ">

@@ -71,45 +71,44 @@ const Banner = () => {
                 </h1>
                 
                 {/* main description paragraph */}
-                <span>
-      
-                  <li className="paragraphStyles py-0.5 px-3">
-                    {t(`banner.p1`)}
-                    
-                    <a 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      className="hover:underline hover:decoration-link_color_hover" 
-                      href="https://www.google.com/search?q=Full+Stack+Developer&oq=full+stack+developer&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDMxNjhqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
-                    >
-                        <strong className="text-link_color hover:text-link_color_hover">
-                          {t(`banner.full_stack`)}
-                        </strong>
-                    </a>
-                    
-                    <a 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      className="hover:underline hover:decoration-link_color_hover" 
-                      href="https://www.google.com/search?q=software+development+engineer&sca_esv=580697965&ei=Sk1MZanzOtTDkPIPwJKL2A0&oq=softwar+development+en&gs_lp=Egxnd3Mtd2l6LXNlcnAiFnNvZnR3YXIgZGV2ZWxvcG1lbnQgZW4qAggAMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAESJxuUABYtGlwBngBkAEAmAGuAaABjCmqAQQwLjQwuAEDyAEA-AEBqAIUwgILEAAYgAQYsQMYgwHCAg4QLhiABBixAxjHARjRA8ICDRAuGIoFGMcBGNEDGEPCAgUQABiABMICCBAAGIoFGLEDwgINEAAYigUYsQMYgwEYQ8ICBxAAGIoFGEPCAgoQABiKBRixAxhDwgIIEAAYgAQYsQPCAgoQABiABBixAxgKwgIHEAAYgAQYCsICEBAAGIoFGOoCGLQCGEPYAQHCAh0QABiKBRjlAhjlAhjqAhi0AhiKAxi3AxjUA9gBAcICFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQLCAhYQLhgDGI8BGOUCGOoCGLQCGIwD2AECwgILEAAYigUYsQMYgwHCAhEQLhiABBixAxiDARjHARjRA8ICERAuGIMBGMcBGLEDGNEDGIAEwgIJEAAYDRiABBgKwgIGEAAYHhgNwgIIEAAYHhgNGArCAgsQABgeGA0Y8QQYCuIDBBgAIEGIBgG6BgQIARgHugYGCAIQARgK&sclient=gws-wiz-serp"
-                      >
-                        <strong className="text-link_color hover:text-link_color_hover">
-                          {t(`banner.p2`)}
-                        </strong>
-                    </a>
-                    
-                    <a 
-                      className="hover:underline hover:decoration-link_color_hover" 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      href="https://www.google.com/search?q=Technical+High+School+Diploma+in+Programming&oq=Technical+High+School+Diploma+in+Programming&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigAdIBBzQ5NWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8"
-                    >
-                        <strong className="text-link_color hover:text-link_color_hover">
-                        {t(`banner.p3`)}
-                        </strong>
-                    </a>
-                  </li>
+                
+                <p className="paragraphStyles">
+                  {t(`banner.p1`)}
+                  <a 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="hover:underline hover:decoration-link_color_hover" 
+                    href="https://www.google.com/search?q=Full+Stack+Developer&oq=full+stack+developer&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDMxNjhqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
+                  >
+                      <strong className="text-link_color hover:text-link_color_hover">
+                        {t(`banner.full_stack`)}
+                      </strong>
+                  </a>
                   
+                  <a 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="hover:underline hover:decoration-link_color_hover" 
+                    href="https://www.google.com/search?q=software+development+engineer&sca_esv=580697965&ei=Sk1MZanzOtTDkPIPwJKL2A0&oq=softwar+development+en&gs_lp=Egxnd3Mtd2l6LXNlcnAiFnNvZnR3YXIgZGV2ZWxvcG1lbnQgZW4qAggAMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAESJxuUABYtGlwBngBkAEAmAGuAaABjCmqAQQwLjQwuAEDyAEA-AEBqAIUwgILEAAYgAQYsQMYgwHCAg4QLhiABBixAxjHARjRA8ICDRAuGIoFGMcBGNEDGEPCAgUQABiABMICCBAAGIoFGLEDwgINEAAYigUYsQMYgwEYQ8ICBxAAGIoFGEPCAgoQABiKBRixAxhDwgIIEAAYgAQYsQPCAgoQABiABBixAxgKwgIHEAAYgAQYCsICEBAAGIoFGOoCGLQCGEPYAQHCAh0QABiKBRjlAhjlAhjqAhi0AhiKAxi3AxjUA9gBAcICFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQLCAhYQLhgDGI8BGOUCGOoCGLQCGIwD2AECwgILEAAYigUYsQMYgwHCAhEQLhiABBixAxiDARjHARjRA8ICERAuGIMBGMcBGLEDGNEDGIAEwgIJEAAYDRiABBgKwgIGEAAYHhgNwgIIEAAYHhgNGArCAgsQABgeGA0Y8QQYCuIDBBgAIEGIBgG6BgQIARgHugYGCAIQARgK&sclient=gws-wiz-serp"
+                    >
+                      <strong className="text-link_color hover:text-link_color_hover">
+                        {t(`banner.p2`)}
+                      </strong>
+                  </a>
+                  
+                  <a 
+                    className="hover:underline hover:decoration-link_color_hover" 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    href="https://www.google.com/search?q=Technical+High+School+Diploma+in+Programming&oq=Technical+High+School+Diploma+in+Programming&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigAdIBBzQ5NWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8"
+                  >
+                      <strong className="text-link_color hover:text-link_color_hover">
+                      {t(`banner.p3`)}
+                      </strong>
+                  </a>
+                </p>
+                
+                <div className="ml-[40px]">
                   <li className="paragraphStyles py-0.5 px-3">
                     <strong className="text-highlighted_text_color">{t(`banner.description_aprendio`)}</strong>
                   </li>
@@ -124,24 +123,24 @@ const Banner = () => {
                       <strong className="text-highlighted_text_color">{t(`banner.description_tecnologias2`)}</strong>
                       {t(`banner.p7`)}
                   </li>
-                </span>
-                
-                <li className="paragraphStyles py-0.5 px-3">
-                    {t(`banner.description_es`)}
-                </li>
-                
-                <li className="paragraphStyles py-0.5 px-3">
-                    {t(`banner.description_curiosidad`)}
-                </li>
-                
-                <li className="paragraphStyles py-0.5 px-3">
-                  {t(`banner.description_prioriza`)}
-                </li>
+                  
+                  <li className="paragraphStyles py-0.5 px-3">
+                      {t(`banner.description_es`)}
+                  </li>
+                  
+                  <li className="paragraphStyles py-0.5 px-3">
+                      {t(`banner.description_curiosidad`)}
+                  </li>
+                  
+                  <li className="paragraphStyles py-0.5 px-3">
+                    {t(`banner.description_prioriza`)}
+                  </li>
 
-                <li className="paragraphStyles py-0.5 px-3">
-                  {t(`banner.description_mision`)}
-                </li>
-                
+                  <li className="paragraphStyles py-0.5 px-3">
+                    {t(`banner.description_mision`)}
+                  </li>
+                  
+                </div>
                 
 
                 
