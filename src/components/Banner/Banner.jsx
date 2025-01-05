@@ -1,22 +1,24 @@
 import { useEffect, useState } from "react";
-import headerImg from "../../assets/img/pfp/difuminado5.png";
-import arrowDown from "../../assets/img/icons/arrow-down.svg";
-import './Banner.css';
-import TypeAnimation from './TypeAnimation/TypeAnimation'
 import { useTranslation } from "react-i18next";
-import SocialIcons from "../SocialIcons/SocialIcons";
+
+import TypeAnimation from '@/components/Banner/TypeAnimation/TypeAnimation'
+import SocialIcons from "@/components/SocialIcons/SocialIcons";
+import '@/components/Banner/Banner.css';
+
+import arrowDown from "@/assets/img/icons/arrow-down.svg";
+import headerImg from "@/assets/img/pfp/difuminado5.png";
 
 const Banner = () => {
   const [ t ] = useTranslation("global");  
   
   const typeAnimationArray = [
-                    t(`banner.typeAnimation_1`), 
-                    t(`banner.typeAnimation_2`),
-                    t(`banner.typeAnimation_3`),
-                    t(`banner.typeAnimation_4`)
-                  ];
+    t(`banner.typeAnimation_1`), 
+    t(`banner.typeAnimation_2`),
+    t(`banner.typeAnimation_3`),
+    t(`banner.typeAnimation_4`)
+  ];
   
-  const [text, setText] = useState('');
+  const [text] = useState('');
   const [fontSize, setFontSize] = useState(16); // Tamaño de fuente inicial en píxeles
   
   useEffect(() => {

@@ -1,12 +1,13 @@
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
-import colorSharp2 from "@/assets/img/color-sharp2.png";
-import "@/components/Projects/Projects.css"
+import ProjectTabs from "@/components/Projects/ProjectTabs/ProjectTabs.jsx";
+import CustomHeader from "@/components/UI/CustomHeader/CustomHeader.jsx";
 import projectsJSON_en from "@/data/en/projects.json";
 import projectsJSON_es from "@/data/es/projects.json";
-import ProjectTabs from "@/components/Projects/ProjectTabs/ProjectTabs.jsx";
-import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
-import CustomHeader from "@/components/UI/CustomHeader/CustomHeader.jsx";
+import "@/components/Projects/Projects.css"
+
+import colorSharp2 from "@/assets/img/color-sharp2.png";
 // soon: category 'Research and Experimentation'
 
 const Projects = () => {
