@@ -1,8 +1,9 @@
-import "./ProjectItemCard.css"
 import { motion } from "framer-motion"
-import ProjectImage from "../ProjectImage/ProjectImage"
+import ProjectImage from "@/components/Projects/ProjectImage/ProjectImage"
 
-const ProjectItemCard = ( {title, main_technologies, description, imgPath} ) => {
+import "@/components/Projects/ProjectItemCard/ProjectItemCard.css"
+
+const ProjectItemCard = ( {title, main_technologies, disciplines_covered, description, imgPath} ) => {
   const TechnologiesArray = main_technologies ?Object.values(main_technologies) : [];
   
   return (
@@ -13,6 +14,7 @@ const ProjectItemCard = ( {title, main_technologies, description, imgPath} ) => 
             title = { title }
           />
         </div>
+        
         <div className="textContainer">
           <h4>{title}</h4>
           <h5>Tecnologías</h5>
@@ -21,11 +23,15 @@ const ProjectItemCard = ( {title, main_technologies, description, imgPath} ) => 
               <span key={index}>{technology}</span>
             ))}
           </h5>
-          <span>{description}</span>
+          
+          <span>
+            {disciplines_covered}
+          </span>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laudantium voluptate, in cumque assumenda perferendis aspernatur officia maxime tempore expedita, commodi vero nisi? Nam vero exercitationem fugit dicta voluptate inventore.
+            {description}
           </p>
         </div>
+        
     </motion.div>
       
 

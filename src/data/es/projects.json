@@ -7,7 +7,8 @@
       "projects": [
         {
           "title": "Panel Administrativo Veterinaria",
-          "description": "Diseño, Desarrollo front-end y back-end",
+          "disciplines_covered": "Diseño de Interfaces (UI/UX), Desarrollo Front-End, Desarrollo Back-End",
+          "description": "aa",
           "imgPath": "",
           "main_technologies": ["React", "JavaScript", "TailwindCSS", "Vite"],
           "secondary_technologies": ["Framer Motion", "react-tooltip", "react-router-dom", "react-mailchimp-subscribe", "i18next", "nodemailer", "cors", "dotenv"],
