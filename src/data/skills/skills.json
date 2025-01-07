@@ -1,0 +1,82 @@
+[
+  {
+    "img": "/assets/img/skill_icons/react.png",
+    "label": "React"
+  },
+  {
+    "img": "/assets/img/skill_icons/laravel.svg",
+    "label": "Laravel"
+  },
+  {
+    "img": "/assets/img/skill_icons/vue.png",
+    "label": "Vue.Js"
+  },
+  {
+    "img": "/assets/img/skill_icons/js.png",
+    "label": "Javascript"
+  },
+  {
+    "img": "/assets/img/skill_icons/php.png",
+    "label": "PHP"
+  },
+  {
+    "img": "/assets/img/skill_icons/node.svg",
+    "label": "Node.Js"
+  },
+  {
+    "img": "/assets/img/skill_icons/css.png",
+    "label": "CSS3"
+  },
+  {
+    "img": "/assets/img/skill_icons/bootstrap.svg",
+    "label": "Bootstrap"
+  },
+  {
+    "img": "/assets/img/skill_icons/tw.png",
+    "label": "Tailwind CSS"
+  },
+  {
+    "img": "/assets/img/skill_icons/wp.svg",
+    "label": "Wordpress"
+  },
+  {
+    "img": "/assets/img/skill_icons/sql.png",
+    "label": "MySQL"
+  },
+  {
+    "img": "/assets/img/skill_icons/html.png",
+    "label": "HTML5"
+  },
+  {
+    "img": "/assets/img/skill_icons/figma.png",
+    "label": "Figma"
+  },
+  {
+    "img": "/assets/img/skill_icons/adobexd.png",
+    "label": "Adobe XD"
+  },
+  {
+    "img": "/assets/img/skill_icons/languages.jpg",
+    "label": "t('skills.english_spanish')"
+  },
+  {
+    "img": "/assets/img/skill_icons/electron.png",
+    "label": "Electron"
+  },
+  {
+    "img": "/assets/img/skill_icons/git.png",
+    "label": "Git"
+  },
+  {
+    "img": "/assets/img/skill_icons/postman.png",
+    "label": "Postman"
+  },
+  {
+    "img": "/assets/img/skill_icons/scrum.png",
+    "label": "SCRUM"
+  },
+  {
+    "img": "/assets/img/skill_icons/photoshop.png",
+    "label": "Photoshop"
+  }
+]

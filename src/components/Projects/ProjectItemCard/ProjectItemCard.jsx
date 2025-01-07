@@ -18,11 +18,10 @@ const ProjectItemCard = ( {title, main_technologies, disciplines_covered, descri
         <div className="textContainer">
           <h4>{title}</h4>
           <h5>Tecnologías</h5>
-          <h5>
-            {TechnologiesArray.map((technology, index) => (
-              <span key={index}>{technology}</span>
-            ))}
-          </h5>
+          
+          {TechnologiesArray.map((technology, index) => (
+            <span key={index}>{technology}</span>
+          ))}
           
           <span>
             {disciplines_covered}

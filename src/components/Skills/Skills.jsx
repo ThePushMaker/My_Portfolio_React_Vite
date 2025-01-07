@@ -1,30 +1,12 @@
 // import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import colorSharp from '../../assets/img/color-sharp.png';
-import './Skills.css';
 import { useTranslation } from 'react-i18next';
-import meter1 from '../../assets/img/skill_icons/react.png';
-import meter2 from '../../assets/img/skill_icons/laravel.svg';
-import meter3 from '../../assets/img/skill_icons/vue.png';
-import meter4 from '../../assets/img/skill_icons/js.png';
-import meter5 from '../../assets/img/skill_icons/php.png';
-import meter6 from '../../assets/img/skill_icons/node.svg';
-import meter7 from '../../assets/img/skill_icons/tw.png';
-import meter8 from '../../assets/img/skill_icons/bootstrap.svg';
-import meter9 from '../../assets/img/skill_icons/wp.svg';
-import meter10 from '../../assets/img/skill_icons/sql.png';
-import meter11 from '../../assets/img/skill_icons/css.png';
-import meter12 from '../../assets/img/skill_icons/html.png';
-import meter13 from '../../assets/img/skill_icons/figma.png';
-import meter14 from '../../assets/img/skill_icons/languages.jpg';
-import meter15 from '../../assets/img/skill_icons/electron.png';
-import meter16 from '../../assets/img/skill_icons/git.png';
-import meter17 from '../../assets/img/skill_icons/postman.png';
-import meter18 from '../../assets/img/skill_icons/scrum.png';
-import meter19 from '../../assets/img/skill_icons/photoshop.png';
-import img_adobexd from '../../assets/img/skill_icons/adobexd.png';
-import CustomHeader from '../UI/CustomHeader/CustomHeader';
 
+import CustomHeader from '@/components/UI/CustomHeader/CustomHeader';
+// import 'react-multi-carousel/lib/styles.css';
+import '@/components/Skills/Skills.css';
+import imgCarouselJson from '@/data/skills/skills.json';
+
+import colorSharp from '@/assets/img/color-sharp.png';
 
 // const responsive = {
 //   superLargeDesktop: {
@@ -50,6 +32,9 @@ import CustomHeader from '../UI/CustomHeader/CustomHeader';
 //   }
 // };
 
+// console.log("imgCarouselJson);
+// const imgCarousel = Object.values(imgCarouselJson);
+
 const Skills = () => {
   const [ t ] = useTranslation("global");
   
@@ -64,89 +49,6 @@ const Skills = () => {
       {'.'}
     </span>
   ;
-  
-  const imgCarousel = [
-    {
-      "img": meter1,
-      "label": "React"
-    },
-    {
-      "img": meter2,
-      "label": "Laravel"
-    },
-    {
-      "img": meter3,
-      "label": "Vue.Js"
-    },
-    {
-      "img": meter4,
-      "label": "Javascript"
-    },
-    {
-      "img": meter5,
-      "label": "PHP"
-    },
-    {
-      "img": meter6,
-      "label": "Node.Js"
-    },
-    {
-      "img": meter11,
-      "label": "CSS3"
-    },
-    {
-      "img": meter8,
-      "label": "Bootstrap"
-    },
-    {
-      "img": meter7,
-      "label": "Tailwind CSS"
-    },
-    {
-      "img": meter9,
-      "label": "Wordpress"
-    },
-    {
-      "img": meter10,
-      "label": "MySQL"
-    },
-    {
-      "img": meter12,
-      "label": "HTML5"
-    },
-    {
-      "img": meter13,
-      "label": "Figma"
-    },
-    {
-      "img": img_adobexd,
-      "label": "Adobe XD"
-    },
-    {
-      "img": meter14,
-      "label": t('skills.english_spanish')
-    },
-    {
-      "img": meter15,
-      "label": "Electron"
-    },
-    {
-      "img": meter16,
-      "label": "Git"
-    },
-    {
-      "img": meter17,
-      "label": "Postman"
-    },
-    {
-      "img": meter18,
-      "label": "SCRUM"
-    },
-    {
-      "img": meter19,
-      "label": "Photoshop"
-    }
-  ]
   
   return(
     <>
@@ -205,7 +107,8 @@ const Skills = () => {
                 </Carousel>      */}
                 
                 <div className='skills_grid skill-slider lg:mb-0'>
-                  {imgCarousel.map((item, index) => (
+                
+                  {imgCarouselJson.map((item, index) => (
                     <div className='item mx-10' key={index}>
                       <img src={item.img} alt={item.label} />
                       <h5>{item.label}</h5>
