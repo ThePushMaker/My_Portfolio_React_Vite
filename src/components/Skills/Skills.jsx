@@ -111,7 +111,12 @@ const Skills = () => {
                   {imgCarouselJson.map((item, index) => (
                     <div className='item mx-10' key={index}>
                       <img src={item.img} alt={item.label} />
-                      <h5>{item.label}</h5>
+                      <h5>
+                        {item.label.startsWith("t(")
+                          ? t(item.label.slice(3, -2)) //extrae la clave dentro de t('...')
+                          : item.label
+                        }
+                      </h5>
                     </div>
                   ))}
                 </div>
