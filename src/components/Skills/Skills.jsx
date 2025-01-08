@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import CustomHeader from '@/components/UI/CustomHeader/CustomHeader';
 // import 'react-multi-carousel/lib/styles.css';
 import '@/components/Skills/Skills.css';
-import imgCarouselJson from '@/data/skills/skills.json';
+import imgSkillsJson from '@/data/skills/skills.json';
 
 import colorSharp from '@/assets/img/color-sharp.png';
 
@@ -31,9 +31,6 @@ import colorSharp from '@/assets/img/color-sharp.png';
 //     partialVisibilityGutter: 30
 //   }
 // };
-
-console.log(imgCarouselJson);
-// const imgCarousel = Object.values(imgCarouselJson);
 
 const Skills = () => {
   const [ t ] = useTranslation("global");
@@ -108,7 +105,7 @@ const Skills = () => {
                 
                 <div className='skills_grid skill-slider lg:mb-0'>
                 
-                  {imgCarouselJson.map((item, index) => (
+                  {imgSkillsJson.map((item, index) => (
                     <div className='item mx-10' key={index}>
                       <img src={item.img} alt={item.label} />
                       <h5>
