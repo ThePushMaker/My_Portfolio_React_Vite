@@ -32,7 +32,7 @@ import colorSharp from '@/assets/img/color-sharp.png';
 //   }
 // };
 
-// console.log("imgCarouselJson);
+console.log(imgCarouselJson);
 // const imgCarousel = Object.values(imgCarouselJson);
 
 const Skills = () => {
