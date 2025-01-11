@@ -10,7 +10,7 @@ function Home() {
   
   return (
     <>
-      <NavBar />      
+      <NavBar />
       <div className="app-container">
         <div className='bgBanner1'>
           <Banner />

@@ -4,56 +4,61 @@ import ProjectImage from "@/components/Projects/ProjectImage/ProjectImage"
 import imgSkillsJson from '@/data/skills/skills.json';
 import "@/components/Projects/ProjectItemCard/ProjectItemCard.css"
 
-const ProjectItemCard = ( {title, main_technologies, disciplines_covered, description, imgPath} ) => {
-  const mainTechnologies = main_technologies;
+const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_description, imgPath} ) => {
   
   return (
     <motion.div animate={{scale: [0, 1]}} transition={{duration: 0.5}} className="projectItemCard border-[1px] border-border_color2 ">
-        <div className="proj-imgbx h-[17rem]">
+        <div className="rounded-[2rem] overflow-hidden h-[17rem]">
           <ProjectImage 
             imgPath = { imgPath }
             title = { title }
           />
         </div>
         
-        <div className="textContainer">
-          <h4>{title}</h4>
-          <h5>Tecnologías</h5>
+        {/* text */}
+        <div className="text-left my-[1.5rem] mx-[1rem]">
+          <h4 className="text-center text-[1.3rem] text-link_color font-bold">{'- '}{title}{' -'}</h4>
           
-          {/* {main_technologies.map((technology, index) => {
-        // Busca el objeto correspondiente en el JSON
-        const tech = technologyData.find(item => item.label === technology);
-        
-        return (
-          <div key={index}>
-            <img src={tech ? tech.img : ''} alt={technology} style={{ width: '30px', height: '30px' }} />
-            {technology}
+          <hr className="border-[1px] border-border_color1 my-3" />
+          
+          <div>
+            <h5 className="px-10 text-[1.11rem] text-center pb-3 text-highlighted_text_color font-bold">Tecnologías:</h5>
+            
+            {/* display technology icons */}
+            <div className="flex flex-wrap overflow-hidden justify-center h-auto">
+              {technologies_used && technologies_used.map((technology, index) => {
+                const tech = imgSkillsJson.find(item => item.label === technology);
+                return (
+                  <img key={index} src={tech ? tech.img : ''} alt={technology} className="flex-col w-12 h-12 rounded-lg mx-3 my-3" />
+                )
+              })}
+            </div>
           </div>
-        );
-      })} */}
           
-
-          {mainTechnologies && main_technologies.map((technology, index) => {
-            <div key={index}>
-              {technology}
-            </div>
-          })}
+          <div className="pb-2">
+            <h5 className="px-10 text-[1.11rem] text-center pb-3 text-highlighted_text_color font-bold">Disciplinas:</h5>
+              <div className="flex">
+                <ul className="mx-auto text-left list-disc list-inside">
+                  {disciplines_covered && disciplines_covered.map((discipline, index) => (
+                    <li key={index} className="text-[1.12rem] py-0.5">
+                      <span className="text">
+                        {discipline}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+          </div>
           
-          {/* {imgSkillsJson.map((item, index) => (
-            <div className='item w-14 h-14 mx-10' key={index}>
-              <img src={item.img} alt={item.label} />
-              <h5>
-                  {item.label}
-              </h5>
-            </div>
-          ))} */}
+          <hr className="border-[1px] border-border_color1 my-3" />
           
-          <span>
-            {disciplines_covered}
-          </span>
-          <p>
-            {description}
-          </p>
+          <div>
+            <h5 className="px-10 text-[1.11rem] text-center pb-3 text-highlighted_text_color font-bold">Descripción:</h5>
+            <p className="text-[1.06rem] h-[6.1rem] overflow-hidden text-ellipsis">
+              {short_description}
+            </p>
+          </div>
+          
         </div>
         
     </motion.div>

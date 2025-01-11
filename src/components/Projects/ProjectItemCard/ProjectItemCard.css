@@ -1,4 +1,3 @@
-
 .projectItemCard {
   margin: 0 auto;
   /* border: 2.15rem solid var(--neon_color1); */
@@ -11,32 +10,7 @@
   box-shadow: var(--containerShadow2);
 }
 .projectItemCard:hover {
-  box-shadow: var(--containerShadow3);
+  box-shadow: var(--containerShadow3);                                                                        
   transform: scale(1.1);
   filter: brightness(110%);
 }
-
-.projectItemCard .textContainer {
-  margin: 1.5rem auto;
-  text-align: center;
-}
-.projectItemCard .textContainer h4 {
-  font-size: 1.61rem;
-  color: var(--highlighted_text_color);
-  font-weight: 700;
-}
-.projectItemCard .textContainer span {
-  font-size: 1.30rem;
-  color: var(--link_disabled_color);
-}
-.projectItemCard .textContainer p {
-  margin-top: 0.7rem;
-  font-size: 1.25rem;
-}
-.proj-imgbx {
-  border-radius: 2rem;
-  overflow: hidden;
-}
-
-
-

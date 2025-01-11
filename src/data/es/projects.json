@@ -7,10 +7,11 @@
       "projects": [
         {
           "title": "Panel Administrativo Veterinaria",
-          "disciplines_covered": "Diseño de Interfaces (UI/UX), Desarrollo Front-End, Desarrollo Back-End",
-          "description": "aa",
-          "imgPath": "",
-          "main_technologies": ["React", "JavaScript", "TailwindCSS", "Vite"],
+          "disciplines_covered": ["Diseño de Interfaces (UI/UX)", "Desarrollo FrontEnd", "Desarrollo BackEnd"],
+          "short_description": "• Implemented Restful API, routes, error handling, middleware, controllers, views, query builder, seeders, blade templates, interface design, database design and management, CRUD operations, and more.",
+          "large_description": "Developed an administrative management system for veterinary clinics called 'VETSOFT'. • Implemented Restful API, routes, error handling, middleware, controllers, views, query builder, seeders, blade templates, interface design, database design and management, CRUD operations, and more.",
+          "imgPath": "/assets/img/projects/vetsoft/1.png",
+          "technologies_used": ["Laravel", "Vue.Js", "Bootstrap","MySQL", "JavaScript", "PHP", "HTML5", "CSS3", "Git", "SCRUM"],
           "secondary_technologies": ["Framer Motion", "react-tooltip", "react-router-dom", "react-mailchimp-subscribe", "i18next", "nodemailer", "cors", "dotenv"],
           "sections": [
             {

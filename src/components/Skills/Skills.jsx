@@ -60,7 +60,7 @@ const Skills = () => {
                 />
                   <p className='text-center w-[90%] md:w-5/6 mx-auto mt-[14px] mb-6 md:mb-8 lg:mb-[70px]'
                 > 
-                    {skills_description} 
+                    {skills_description}
                   </p>
                 
                 {/* carrusel en desuso por impracticidad al tener que hacer click continuamente para ver todos los items*/}
