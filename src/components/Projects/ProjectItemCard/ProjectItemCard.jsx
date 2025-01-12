@@ -1,25 +1,103 @@
+import Carousel from 'react-multi-carousel';
 import { motion } from "framer-motion"
 
-import ProjectImage from "@/components/Projects/ProjectImage/ProjectImage"
+import ProjectImage from "@/components/Projects/ProjectImage/ProjectImage";
 import imgSkillsJson from '@/data/skills/skills.json';
-import "@/components/Projects/ProjectItemCard/ProjectItemCard.css"
+import "@/components/Projects/ProjectItemCard/ProjectItemCard.css";
+import 'react-multi-carousel/lib/styles.css';
+
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 1,
+    partialVisibilityGutter: 40
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1,
+    partialVisibilityGutter: 40
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+    partialVisibilityGutter: 30
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+    partialVisibilityGutter: 30
+  }
+};
 
 const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_description, imgPath} ) => {
   
   return (
     <motion.div animate={{scale: [0, 1]}} transition={{duration: 0.5}} className="projectItemCard border-[1px] border-border_color2 ">
-        <div className="rounded-[2rem] overflow-hidden h-[17rem]">
-          <ProjectImage 
-            imgPath = { imgPath }
-            title = { title }
-          />
-        </div>
+          
+          <Carousel
+            additionalTransfrom={0}
+            arrows
+            autoPlay={true}
+            autoPlaySpeed={6000}
+            centerMode={false}
+            className="owl-carousel owl-theme skill-slider pb-10 mb-4 lg:mb-0"
+            dotListClass=""
+            draggable={true}
+            focusOnSelect={false}
+            itemClass=""
+            infinite={true}
+            keyBoardControl={true}
+            minimumTouchDrag={80}
+            pauseOnHover
+            renderArrowsWhenDisabled={false}
+            renderButtonGroupOutside={false}
+            renderDotsOutside={false}
+            responsive={responsive}
+            rewind={false}
+            rtl={false}
+            shouldResetAutoplay
+            showDots={true}
+            sliderClass=''
+            slidesToSlide={1}
+            swipeable={true}
+            ssr={true} // means to render carousel on server-side.
+            // customTransition="all"
+            // transitionDuration={10}
+            containerClass=""
+          >
+            <div className="rounded-[2rem] overflow-hidden h-[17rem]">
+              <ProjectImage 
+                imgPath = { imgPath }
+                title = { title }
+              />
+            </div>
+            <div className="rounded-[2rem] overflow-hidden h-[17rem]">
+              <ProjectImage 
+                imgPath = { imgPath }
+                title = { title }
+              />
+            </div>
+            <div className="rounded-[2rem] overflow-hidden h-[17rem]">
+              <ProjectImage 
+                imgPath = { imgPath }
+                title = { title }
+              />
+            </div>
+            <div className="rounded-[2rem] overflow-hidden h-[17rem]">
+              <ProjectImage 
+                imgPath = { imgPath }
+                title = { title }
+              />
+            </div>
+        
+          </Carousel>
         
         {/* text */}
         <div className="text-left my-[1.5rem] mx-[1rem]">
           <h4 className="text-center text-[1.3rem] text-link_color font-bold">{'- '}{title}{' -'}</h4>
           
-          <hr className="border-[1px] border-border_color1 my-3" />
+          <hr className="border-[1px] border-border_color2 my-3" />
           
           <div>
             <h5 className="px-10 text-[1.11rem] text-center pb-3 text-highlighted_text_color font-bold">Tecnologías:</h5>
@@ -50,7 +128,7 @@ const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_
               </div>
           </div>
           
-          <hr className="border-[1px] border-border_color1 my-3" />
+          <hr className="border-[1px] border-border_color2 my-3" />
           
           <div>
             <h5 className="px-10 text-[1.11rem] text-center pb-3 text-highlighted_text_color font-bold">Descripción:</h5>

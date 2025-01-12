@@ -1,36 +1,10 @@
-// import Carousel from 'react-multi-carousel';
 import { useTranslation } from 'react-i18next';
 
 import CustomHeader from '@/components/UI/CustomHeader/CustomHeader';
-// import 'react-multi-carousel/lib/styles.css';
 import '@/components/Skills/Skills.css';
 import imgSkillsJson from '@/data/skills/skills.json';
 
 import colorSharp from '@/assets/img/color-sharp.png';
-
-// const responsive = {
-//   superLargeDesktop: {
-//     // the naming can be any, depends on you.
-//     breakpoint: { max: 4000, min: 3000 },
-//     items: 7,
-//     partialVisibilityGutter: 40
-//   },
-//   desktop: {
-//     breakpoint: { max: 3000, min: 1024 },
-//     items: 7,
-//     partialVisibilityGutter: 40
-//   },
-//   tablet: {
-//     breakpoint: { max: 1024, min: 464 },
-//     items: 4,
-//     partialVisibilityGutter: 30
-//   },
-//   mobile: {
-//     breakpoint: { max: 464, min: 0 },
-//     items: 3,
-//     partialVisibilityGutter: 30
-//   }
-// };
 
 const Skills = () => {
   const [ t ] = useTranslation("global");
@@ -62,46 +36,6 @@ const Skills = () => {
                 > 
                     {skills_description}
                   </p>
-                
-                {/* carrusel en desuso por impracticidad al tener que hacer click continuamente para ver todos los items*/}
-                {/* <Carousel
-                  additionalTransfrom={0}
-                  arrows
-                  autoPlay={true}
-                  autoPlaySpeed={3000}
-                  centerMode={false}
-                  className="owl-carousel owl-theme skill-slider pb-10 mb-4 lg:mb-0"
-                  dotListClass=""
-                  draggable={true}
-                  focusOnSelect={false}
-                  itemClass=""
-                  infinite={true}
-                  keyBoardControl={true}
-                  minimumTouchDrag={80}
-                  pauseOnHover
-                  renderArrowsWhenDisabled={false}
-                  renderButtonGroupOutside={false}
-                  renderDotsOutside={false}
-                  responsive={responsive}
-                  rewind={false}
-                  rtl={false}
-                  shouldResetAutoplay
-                  showDots={true}
-                  sliderClass=''
-                  slidesToSlide={1}
-                  swipeable={true}
-                  ssr={true} // means to render carousel on server-side.
-                  // customTransition="all"
-                  // transitionDuration={10}
-                  containerClass=""
-                >
-                    {imgCarousel.map((item, index) => (
-                      <div className='item' key={index}>
-                        <img src={item.img} alt={item.label} />
-                        <h5>{item.label}</h5>
-                      </div>
-                    ))}
-                </Carousel>      */}
                 
                 <div className='skills_grid skill-slider lg:mb-0'>
                 
