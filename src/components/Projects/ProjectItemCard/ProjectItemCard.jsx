@@ -132,7 +132,7 @@ const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_
           
           <div>
             <h5 className="px-10 text-[1.11rem] text-center pb-3 text-highlighted_text_color font-bold">Descripción:</h5>
-            <p className="text-[1.06rem] h-[6.1rem] overflow-hidden text-ellipsis">
+            <p className="text-[0.97rem] h-[7.1rem] overflow-hidden text-ellipsis">
               {short_description}
             </p>
           </div>
