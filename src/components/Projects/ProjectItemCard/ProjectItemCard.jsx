@@ -30,68 +30,56 @@ const responsive = {
   }
 };
 
-const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_description, imgPath} ) => {
+const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_description, images} ) => {
+  console.log(images);
+  
   
   return (
     <motion.div animate={{scale: [0, 1]}} transition={{duration: 0.5}} className="projectItemCard border-[1px] border-border_color2 ">
           
-          <Carousel
-            additionalTransfrom={0}
-            arrows
-            autoPlay={true}
-            autoPlaySpeed={6000}
-            centerMode={false}
-            className="owl-carousel owl-theme skill-slider pb-10 mb-4 lg:mb-0"
-            dotListClass=""
-            draggable={true}
-            focusOnSelect={false}
-            itemClass=""
-            infinite={true}
-            keyBoardControl={true}
-            minimumTouchDrag={80}
-            pauseOnHover
-            renderArrowsWhenDisabled={false}
-            renderButtonGroupOutside={false}
-            renderDotsOutside={false}
-            responsive={responsive}
-            rewind={false}
-            rtl={false}
-            shouldResetAutoplay
-            showDots={true}
-            sliderClass=''
-            slidesToSlide={1}
-            swipeable={true}
-            ssr={true} // means to render carousel on server-side.
-            // customTransition="all"
-            // transitionDuration={10}
-            containerClass=""
-          >
-            <div className="rounded-[2rem] overflow-hidden h-[17rem]">
-              <ProjectImage 
-                imgPath = { imgPath }
-                title = { title }
-              />
-            </div>
-            <div className="rounded-[2rem] overflow-hidden h-[17rem]">
-              <ProjectImage 
-                imgPath = { imgPath }
-                title = { title }
-              />
-            </div>
-            <div className="rounded-[2rem] overflow-hidden h-[17rem]">
-              <ProjectImage 
-                imgPath = { imgPath }
-                title = { title }
-              />
-            </div>
-            <div className="rounded-[2rem] overflow-hidden h-[17rem]">
-              <ProjectImage 
-                imgPath = { imgPath }
-                title = { title }
-              />
-            </div>
-        
-          </Carousel>
+          {images && images.length > 0 && (
+            <Carousel
+              additionalTransfrom={0}
+              arrows
+              autoPlay={true}
+              autoPlaySpeed={6000}
+              centerMode={false}
+              className="owl-carousel owl-theme skill-slider pb-10 mb-4 lg:mb-0"
+              dotListClass=""
+              draggable={true}
+              focusOnSelect={false}
+              itemClass=""
+              infinite={true}
+              keyBoardControl={true}
+              minimumTouchDrag={80}
+              pauseOnHover
+              renderArrowsWhenDisabled={false}
+              renderButtonGroupOutside={false}
+              renderDotsOutside={false}
+              responsive={responsive}
+              rewind={false}
+              rtl={false}
+              shouldResetAutoplay
+              showDots={true}
+              sliderClass=''
+              slidesToSlide={1}
+              swipeable={true}
+              ssr={true} // means to render carousel on server-side.
+              // customTransition="all"
+              // transitionDuration={10}
+              containerClass=""
+            >
+              {images.map((image, index) => (
+                <div key={index} className="rounded-[2rem] overflow-hidden h-[17rem]">
+                  <ProjectImage
+                    imgPath = { image.path }
+                    title = { title }
+                  />
+                </div>
+              ))}
+            </Carousel>
+          )}
+          
         
         {/* text */}
         <div className="text-left my-[1.5rem] mx-[1rem]">

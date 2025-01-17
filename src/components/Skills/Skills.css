@@ -48,19 +48,19 @@
 .skill img {
   align-self: center; /*alinear imagenes centro x*/
 }
-/* .react-multiple-carousel__arrow--left {
-  left: 0;
+
+.react-multiple-carousel__arrow--left {
+  left: 0.3rem;
   z-index: 0;
 }
 
 .react-multiple-carousel__arrow--right {
-  right: 0;
+  right: 0.3rem;
   z-index: 0;
 }
 .react-multi-carousel-dot--active button {
   background-color: white;
-  
-} */
+}
 .skills_grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);

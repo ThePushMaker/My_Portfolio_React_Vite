@@ -10,7 +10,50 @@
           "disciplines_covered": ["Diseño de Interfaces (UI/UX)", "Desarrollo FrontEnd", "Desarrollo BackEnd"],
           "short_description": "Desarrollé una aplicación robusta con Laravel y Vue.js, diseñando vistas, maquetaeando formularios en el frontend, creando funcionalidades en el backend, optimizando rendimiento, organizando mejor. Implementé RESTful API, gestión de roles y permisos, trabajando eficientemente en equipo para mejorar la experiencia del usuario.",
           "large_description": "Desarrollé una aplicación web robusta utilizando Laravel y Vue.js, implementando módulos como autenticación de usuarios, gestión avanzada de roles y permisos, y un sistema de notificaciones en tiempo real. Superé retos como la optimización de consultas complejas en el backend para mejorar el rendimiento y la integración fluida entre frontend y backend. Trabajé estrechamente con mi equipo para garantizar una implementación eficiente y escalable, contribuyendo con soluciones estratégicas a problemas técnicos. A través de la colaboración, logramos un producto final que no solo cumple con los requisitos del cliente, sino que también mejora la experiencia del usuario.",
-          "imgPath": "/assets/img/projects/vetsoft/1.png",
+          "images": [
+            {
+              "id": 1,
+              "path": "/assets/img/projects/vetsoft/1.png",
+              "alt": "Panel Administrativo Veterinaria",
+              "caption": "Panel Administrativo Veterinaria"
+            },
+            {
+              "id": 2,
+              "path": "/assets/img/projects/vetsoft/2.png",
+              "alt": "Panel Administrativo Veterinaria",
+              "caption": "Panel Administrativo Veterinaria"
+            },
+            {
+              "id": 3,
+              "path": "/assets/img/projects/vetsoft/3.png",
+              "alt": "Panel Administrativo Veterinaria",
+              "caption": "Panel Administrativo Veterinaria"
+            },
+            {
+              "id": 4,
+              "path": "/assets/img/projects/vetsoft/4.png",
+              "alt": "Panel Administrativo Veterinaria",
+              "caption": "Panel Administrativo Veterinaria"
+            },
+            {
+              "id": 5,
+              "path": "/assets/img/projects/vetsoft/5.png",
+              "alt": "Panel Administrativo Veterinaria",
+              "caption": "Panel Administrativo Veterinaria"
+            },
+            {
+              "id": 6,
+              "path": "/assets/img/projects/vetsoft/6.png",
+              "alt": "Panel Administrativo Veterinaria",
+              "caption": "Panel Administrativo Veterinaria"
+            },
+            {
+              "id": 7,
+              "path": "/assets/img/projects/vetsoft/7.png",
+              "alt": "Panel Administrativo Veterinaria",
+              "caption": "Panel Administrativo Veterinaria"
+            }
+          ],
           "technologies_used": ["Laravel", "Vue.Js", "Bootstrap","MySQL", "JavaScript", "PHP", "HTML5", "CSS3", "Git", "SCRUM"],
           "secondary_technologies": ["Framer Motion", "react-tooltip", "react-router-dom", "react-mailchimp-subscribe", "i18next", "nodemailer", "cors", "dotenv"],
           "sections": [
