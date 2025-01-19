@@ -6,7 +6,6 @@ import ScrollRestoration from "@/components/ScrollRestoration/ScrollRestoration"
 
 import App from "./App";
 import ArticleLayout from "./layouts/ArticleLayout";
-// import IndexLayout from "./layouts/IndexLayout"; //pendiente borrar
 import ProjectsCategoryOverview from "./views/Projects/ProjectsCategoryOverview";
 import ProjectsCategoriesIndex from "./views/Projects/ProjectsCategoriesIndex";
 import ArticleProjectsLayout from "./layouts/ArticleProjectsLayout";

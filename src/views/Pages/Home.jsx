@@ -1,7 +1,7 @@
 import NavBar from '@/components/NavBar/NavBar';
 import Banner from '@/components/Banner/Banner';
 import Skills from '@/components/Skills/Skills';
-import Projects from '@/components/Projects/Projects';
+import ProjectsSection from '@/components/Projects/ProjectsSection';
 import Contact from '@/components/Contact/Contact';
 import Footer from '@/components/Footer/Footer';
 import AboutMe from '@/views/AboutMe/AboutMe';
@@ -15,7 +15,7 @@ function Home() {
         <div className='bgBanner1'>
           <Banner />
           <Skills />
-          <Projects />
+          <ProjectsSection />
           <AboutMe />
         </div>
         <Contact />

@@ -9,7 +9,8 @@ const variants = {
   closed: { opacity: 0 },
 }
 
-const TabPanel = (props) => {
+// el componente TabCategoryContent se encarga de renderizar el contenido de cada categoría de las tabs cuando se hace click en una de ellas
+const TabCategoryContent = (props) => {
   const [ t ] = useTranslation("global");
   let navigate = useNavigate();
 
@@ -17,7 +18,7 @@ const TabPanel = (props) => {
 
   const toggleMostrarMas = (e) => {
     e.preventDefault();
-    // console.log(props.category);    
+    // console.log(props.category);
     
     const newURL = routes[props.category];
 
@@ -69,4 +70,4 @@ const TabPanel = (props) => {
   );
 };
 
-export default TabPanel;
+export default TabCategoryContent;

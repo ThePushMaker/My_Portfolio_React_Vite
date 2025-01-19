@@ -22,16 +22,6 @@
   transition: 0.3s ease-in-out;
 }
 
-
-.background-image-right {
-  top: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -4;
-  opacity: 0.2;
-}
 .indicator {
   content: "";
   /* background: transparent; */
@@ -42,8 +32,3 @@
   height: 0;
   transition: .4s;
 }
-
-.texto_blanco span {
-  color: white !important;
-}
-

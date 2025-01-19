@@ -1,10 +1,10 @@
 import Carousel from 'react-multi-carousel';
 import { motion } from "framer-motion"
+import 'react-multi-carousel/lib/styles.css';
 
 import ProjectImage from "@/components/Projects/ProjectImage/ProjectImage";
 import imgSkillsJson from '@/data/skills/skills.json';
 import "@/components/Projects/ProjectItemCard/ProjectItemCard.css";
-import 'react-multi-carousel/lib/styles.css';
 
 const responsive = {
   superLargeDesktop: {
