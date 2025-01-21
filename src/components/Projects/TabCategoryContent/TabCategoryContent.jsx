@@ -1,8 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { routes } from '../../../routes';
-import ProjectsListGrid from "../ProjectsListGrid/ProjectsListGrid";
-import { useTranslation } from "react-i18next";
+
+import { routes } from '@/routes.js';
+import ProjectsListGrid from "@/components/Projects/ProjectsListGrid/ProjectsListGrid.jsx";
 
 const variants = {
   open: { opacity: 1 },
@@ -46,7 +47,7 @@ const TabCategoryContent = (props) => {
           category={props.category} 
         />
         
-        <div className="">
+        <div>
           {props.projects.length > 6 && (
 
             // { props.category }
