@@ -79,9 +79,9 @@
   --success_dark_color:rgb(46, 107, 46);
   --danger_color:rgb(255, 99, 99);
   --danger_dark_color:rgb(141, 53, 53);
-  --default_md_text_size: 23px; /*parrafos y demás*/
-  --input-font-size: 19.5px;
-  --button-font-size: 18px;
+  --default_md_text_size: 1.3rem; /*parrafos y demás*/
+  --input-font-size: 1.15rem;
+  --button-font-size: 1rem;
   --gradient_color1: #8a44db; /*used in project tabs*/
   --gradient_color2: #1f53cc;/*used in project tabs*/
   --degradado1: linear-gradient(90deg, #20224d 5.58%, #21244d9c 95.91%); /*used in Articles*/
