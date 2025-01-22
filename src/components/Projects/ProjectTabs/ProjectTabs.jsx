@@ -8,7 +8,7 @@ import TabCategoryContent from '@/components/Projects/TabCategoryContent/TabCate
 const ProjectTabs = ({ categories }) => {
   const [ t ] = useTranslation("global");
   const [activeTab, setActiveTab] = useState(1);
-  const indicatorRef = useRef(null); 
+  const indicatorRef = useRef(null);
   
   const handleTabClick = (index) => {
     setActiveTab(index);
@@ -67,19 +67,20 @@ const ProjectTabs = ({ categories }) => {
     <div>
     
       {/* Botones de pestaña */}
-      <div 
+      <div
         className="relative flex space-x-4 shadow-2xl shadow-900/20 nav nav-pills h-[180px] my-0 mx-auto rounded-[50px] 
-          bg-container_color4 overflow-hidden md:h-[75px] lg:w-[72%]"
+        bg-container_color4 overflow-hidden md:h-[75px] lg:w-[72%]"
       >
-      
         <div className="flex h-[100%] w-[100%] flex-wrap md:flex-nowrap">
+          {/* Indicador de pestaña activa */}
           <div ref={indicatorRef} className="indicator h-[100%] rounded-full shadow-md"></div>
+          {/* Botones */}
           {categories.map((tab, index) => {
             return (
               <button
                 key={index}
                 id={`tab-${index + 1}`}
-                className="w-[100%] tab nav-item nav-link hover:underline hover:decoration-link_color_hover text-dark_link_color 
+                className="w-[100%] tab nav-item nav-link hover:underline hover:decoration-link_color_hover text-dark_link_color
                   hover:text-dark_link_color_hover transition-all duration-300"
                 onClick={() => handleTabClick(index+1)}
               >
@@ -91,9 +92,7 @@ const ProjectTabs = ({ categories }) => {
               </button>
             );
           })}
-        
-        </div>  
-        
+        </div>
       </div>
 
       {/* Contenido de las pestañas */}
@@ -103,7 +102,7 @@ const ProjectTabs = ({ categories }) => {
           // console.log(project)
           return (
             
-            // contenido categorias tabs
+            // contenido de cada categoria de tabs
             <TabCategoryContent
               key={index} 
               index={index}

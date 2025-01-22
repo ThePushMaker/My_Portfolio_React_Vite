@@ -15,8 +15,6 @@ const Contact = () => {
     email: '',
     message: ''
   }
-  // pborrar
-  // const [formData, setformData] = useState(resetFormData);
   const [formData, setFormData] = useState(resetFormData);
   const [buttonText, setButtonText] = useState('');
   const [status, setStatus] = useState({useState});

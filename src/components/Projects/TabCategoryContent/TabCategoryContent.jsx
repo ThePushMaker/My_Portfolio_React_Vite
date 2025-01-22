@@ -37,12 +37,14 @@ const TabCategoryContent = (props) => {
           id={`panel-${props.index+1}`}
           className={`${props.activeTab === props.index+1 ? '' : 'hidden'} `}
         >
+          {/* texto de la categoria */}
           <h3 className="pb-[15px] lg:pb-[20px] text-highlighted_text_color">{props.category}</h3>
           <p className="text-center m-auto pb-[25px] w-[85%] md:w-[90%] lg:pb-[35px] lg:w-[70%]">
-            {props.description}{'.'}
+            {props.description}
           </p>
           
-          <ProjectsListGrid 
+          {/* lista de proyectos */}
+          <ProjectsListGrid
             projects={mostrarRegistros}
             category={props.category}
           />
@@ -60,7 +62,7 @@ const TabCategoryContent = (props) => {
                 </span>
               </button>
             )}
-            
+          
           </div>
         </motion.div>
       )}
