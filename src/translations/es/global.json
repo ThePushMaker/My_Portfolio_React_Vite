@@ -79,7 +79,7 @@
   },
   "contact": {
     "header": "Contactarme es muy fácil",
-    "subtitle": "Si tienes alguna pregunta o necesitas más información, no dudes en contactarme. Estoy aquí para ayudarte a crear algo grandioso.",
+    "description": "Si tienes alguna pregunta o necesitas más información, no dudes en contactarme. Estoy aquí para ayudarte a crear algo grandioso.",
     "placeholder_name": "Nombre completo",
     "placeholder_email": "Correo Electrónico",
     "placeholder_message": "Mensaje",

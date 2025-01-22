@@ -75,7 +75,7 @@
   },
   "contact": {
     "header": "Contacting me is very easy",
-    "subtitle": "If you have any questions or need more information, please don't hesitate to contact me. I'm here to help you create something great.",
+    "description": "If you have any questions or need more information, please don't hesitate to contact me. I'm here to help you create something great.",
     "placeholder_name": "Full Name",
     "placeholder_email": "Email Address",
     "placeholder_message": "Message",
