@@ -11,13 +11,12 @@ const ProjectsListGrid = ({ projects, category }) => {
       {projects.map((project, index) => {
         const link = `${routes[category]}/${index+1}`
         return (
-
-            <div key={index} >
-              <ProjectItemCard
-                {...project}
-                link={link}
-              />
-            </div>
+            // tarjeta de proyecto
+            <ProjectItemCard
+              key={index}
+              {...project}
+              link={link}
+            />
           )
       })}
     </div>

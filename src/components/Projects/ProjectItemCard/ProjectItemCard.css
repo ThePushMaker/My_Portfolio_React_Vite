@@ -1,5 +1,5 @@
 .projectItemCard {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* border: 2.15rem solid var(--neon_color1); */
   border-radius: 2rem;
   background: var(--degradado6);
@@ -10,7 +10,7 @@
   box-shadow: var(--containerShadow2);
 }
 .projectItemCard:hover {
-  box-shadow: var(--containerShadow3);                                                                        
+  box-shadow: var(--containerShadow3);
   transform: scale(1.1);
   filter: brightness(110%);
 }
