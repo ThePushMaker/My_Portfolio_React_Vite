@@ -79,8 +79,8 @@
   --success_dark_color:rgb(46, 107, 46);
   --danger_color:rgb(255, 99, 99);
   --danger_dark_color:rgb(141, 53, 53);
-  --default_md_text_size: 1.3rem; /*parrafos y demás*/
-  --input-font-size: 1.15rem;
+  --default_md_text_size: 1.13rem; /*parrafos y demás*/
+  --input-font-size: 1.05rem;
   --button-font-size: 1rem;
   --gradient_color1: #8a44db; /*used in project tabs*/
   --gradient_color2: #1f53cc;/*used in project tabs*/
@@ -225,12 +225,12 @@ h3 {
   
 }
 h2 {
-  font-size: 50px;
+  /* font-size: 1rem; */
 }
 h3 {
   letter-spacing: 0.8px;
   line-height: 1.1em;
-  font-size: 35px;
+  font-size: 1.76rem;
 }
 
 p {
@@ -318,8 +318,9 @@ p.danger {
   background-attachment: fixed;
 }
 
+/* emoji de titulo */
 .emoji_size {
-  font-size: 30px;
+  font-size: 1.4rem;
 }
 
 .bg_semitransparent {
@@ -331,7 +332,6 @@ p.danger {
 }
 
 /* hr separator */
-
 .hr5 {
   border: 0;
   border-top: medium double var(--border_color1);
@@ -341,16 +341,17 @@ p.danger {
   /* color: #fff; */
   text-align: center;
 }
-
-.hr5::after {
-  /* content: "¶"; */
+/* icono de barra separadora hr */
+/* .hr5::after {
+  content: "¶";
   display: inline-block;
   position: relative;
   top: -0.7em;
-  font-size: 1.4em;
-  padding: 0 0.3em;
-  /* background: white; */
-}
+  font-size: 1.4rem;
+  padding: 0 0.3rem;
+  // background: white; 
+} */
+
 .simple_background {
   background: rgb(16, 16, 38);  
 }

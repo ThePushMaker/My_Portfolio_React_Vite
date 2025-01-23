@@ -1,6 +1,5 @@
 .projectItemCard {
-  /* margin: 0 auto; */
-  /* border: 2.15rem solid var(--neon_color1); */
+  /* border: 0.1rem solid var(--neon_color1); */
   border-radius: 2rem;
   background: var(--degradado6);
   transition: transform 0.4s ease-in-out;

@@ -41,7 +41,7 @@ const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_
         {images && images.length > 0 && (
           <Carousel
             additionalTransfrom={0}
-            arrows
+            arrows={false}
             autoPlay={true}
             autoPlaySpeed={6000}
             centerMode={false}
