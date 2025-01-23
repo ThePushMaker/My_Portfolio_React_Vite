@@ -1,6 +1,7 @@
 import Carousel from 'react-multi-carousel';
 import { motion } from "framer-motion"
 import 'react-multi-carousel/lib/styles.css';
+import { Link } from 'react-router-dom'
 
 import ProjectImage from "@/components/Projects/ProjectImage/ProjectImage";
 import imgSkillsJson from '@/data/skills/skills.json';
@@ -30,55 +31,55 @@ const responsive = {
   }
 };
 
-const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_description, images} ) => {
+const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_description, images, link} ) => {
   console.log(images);
   
   
   return (
     <motion.div animate={{scale: [0, 1]}} transition={{duration: 0.5}} className="projectItemCard border-[1px] border-border_color2 ">
-          
-          {images && images.length > 0 && (
-            <Carousel
-              additionalTransfrom={0}
-              arrows
-              autoPlay={true}
-              autoPlaySpeed={6000}
-              centerMode={false}
-              className="owl-carousel owl-theme skill-slider pb-10 mb-4 lg:mb-0"
-              dotListClass=""
-              draggable={true}
-              focusOnSelect={false}
-              itemClass=""
-              infinite={true}
-              keyBoardControl={true}
-              minimumTouchDrag={80}
-              pauseOnHover
-              renderArrowsWhenDisabled={false}
-              renderButtonGroupOutside={false}
-              renderDotsOutside={false}
-              responsive={responsive}
-              rewind={false}
-              rtl={false}
-              shouldResetAutoplay
-              showDots={true}
-              sliderClass=''
-              slidesToSlide={1}
-              swipeable={true}
-              ssr={true} // means to render carousel on server-side.
-              // customTransition="all"
-              // transitionDuration={10}
-              containerClass=""
-            >
-              {images.map((image, index) => (
-                <div key={index} className="rounded-[2rem] overflow-hidden h-[17rem]">
-                  <ProjectImage
-                    imgPath = { image.path }
-                    title = { title }
-                  />
-                </div>
-              ))}
-            </Carousel>
-          )}
+      <Link to={link}>
+        {images && images.length > 0 && (
+          <Carousel
+            additionalTransfrom={0}
+            arrows
+            autoPlay={true}
+            autoPlaySpeed={6000}
+            centerMode={false}
+            className="owl-carousel owl-theme skill-slider pb-10 mb-4 lg:mb-0"
+            dotListClass=""
+            draggable={true}
+            focusOnSelect={false}
+            itemClass=""
+            infinite={true}
+            keyBoardControl={true}
+            minimumTouchDrag={80}
+            pauseOnHover
+            renderArrowsWhenDisabled={false}
+            renderButtonGroupOutside={false}
+            renderDotsOutside={false}
+            responsive={responsive}
+            rewind={false}
+            rtl={false}
+            shouldResetAutoplay
+            showDots={true}
+            sliderClass=''
+            slidesToSlide={1}
+            swipeable={true}
+            ssr={true} // means to render carousel on server-side.
+            // customTransition="all"
+            // transitionDuration={10}
+            containerClass=""
+          >
+            {images.map((image, index) => (
+              <div key={index} className="rounded-[2rem] overflow-hidden h-[17rem]">
+                <ProjectImage
+                  imgPath = { image.path }
+                  title = { title }
+                />
+              </div>
+            ))}
+          </Carousel>
+        )}
           
         
         {/* text */}
@@ -127,8 +128,8 @@ const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_
           
         </div>
         
+      </Link>
     </motion.div>
-      
 
   );
 }
