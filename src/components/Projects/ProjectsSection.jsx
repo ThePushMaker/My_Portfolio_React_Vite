@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import ProjectTabs from "@/components/Projects/ProjectTabs/ProjectTabs.jsx";
-import CustomHeader from "@/components/UI/CustomHeader/CustomHeader.jsx";
+import ProjectTabs from "@/components/Projects/ProjectTabs/ProjectTabs";
+import CustomHeader from "@/components/UI/CustomHeader/CustomHeader";
 import projectsJSON_en from "@/data/en/projects.json";
 import projectsJSON_es from "@/data/es/projects.json";
 import "@/components/Projects/Projects.css"

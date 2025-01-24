@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useEffect, useRef, useState } from 'react';
 
-import TabCategoryContent from '@/components/Projects/TabCategoryContent/TabCategoryContent.jsx';
+import TabCategoryContent from '@/components/Projects/TabCategoryContent/TabCategoryContent';
 
 
 // componente de pestañas (tabs)

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { routes } from '@/routes.js'
-import ProjectItemCard from '@/components/Projects/ProjectItemCard/ProjectItemCard.jsx'
+import ProjectItemCard from '@/components/Projects/ProjectItemCard/ProjectItemCard'
 
 const ProjectsListGrid = ({ projects, category }) => {
   

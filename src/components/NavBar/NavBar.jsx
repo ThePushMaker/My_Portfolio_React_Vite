@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import logo from "../../assets/img/logo.png";
-import "./NavBar.css";
 import { Link } from "react-router-dom";
-import MobileNavBar from "./MobileNavBar";
-import SelectLanguage from "./SelectLanguage/SelectLanguage";
-import { NavbarRoutesHome, NavbarRoutes } from '../../routes';
 import { useTranslation } from "react-i18next";
+
+import { NavbarRoutesHome, NavbarRoutes } from '@/routes.js';
+import MobileNavBar from "@/components/NavBar/MobileNavBar";
+import SelectLanguage from "@/components/NavBar/SelectLanguage/SelectLanguage";
+import "@/components/NavBar/NavBar.css";
+
+import logo from "@/assets/img/logo.png";
 
 const NavBar = () => {
   const [activateLink, setActiveLink] = useState('home');

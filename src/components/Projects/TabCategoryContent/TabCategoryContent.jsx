@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 import { routes } from '@/routes.js';
-import ProjectsListGrid from "@/components/Projects/ProjectsListGrid/ProjectsListGrid.jsx";
+import ProjectsListGrid from "@/components/Projects/ProjectsListGrid/ProjectsListGrid";
 
 const variants = {
   open: { opacity: 1 },
