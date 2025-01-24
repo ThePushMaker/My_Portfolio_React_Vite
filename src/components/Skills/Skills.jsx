@@ -37,10 +37,10 @@ const Skills = () => {
                     {skills_description}
                   </p>
                 
-                <div className='skills_grid skill-slider lg:mb-0'>
+                <div className='skills_grid skill-icons lg:mb-0'>
                 
                   {imgSkillsJson.map((item, index) => (
-                    <div className='item mx-10' key={index}>
+                    <div className='item' key={index}>
                       <img src={item.img} alt={item.label} />
                       <h5>
                         {item.label.startsWith("t(")
