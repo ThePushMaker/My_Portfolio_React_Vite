@@ -1,12 +1,14 @@
 
 import { useEffect, useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
+import { LANGUAGES } from "../../../constants/constants";
+
+import './SelectLanguage.css'
+
 import arrowDownIcon from '../../../assets/img/icons/angle-down.svg'
 import searchIcon from '../../../assets/img/icons/search.svg'
 import flagUS from '../../../assets/img/flags/flag-us.svg'
 import flagMX from '../../../assets/img/flags/flag-mx.svg'
-import { LANGUAGES } from "../../../constants/constants";
-import { useTranslation } from 'react-i18next';
-import './SelectLanguage.css'
 
 const SelectLanguage = () => {
   const [ t, i18n ] = useTranslation("global"); //'t' it's used in changelanguage functionality
@@ -122,43 +124,48 @@ const SelectLanguage = () => {
   }
 
   return (
-    <div className=''>
-      <div className={`wrapper ${isActive ? 'active' : ''}`} ref={wrapperRef}>
-        <div className="select-btn" onClick={toggleSelect}>
-          <span className='text-[21px] xlNavbar:text-[23px]'>{selectedElement}</span>
-          <img src={arrowDownIcon} alt="arrowDownIcon" />          
+    <div className={`wrapper ${isActive ? 'active' : ''}`} ref={wrapperRef}>
+      
+      {/* select button with selected language */}
+      <div className="select-btn" onClick={toggleSelect}>
+        <span className='text-xl xlNavbar:text-md'>{selectedElement}</span>
+        <img src={arrowDownIcon} alt="arrowDownIcon" />
+      </div>
+
+      {/* container with list of languages */}
+      <div className={`${isActive ? 'active opacity-100' : 'opacity-0'} content transition-all duration-500 ease-in-out`}>
+        
+        {/* search bar */}
+        <div className="search">
+          <img src={searchIcon} alt="searchIcon" />
+          <input
+            type="text"
+            id='searchLanguage'
+            placeholder='Search'
+            value={searchData.searchInp}
+            onChange={handleSearchInputChange}
+            ref={inputRef} // Asigna la referencia al elemento input
+            className='h-9 w-full text-md'
+          />
         </div>
-        <div className={`${isActive ? 'active opacity-100' : 'opacity-0'} content transition-all duration-500 ease-in-out`}>
-          <div className="search">
-            <img src={searchIcon} alt="searchIcon" />       
-            <input
-              type="text"
-              id='searchLanguage'
-              placeholder='Search'
-              value={searchData.searchInp}
-              onChange={handleSearchInputChange}
-              ref={inputRef} // Asigna la referencia al elemento input
-            />
-          </div>
-          <ul className="options">
-            {searchData.arrayData ? (
-              searchData.arrayData.length > 0 ? (
-                searchData.arrayData.map((item, index) => (
-                  <li
-                    key={index}
-                    onClick={() => handleItemSelection(item.label, item.code)}
-                    className={selectedItem === item.label ? 'selected' : ''}
-                  >
-                    <img className='w-7 pr-2' src={flagImages[item.code]} alt={item.code}/>
-                    {item.label}
-                  </li>
-                ))
-              ) : (
-                <p>Oops! Language not found</p>
-              )
-            ) : ''}
-          </ul>
-        </div>
+        
+        {/* list of languages */}
+        <ul className="language-list">
+            {searchData.arrayData.length > 0 ? (
+              searchData.arrayData.map((item, index) => (
+                <li
+                  key={index}
+                  onClick={() => handleItemSelection(item.label, item.code)}
+                  className={`text-smmd ${selectedItem === item.label ? 'selected' : ''}`}
+                >
+                  <img className='w-7 pr-2' src={flagImages[item.code]} alt={item.code}/>
+                  {item.label}
+                </li>
+              ))
+            ) : (
+              <p className='text-base text-blue-950 text-center'>{t(`navbar.language_not_found`)}</p>
+            )}
+        </ul>
       </div>
     </div>
   );

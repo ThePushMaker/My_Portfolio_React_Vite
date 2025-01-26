@@ -31,21 +31,21 @@
   opacity: 0;
 }
 
+/* minimize navbar animation when scroll */
 .scrolled  {
-  padding: 0.45rem 0;
+  padding: 0.4rem 0;
   backdrop-filter: blur(4px);
   box-shadow: 0 3px 8px 0px rgba(0,0,0,0.4);
   }
-
   .scrolled::before {
     opacity: 1;
   }
 
+/* links in the navbar */
 .navbar-link {
   font-weight: 400;
   letter-spacing: 0.8px;
-  opacity: 0.6;
-  font-size: 1.25rem; 
+  opacity: 0.7;
   transition: all 0.4s ease-in-out;
 }
 .navbar-link:hover,
@@ -68,6 +68,10 @@
   bottom: -0.5rem;
   left: 10%;
 }
+
+
+/* contact button */
+/* contact button in the left side of the navbar */
 .contact_button {
   font-weight: 700;
   color: #fff;
@@ -100,42 +104,10 @@
   height: 100%;
   position: absolute;
 }
- .navbar-toggler-icon {
-  width: 24px;
-  height: 17px;
-  background-image: none;
-  position: relative;
-  /* border-bottom: 2px solid #fff; */
-  top: -2px;
-}
-.navbar-toggler-icon:after,
-.navbar-toggler-icon:before {
-  width: 24px;
-  position: absolute;
-  height: 2px;
-  /* background-color: #fff; */
-  top: 0;
-  left: 0;
-  content: "";
-  z-index: 2;
-}
-.navbar-toggler-icon:after {
-  top: 8px;
-}
-/* pendiente abajo */
-.navbar-toggler .navbar-toggler-icon:after {
-  transform: rotate(45deg);
-  background-color: #fff;
-  height: 2px;
-}
-.navbar-toggler .navbar-toggler-icon:before {
-  transform: translateY(8px) rotate(-45deg);
-  background-color: #fff;
-  height: 2px;
-}
 
 
-
+/* up button */
+/* boton flecha arriba para hacer scroll a la parte superior en la pagina */
 .floating-button {
   position: fixed;
   bottom: 20px;
@@ -157,7 +129,8 @@
 }
 
 
-/* decoración bajo enlace */
+/* mobile navbar */
+/* linea de decoración bajo el enlace */
 #mobileNavbar li a:hover::after {
   content: "";
   width: 30%;
@@ -167,22 +140,20 @@
   bottom: -4px;
   left: 0px
 }
-
+/* posicionamiento del menu navbar abierto en mobile */
 #mobileNavbar.active {
-  right: 0px;
+  right: 0rem;
+  top: 0rem;
 }
+/* fondo del menu navbar abierto en mobile */
 .mobileNavbarMenu {
   z-index: 1 !important;
   background-color: rgba(0, 1, 28, 0.7);
   backdrop-filter: blur(0.4rem);
   transition: all 0.25s ease-in-out;
 }
-
+/* animacion del icono para abrir el menu en mobile */
 .mobileNavbarButton svg{
   transition: all;
   transition-duration: 300ms;
-}
-.logoImgNavbar {
-  width: 4rem;
-  margin-right: 2rem;
 }

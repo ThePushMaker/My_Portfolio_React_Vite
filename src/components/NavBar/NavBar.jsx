@@ -32,7 +32,7 @@ const NavBar = () => {
     setActiveLink(value);
   };
 
-  const navLinkStyles = 'navbar-link text-[17px] xlNavbar:text-[20px] py-0 px-[14px] xlNavbar:px-[25px]';
+  const navLinkStyles = 'navbar-link text-sm xlNavbar:text-smmd py-0 px-[14px] xlNavbar:px-[25px]';
 
   return (
     <>
@@ -47,9 +47,9 @@ const NavBar = () => {
                 <>
                   {/* imagen logo */}
                   <a href="/#top" className="navbar-brand">
-                    <img src={logo} alt="Logo" className="logoImgNavbar" />
+                    <img src={logo} alt="Logo" className="w-12 mr-8"/>
                   </a>
-
+                  
                   {/* homepage navbar links */}
                   <div className="invisible hidden lg:inline lg:visible">
 
@@ -75,7 +75,7 @@ const NavBar = () => {
                 <>
                   {/* imagen logo */}
                   <Link to="/" className="navbar-brand">
-                    <img src={logo} alt="Logo" className="logoImgNavbar" />
+                    <img src={logo} alt="Logo" className="w-12 mr-8"/>
                   </Link>
 
                   {/* navbar links */}
@@ -116,7 +116,7 @@ const NavBar = () => {
                   <a href="#contact">
                     <button className="contact_button px-4 py-4 xlNavbar:px-6 ml-3">
                       {'< '}
-                      <span className="text-styled-font-family1 text-[14px] xlNavbar:text-xlNavbar">
+                      <span className="text-styled-font-family1 text-xxsm xlNavbar:text-xlNavbar">
                         {t(`navbar.CONTACT ME`)}
                       </span>
                       {' />'}
@@ -126,7 +126,7 @@ const NavBar = () => {
                   <Link to="/">
                     <button className="contact_button px-4 py-4 xlNavbar:px-6 ml-3">
                       {'< '}
-                      <label className="text-styled-font-family1 text-[14px] xlNavbar:text-xlNavbar">
+                      <label className="text-styled-font-family1 text-xxsm xlNavbar:text-xlNavbar">
                         {t(`navbar.CONTACT ME`)}
                       </label>
                       {' />'}
