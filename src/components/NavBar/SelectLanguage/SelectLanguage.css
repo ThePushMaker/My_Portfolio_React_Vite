@@ -96,5 +96,5 @@
   padding: 0 13px;
 }
 .language-list li:hover, li.selected {
-  background: #f2f2f2;
+  background: var(--container_color3);
 }
