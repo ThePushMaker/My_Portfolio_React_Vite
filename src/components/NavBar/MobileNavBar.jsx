@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import SocialIcons from "../SocialIcons/SocialIcons";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+
+import SocialIcons from "@/components/SocialIcons/SocialIcons";
 
 const MobileNavBar = ({ NavbarRoutesHome, NavbarRoutes }) => {
   const [ t ] = useTranslation("global");  
