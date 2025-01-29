@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import SocialIcons from "@/components/SocialIcons/SocialIcons";
 
 const MobileNavBar = ({ NavbarRoutesHome, NavbarRoutes }) => {
-  const [ t ] = useTranslation("global");  
+  const [ t ] = useTranslation("global");
   const [openMobileNavbar, setOpenMobileNavbar] = useState(false);
   const navbarRef = useRef(null);
   const buttonRef = useRef(null);
@@ -38,36 +38,37 @@ const MobileNavBar = ({ NavbarRoutesHome, NavbarRoutes }) => {
     <div ref={navbarRef}> {/*mobile navbar menu */}
       <div
         id="mobileNavbar"
-        className={`${openMobileNavbar ? 'active' : ''}
-        mobileNavbarMenu px-11 py-6 fixed top-[4rem] right-[-75vw] md:right-[-50vw] w-[70vw] md:w-[45vw]
-        shadow-2xl shadow-border_color1 text-white bg-opacity-[90%] h-screen lg:invisible lg:hidden`}
+        className={` mobileNavbarMenu px-11 py-6 fixed top-[0rem] right-[-75vw] md:right-[-50vw] w-[70vw] md:w-[45vw] shadow-2xl
+          shadow-border_color1 text-white bg-opacity-[90%] h-screen lg:invisible lg:hidden
+        ${openMobileNavbar ? 'active' : ''}`}
       >
+      
+        {/* navbar links */}
         <ul className="space-y-8 py-8 flex flex-col">
-          {location.pathname === '/' && (
+          {location.pathname === '/' ? (
             <>
               {NavbarRoutesHome.map((item, index) => (
                 <li key={index} className="relative">
                   <a href={item.URL} className="font-bold hover:text-link_color_hover ease-in-out duration-300"> 
-                    <span>
-                      {t(`navbar.${item.name}`)}
-                    </span>
+                    <span> {t(`navbar.${item.name}`)}</span>
                   </a>
                 </li>
               ))}
             </>
-          )}
-          {location.pathname !== '/' && (
+          ) : (
             <>
               {NavbarRoutes.map((item, index) => (
                 <li key={index} className="relative">
-                  <Link to={item.URL} className="font-bold hover:text-link_color_hover ease-in-out duration-300"> {t(`navbar.${item.name}`)}</Link>
+                  <Link to={item.URL} className="font-bold hover:text-link_color_hover ease-in-out duration-300">
+                    {t(`navbar.${item.name}`)}
+                  </Link>
                 </li>
               ))}
             </>
           )}
         </ul>
         <div className="flex justify-center absolute bottom-0 left-0 w-[100%] text-center py-[50px] ">
-          <SocialIcons /> 
+          <SocialIcons />
         </div>
       </div>
       
