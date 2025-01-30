@@ -1,11 +1,8 @@
 .projectItemCard {
-  /* border: 0.1rem solid var(--neon_color1); */
-  border-radius: 2rem;
   background: var(--degradado6);
   transition: transform 0.4s ease-in-out;
   transition: filter 0.1s ease-in-out;
   transition: box-shadow 0.25s ease-in-out;
-  padding: 0.6rem 0.6rem;
   box-shadow: var(--containerShadow2);
 }
 .projectItemCard:hover {

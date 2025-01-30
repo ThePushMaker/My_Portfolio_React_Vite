@@ -38,12 +38,12 @@ const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_
   return (
     <motion.div
       animate={{scale: [0, 1]}} 
-      transition={{duration: 0.5}} 
-      className="projectItemCard border-[1px] border-border_color2 flex"
+      transition={{duration: 0.5}}
+      className="projectItemCard rounded-3xl p-6"
     >
       <Link to={link} className="flex w-full">
         {/* image carousel */}
-        <div className='w-1/2'>
+        <div className='w-4/12 group'>
           {images && images.length > 0 && (
             <Carousel
               additionalTransfrom={0}
@@ -78,7 +78,10 @@ const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_
             >
               {/* display project images */}
               {images.map((image, index) => (
-                <div key={index} className="rounded-xl overflow-hidden">
+                <div
+                  key={index}
+                  className="rounded-xl overflow-hidden border-[0.12rem] border-solid border-slate-300 group-hover:border-slate-500"
+                >
                   <ProjectImage
                     imgPath = { image.path }
                     title = { title }
@@ -91,19 +94,16 @@ const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_
           
         
         {/* text and icons */}
-        <div className="text-left my-[1.5rem] mx-[1rem]">
-          <h4 className="text-center text-[1.3rem] text-white font-bold mb-2">{'- '}{title}{' -'}</h4>
-          
-          {/* <hr className="border-[1px] border-border_color2 my-3" /> */}
+        <div className="text-left ml-[1.5rem] mx-[1rem] mx-6">
+          {/* <h4 className="text-lg text-white font-bold mb-2">{'- '}{title}{' -'}</h4> */}
+          <h4 className="text-lg text-white font-bold mb-2">{'- '}{title}</h4>
           
           {/* description */}
           <p className="text-mdsm h-[7.1rem] overflow-hidden text-ellipsis text-slate-300">
             {short_description}
           </p>
           
-          
           <div>
-            {/* <h5 className="px-10 text-[1.11rem] text-center pb-3 text-highlighted_text_color font-bold">Tecnologías:</h5> */}
             
             {/* display technology icons */}
             <div className="flex flex-wrap overflow-hidden justify-center h-auto">
@@ -116,19 +116,17 @@ const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_
             </div>
           </div>
           
+          {/* disciplines */}
           <div className="pb-2">
-            {/* <h5 className="px-10 text-[1.11rem] text-center pb-3 text-highlighted_text_color font-bold">Disciplinas:</h5> */}
-              <div className="flex">
-                <ul className="mx-auto text-left list-disc list-inside">
+                <ul className="flex mx-auto text-left list-disc list-inside">
                   {disciplines_covered && disciplines_covered.map((discipline, index) => (
-                    <li key={index} className="text-base py-0.5">
+                    <li key={index} className="text-mdsm py-0.5 mx-2">
                       <span className="text">
                         {discipline}
                       </span>
                     </li>
                   ))}
                 </ul>
-              </div>
           </div>
           
           

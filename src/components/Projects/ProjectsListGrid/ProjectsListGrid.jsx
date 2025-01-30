@@ -6,7 +6,7 @@ import ProjectItemCard from '@/components/Projects/ProjectItemCard/ProjectItemCa
 const ProjectsListGrid = ({ projects, category }) => {
   
   return (
-    <div className="grid grid-cols-1 gap-6"> {/* grid */}
+    <div className="grid grid-cols-1 gap-4 max-w-screen-lg mx-auto"> {/* grid */}
     {/* listado de proyectos */}
       {projects.map((project, index) => {
         const link = `${routes[category]}/${index+1}`

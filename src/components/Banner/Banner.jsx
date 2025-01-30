@@ -156,7 +156,6 @@ const Banner = () => {
                 </ul>
                 
 
-                
                 {/* cv */}
                 <div className="flex mb-6 pt-[0.8rem] w-full">
                     <a

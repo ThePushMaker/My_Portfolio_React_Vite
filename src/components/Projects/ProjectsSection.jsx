@@ -31,10 +31,10 @@ const ProjectsSection = () => {
   return (
     <>
       <section 
-        className="project bg_semitransparent px-4 md:px-14  pt-12 pb-16 lg:pb-16"
+        className="project bg_semitransparent px-4 md:px-14 pt-12 pb-16 lg:pb-16"
         id="projects"
       >
-        <div className="container m-auto w-full lg:max-w-screen-xl">
+        <div className="container mx-auto w-full lg:max-w-screen-xl">
         
           {/* titulo */}
           <CustomHeader
