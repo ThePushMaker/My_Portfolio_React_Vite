@@ -30,7 +30,7 @@ const Banner = () => {
 
   return(
     <>
-      <section className="banner px-6 md:px-14 lg:px-24 text-center md:text-start mt-0 pb-[160px]" id="home">
+      <section className="banner max-w-[83%] md:w-[60%] lg:w-full lg:max-w-screen-xl mx-auto text-center md:text-start mt-0 pb-[160px]" id="home">
         
         {/* slogan */}
         <div className="h-screen flex items-center mb-10">
@@ -60,11 +60,19 @@ const Banner = () => {
           <div className="items-center flex flex-wrap">
             <div className="w-full lg:w-7/12">
                 
-                <span className="tagline text-link_disabled_color text-xl">{'🌐 '}{t(`banner.welcome`)}{' 🌐'}</span>
+                <span className="tagline text-link_disabled_color text-xl">
+                  <span className="text-sm">
+                    {'🌐 '}
+                  </span>
+                    {t(`banner.welcome`)}
+                  <span className="text-sm">
+                    {' 🌐'}
+                  </span>
+                </span>
                 
                 {/* welcome box */}
                 <h1 className="text-4xl md:text-5xl lg:text-5xl mb-3">
-                <span className="textShadow">{t(`banner.Fullname`)}</span>                       
+                <span className="textShadow">{t(`banner.Fullname`)}</span>
                   <div className="h-16 lg:h-12 mt-2">
                     <span className="wrap text-highlighted_text_color" style={{ fontSize: `${fontSize}px` }}>
                       { <TypeAnimation {...typeAnimationArray}/>}
@@ -78,7 +86,7 @@ const Banner = () => {
                   <a 
                     target="_blank" 
                     rel="noreferrer" 
-                    className="hover:underline hover:decoration-link_color_hover" 
+                    className="hover:underline hover:decoration-link_color_hover"
                     href="https://www.google.com/search?q=Full+Stack+Developer&oq=full+stack+developer&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDMxNjhqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
                   >
                       <strong className="text-link_color hover:text-link_color_hover">
@@ -87,9 +95,9 @@ const Banner = () => {
                   </a>
                   
                   <a 
-                    target="_blank" 
-                    rel="noreferrer" 
-                    className="hover:underline hover:decoration-link_color_hover" 
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:underline hover:decoration-link_color_hover"
                     href="https://www.google.com/search?q=software+development+engineer&sca_esv=580697965&ei=Sk1MZanzOtTDkPIPwJKL2A0&oq=softwar+development+en&gs_lp=Egxnd3Mtd2l6LXNlcnAiFnNvZnR3YXIgZGV2ZWxvcG1lbnQgZW4qAggAMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAESJxuUABYtGlwBngBkAEAmAGuAaABjCmqAQQwLjQwuAEDyAEA-AEBqAIUwgILEAAYgAQYsQMYgwHCAg4QLhiABBixAxjHARjRA8ICDRAuGIoFGMcBGNEDGEPCAgUQABiABMICCBAAGIoFGLEDwgINEAAYigUYsQMYgwEYQ8ICBxAAGIoFGEPCAgoQABiKBRixAxhDwgIIEAAYgAQYsQPCAgoQABiABBixAxgKwgIHEAAYgAQYCsICEBAAGIoFGOoCGLQCGEPYAQHCAh0QABiKBRjlAhjlAhjqAhi0AhiKAxi3AxjUA9gBAcICFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQLCAhYQLhgDGI8BGOUCGOoCGLQCGIwD2AECwgILEAAYigUYsQMYgwHCAhEQLhiABBixAxiDARjHARjRA8ICERAuGIMBGMcBGLEDGNEDGIAEwgIJEAAYDRiABBgKwgIGEAAYHhgNwgIIEAAYHhgNGArCAgsQABgeGA0Y8QQYCuIDBBgAIEGIBgG6BgQIARgHugYGCAIQARgK&sclient=gws-wiz-serp"
                     >
                       <strong className="text-link_color hover:text-link_color_hover">
@@ -98,7 +106,7 @@ const Banner = () => {
                   </a>
                   
                   <a 
-                    className="hover:underline hover:decoration-link_color_hover" 
+                    className="hover:underline hover:decoration-link_color_hover"
                     target="_blank" 
                     rel="noreferrer" 
                     href="https://www.google.com/search?q=Technical+High+School+Diploma+in+Programming&oq=Technical+High+School+Diploma+in+Programming&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigAdIBBzQ5NWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8"
@@ -152,8 +160,8 @@ const Banner = () => {
                 {/* cv */}
                 <div className="flex mb-6 pt-[0.8rem] w-full">
                     <a
-                      target="_blank" 
-                      rel="noreferrer" 
+                      target="_blank"
+                      rel="noreferrer"
                       href="https://www.google.com/search?q=software+development+engineer&sca_esv=580697965&ei=Sk1MZanzOtTDkPIPwJKL2A0&oq=softwar+development+en&gs_lp=Egxnd3Mtd2l6LXNlcnAiFnNvZnR3YXIgZGV2ZWxvcG1lbnQgZW4qAggAMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAEMgcQABgNGIAESJxuUABYtGlwBngBkAEAmAGuAaABjCmqAQQwLjQwuAEDyAEA-AEBqAIUwgILEAAYgAQYsQMYgwHCAg4QLhiABBixAxjHARjRA8ICDRAuGIoFGMcBGNEDGEPCAgUQABiABMICCBAAGIoFGLEDwgINEAAYigUYsQMYgwEYQ8ICBxAAGIoFGEPCAgoQABiKBRixAxhDwgIIEAAYgAQYsQPCAgoQABiABBixAxgKwgIHEAAYgAQYCsICEBAAGIoFGOoCGLQCGEPYAQHCAh0QABiKBRjlAhjlAhjqAhi0AhiKAxi3AxjUA9gBAcICFhAAGAMYjwEY5QIY6gIYtAIYjAPYAQLCAhYQLhgDGI8BGOUCGOoCGLQCGIwD2AECwgILEAAYigUYsQMYgwHCAhEQLhiABBixAxiDARjHARjRA8ICERAuGIMBGMcBGLEDGNEDGIAEwgIJEAAYDRiABBgKwgIGEAAYHhgNwgIIEAAYHhgNGArCAgsQABgeGA0Y8QQYCuIDBBgAIEGIBgG6BgQIARgHugYGCAIQARgK&sclient=gws-wiz-serp"
                     >
                       <button>
