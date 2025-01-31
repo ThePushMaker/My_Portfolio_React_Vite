@@ -27,21 +27,13 @@
   display: block;
 }
 
-.banner button {
-  color: #fff;
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 0.8px;
-  display: flex;
-  align-items: center;
-}
-.banner button svg {
+.banner a svg {
   font-size: 25px;
   margin-left: 10px;
   transition: 0.3s ease-in-out;
   line-height: 1;
 }
-.banner button:hover svg {
+.banner a:hover svg {
   margin-left: 25px;
 }
 .banner .animatedImg {
