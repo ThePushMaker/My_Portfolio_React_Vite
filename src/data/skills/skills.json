@@ -56,8 +56,12 @@
     "label": "Adobe XD"
   },
   {
-    "img": "/assets/img/skill_icons/languages.jpg",
-    "label": "t('skills.english_spanish')"
+    "img": "/assets/img/flags/flag-us.svg",
+    "label": "t('skills.english')"
+  },
+  {
+    "img": "/assets/img/flags/flag-mx.svg",
+    "label": "t('skills.spanish')"
   },
   {
     "img": "/assets/img/skill_icons/electron.png",

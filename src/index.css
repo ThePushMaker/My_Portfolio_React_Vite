@@ -67,7 +67,6 @@
   --dark_link_color:#0040a6;
   --dark_link_color_hover:#f6ff00;
   --dark_link_color_hover2:#0059e8;
-  /* --container_color:#171939; used in skills */
   --container_color2:rgb(var(--container_color2_aux)); /*used in about-me and projects*/
   --container_color2_aux:23, 25, 57; /*used in skills*/
   --container_color3:rgb(224, 224, 233);/*Used in articles*/
@@ -186,11 +185,6 @@ h6 {
   padding: 0;
   line-height: normal;
 }
-@media (max-width: 640px) {
-  h2 {
-    font-size: 2.15rem;
-  }
-}
 
 p,
 a,
@@ -224,9 +218,6 @@ h3 {
   font-weight: 700;
   text-align: center;
   
-}
-h2 {
-  /* font-size: 1rem; */
 }
 h3 {
   letter-spacing: 0.8px;
@@ -342,16 +333,6 @@ p.danger {
   /* color: #fff; */
   text-align: center;
 }
-/* icono de barra separadora hr */
-/* .hr5::after {
-  content: "¶";
-  display: inline-block;
-  position: relative;
-  top: -0.7em;
-  font-size: 1.4rem;
-  padding: 0 0.3rem;
-  // background: white; 
-} */
 
 .simple_background {
   background: rgb(16, 16, 38);  
