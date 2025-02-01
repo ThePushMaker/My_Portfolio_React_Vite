@@ -57,11 +57,11 @@
   },
   {
     "img": "/assets/img/flags/flag-us.svg",
-    "label": "t('skills.english')"
+    "label": "t('skills.english_skill')"
   },
   {
     "img": "/assets/img/flags/flag-mx.svg",
-    "label": "t('skills.spanish')"
+    "label": "t('skills.spanish_skill')"
   },
   {
     "img": "/assets/img/skill_icons/electron.png",

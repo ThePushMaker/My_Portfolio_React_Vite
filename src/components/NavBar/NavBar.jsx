@@ -13,7 +13,7 @@ const NavBar = () => {
   const [activateLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
-  // const [ t, i18n ] = useTranslation("global");  
+  // const [ t, i18n ] = useTranslation("global");
   const [t] = useTranslation("global");
 
   //  detectar si se ha hecho scroll en la pagina

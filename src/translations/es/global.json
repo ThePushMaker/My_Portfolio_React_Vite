@@ -6,7 +6,8 @@
     "not_found_button":"Volver a la página de inicio"
   },
   "navbar": {
-    "Spanish": "Spanish",
+    "spanish": "Español",
+    "english": "Inglés",
     "Home": "Inicio",
     "Skills": "Habilidades",
     "Projects": "Proyectos",
@@ -52,8 +53,8 @@
     "description4": " Laravel y React",
     "description5": ", considerándolos mis principales áreas de experiencia. También cuento con experiencia trabajando con",
     "description6": " SCRUM",
-    "english": "Inglés",
-    "spanish": "Español"
+    "english_skill": "English B1",
+    "spanish_skill": "Español C2"
   },
   "projects": {
     "title": "Proyectos",

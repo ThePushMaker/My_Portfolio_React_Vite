@@ -2,7 +2,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { LANGUAGES } from "@/constants/constants";
 import './SelectLanguage.css'
 
 import arrowDownIcon from '@/assets/img/icons/angle-down.svg'
@@ -11,12 +10,17 @@ import searchIcon from '@/assets/img/icons/search.svg'
 const SelectLanguage = () => {
   const [ t, i18n ] = useTranslation("global"); //'t' it's used in changelanguage functionality
 
+  const languages = [
+    { label: 'English', code: 'en' },
+    { label: 'Español', code: 'es' }
+  ];
+
   const [isActive, setIsActive] = useState(false);
   const [selectedElement, setSelectedElement] = useState("Language");
   const [selectedItem, setSelectedItem] = useState(null);
   const [searchData, setSearchData] = useState({
     searchInp: '',
-    arrayData: [...LANGUAGES],
+    arrayData: [...languages],
   });
   
   // Objeto que mapea códigos de idioma a rutas de imágenes de banderas
@@ -28,7 +32,7 @@ const SelectLanguage = () => {
   const wrapperRef = useRef(null); // Ref para el div contenedor del select
   const inputRef = useRef(null); // Ref para el elemento input del campo de búsqueda
  
-  // get navigator default langugage & convert it to a compatible code to set it as the app language
+  // when load the component: get navigator default langugage & convert it to a compatible code to set it as the app language
   useEffect(() => {
     const storedLanguage = localStorage.getItem('language');
     
@@ -38,18 +42,17 @@ const SelectLanguage = () => {
       const parts = languageCode.split('-');
       
       changeLang(parts[0])
-    }else { 
-      if(storedLanguage==='en') setSelectedElement('English')
-      else if(storedLanguage==='es') setSelectedElement('Spanish')
-      else setSelectedElement('English') //falbackLng en
-      // console.log("ya habia storedlanguage",storedLanguage)
+    }else {
+      if(storedLanguage==='en') setSelectedElement(t(`navbar.english`))
+      else if(storedLanguage==='es') setSelectedElement(t(`navbar.spanish`))
+      else setSelectedElement(t(`navbar.english`)) //falbackLng en
     }
   }, []);
  
  
   const changeLang = newLng => {
     i18n.changeLanguage(newLng);
-    setSelectedElement(newLng)
+    setSelectedElement(newLng);
     localStorage.setItem('language', newLng);
   }
   
@@ -64,7 +67,7 @@ const SelectLanguage = () => {
     setSearchData(prevData => ({
       ...prevData,
       searchInp: '', // Establecer el campo de búsqueda en una cadena vacía al cerrar el select
-      arrayData: [...LANGUAGES],
+      arrayData: [...languages],
     }));
   }
 
@@ -108,7 +111,7 @@ const SelectLanguage = () => {
   // search functionality
   const handleSearchInputChange = (event) => {
     const inputValue = event.target.value;
-    let eventsFiltered = [...LANGUAGES];
+    let eventsFiltered = [...languages];
 
     eventsFiltered = eventsFiltered.filter(item => item.label.toLocaleLowerCase().includes(inputValue.toLocaleLowerCase()));
   

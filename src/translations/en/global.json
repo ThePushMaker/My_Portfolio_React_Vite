@@ -6,8 +6,8 @@
     "not_found_button":"Back to home page"
   },
   "navbar": {
-    "Spanish": "Spanish",
-    "English": "English",
+    "spanish": "Spanish",
+    "english": "English",
     "Home": "Home",
     "Skills": "Skills",
     "Projects": "Projects",
@@ -50,7 +50,8 @@
     "description4": " React & Laravel",
     "description5": ", considering them my main areas of expertise. Also, I have experience working with",
     "description6": " SCRUM",
-    "english_spanish": "English & Spanish"
+    "english_skill": "English B1",
+    "spanish_skill": "Español C2"
   },
   "projects": {
     "title": "Projects",
