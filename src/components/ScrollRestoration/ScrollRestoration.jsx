@@ -1,45 +1,61 @@
-import { useEffect } from "react"
-import { useLocation } from "react-router-dom"
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const ScrollRestoration = () => {
   const location = useLocation();
-  
+  // Creamos una clave única combinando pathname, search y hash
+  const scrollKey = `${location.pathname}${location.search}${location.hash}`;
+
   useEffect(() => {
-    //configurar el historial para manejar manualmente la restauración del scroll
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
     }
-    
-    // Función para guardar la posición actual del scroll en sessionStorage
+
+    // Función para guardar la posición actual del scroll
     const saveScrollPosition = () => {
-      sessionStorage.setItem(location.pathname, window.scrollY.toString());
+      sessionStorage.setItem(scrollKey, window.scrollY.toString());
     };
-    
-    // funcion para restaurar la posición del scroll
+
+    // Función para restaurar la posición del scroll
     const restoreScrollPosition = () => {
-      const savedPosition = sessionStorage.getItem(location.pathname);
-      if (savedPosition) {
+      const savedPositionStr = sessionStorage.getItem(scrollKey);
+      if (savedPositionStr) {
+        const savedPosition = parseInt(savedPositionStr, 10);
         setTimeout(() => {
-          window.scrollTo(0, parseInt(savedPosition, 10));
-        }, 100); // Espera 100ms antes de restaurar la posición del scroll para asegurarse de que el DOM este listo
+          const maxScroll = document.body.scrollHeight - window.innerHeight;
+          window.scrollTo(0, Math.min(savedPosition, maxScroll));
+        }, 300); // Delay para dar tiempo a que el DOM se renderice completamente
       } else {
-        window.scrollTo(0, 0); // si no hay posición guardada, ir a inicio
+        window.scrollTo(0, 0);
       }
     };
-    
-    // Restaurar la posición al montar el componente
+
+    // Restauramos la posición al montar el componente
     restoreScrollPosition();
-    
-    // Guardar la posición actual del scroll antes de la recarga o al cambiar de ruta
-    window.addEventListener("beforeunload", saveScrollPosition);
-    
-    // limpiar el listener cuando el componente se desmonte
-    return () => {
-      window.removeEventListener("beforeunload", saveScrollPosition);
+
+    // Usamos un throttling básico para actualizar el scroll cada 100ms
+    let throttleTimeout = null;
+    const handleScroll = () => {
+      if (throttleTimeout === null) {
+        throttleTimeout = setTimeout(() => {
+          saveScrollPosition();
+          throttleTimeout = null;
+        }, 100);
+      }
     };
-    
-  }, [location.pathname]);
-  
+
+    // Agregamos los event listeners
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("pageshow", restoreScrollPosition);
+
+    // Guardamos la posición en el cleanup y removemos los listeners
+    return () => {
+      saveScrollPosition();
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("pageshow", restoreScrollPosition);
+    };
+  }, [scrollKey]);
+
   return null;
 };
 
