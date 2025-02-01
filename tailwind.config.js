@@ -13,6 +13,7 @@ export default {
       fontSize: {
         'xxsm': '0.79rem',
         'mdsm': '0.93rem',
+        'mdsm2': '1.09rem',
         'smmd': '1.05rem',
       },
       colors: {
