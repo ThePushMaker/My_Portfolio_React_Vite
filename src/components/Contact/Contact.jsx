@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import '@/components/Contact/Contact.css'
-import contactImg from '@/assets/img/contact-img.png'
 import EmailDisplay from '@/components/EmailDisplay/EmailDisplay.jsx';
 import TransparentInput from '@/components/UI/TransparentInput/TransparentInput.jsx';
 import CustomHeader from '@/components/UI/CustomHeader/CustomHeader.jsx';
+import '@/components/Contact/Contact.css'
+
+import contactImg from '@/assets/img/contact-img.png'
 
 const Contact = () => {
-  const [ t] = useTranslation("global"); 
+  const [ t] = useTranslation("global");
   
   const resetFormData = {
     fullName: '',
