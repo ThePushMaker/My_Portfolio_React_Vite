@@ -1,45 +1,41 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 const ScrollRestoration = () => {
   const location = useLocation();
-  // Creamos una clave única combinando pathname, search y hash
+  // Clave única para cada ruta (incluye pathname, search y hash)
   const scrollKey = `${location.pathname}${location.search}${location.hash}`;
+  const throttleTimeoutRef = useRef(null);
 
   useEffect(() => {
+    // se ejecuta cuando se monta el componente
+    // Desactivamos la restauración automática del navegador
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
     }
 
-    // Función para guardar la posición actual del scroll
     const saveScrollPosition = () => {
       sessionStorage.setItem(scrollKey, window.scrollY.toString());
     };
 
-    // Función para restaurar la posición del scroll
     const restoreScrollPosition = () => {
       const savedPositionStr = sessionStorage.getItem(scrollKey);
-      if (savedPositionStr) {
-        const savedPosition = parseInt(savedPositionStr, 10);
-        setTimeout(() => {
-          const maxScroll = document.body.scrollHeight - window.innerHeight;
-          window.scrollTo(0, Math.min(savedPosition, maxScroll));
-        }, 300); // Delay para dar tiempo a que el DOM se renderice completamente
-      } else {
-        window.scrollTo(0, 0);
-      }
+      const savedPosition = savedPositionStr ? parseInt(savedPositionStr, 10) : 0;
+      setTimeout(() => {
+        const maxScroll = document.body.scrollHeight - window.innerHeight;
+        window.scrollTo(0, Math.min(savedPosition, maxScroll));
+      }, 300); // Delay para esperar a que el DOM se renderice
     };
 
-    // Restauramos la posición al montar el componente
+    // Restauramos la posición cuando se monta el componente
     restoreScrollPosition();
 
-    // Usamos un throttling básico para actualizar el scroll cada 100ms
-    let throttleTimeout = null;
+    // Throttling de 100ms para evitar llamadas excesivas
     const handleScroll = () => {
-      if (throttleTimeout === null) {
-        throttleTimeout = setTimeout(() => {
+      if (!throttleTimeoutRef.current) {
+        throttleTimeoutRef.current = setTimeout(() => {
           saveScrollPosition();
-          throttleTimeout = null;
+          throttleTimeoutRef.current = null;
         }, 100);
       }
     };
@@ -48,11 +44,13 @@ const ScrollRestoration = () => {
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("pageshow", restoreScrollPosition);
 
-    // Guardamos la posición en el cleanup y removemos los listeners
+    // Limpiamos los event listeners cuando el componente se desmonta
     return () => {
-      saveScrollPosition();
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("pageshow", restoreScrollPosition);
+      if (throttleTimeoutRef.current) {
+        clearTimeout(throttleTimeoutRef.current);
+      }
     };
   }, [scrollKey]);
 

@@ -64,8 +64,8 @@ const AboutMe = () => {
 
             <p className={`flex w-full ${paragraphStyles}`}>
               <a 
-                className={`mx-auto ${linkStyles}`} 
-                target="_blank" rel="noreferrer" 
+                className={`mx-auto ${linkStyles}`}
+                target="_blank" rel="noreferrer"
                 href="https://www.google.com/search?q=disc+dc&oq=disc+dc&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yCAgFEAAYFhgeMggIBhAAGBYYHjIICAcQABgWGB4yCAgIEAAYFhgeMggICRAAGBYYHtIBCDEyMzFqMWo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
               >
                 DISC: DC

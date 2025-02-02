@@ -3,6 +3,7 @@ import { createBrowserRouter, Outlet } from "react-router-dom";
 import { routes } from "./routes";
 import NotFound from "./views/NotFound/NotFound";
 import ScrollRestoration from "@/components/ScrollRestoration/ScrollRestoration";
+// import { ScrollRestoration } from "react-router-dom";
 
 import App from "./App";
 import ArticleLayout from "./layouts/ArticleLayout";
