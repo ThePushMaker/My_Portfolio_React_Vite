@@ -3,7 +3,8 @@
     "loading":"Cargando",
     "not_found_title":"No encontrado",
     "not_found_message":"Esta página no se puedo encontrar",
-    "not_found_button":"Volver a la página de inicio"
+    "not_found_button":"Volver a la página de inicio",
+    "copy": "COPIAR"
   },
   "navbar": {
     "spanish": "Español",
@@ -95,7 +96,10 @@
     "fill_out_all": "Por favor, complete todos los campos",
     "message_sent": "El mensaje se envió exitosamente",
     "something_wrong": "Algo salió mal, por favor inténtelo de nuevo más tarde",
-    "sending": "Enviando..."
+    "sending": "Enviando...",
+    "copy_email_header": "¿Apresurado?",
+    "copy_email": "Copia mi correo electrónico y conversemos. ¡Espero tu mensaje!",
+    "email_copied": "Copiado al portapapeles"
   },
   "newsletter": {
     "main_message": "Suscríbete a mi boletín y nunca te pierdas las nuevas contribuciones",

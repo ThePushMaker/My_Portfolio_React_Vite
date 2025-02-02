@@ -48,7 +48,7 @@ const clearFields = () => {
   
   return(
    
-      <section className="newsletter-bx py-6 md:py-9 px-10 lg:py-[85px] w-full">
+      <section className="newsletter-bx py-6 md:py-10 px-12 w-full">
         <div className="flex flex-wrap items-center w-full xl:w-10/12 mx-auto">
           <div className="w-full lg:w-4/12">
             <p className="text-[1.45rem] lg:mr-4 text-container_color5 font-bold text-center"> {t(`newsletter.main_message`)} </p>

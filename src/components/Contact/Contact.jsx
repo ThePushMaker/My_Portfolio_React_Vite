@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import EmailDisplay from '@/components/EmailDisplay/EmailDisplay.jsx';
 import TransparentInput from '@/components/UI/TransparentInput/TransparentInput.jsx';
 import CustomHeader from '@/components/UI/CustomHeader/CustomHeader.jsx';
+
 import '@/components/Contact/Contact.css'
 
 import contactImg from '@/assets/img/contact-img.png'
@@ -61,7 +62,7 @@ const Contact = () => {
     
     <section className='bgBannerContacto'>
       <div
-        className='contact degradado4 px-6 md:px-6 lg:px-6 xl:px-28 pt-[50px] pb-[170px]'
+        className='contact degradado4 px-6 md:px-6 lg:px-6 xl:px-28 pt-[50px] pb-[150px]'
         id="contact"
       >
         <div className='container mx-auto w-full h-full'>
