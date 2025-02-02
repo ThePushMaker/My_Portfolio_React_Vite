@@ -4,7 +4,8 @@ import { useLocation } from "react-router-dom";
 const ScrollRestoration = () => {
   const location = useLocation();
   // Clave única para cada ruta (incluye pathname, search y hash)
-  const scrollKey = `${location.pathname}${location.search}${location.hash}`;
+  // const scrollKey = `${location.pathname}${location.search}${location.hash}`;
+  const scrollKey = `${location.pathname}${location.search}`;
   const throttleTimeoutRef = useRef(null);
 
   useEffect(() => {
