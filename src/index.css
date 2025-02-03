@@ -356,3 +356,14 @@ p.danger {
 .containerShadow1{
   box-shadow: 0 7px 10px 2px rgba(0,0,0,0.5);
 }
+
+.lista-flecha {
+  list-style: none; /* Elimina las bolitas */
+  padding-left: 0; /* Elimina el padding por defecto */
+}
+.lista-flecha li::before {
+  content: "▶ "; /* Flecha antes del texto */
+  color: #ffcc00; /* Color opcional */
+  font-size: 1rem; /* Tamaño opcional */
+  margin-right: 8px; /* Espaciado */
+}

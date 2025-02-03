@@ -30,11 +30,11 @@ const Banner = () => {
 
   return(
     <>
-      <section className="banner max-w-[83%] md:w-[60%] lg:w-full lg:max-w-screen-xl mx-auto text-center md:text-start mt-0 pb-[160px]" id="home">
+      <section className="banner max-w-[90%] lg:w-full lg:max-w-screen-xl mx-auto text-center md:text-start mt-0 pb-[160px]" id="home">
         
         {/* slogan */}
         <div className="h-screen flex items-center mb-10">
-          <h2 className={`paragraphStyles2 text-[3.7rem] w-[90%] mx-auto`}>
+          <h2 className={`paragraphStyles2 text-5xl lg:text-[3.7rem] lg:w-[90%] mx-auto`}>
             {'"'}
             {t(`banner.slogan1`)}
             <strong className="text-link_color">
@@ -98,8 +98,7 @@ const Banner = () => {
               </p>
                 
               {/* list */}
-              <ul className="ml-10 list-disc">
-                
+              <ul className="ml-6 lista-flecha">
                 <li className="paragraphStyles bannerList">
                     {t(`banner.description_enfocado_en`)}
                     <strong className="text-highlighted_text_color">{t(`banner.description_enfocado_en2`)}</strong>
