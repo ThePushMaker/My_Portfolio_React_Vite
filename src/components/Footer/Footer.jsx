@@ -8,11 +8,11 @@ import SocialIconsSmall from '../SocialIconsSmall/SocialIconsSmall';
 const smTextSize = 'text-[18.5px]'
 
 const Footer = () => {
-  const [ t] = useTranslation("global"); 
+  const [ t] = useTranslation("global");
   let location = useLocation();
-  // console.log(location.pathname) 
+  // console.log(location.pathname)
   return(
-    <footer className='footer px-6 md:px-14 lg:px-20 footer_shadow'>
+    <footer className='footer px-6 md:px-14 lg:px-20 footer_shadow min-w-min'>
       <div className='container mx-auto pt-16 pb-16'>
         <div className='flex flex-wrap items-center'>
           {location.pathname==='/' && <MailchimpForm />}

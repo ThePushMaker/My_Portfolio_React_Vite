@@ -27,6 +27,11 @@
     bg-[linear-gradient(180deg,_rgba(34,44,144,0.2)_50%,_rgba(3,6,38,0.2)_100%)] hover:backdrop-brightness-[115%]
     lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg;
   }
+  .app-container {
+    @apply flex flex-col min-h-screen
+    min-w-min
+    ;
+  }
 }
 
 
@@ -287,11 +292,6 @@ p.danger {
 }
 .button_transparent_rounded:hover::before {
   width: 100%;
-}
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Esto asegura que la altura del contenedor sea al menos igual a la altura de la ventana gráfica. */
 }
 
 .degradado1 {

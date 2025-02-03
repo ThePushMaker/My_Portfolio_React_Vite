@@ -144,13 +144,18 @@
 #mobileNavbar.active {
   right: 0rem;
   top: 0rem;
+  opacity: 1;
 }
 /* fondo del menu navbar abierto en mobile */
 .mobileNavbarMenu {
   z-index: 1 !important;
   background-color: rgba(0, 1, 28, 0.7);
   backdrop-filter: blur(0.4rem);
-  transition: all 0.25s ease-in-out;
+  transition: all 0.3s ease-in-out, opacity 0.16s ease-in-out;
+  position: fixed;
+  top: 0;
+  right: -400px;
+  opacity: 0;
 }
 /* animacion del icono para abrir el menu en mobile */
 .mobileNavbarButton svg{

@@ -6,7 +6,7 @@ import ProjectImage from "./ProjectImage/ProjectImage";
 import { useTranslation } from "react-i18next";
 
 const ProjectsCategoryCommon = ({ title, description, categories, projects, projectInfo, projectCategory }) => {
-  const [ t] = useTranslation("global"); 
+  const [ t] = useTranslation("global");
 
   return (
     <>
