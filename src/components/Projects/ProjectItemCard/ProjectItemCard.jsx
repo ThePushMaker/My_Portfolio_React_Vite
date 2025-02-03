@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 
 import ProjectImage from "@/components/Projects/ProjectImage/ProjectImage";
 import imgSkillsJson from '@/data/skills/skills.json';
-import "@/components/Projects/ProjectItemCard/ProjectItemCard.css";
 
 const responsive = {
   superLargeDesktop: {
@@ -32,24 +31,22 @@ const responsive = {
 };
 
 const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_description, images, link} ) => {
-  console.log(images);
-  
   
   return (
     <motion.div
-      animate={{scale: [0, 1]}} 
+      animate={{scale: [0, 1]}}
       transition={{duration: 0.5}}
-      className="projectItemCard rounded-3xl p-6"
     >
-      <Link to={link} className="flex w-full">
+    
+      <Link to={link} className="projectItemCard rounded-3xl p-6 flex w-full flex-wrap md:flex-nowrap justify-center group">
         {/* image carousel */}
-        <div className='w-4/12 group'>
+        <div className='w-full md:w-3/12 lg:w-4/12 group'>
           {images && images.length > 0 && (
             <Carousel
               additionalTransfrom={0}
               arrows={false}
               autoPlay={true}
-              autoPlaySpeed={6000}
+              autoPlaySpeed={5500}
               centerMode={false}
               className="owl-carousel owl-theme skill-slider pb-10 mb-4 lg:mb-0"
               dotListClass=""
@@ -78,15 +75,12 @@ const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_
             >
               {/* display project images */}
               {images.map((image, index) => (
-                <div
+                <ProjectImage
+                  imgPath = { image.path }
+                  title = { title }
                   key={index}
-                  className="rounded-xl overflow-hidden border-[0.12rem] border-solid border-slate-300 group-hover:border-slate-500"
-                >
-                  <ProjectImage
-                    imgPath = { image.path }
-                    title = { title }
-                  />
-                </div>
+                  classes="rounded-xl overflow-hidden border-[0.15rem] border-solid border-slate-600 group-hover:border-slate-500"
+                />
               ))}
             </Carousel>
           )}
@@ -94,24 +88,40 @@ const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_
           
         
         {/* text and icons */}
-        <div className="text-left ml-[1.5rem] mx-[1rem] mx-6">
+        <div className="text-left ml-0 md:ml-6">
           {/* <h4 className="text-lg text-white font-bold mb-2">{'- '}{title}{' -'}</h4> */}
-          <h4 className="text-lg text-white font-bold mb-2">{'- '}{title}</h4>
+          <h4 className="text-lg text-white font-bold mb-2 group-hover:text-link_color">{title}</h4>
           
           {/* description */}
-          <p className="text-mdsm h-[7.1rem] overflow-hidden text-ellipsis text-slate-300">
-            {short_description}
-          </p>
+          <p className="text-mdsm h-[7rem] overflow-hidden text-ellipsis text-slate-300 mb-1.5">{short_description}</p>
           
           <div>
             
-            {/* display technology icons */}
-            <div className="flex flex-wrap overflow-hidden justify-center h-auto">
-              {technologies_used && technologies_used.map((technology, index) => {
-                const tech = imgSkillsJson.find(item => item.label === technology);
+            {/* display technologies used */}
+            <div className="flex flex-wrap h-auto gap-y-2 gap-x-3 mb-1.5">
+              {technologies_used && technologies_used.map((technologyName, index) => {
+                // search for technology in imgSkillsJson.json
+                const tech = imgSkillsJson.find(item => item.label === technologyName) || {};
                 return (
-                  <img key={index} src={tech ? tech.img : ''} alt={technology} className="flex-col w-7 h-7 rounded-sm mx-3 my-3" />
-                )
+                  // display technology icon and name
+                  <div
+                    className='flex flex-col md:flex-row items-center text-[1.2rem] text-blue-300 rounded-xl px-2.5 py-[0.25rem] border-[0.01rem] border-solid border-blue-900 bg-blue-950'
+                    key={index}
+                  >
+                    <img
+                      className='rounded-sm w-5 h-[1.2rem] mx-auto md:mx-0 md:mr-1.5'
+                      src={tech ? tech.img : ''}
+                      alt={technologyName}
+                    />
+                    <h5 className='text-sm mt-1.5 md:mt-0'>
+                      {/* extrae la clave dentro de t('...') y la traduce */}
+                      {tech.label && tech.label.startsWith("t(")
+                        ? t(tech.label.slice(3, -2)) //extrae la clave dentro de t('...')
+                        : tech.label
+                      }
+                    </h5>
+                  </div>
+                );
               })}
             </div>
           </div>
@@ -120,8 +130,8 @@ const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_
           <div className="pb-2">
                 <ul className="flex mx-auto text-left list-disc list-inside">
                   {disciplines_covered && disciplines_covered.map((discipline, index) => (
-                    <li key={index} className="text-mdsm py-0.5 mx-2">
-                      <span className="text">
+                    <li key={index} className="text-mdsm py-0.5 mx-2 text-slate-300">
+                      <span>
                         {discipline}
                       </span>
                     </li>

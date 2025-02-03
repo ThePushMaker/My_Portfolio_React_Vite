@@ -9,7 +9,7 @@ const TransparentInput = ({ autoComplete, name, onChange, placeholder, readOnly,
         readOnly={readOnly}
         onChange={onChange}
         placeholder={placeholder}
-        type={type} 
+        type={type}
         value={value}
       />
     </div>

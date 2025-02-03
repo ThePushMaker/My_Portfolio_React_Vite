@@ -14,16 +14,21 @@
   .paragraphStyles {
     @apply mb-2 textShadow text-[#ccc];
   }
-  .paragraphStyles2 { 
+  .paragraphStyles2 {
     @apply mb-2 textShadow text-[#eee];
   }
   .bannerList {
-    @apply py-0.5 px-0.5 
+    @apply py-0.5 px-0.5;
   }
-  .textShadow {
-    text-shadow: 1px 1px 20px rgba(0, 0, 0, 1); 
+  
+  .projectItemCard {
+    @apply transition-all ease-in-out duration-200
+    shadow-[var(--containerShadow2)] hover:shadow-[var(--containerShadow3)] cursor-pointer
+    bg-[linear-gradient(180deg,_rgba(34,44,144,0.2)_50%,_rgba(3,6,38,0.2)_100%)] hover:backdrop-brightness-[115%]
+    lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg;
   }
 }
+
 
 @font-face {
   font-family: Cyber;
@@ -256,6 +261,10 @@ p.danger {
   color: var(--danger_color);
 }
 
+
+.textShadow {
+  text-shadow: 1px 1px 20px rgba(0, 0, 0, 1);
+}
 
 .button_transparent_rounded span {
   z-index: 1;

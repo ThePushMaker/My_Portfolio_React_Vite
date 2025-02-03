@@ -6,9 +6,9 @@
       "description": "Soluciones web multiplataforma que se adapten a sus necesidades específicas. Desde planificación, documentación y desarrollo hasta la implementación y mantenimiento, mi compromiso es brindarle la mejor plataforma web que maximizará la productividad y gestión de su empresa.",
       "projects": [
         {
-          "title": "Panel Administrativo para Veterinaria",
-          "disciplines_covered": ["Diseño de Interfaces (UI/UX)", "Desarrollo FrontEnd", "Desarrollo BackEnd"],
-          "short_description": "Desarrollé una aplicación robusta con Laravel y Vue.js, diseñando vistas, maquetaeando formularios en el frontend, creando funcionalidades en el backend, optimizando rendimiento, organizando mejor. Implementé RESTful API, gestión de roles y permisos, trabajando eficientemente en equipo para mejorar la experiencia del usuario.",
+          "title": "Panel Administrativo para Veterinarias",
+          "disciplines_covered": ["Desarrollo FrontEnd", "Desarrollo BackEnd", "Diseño de Interfaces (UI/UX)"],
+          "short_description": "Panel de administración web para veterinarias, desde la arquitectura en MySQL hasta el diseño UI/UX con Vue.js. Implementé una API RESTful en Laravel, gestioné roles y permisos con middleware y optimicé consultas en el frontend. Además, mejoré la eficiencia con componentes reutilizables y trabajé en un entorno ágil con SCRUM, asegurando escalabilidad.",
           "large_description": "Desarrollé una aplicación web robusta utilizando Laravel y Vue.js, implementando módulos como autenticación de usuarios, gestión avanzada de roles y permisos, y un sistema de notificaciones en tiempo real. Superé retos como la optimización de consultas complejas en el backend para mejorar el rendimiento y la integración fluida entre frontend y backend. Trabajé estrechamente con mi equipo para garantizar una implementación eficiente y escalable, contribuyendo con soluciones estratégicas a problemas técnicos. A través de la colaboración, logramos un producto final que no solo cumple con los requisitos del cliente, sino que también mejora la experiencia del usuario.",
           "images": [
             {
