@@ -89,7 +89,7 @@ const Banner = () => {
                   className="hover:underline hover:decoration-link_color_hover"
                   href="https://www.google.com/search?q=Full+Stack+Developer&oq=full+stack+developer&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDMxNjhqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
                   >
-                    <strong className="text-link_color hover:text-link_color_hover">
+                    <strong className="text-link_color hover:text-link_color_hover">|
                       {t(`banner.full_stack`)}
                     </strong>
                 </a>

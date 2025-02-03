@@ -28,9 +28,7 @@
     lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:hover:drop-shadow-lg;
   }
   .app-container {
-    @apply flex flex-col min-h-screen
-    min-w-min
-    ;
+    @apply flex flex-col min-h-screen;
   }
 }
 
@@ -155,33 +153,23 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
 }
-@keyframes borderAnimation {
-  0% {
-    border-color: var(--border_color1); /* Inicia con el color del borde */
-  }
-  25% {
-    border-color: rgb(255, 0, 0); /* Cambia a rojo al 25% de la animación */
-  }
-  50% {
-    border-color: rgb(0, 255, 0); /* Cambia a verde al 50% de la animación */
-  }
-  75% {
-    border-color: rgb(0, 0, 255); /* Cambia a azul al 75% de la animación */
-  }
-  100% {
-    border-color: var(--border_color1); /* Vuelve al color original al final de la animación */
-  }
-}
 body {
+  min-width: fit-content;
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #050509;
+  background-color: var(--container_color5);
   color: #fff;
   font-family: var(--styled-font-family1);
   border: 1px solid var(--border_color1); /* Decoración alrededor de la página */
   animation: borderAnimation 30s infinite; /* Aplica la animación al borde */
 }
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 *:focus {
   outline-color: var(--border_color1);
   
@@ -366,4 +354,21 @@ p.danger {
   color: #ffcc00; /* Color opcional */
   font-size: 1rem; /* Tamaño opcional */
   margin-right: 8px; /* Espaciado */
+}
+@keyframes borderAnimation {
+  0% {
+    border-color: var(--border_color1); /* Inicia con el color del borde */
+  }
+  25% {
+    border-color: rgb(255, 0, 0); /* Cambia a rojo al 25% de la animación */
+  }
+  50% {
+    border-color: rgb(0, 255, 0); /* Cambia a verde al 50% de la animación */
+  }
+  75% {
+    border-color: rgb(0, 0, 255); /* Cambia a azul al 75% de la animación */
+  }
+  100% {
+    border-color: var(--border_color1); /* Vuelve al color original al final de la animación */
+  }
 }
