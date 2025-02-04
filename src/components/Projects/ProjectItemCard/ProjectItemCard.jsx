@@ -105,15 +105,16 @@ const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_
                 return (
                   // display technology icon and name
                   <div
-                    className='flex flex-col md:flex-row items-center text-[1.2rem] text-blue-300 rounded-xl px-2.5 py-[0.25rem] border-[0.01rem] border-solid border-blue-900 bg-blue-950'
+                    className='flex md:flex-row items-center text-blue-300 rounded-xl px-2.5 py-1 border-[0.01rem] border-solid
+                    border-blue-900 bg-blue-950'
                     key={index}
                   >
                     <img
-                      className='rounded-sm w-5 h-[1.2rem] mx-auto md:mx-0 md:mr-1.5'
+                      className='rounded-sm w-5 h-[1.2rem] mx-auto mr-1.5'
                       src={tech ? tech.img : ''}
                       alt={technologyName}
                     />
-                    <h5 className='text-sm mt-1.5 md:mt-0'>
+                    <h5 className='text-xs lg:text-sm mt-1.5 md:mt-0'>
                       {/* extrae la clave dentro de t('...') y la traduce */}
                       {tech.label && tech.label.startsWith("t(")
                         ? t(tech.label.slice(3, -2)) //extrae la clave dentro de t('...')
@@ -125,22 +126,6 @@ const ProjectItemCard = ( {title, technologies_used, disciplines_covered, short_
               })}
             </div>
           </div>
-          
-          {/* disciplines */}
-          <div className="pb-2">
-                <ul className="flex mx-auto text-left list-disc list-inside">
-                  {disciplines_covered && disciplines_covered.map((discipline, index) => (
-                    <li key={index} className="text-mdsm py-0.5 mx-2 text-slate-300">
-                      <span>
-                        {discipline}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-          </div>
-          
-          
-         
           
         </div>
         
